@@ -1,0 +1,24 @@
+schema_version: 1
+finding:
+  id: required_stable_identifier
+  repository: required
+  status: [NEW, UNCHANGED, IMPROVED, REGRESSED, RESOLVED, REOPENED]
+  classification: [Confirmed, Strong indication, Potential, Recommendation]
+  severity: [Critical, High, Medium, Low]
+  confidence: [High, Medium, Low]
+  area: required
+  title: required
+  evidence: required
+  impact: required
+  recommendation: required
+  suggested_next_action: required
+  first_seen: required
+  last_seen: required
+  source_ref: optional
+  related_findings: optional
+  remediation_state: optional
+rules:
+  stable_id: true
+  append_history: true
+  redact_secrets: true
+  speculation_is_not_confirmation: true
