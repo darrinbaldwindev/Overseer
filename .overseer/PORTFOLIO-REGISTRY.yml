@@ -1,0 +1,14 @@
+schema_version: 1
+last_discovery: null
+repositories: []
+relationships: []
+portfolio_events: []
+
+# Each repository entry should contain:
+# id, full_name, default_branch, visibility, archived, permissions,
+# first_seen, last_seen, last_scanned, last_commit,
+# health_score, active_findings, scan_status, priority.
+
+# Relationship types:
+# depends_on, duplicates, shares_component, shares_service,
+# supersedes, related_to, conflicts_with, candidate_for_reuse.
