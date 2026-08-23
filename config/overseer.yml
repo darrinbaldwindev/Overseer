@@ -1,0 +1,53 @@
+version: 1
+
+agent:
+  name: Overseer
+  mode: observe_report
+  mission: supervise_github_project_portfolio
+
+scan:
+  discover_repositories: true
+  inspect_default_branch: true
+  inspect_active_branches: true
+  inspect_commits: true
+  inspect_pull_requests: true
+  inspect_issues: true
+  inspect_workflows: true
+  inspect_dependency_manifests: true
+  inspect_tests: true
+  inspect_documentation: true
+  inspect_security_configuration: true
+  inspect_deployment_configuration: true
+  compare_with_previous_scan: true
+  cross_repository_analysis: true
+
+reporting:
+  repository_log_path: .overseer/OVERSEER-LOG.md
+  portfolio_report_path: .overseer/PORTFOLIO.md
+  append_history: true
+  include_evidence: true
+  include_confidence: true
+  include_recommendations: true
+
+severity:
+  critical: 90
+  high: 70
+  medium: 40
+  low: 0
+
+safety:
+  allow_code_writes: false
+  allow_dependency_updates: false
+  allow_issue_creation: false
+  allow_pull_request_creation: false
+  allow_merges: false
+  allow_deletions: false
+  allow_history_rewrites: false
+  allow_secret_access: false
+  allow_production_changes: false
+
+escalation:
+  critical_findings: immediate
+  security_findings: immediate
+  repeated_regressions: priority
+  blocked_projects: priority
