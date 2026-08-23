@@ -1,0 +1,9 @@
+[project]
+name = "overseer"
+version = "0.1.0"
+description = "Deterministic supervisory tooling for the Manus Desktop Overseer"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
