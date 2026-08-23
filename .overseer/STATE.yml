@@ -1,0 +1,25 @@
+version: 1
+control_plane:
+  name: Overseer
+  mode: observe_report
+  source: MANUS-INTEGRATION.md
+  state_schema: 1
+portfolio:
+  last_discovery: null
+  repository_count: 0
+  repositories: []
+scans:
+  last_scan: null
+  completed: 0
+  failed: 0
+findings:
+  active: 0
+  resolved: 0
+  reopened: 0
+  critical: 0
+  high: 0
+  medium: 0
+  low: 0
+self_supervision:
+  enabled: true
+  policy_self_modification: false
