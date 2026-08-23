@@ -1,0 +1,37 @@
+schema_version: 1
+repository:
+  full_name: required
+  visibility: required
+  default_branch: required
+  permissions: required
+  archived: required
+  size: optional
+  languages: optional
+project:
+  classification: optional
+  purpose: optional
+  architecture: optional
+  runtime: optional
+  package_manager: optional
+  deployment_model: optional
+scan:
+  overseer_version: required
+  control_plane_commit: required
+  scanned_at: required
+  inspected_ref: required
+  scan_status: [complete, partial, failed]
+  limitations: optional
+health:
+  score: optional
+  critical: 0
+  high: 0
+  medium: 0
+  low: 0
+findings:
+  active_ids: []
+  resolved_ids: []
+  reopened_ids: []
+changes:
+  previous_ref: optional
+  current_ref: required
+  changed_since_previous_scan: false
