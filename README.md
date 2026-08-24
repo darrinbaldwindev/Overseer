@@ -30,35 +30,52 @@ It should:
 Overseer/
 ├── README.md
 ├── OVERSEER.md
+├── MANUS-INTEGRATION.md
 ├── config/
 │   └── overseer.yml
 ├── protocols/
-│   └── repository-scan.md
-├── templates/
-│   └── repository-log.md
-└── logs/
-    └── .gitkeep
+│   ├── agent-governance.md
+│   ├── autonomous-loop.md
+│   ├── finding-lifecycle.md
+│   ├── knowledge-model.md
+│   ├── owner-reporting.md
+│   ├── portfolio-discovery.md
+│   ├── portfolio-intelligence.md
+│   ├── priority-engine.md
+│   ├── recommendation-policy.md
+│   ├── repository-scan.md
+│   ├── scan-engine.md
+│   └── scan-manifest.md
+├── src/
+│   ├── adapters/
+│   ├── analysis/
+│   ├── discovery/
+│   ├── findings/
+│   ├── pipeline/
+│   ├── scanner/
+│   └── state/
+└── tests/
 ```
 
-## Planned capabilities
+## Current capabilities
 
-1. **Portfolio discovery** — enumerate repositories available to the connected GitHub identity.
-2. **Repository reconnaissance** — inspect source, configuration, documentation, CI/CD, tests and dependency manifests.
-3. **Static review** — identify likely defects, dead code, missing validation and maintainability issues.
-4. **Security review** — inspect dependency/configuration risks and GitHub security posture where permissions allow.
-5. **Architecture review** — identify structural problems and cross-repository duplication or coupling.
-6. **Delivery review** — inspect branches, commits, pull requests, issues and workflow health.
-7. **Project scoring** — calculate a consistent health score with evidence.
-8. **Persistent logging** — write findings into each target repository without overwriting historical observations.
-9. **Escalation** — surface critical findings before lower-priority recommendations.
-10. **Continuous supervision** — compare scans over time and identify regressions or improvements.
+1. **Portfolio discovery** — model repositories available to the connected GitHub identity.
+2. **Repository reconnaissance** — establish repository boundaries and inspection coverage.
+3. **Evidence extraction** — capture observable repository facts without turning absence into unsupported certainty.
+4. **Static analysis rules** — generate conservative candidate findings from evidence.
+5. **Confidence and coverage** — distinguish full, partial and limited inspection.
+6. **Historical state** — detect new, unchanged, changed and reopened observations.
+7. **Decision ledger** — retain evidence-backed recommendations and owner-approval boundaries.
+8. **Safe dry-run orchestration** — compose discovery, evidence, analysis, scoring and state without mutation authority.
+9. **Agent governance** — keep project agents subordinate to the portfolio supervisory layer.
+10. **Continuous supervision** — support repeat scans and historical comparison.
 
 ## Safety boundaries
 
-Overseer must never silently delete code, rewrite history, expose secrets, merge pull requests, disable security controls, or make production changes. Any autonomous write operation must be permitted by the active policy and recorded.
+The active policy is `observe_report`. Overseer must never silently delete code, rewrite history, expose secrets, merge pull requests, disable security controls, or make production changes. Autonomous writes are permitted only when explicitly enabled by policy, must be narrowly scoped, and must be recorded.
 
 ## Status
 
-**Phase 0 — Architecture initialized.**
+**Phase 1 — Supervisory control plane and safe analysis pipeline.**
 
-The repository is intentionally starting with policy and protocol before autonomous code is introduced. This keeps the agent's behavior inspectable and auditable from the beginning.
+The repository now contains the operating charter, Manus Desktop integration contract, governance protocols, inspection confidence model, historical state primitives, decision ledger, GitHub inventory adapter, and read-only portfolio dry-run pipeline. The next milestone is validated live GitHub scanning with explicit coverage/limitations and owner-facing reporting; mutation authority remains disabled.
