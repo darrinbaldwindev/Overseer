@@ -2,7 +2,7 @@
 
 **Autonomous multi-repository engineering supervisor**
 
-Overseer is an AI agent designed to continuously inspect an owner's GitHub portfolio, understand project state, identify defects and risks, recommend improvements, and maintain an auditable record of its findings inside each repository.
+Overseer is an AI agent designed to continuously inspect an owner's GitHub portfolio, understand project state, identify defects and risks, recommend improvements, remember validated reusable skills, and maintain an auditable record of its findings inside each repository.
 
 ## Mission
 
@@ -16,13 +16,14 @@ It should:
 - Distinguish evidence from assumptions.
 - Prioritize findings by severity, confidence, impact, and effort.
 - Recommend concrete remediation steps.
+- Learn and reuse validated procedures without granting those procedures additional authority.
 - Maintain an append-only audit trail in each repository.
 - Re-scan repositories after meaningful changes.
 - Avoid destructive changes unless explicitly authorized by policy.
 
 ## Operating principle
 
-> Observe first. Verify second. Recommend third. Change only when authorized. Record everything important.
+> Observe first. Verify second. Reuse validated skills where appropriate. Recommend third. Change only when authorized. Record everything important.
 
 ## Repository structure
 
@@ -45,7 +46,8 @@ Overseer/
 │   ├── recommendation-policy.md
 │   ├── repository-scan.md
 │   ├── scan-engine.md
-│   └── scan-manifest.md
+│   ├── scan-manifest.md
+│   └── skill-memory.md
 ├── src/
 │   ├── adapters/
 │   ├── analysis/
@@ -54,7 +56,9 @@ Overseer/
 │   ├── pipeline/
 │   ├── scanner/
 │   └── state/
+│       └── skill_memory.py
 └── tests/
+    └── test_skill_memory.py
 ```
 
 ## Current capabilities
@@ -69,13 +73,14 @@ Overseer/
 8. **Safe dry-run orchestration** — compose discovery, evidence, analysis, scoring and state without mutation authority.
 9. **Agent governance** — keep project agents subordinate to the portfolio supervisory layer.
 10. **Continuous supervision** — support repeat scans and historical comparison.
+11. **Reusable skill memory** — retain versioned, evidence-backed procedures; retrieve matching skills; record reuse outcomes; and keep skill memory separate from permissions and execution authority.
 
 ## Safety boundaries
 
-The active policy is `observe_report`. Overseer must never silently delete code, rewrite history, expose secrets, merge pull requests, disable security controls, or make production changes. Autonomous writes are permitted only when explicitly enabled by policy, must be narrowly scoped, and must be recorded.
+The active policy is `observe_report`. Overseer must never silently delete code, rewrite history, expose secrets, merge pull requests, disable security controls, or make production changes. Autonomous writes are permitted only when explicitly enabled by policy, must be narrowly scoped, and must be recorded. Remembered skills never grant authority beyond the active policy.
 
 ## Status
 
 **Phase 1 — Supervisory control plane and safe analysis pipeline.**
 
-The repository now contains the operating charter, Manus Desktop integration contract, governance protocols, inspection confidence model, historical state primitives, decision ledger, GitHub inventory adapter, and read-only portfolio dry-run pipeline. The next milestone is validated live GitHub scanning with explicit coverage/limitations and owner-facing reporting; mutation authority remains disabled.
+The repository contains the operating charter, Manus Desktop integration contract, governance protocols, inspection confidence model, historical state primitives, decision ledger, GitHub inventory adapter, read-only portfolio dry-run pipeline, and reusable skill-memory primitives. The next milestone remains validated live GitHub scanning with explicit coverage/limitations and owner-facing reporting; mutation authority remains disabled.
