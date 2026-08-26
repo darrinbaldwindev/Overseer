@@ -94,3 +94,17 @@ Reassess after Darrin records the control-plane hierarchy, the schedule is renew
 **Closure evidence:** Exact policy/config/log paths; precedence/conflict statement; one bounded Darrin decision record; explicit no-config-change confirmation.
 
 **Immediate successor:** On closure and Darrin’s decision, issue **O-02**: verify a fresh reviewer can discover the approved policy hierarchy and log paths.
+
+## Wave 1 task closure — O-01 — 2026-08-26T13:58:32+10:00
+
+**Author/platform:** Manus Overseer. **Scope:** Read-only reconciliation of `main` at `3bb09fc689a815b27d0b866179c2fc8e12585575`, `README.md`, `MANUS-INTEGRATION.md`, and `config/overseer.yml`. No configuration, connector, schedule, code, test, deployment, or production change was made.
+
+**Result:** **O-01 CLOSED — policy/log-path conflict stated.** `MANUS-INTEGRATION.md` calls the GitHub Overseer repository authoritative for operating policy, scan protocols, finding semantics, reporting structure, and persistent supervisory state. `config/overseer.yml` declares `agent.mode: observe_report`, disables writes/merges/secret/production access, and names `.overseer/OVERSEER-LOG.md` plus `.overseer/PORTFOLIO.md` as record paths. The active user-authorized portfolio record convention is `docs/overseer/OVERSEER.md`, with a narrow time-bounded PR-only notice exception. The latter is a live owner instruction, not a configuration edit.
+
+**Owner decision required:** Darrin must record the governing precedence: canonical policy source, approved record paths, precedence of explicit live owner authorization, PR-only notification scope/deduplication/expiry, and renewal/revocation owner. No configuration modification is proposed.
+
+### Active successor — O-02
+
+**Task O-02:** After Darrin records the decision, verify that a fresh reviewer can discover the policy hierarchy, record paths, allowed destination, expiry, and prohibited actions from repository evidence without chat history.
+
+**Status:** O-01 closed; O-02 active and blocked on Darrin’s policy-hierarchy decision.
