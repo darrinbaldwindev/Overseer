@@ -239,3 +239,11 @@ Darrin may respond **A**, **B**, or **C**, with an explicit modification if need
 **Separate locator finding:** [Draft PR #1](https://github.com/darrinbaldwindev/GlobalShopCo-Headless/pull/1), `agent/chatgpt/m3-baseline` at `64c6bc37`, is an open code-bearing implementation proposal with a PHP plugin path. It is not canonical, approved, or merged; its `CLEAN` state must not be interpreted as authorization or readiness. H-01 is the static scope/provenance review task; no merge or code execution is authorized.
 
 **O-06 status:** Active for material locator changes only. This update does not authorize implementation, provider/hosting/Shopify/WordPress configuration, credentials, product/checkout action, test, deployment, release, or external integration.
+
+## Comprehensive portfolio scan — Issue #2 protocol reconciliation — 2026-08-26T17:31:45+10:00
+
+**Verified scan evidence:** `Overseer/main` is `207d43fe631f60f5882f37ccd3319573d2298650`; policy/log PR #1 remains open with unknown merge/check state. New owner-authored Issue #2 requests a GPTChat↔Manus work-allocation, handoff, status-vocabulary, conflict-resolution, and capability-propagation protocol.
+
+**Reconciliation:** The existing owner-selected three-layer policy already supplies the baseline: `Overseer` provides default observe/report authority; each project’s `docs/overseer/OVERSEER.md` provides append-only project evidence/task records; shared `repo/docs/overseer/OVERSEER.md` provides cross-platform coordination. Issue #2 directionally reinforces the shared-log model but does not supersede this hierarchy or authorize a configuration, connector, schedule, branch/path migration, AgentOS event bus, or external notification change.
+
+**Task-chain impact:** **O-07 active — protocol reconciliation draft:** prepare, privately, a compact role/handoff/status/conflict matrix mapped to the existing three-layer policy and Issue #2. Preserve ChatGPT’s synthesis/reconciliation role and Manus’s evidence/static validation role; do not create a duplicate coordination system or alter the active schedule. Publication or policy modification requires a separate owner decision.
