@@ -7,7 +7,7 @@ repositories:
     visibility: private
     archived: false
     last_scanned: 2026-08-26
-    last_commit: 66d443baaf2c5e449a2d7af9484124fd22ae92
+    last_commit: 66d443baaf2c5e449a2d7af9484124fd5b5a6d6db7ae
     priority: critical
     scan_status: scanned
   - id: globalshopco
