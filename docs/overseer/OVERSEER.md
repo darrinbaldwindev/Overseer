@@ -223,3 +223,11 @@ Darrin may respond **A**, **B**, or **C**, with an explicit modification if need
 **Locator action:** The shared `repo/docs/overseer/OVERSEER.md` locator has received an append-only delta adding `GlobalShopCo-Headless` as a distinct project. Its locator status is intentionally **no authorized project log / no log branch / no documentation PR yet**. This reflects the owner-approved README-only creation boundary, rather than a coverage omission. The current gate is S-09, an owner decision on a bounded documentation-only branch/PR; no change in the repository is authorized until that decision.
 
 **O-06 status:** Active for material locator changes only. No policy hierarchy change, configuration/connector/schedule modification, default-branch change, path migration, log bootstrap in the new repository, or external communication is authorized by this entry.
+
+## O-06 material locator maintenance — GlobalShopCo-Headless documentation PR — 2026-08-26T17:12:43+10:00
+
+**Material locator change:** Under Darrin’s S-09 Option A decision, private `GlobalShopCo-Headless` now has an authorized project evidence log at `docs/overseer/OVERSEER.md` on branch [`agent/overseer/initial-documentation`](https://github.com/darrinbaldwindev/GlobalShopCo-Headless/tree/agent/overseer/initial-documentation), commit [`5e32895`](https://github.com/darrinbaldwindev/GlobalShopCo-Headless/commit/5e32895b62cebc5a3e851c50f1da9ce4629ac233). The documentation is proposed through [PR #2](https://github.com/darrinbaldwindev/GlobalShopCo-Headless/pull/2) to `main`, not merged.
+
+**Locator status:** Replace the earlier provisional status “no authorized project log / no documentation PR yet” with: **open documentation PR; log is proposed on the documentation branch; S-10 review/merge gate active.** `main` remains the README-only baseline until a separate owner merge decision.
+
+**Boundary:** The locator update neither approves nor merges PR #2 and does not authorize any code, dependency, credential, provider/hosting, Shopify, product, checkout, test, deployment, release, or external-integration action. O-06 remains active for material locator changes only.
