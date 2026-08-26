@@ -84,3 +84,13 @@ Reassess after Darrin records the control-plane hierarchy, the schedule is renew
 **Next Overseer instruction:** Maintain this timeline append-only. On a material source, test, protocol, live-scan evidence, or review change, record date, exact revision, verified fact versus claim, milestone status, blocker, owner decision, and reassessment condition. Do not execute repository code or alter paths other than this log without separate authority.
 
 **Confidence:** High for static repository evidence; limited for executed pipeline behavior and check status.
+
+## Active task assignment — Wave 1 (O-01) — 2026-08-26T13:50:47+10:00
+
+**Authority and scope:** Darrin’s continuous-task-chain instruction. This is a documentation/evidence reconciliation task; it does not authorize configuration changes, connector changes, schedule changes, code execution, deployment, or changes outside this log.
+
+**Task O-01:** Reconcile the repository’s stated `observe_report` control-plane policy with the active multi-repository log convention and the narrow PR-notice exception.
+
+**Closure evidence:** Exact policy/config/log paths; precedence/conflict statement; one bounded Darrin decision record; explicit no-config-change confirmation.
+
+**Immediate successor:** On closure and Darrin’s decision, issue **O-02**: verify a fresh reviewer can discover the approved policy hierarchy and log paths.
