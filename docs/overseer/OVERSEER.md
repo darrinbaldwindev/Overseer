@@ -215,3 +215,11 @@ Darrin may respond **A**, **B**, or **C**, with an explicit modification if need
 **Task O-06:** On each daily portfolio scan, compare the shared Locator Index against current repository identity/default branch, current log branch/head/path, and log PR state. Append an index update only for a material locator change: repository rename/move/access change, default-branch change, log branch/head/path change, log PR state change, or explicit hierarchy change. Record no-change results only in the daily summary, not as repeated log entries.
 
 **Status:** O-05 closed; O-06 active — recurring evidence maintenance within the existing read-only daily scan.
+
+## O-06 material locator maintenance — GlobalShopCo-Headless addition — 2026-08-26T15:44:25+10:00
+
+**Evidence:** Darrin explicitly reaffirmed that complete Overseer coverage includes AgentOS and every accessible portfolio project. Static GitHub metadata confirms private `darrinbaldwindev/GlobalShopCo-Headless`, default `main`, initial `README.md` only at `646c5df5b51d927255d0b67aa806e5a48fbb6e15`, and no open pull request.
+
+**Locator action:** The shared `repo/docs/overseer/OVERSEER.md` locator has received an append-only delta adding `GlobalShopCo-Headless` as a distinct project. Its locator status is intentionally **no authorized project log / no log branch / no documentation PR yet**. This reflects the owner-approved README-only creation boundary, rather than a coverage omission. The current gate is S-09, an owner decision on a bounded documentation-only branch/PR; no change in the repository is authorized until that decision.
+
+**O-06 status:** Active for material locator changes only. No policy hierarchy change, configuration/connector/schedule modification, default-branch change, path migration, log bootstrap in the new repository, or external communication is authorized by this entry.
