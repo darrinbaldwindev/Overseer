@@ -155,3 +155,26 @@ Status: Pending Darrin selection.
 ## Required response
 
 Darrin may respond **A**, **B**, or **C**, with an explicit modification if needed. Until then, Option A is a recommendation only and the current safe append-only records remain operational under the existing user authorization.
+
+## Owner decision — O-03 closed; O-04 assigned — 2026-08-26T14:34:55+10:00
+
+**Decision:** **Option A selected.** Adopt the documented three-layer policy hierarchy without configuration change:
+
+1. The `Overseer` repository’s operating policy and `observe_report` safety controls govern default authority.
+2. Each project’s `docs/overseer/OVERSEER.md` is its authorized append-only evidence and task log under the current live Darrin instruction.
+3. `darrinbaldwindev/repo` `docs/overseer/OVERSEER.md` is the shared Manus–ChatGPT task-chain coordination index; it is not a substitute for source-specific evidence logs.
+4. An explicit live Darrin instruction applies only to its named scope, destination, and expiry. The narrow affected-PR-only material-notice exception remains bounded by its existing authorization window and does not imply broader external communication or execution authority.
+
+**Authority:** Darrin, explicit A selection in the owner-decision interaction on 26 August 2026.
+
+**Evidence:** `Overseer` `main` `3bb09fc689a815b27d0b866179c2fc8e12585575`; `MANUS-INTEGRATION.md`; `config/overseer.yml`; current project-level and shared coordination logs; O-02 decision package.
+
+**Approved scope:** Documentation-only precedence statement; continued append-only project evidence/task logs; shared task-chain coordination; the existing narrowly bounded PR-only notice exception while active.
+
+**Excluded scope:** No configuration/path migration, connector or schedule change, code execution, new external destination, merge, deployment, provider activation, credential access, or production action.
+
+### Active successor — O-04
+
+**Task O-04:** Perform a fresh-reviewer discoverability verification: from the recorded repository paths, confirm that a reviewer can identify the default safety policy, project log location, shared coordination index, live-exception scope/expiry, and prohibited actions without relying on chat history. Record any missing pointer or ambiguity as a documentation finding only; do not change configuration.
+
+**Verification / review trigger:** Completion of the fresh-reviewer path check, any explicit owner change, exception expiry, or separately authorized configuration/path migration. **Status:** O-03 closed; O-04 active.
