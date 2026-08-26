@@ -201,3 +201,17 @@ Darrin may respond **A**, **B**, or **C**, with an explicit modification if need
 **Closure evidence:** A fresh reviewer can locate each project’s current evidence/task log from the shared index, while the static `observe_report` safety boundary and live-exception scope remain visible.
 
 **Status:** O-04 closed (partial pass); O-05 active — documentation-only.
+
+## Task closure — O-05; active successor O-06 — 2026-08-26T14:38:23+10:00
+
+**Author/platform:** Manus Overseer. **Scope:** Read-only branch, pull-request, and log-path locator review across the accessible portfolio. No code, configuration, default-branch, connector, schedule, credential, deployment, or production action was taken.
+
+**O-05 result:** **CLOSED — shared Project Overseer Log Locator Index established.** The shared `repo` coordination log now lists each accessible project, default/known canonical branch, current log branch/head, authorized log path, open documentation PR where present, and task status. A fresh reviewer can follow the Option A policy sequence without chat history: `Overseer` policy, shared index, then exact project branch/path.
+
+**Limitations:** The index is current to its recorded timestamp and evidence revisions. It is a locator only; it does not make a log branch the canonical product branch, supersede source evidence, merge any PR, or alter static `.overseer` configuration paths.
+
+### Active successor — O-06
+
+**Task O-06:** On each daily portfolio scan, compare the shared Locator Index against current repository identity/default branch, current log branch/head/path, and log PR state. Append an index update only for a material locator change: repository rename/move/access change, default-branch change, log branch/head/path change, log PR state change, or explicit hierarchy change. Record no-change results only in the daily summary, not as repeated log entries.
+
+**Status:** O-05 closed; O-06 active — recurring evidence maintenance within the existing read-only daily scan.
