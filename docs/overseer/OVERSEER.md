@@ -65,3 +65,22 @@ AgentOS, Franchise, GemVerse, and this repository each contain valid but partial
 Reassess after Darrin records the control-plane hierarchy, the schedule is renewed/changed/expires, a new portfolio log convention is approved, or a material change occurs in `Overseer` policy/configuration/protocols. Do not create an issue or post an external notice from this finding while there is no affected open pull request.
 
 > This log is evidence-based governance documentation. It is not proof of runtime, security, privacy, compliance, production, release, or deployment readiness, and it does not authorize any action beyond the audited documentation record.
+
+## Project timeline and current milestone — 2026-08-26T11:02:51+10:00
+
+**Scope and evidence:** Deep static review of `main` at `3bb09fc689a815b27d0b866179c2fc8e12585575`, eight recent commits, 67 tracked files (26 source-path, 15 test-path, 28 documentation-path), and open documentation-only PR [#1](https://github.com/darrinbaldwindev/Overseer/pull/1). No repository code, test, deployment, credential, or provider action was run.
+
+| Timeline point | Verified observation | Status |
+|---|---|---|
+| Recent history | Repository history adds scan-manifest coverage reporting, control-plane/governance boundaries, a GitHub inventory adapter, and reusable skill-memory protocol/primitives/tests. | Phase 1 control-plane foundation. |
+| Current | `main` ends at `3bb09fc6` (*Document reusable skill memory capability*). The default policy remains `observe_report`; PR #1 is an open one-file continuity-audit log. | In progress. |
+
+**Current milestone:** Validate the repository’s own live GitHub scan pipeline with explicit coverage/limitations, historical comparison, evidence persistence, and owner-facing reporting while retaining read-only mutation boundaries.
+
+**Held blockers:** Static source and tests exist, but this scan did not execute the pipeline or independently prove end-to-end behavior, persistence semantics, coverage calculations, or owner-report generation. No releases or workflow-path evidence were found in the default tree; check status is unavailable to this review.
+
+**Owner decision:** Darrin must approve any bounded non-production validation plan or any change to `observe_report` authority. No merge, credential use, connector expansion, deployment, or project mutation is authorized by this entry.
+
+**Next Overseer instruction:** Maintain this timeline append-only. On a material source, test, protocol, live-scan evidence, or review change, record date, exact revision, verified fact versus claim, milestone status, blocker, owner decision, and reassessment condition. Do not execute repository code or alter paths other than this log without separate authority.
+
+**Confidence:** High for static repository evidence; limited for executed pipeline behavior and check status.
