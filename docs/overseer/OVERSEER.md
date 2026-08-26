@@ -265,3 +265,15 @@ Darrin may respond **A**, **B**, or **C**, with an explicit modification if need
 **Option C:** Retain the protocol entirely as private guidance and defer all publication until Darrin selects a canonical policy-document destination.
 
 **No option is selected by this record.** O-08 is blocked pending Darrin’s explicit selection. H-03 remains independently blocked on Darrin naming the implementation-capable owner for the Headless reconciliation plan.
+
+## Near-continuous Manus Overseer interval profile — selected; activation pending — 2026-08-26
+
+**Decision:** Darrin selected the event-driven **Profile A**: immediate GitHub event receipt; a 2-minute project/revision batching window; 15-minute delivery-health reconciliation; and retention of the existing daily 9:00 AM read-only portfolio review plus Monday weekly synthesis.
+
+**Evidence:** GitHub supports webhook deliveries to a configured endpoint when subscribed events occur, providing near-real-time event delivery rather than broad polling. The selected profile is recorded in the prepared activation specification and decision package.
+
+**Approved now:** Documentation and decision-package preparation only.
+
+**Excluded now:** No endpoint/webhook/GitHub App/service creation; no webhook secret generation or storage; no repository setting; no hosting purchase/activation; no schedule/connector change; no automatic task creation; no repository mutation; no code/test/run; no credential/provider access; no external notice; no merge/deployment/release.
+
+**Status:** **Activation pending a separate explicit Darrin authorization** that confirms endpoint owner, hosting destination/cost, repository allowlist, event scope, task-reaction mode, metadata retention period, and failure destination. Until then, the current event-triggered log check-ins and existing daily/weekly backstops remain in force.
