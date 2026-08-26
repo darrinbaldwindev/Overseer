@@ -178,3 +178,26 @@ Darrin may respond **A**, **B**, or **C**, with an explicit modification if need
 **Task O-04:** Perform a fresh-reviewer discoverability verification: from the recorded repository paths, confirm that a reviewer can identify the default safety policy, project log location, shared coordination index, live-exception scope/expiry, and prohibited actions without relying on chat history. Record any missing pointer or ambiguity as a documentation finding only; do not change configuration.
 
 **Verification / review trigger:** Completion of the fresh-reviewer path check, any explicit owner change, exception expiry, or separately authorized configuration/path migration. **Status:** O-03 closed; O-04 active.
+
+## Task closure — O-04; active successor O-05 — 2026-08-26T14:36:43+10:00
+
+**Author/platform:** Manus Overseer. **Scope:** Fresh-reviewer path check using only GitHub repository metadata and recorded paths. No code, configuration, connector, schedule, deployment, credential, or production action was taken.
+
+**Result:** **O-04 CLOSED — PARTIAL PASS.**
+
+| Required discovery item | Result | Evidence |
+|---|---|---|
+| Default safety policy | **PASS** | `Overseer` default `main` exposes `README.md`, `MANUS-INTEGRATION.md`, and `config/overseer.yml`, including `observe_report` and disabled write/merge/secret/production controls. |
+| Shared coordination index | **PASS** | `repo` default branch is `agent/overseer/initial-scan` and exposes `docs/overseer/OVERSEER.md`, including the Option A hierarchy and task-chain record. |
+| Live owner-exception boundary | **PASS, record-based** | The shared record describes the narrow affected-PR-only, time-bounded communication exception and its prohibited actions. |
+| Project evidence-log location | **PARTIAL** | Existing project logs are available on named `agent/overseer/*` branches and open documentation PRs, but `Overseer/main` does not contain `docs/overseer/OVERSEER.md`. Amazon-Affiliate and Global Shop Co have log-only branches with no open PR, so a fresh reviewer cannot discover their log locations from a concise shared locator alone. |
+
+**Finding:** The selected hierarchy is understandable, but cross-project discoverability is incomplete without a maintained locator index of repository, log branch, log path, and associated open PR (if any). This is a documentation/continuity gap, not a configuration or runtime defect.
+
+### Active successor — O-05
+
+**Task O-05:** Add and maintain a concise **Project Overseer Log Locator Index** in the shared `repo` coordination log. It must list each accessible project, canonical/known default branch, current log branch, log path, log PR URL where one exists, and status. It must not migrate paths, alter configuration, change default branches, or create a project PR solely for discoverability.
+
+**Closure evidence:** A fresh reviewer can locate each project’s current evidence/task log from the shared index, while the static `observe_report` safety boundary and live-exception scope remain visible.
+
+**Status:** O-04 closed (partial pass); O-05 active — documentation-only.
