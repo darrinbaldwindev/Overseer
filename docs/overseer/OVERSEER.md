@@ -231,3 +231,11 @@ Darrin may respond **A**, **B**, or **C**, with an explicit modification if need
 **Locator status:** Replace the earlier provisional status “no authorized project log / no documentation PR yet” with: **open documentation PR; log is proposed on the documentation branch; S-10 review/merge gate active.** `main` remains the README-only baseline until a separate owner merge decision.
 
 **Boundary:** The locator update neither approves nor merges PR #2 and does not authorize any code, dependency, credential, provider/hosting, Shopify, product, checkout, test, deployment, release, or external-integration action. O-06 remains active for material locator changes only.
+
+## O-06 material locator maintenance — GlobalShopCo-Headless main log and draft PR #1 — 2026-08-26T17:20:13+10:00
+
+**Locator transition:** Darrin authorized and Manus merged GlobalShopCo-Headless PR #2. The project log is now active at [`main:docs/overseer/OVERSEER.md`](https://github.com/darrinbaldwindev/GlobalShopCo-Headless/blob/main/docs/overseer/OVERSEER.md), main revision [`1df3ecc`](https://github.com/darrinbaldwindev/GlobalShopCo-Headless/commit/1df3ecc0c074942317b5cdd133d1d5ab34b09b12). The prior documentation PR locator is historical; PR #2 is merged. The current implementation source-of-truth remains only the approved documentation boundary, not an application baseline.
+
+**Separate locator finding:** [Draft PR #1](https://github.com/darrinbaldwindev/GlobalShopCo-Headless/pull/1), `agent/chatgpt/m3-baseline` at `64c6bc37`, is an open code-bearing implementation proposal with a PHP plugin path. It is not canonical, approved, or merged; its `CLEAN` state must not be interpreted as authorization or readiness. H-01 is the static scope/provenance review task; no merge or code execution is authorized.
+
+**O-06 status:** Active for material locator changes only. This update does not authorize implementation, provider/hosting/Shopify/WordPress configuration, credentials, product/checkout action, test, deployment, release, or external integration.
