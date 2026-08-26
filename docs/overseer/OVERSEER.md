@@ -108,3 +108,50 @@ Reassess after Darrin records the control-plane hierarchy, the schedule is renew
 **Task O-02:** After Darrin records the decision, verify that a fresh reviewer can discover the policy hierarchy, record paths, allowed destination, expiry, and prohibited actions from repository evidence without chat history.
 
 **Status:** O-01 closed; O-02 active and blocked on Darrin’s policy-hierarchy decision.
+# Overseer O-02 — Policy Hierarchy and Log-Path Decision Package
+
+**Prepared:** 2026-08-26T14:19:29+10:00 (`Australia/Sydney`)
+**Prepared by:** Manus Overseer, read-only governance role
+**Decision authority:** Darrin
+**Decision status:** Pending
+
+## Decision requested
+
+> **Which policy hierarchy and record-location model should govern the two-Overseer portfolio operation until a separately authorized configuration change is approved?**
+
+This decision is strictly about **interpretation, precedence, and documentation of the current safe operating model**. It does not authorize configuration edits, connector changes, schedule changes, code execution, merges, deployments, credential access, external-service activation, or broadening of external communication.
+
+## Current verified evidence
+
+| Evidence | Current record | Implication |
+|---|---|---|
+| Repository control-plane policy | `Overseer` `main` at `3bb09fc689a815b27d0b866179c2fc8e12585575`; `MANUS-INTEGRATION.md` identifies the GitHub `Overseer` repository as authoritative for operating policy, scan protocols, finding semantics, reporting structure, and persistent supervisory state. | The repository is the durable policy/protocol reference. |
+| Static safety/configuration | `config/overseer.yml` sets `agent.mode: observe_report`; disables code writes, dependency updates, issue/PR creation, merges, deletions, history rewrites, secret access, and production changes; names `.overseer/OVERSEER-LOG.md` and `.overseer/PORTFOLIO.md`. | The static default is read-only reporting and limited mutation authority. |
+| Active project evidence logs | User-authorized project records currently reside in `docs/overseer/OVERSEER.md` on the relevant log branches, each append-only and path-limited. | Current portfolio history is discoverable at the project level but its path differs from static config. |
+| Shared cross-platform coordination log | `darrinbaldwindev/repo`, `agent/overseer/initial-scan`, `docs/overseer/OVERSEER.md`, now at [`25e2cc3`](https://github.com/darrinbaldwindev/repo/commit/25e2cc3e9eb4478c385b6440f875468962f16625) before this decision package. | The `repo` log is the shared task-chain and Manus–ChatGPT coordination index, not a substitute for source-specific evidence logs. |
+| Narrow communication exception | A standing owner authorization permits one deduplicated material-finding comment on the affected PR only through 22 September 2026; it does not authorize issue, email, Slack, broad external messaging, merge, deployment, or release approval. | A live, explicit owner instruction is narrower and more current than static configuration but must remain time-bounded and destination-specific. |
+
+## Alternatives
+
+| Option | Decision | Benefits | Constraints / risk |
+|---|---|---|---|
+| **A — Recommended** | **Adopt a documented three-layer hierarchy without editing configuration:** (1) `Overseer` repository policy and `observe_report` safety controls govern default authority; (2) each project’s `docs/overseer/OVERSEER.md` is the authorized append-only evidence/task log under current live owner instruction; (3) `repo/docs/overseer/OVERSEER.md` is the shared cross-platform task-chain index. Explicit live Darrin decisions control only their named scope and time window. | Reconciles the current evidence trail with static safety controls; preserves all history; makes the two-Overseer role split discoverable; avoids unnecessary migration/configuration work. | Does not change the static `.overseer` paths. Any future path/configuration migration requires separate owner authorization and a continuity plan. |
+| B | Treat `.overseer/OVERSEER-LOG.md` and `.overseer/PORTFOLIO.md` as immediately exclusive canonical locations and migrate/reconcile all existing logs. | Aligns active records directly to static configuration. | Requires a separately authorized repository-wide migration/change plan; risks breaking current cross-project continuity and exceeds the present read-only boundary. |
+| C | Leave path/precedence ambiguity unresolved; continue using the present records without a governing statement. | No immediate record work. | A future Overseer may select the wrong log path, overread the communication exception, or duplicate/fragment history. |
+
+## Recommended decision record
+
+```markdown
+Decision: Select Option A — record a three-layer policy hierarchy without configuration change.
+Authority: Darrin.
+Evidence: Overseer `main` `3bb09fc…`; `MANUS-INTEGRATION.md`; `config/overseer.yml`; current project `docs/overseer/OVERSEER.md` logs; shared `repo` log at `25e2cc3…`; narrow PR-only communication authorization through 2026-09-22.
+Approved scope: Documentation-only precedence statement; continued append-only project logs; shared `repo` task-chain coordination; narrowly bounded PR-only material notices while the stated authorization is active.
+Excluded scope: No configuration/path migration, schedule/connector change, code execution, broader communication, merge, deployment, provider activation, credential access, or production action.
+Verification: A fresh reviewer can identify the default safety policy, project log location, shared coordination index, live-exception scope/expiry, and prohibited actions from the records without chat history.
+Review trigger: Explicit owner change, communication-exception expiry, configuration/path migration proposal, or evidence of record conflict.
+Status: Pending Darrin selection.
+```
+
+## Required response
+
+Darrin may respond **A**, **B**, or **C**, with an explicit modification if needed. Until then, Option A is a recommendation only and the current safe append-only records remain operational under the existing user authorization.
