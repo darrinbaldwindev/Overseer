@@ -247,3 +247,21 @@ Darrin may respond **A**, **B**, or **C**, with an explicit modification if need
 **Reconciliation:** The existing owner-selected three-layer policy already supplies the baseline: `Overseer` provides default observe/report authority; each project’s `docs/overseer/OVERSEER.md` provides append-only project evidence/task records; shared `repo/docs/overseer/OVERSEER.md` provides cross-platform coordination. Issue #2 directionally reinforces the shared-log model but does not supersede this hierarchy or authorize a configuration, connector, schedule, branch/path migration, AgentOS event bus, or external notification change.
 
 **Task-chain impact:** **O-07 active — protocol reconciliation draft:** prepare, privately, a compact role/handoff/status/conflict matrix mapped to the existing three-layer policy and Issue #2. Preserve ChatGPT’s synthesis/reconciliation role and Manus’s evidence/static validation role; do not create a duplicate coordination system or alter the active schedule. Publication or policy modification requires a separate owner decision.
+
+## O-07 protocol reconciliation draft — closed; O-08 publication decision required — 2026-08-26
+
+**O-07 result:** A private cross-Overseer role/handoff/status/conflict reconciliation draft is prepared at `/home/ubuntu/overseer_scan/o07_cross_overseer_protocol_reconciliation_draft_2026-08-26.md`. It maps Issue #2 to the established three-layer policy, defines the requested status vocabulary and compact handoff fields, and treats the existing append-only logs as the event record without a new integration.
+
+**Validation:** The draft preserves `Overseer` `observe_report` default authority, per-project evidence logs, and shared `repo` coordination. It explicitly excludes an AgentOS control plane, webhook/event bus, background worker, schedule/connector/path/policy change, code/test/run, credential access, external communication, provider activation, deployment, release, merge, rebase, and ownership change. No repository was modified while drafting.
+
+**Status:** **O-07 CLOSED — private reconciliation artifact prepared and validated.**
+
+### O-08 — owner-gated protocol-publication decision
+
+**Recommended Option A:** Authorize a documentation-only append to `Overseer/docs/overseer/OVERSEER.md` and shared `repo/docs/overseer/OVERSEER.md` that publishes the exact validated protocol as an interpretation of the current three-layer policy. It must not change configuration, paths, schedule, connectors, implementation, or external communications.
+
+**Option B:** Publish only a concise shared-log handoff/status vocabulary; retain the full protocol as a private reference.
+
+**Option C:** Retain the protocol entirely as private guidance and defer all publication until Darrin selects a canonical policy-document destination.
+
+**No option is selected by this record.** O-08 is blocked pending Darrin’s explicit selection. H-03 remains independently blocked on Darrin naming the implementation-capable owner for the Headless reconciliation plan.
