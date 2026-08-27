@@ -1,13 +1,11 @@
-schema_version: 1
-last_discovery: 2026-08-26
+schema_version: 2
+last_discovery: 2026-08-27
 repositories:
   - id: agentos
     full_name: darrinbaldwindev/AgentOS
     default_branch: main
     visibility: private
     archived: false
-    last_scanned: 2026-08-26
-    last_commit: 66d443baaf2c5e449a2d7af9484124fd5b5a6d6db7ae
     priority: critical
     scan_status: scanned
   - id: globalshopco
@@ -15,8 +13,6 @@ repositories:
     default_branch: agent/overseer/initial-project-timeline
     visibility: public
     archived: false
-    last_scanned: 2026-08-26
-    last_commit: d4a0b3e6fc2be909792afe14f18c76577ade6b90
     priority: high
     scan_status: scanned
   - id: globalshopco-headless
@@ -24,8 +20,6 @@ repositories:
     default_branch: main
     visibility: private
     archived: false
-    last_scanned: 2026-08-26
-    last_commit: 646c5df5b51d927255d0b67aa806e5a48fbb6e15
     priority: high
     scan_status: inventory-only
   - id: franchise
@@ -33,8 +27,6 @@ repositories:
     default_branch: main
     visibility: private
     archived: false
-    last_scanned: 2026-08-26
-    last_commit: 043301c05b5b6e2eea429b4fe85feabb1b2fe868
     priority: high
     scan_status: scanned
   - id: amazon-affiliate
@@ -42,8 +34,6 @@ repositories:
     default_branch: agent/overseer/initial-project-timeline
     visibility: public
     archived: false
-    last_scanned: 2026-08-26
-    last_commit: d79844c5b9b92c7513132e13a55d18450f98ff66
     priority: medium
     scan_status: scanned
   - id: overseer
@@ -51,44 +41,59 @@ repositories:
     default_branch: main
     visibility: public
     archived: false
-    last_scanned: 2026-08-26
-    last_commit: e88fc192329b597d2c6352757e0981b4b46a95e7
-    priority: critical
-    scan_status: scanned
-  - id: portfolio-control
-    full_name: darrinbaldwindev/repo
-    default_branch: agent/overseer/initial-scan
-    visibility: private
-    archived: false
-    last_scanned: 2026-08-26
-    last_commit: f5181fa8413d7ef9aefb1fdc9df1631089e176a7
     priority: critical
     scan_status: scanned
   - id: manus-codebase
     full_name: darrinbaldwindev/manus
     default_branch: gemverse
     visibility: private
-    archived: false
-    last_scanned: 2026-08-26
     priority: informational
     scan_status: inventory-only
+  - id: gemverse
+    full_name: darrinbaldwindev/GemVerse
+    default_branch: gemverse
+    visibility: private
+    archived: false
+    priority: medium
+    scan_status: inventory-only
+  - id: myprime-delivery
+    full_name: darrinbaldwindev/MyPrimeDelivery
+    default_branch: agent/overseer/initial-project-timeline
+    visibility: public
+    archived: false
+    priority: medium
+    scan_status: inventory-only
+  - id: prs
+    full_name: darrinbaldwindev/PRS
+    default_branch: main
+    visibility: public
+    archived: false
+    priority: medium
+    scan_status: inventory-only
+  - id: ghost-kitchen
+    full_name: darrinbaldwindev/GhostKitchen
+    default_branch: main
+    visibility: public
+    archived: false
+    priority: medium
+    scan_status: inventory-only
 relationships:
-  - from: globalshopco-headless
-    to: globalshopco
-    type: related_to
-  - from: portfolio-control
-    to: all
-    type: manages
   - from: overseer
     to: all
-    type: manages
+    type: portfolio_supervisor
   - from: agentos
     to: overseer
     type: candidate_for_reuse
+  - from: globalshopco-headless
+    to: globalshopco
+    type: related_to
   - from: globalshopco
     to: globalshopco-headless
     type: related_to
 portfolio_events:
-  - date: 2026-08-26
-    event: full accessible GitHub inventory and portfolio scan initiated after discovery that project-level scans were incomplete
-    action: reconcile repository registry and include GlobalShopCo and GlobalShopCo-Headless in portfolio management
+  - date: 2026-08-27
+    event: repository rename reconciliation
+    action: replaced stale repo/portfolio-control identity with darrinbaldwindev/Overseer; preserved Overseer as the canonical portfolio/repo-control repository
+  - date: 2026-08-27
+    event: portfolio rediscovery
+    action: added currently accessible GemVerse, MyPrimeDelivery, PRS, and GhostKitchen repositories to the registry
