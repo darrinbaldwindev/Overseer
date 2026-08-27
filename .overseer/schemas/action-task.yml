@@ -1,0 +1,32 @@
+# Durable task envelope emitted from GPTChat reports.
+required:
+  - task_id
+  - source_report
+  - finding_id
+  - priority
+  - target_repo
+  - objective
+  - acceptance_criteria
+  - executor
+  - verifier
+  - evidence_required
+  - authority_boundary
+  - dependency_ids
+  - fallback_action
+  - status
+  - evidence
+  - attempts
+
+status:
+  values: [discovered, queued, delegated, executing, verification, verified, failed, blocked]
+  terminal: [verified]
+
+idempotency:
+  key: [source_report, finding_id, target_repo]
+  algorithm: sha256
+
+verification:
+  verified_requires_evidence: true
+
+ownership:
+  note: GPTChat creates/analyses findings; GPTChat Overseer owns delegation and coordination; agents execute delegated tasks.
