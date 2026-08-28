@@ -1,0 +1,11 @@
+schema_version: 1
+project_overseer: agentos
+status: waiting_for_schedule
+current_task: bootstrap-agentos-overseer-001
+current_task_status: queued
+last_response: null
+last_checkpoint: null
+last_evidence: null
+blocked_reason: null
+attempts: 0
+next_action: read INBOX.md on scheduled wake, execute queued task, write response and checkpoint
