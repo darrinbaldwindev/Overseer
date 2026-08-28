@@ -1,11 +1,11 @@
 schema_version: 1
 project_overseer: globalshopco
-status: waiting_for_schedule
+status: awaiting_verification
 current_task: bootstrap-globalshopco-overseer-001
-current_task_status: queued
-last_response: null
-last_checkpoint: null
-last_evidence: null
-blocked_reason: null
-attempts: 0
-next_action: read INBOX.md on scheduled wake, execute queued task, write response and checkpoint
+current_task_status: checkpointed
+last_response: "Heartbeat executed: inspected GlobalShopCo branch agent/overseer/initial-project-timeline tree and identified architecture, catalogue, overseer, and research artifacts."
+last_checkpoint: "2026-08-28 heartbeat 15:15 +1000"
+last_evidence: "tree 413568df4ae59513b12661e27f7dc03788f6024e; docs/architecture/SHOPIFY_HEADLESS_VERTICAL_SLICE.md; docs/overseer/OVERSEER_PROTOCOL.md; docs/research/M4.1_HOME_ORGANISATION_BATCH_A_CWS_2026-08-28.md"
+blocked_reason: "Root README fetch returned Not Found; repository tree was accessible and supplied sufficient read-only evidence for the requested high-level state report."
+attempts: 1
+next_action: "GPTChat Overseer verify checkpoint; next worker assignment: reconcile GlobalShopCo current branch state against latest project/overseer protocol and run available validation"
