@@ -23,13 +23,18 @@ The existing shared GPTChat/Manus communication log remains the canonical record
 6. GPTChat Overseer verifies evidence before treating work as complete and then assigns the next appropriate task.
 7. Project Overseers and sub-agents follow the same basic log + schedule + execute + respond pattern within their own scopes.
 
-## Current Test Handoff
+## Active Direct Worker Tasks
 
-TEST-002 is the next direct Manus worker task arising from the successful GlobalShopCo Project Overseer TEST-001 chain.
-
-Objective: perform an evidence-backed GlobalShopCo baseline/architecture audit. Inventory repository structure, identify application entry points/configuration, document Shopify/WordPress integration assumptions, identify missing implementation for the first usable vertical slice, and return evidence-backed recommendations. No target-repository writes unless explicitly authorised.
+### TEST-002 — GlobalShopCo
+Objective: perform an evidence-backed GlobalShopCo baseline/architecture audit. Inventory repository structure, identify application entry points/configuration, document Shopify/WordPress integration assumptions, identify missing implementation required for the first vertical slice, and return evidence-backed recommendations. No target-repository writes unless explicitly authorised.
 
 Acceptance: Manus must report status, work performed, evidence, findings, blockers, and recommended next task. GPTChat Overseer must independently verify the evidence before marking VERIFIED.
+
+### TEST-003 — AgentOS
+Assigned by GPTChat Overseer on 2026-08-28.
+Objective: execute `node --test tests/**/*.test.mjs` in `darrinbaldwindev/AgentOS` using an execution-capable worker and return concrete command/result evidence, including pass/fail counts and relevant failures.
+Constraints: no production mutation, no secrets, no dependency changes or deployment. If execution capability is unavailable, record the exact capability boundary and checkpoint rather than claiming completion.
+Acceptance: structured status, executor, command, evidence, findings, blockers, and checkpoint/resume information. GPTChat Overseer independently verifies.
 
 ## Authority Boundary
 
