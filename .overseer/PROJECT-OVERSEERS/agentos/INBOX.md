@@ -2,34 +2,26 @@
 
 ## Current task
 
-**Task ID:** bootstrap-agentos-overseer-001  
-**Status:** AWAITING_VERIFICATION  
+**Task ID:** TEST-003  
+**Status:** ASSIGNED_TO_MANUS  
 **Assigned by:** GPTChat Overseer  
-**Assigned at:** 2026-08-28  
+**Assigned at:** 2026-08-28
 
 ### Objective
-Confirm that this Project Overseer can consume a durable task from GitHub, execute it on its scheduled wake cycle, and return a durable response.
+Execute the AgentOS test suite using an execution-capable worker and return concrete evidence, while preserving the Project Overseer checkpoint.
 
-### Acceptance criteria
-- Read this inbox on the next scheduled cycle.
-- Acknowledge the task.
-- Inspect the AgentOS repository at `darrinbaldwindev/AgentOS`.
-- Report the current repository health/state at a high level.
-- Record evidence (commit/ref or file paths inspected).
-- Record any permission/tool blocker explicitly.
-- Write the response back to this inbox and update `STATE.yml`.
-- Do not claim VERIFIED without evidence.
+### Worker
+Manus (direct worker assignment from GPTChat Overseer)
 
-### Authority
-Observe/report only. Do not merge, delete, rewrite history, expose secrets, or change production systems.
+### Required work
+1. Access `darrinbaldwindev/AgentOS`.
+2. Run the repository's declared test command: `node --test tests/**/*.test.mjs`.
+3. Capture command/result evidence, including pass/fail counts and relevant failures.
+4. Do not modify production systems or expose secrets.
+5. If execution capability is unavailable, record the exact boundary and checkpoint instead of claiming completion.
 
-## Response log
+### Acceptance
+Return task_id, status, executor, command executed, evidence, findings, blockers, and checkpoint/resume information. GPTChat Overseer independently verifies the result.
 
-### 2026-08-28 heartbeat
-- **ACKNOWLEDGED:** `bootstrap-agentos-overseer-001`
-- **EXECUTED:** inspected AgentOS `README.md` and `package.json`.
-- **Evidence:** README commit `478842ffdaa261934a2165491e5b0bad7ec7adbc`; package.json blob `94a61d0ac028d7bcc6a83a64ee8f15e5c6a8177d`.
-- **Observed state:** package is private, ESM, and exposes `node --test tests/**/*.test.mjs` as its test command.
-- **Blocker:** no execution runtime is exposed through the current GitHub interface, so the test suite was not claimed as executed.
-- **Checkpoint:** persisted to `STATE.yml`; awaiting parent verification.
-- **Next worker:** run the AgentOS test suite with an execution-capable worker and return concrete test evidence.
+## Parent verification
+Bootstrap evidence independently verified by GPTChat Overseer against AgentOS README SHA `478842ffdaa261934a2165491e5b0bad7ec7adbc` and package.json SHA `94a61d0ac028d7bcc6a83a64ee8f15e5c6a8177d`.
