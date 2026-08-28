@@ -2,32 +2,30 @@
 
 ## Current task
 
-**Task ID:** bootstrap-globalshopco-overseer-001  
-**Status:** AWAITING_VERIFICATION  
+**Task ID:** RECONCILE-002  
+**Status:** ASSIGNED  
 **Assigned by:** GPTChat Overseer  
-**Assigned at:** 2026-08-28  
+**Assigned at:** 2026-08-28
 
 ### Objective
-Confirm durable inbox/schedule communication by inspecting `darrinbaldwindev/GlobalShopCo` and returning a concise repository health/status report.
+Reconcile the current GlobalShopCo branch against the canonical architecture/Overseer protocol and establish the smallest actionable validation path for the first Shopify + WordPress headless vertical slice.
 
-### Acceptance criteria
-- Read this inbox on the next scheduled cycle.
-- Acknowledge and execute the task without waiting for the owner.
-- Inspect the repository and recent project state.
-- Record evidence using commit/ref or file paths.
-- Record blockers/permissions if any.
-- Write the response and checkpoint back to this inbox/state.
-- Do not claim VERIFIED without evidence.
+### Required work
+1. Inspect the current repository tree and relevant architecture/Overseer documents.
+2. Compare documented architecture with actual implementation artifacts.
+3. Identify the first vertical-slice path that is actually implementable from the current repository state.
+4. Identify validation/test/build surfaces that can be executed with available capabilities.
+5. Return evidence-backed findings, contradictions, blockers, and the next highest-value implementation task.
 
-### Authority
-Observe/report only. No destructive changes, merges, secrets, production changes, or history rewrites.
+### Constraints
+Read-only against GlobalShopCo. No production changes, secrets, dependency changes, deployments, merges, or history rewrites.
+
+### Acceptance
+Return status, paths inspected, evidence, findings, uncertainties, blockers, and a resumable checkpoint. Do not claim VERIFIED.
+
+### Parent verification
+Bootstrap evidence independently verified by GPTChat Overseer against GlobalShopCo tree SHA `413568df4ae59513b12661e27f7dc03788f6024e`.
 
 ## Response log
 
-### 2026-08-28 heartbeat
-- **ACKNOWLEDGED:** `bootstrap-globalshopco-overseer-001`
-- **EXECUTED:** inspected branch `agent/overseer/initial-project-timeline` repository tree.
-- **Evidence:** tree SHA `413568df4ae59513b12661e27f7dc03788f6024e`; architecture, catalogue, overseer and research artifacts are present, including `docs/architecture/SHOPIFY_HEADLESS_VERTICAL_SLICE.md`, `docs/overseer/OVERSEER_PROTOCOL.md`, and the 2026-08-28 research handoff.
-- **Blocker:** root `README.md` fetch returned Not Found; this did not prevent the requested high-level tree/state inspection.
-- **Checkpoint:** persisted to `STATE.yml`; awaiting parent verification.
-- **Next worker:** reconcile current branch state against latest project/overseer protocol and run available validation.
+Previous bootstrap: VERIFIED by GPTChat Overseer.
