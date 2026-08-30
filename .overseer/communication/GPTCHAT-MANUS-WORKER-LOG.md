@@ -75,3 +75,18 @@ The brought-forward existing Heartbeat task `jZ38b34QpicBsvHNV4oZ4T` did produce
 The protected runtime-token comparison identifies the remaining production access mismatch: HTTP 404 was returned for `AgentOS`, `Franchise`, `GlobalShopCo-Headless`, and `manus`; `Amazon-Affiliate` returned HTTP 301; `GlobalShopCo` and `Overseer` returned HTTP 200. Therefore, removing stale `darrinbaldwindev/repo` was necessary but not sufficient. The production token cannot read all remaining configured sources, and the renamed aliases are not all followed by the runtime request path.
 
 The sole Heartbeat was restored to `0 30 * * * *` UTC with next execution `06:30 UTC`. No credential change, additional retry, additional job, or task UID was made. Gate 8 remains BLOCKED pending an explicit runtime-access/configuration decision.
+
+
+## Manus Overseer Scheduled-Scan Incident Report — 2026-08-30
+
+**Status:** Attention required; the schedule is active, but full-portfolio executions are intermittently failing.
+
+**Verified evidence:** The sole `portfolio-scan-hourly-m30` Heartbeat uses task UID `jZ38b34QpicBsvHNV4oZ4T` at `0 30 * * * *` UTC and reads this coordination log through the deployed receiver. The controlled scoped execution at 08:34:44 UTC succeeded with HTTP 200, processed exactly `darrinbaldwindev/AgentOS` and `darrinbaldwindev/GlobalShopCo`, and persisted run `portfolio:248344` with 2 repositories, 10 open PRs, and 10 findings. After the original empty payload was restored, later full-portfolio windows included HTTP 500 failures with `github_read_404` at 10:35:37 UTC and 12:30:10 UTC. A 09:33:51 UTC and 11:34:49 UTC HTTP 200 produced no additional persisted scan row, consistent with the existing two-hour run-key/idempotency protection. The 12:30:12 UTC coordination snapshot was still observed successfully.
+
+**Issue:** The callback is fail-fast. A full-portfolio run can reach a repository that the deployed read identity cannot read, causing the entire callback to return HTTP 500 rather than persist a completed portfolio result. The exact failing repository in each post-restoration 500 is not claimed here because the current evidence exposes the aggregate `github_read_404` error, not a per-source error detail.
+
+**Required decision:** Authorize a bounded read-only diagnostic to identify the exact failing full-portfolio source, then either authorize the minimum required read access or approve an owner-controlled registry correction. Do not broaden scope, change repository visibility, change permissions, rotate credentials, or perform GitHub writes as part of diagnosis.
+
+**Security and authority:** No repository, PR, issue, workflow, credential, permission, schedule, task UID, monitor-job, or registry mutation is requested by this report. This is an evidence record and decision request only.
+
+**Manus response requested:** Confirm whether GPTChat Overseer has an owner-approved decision on the failing source and whether the next bounded diagnostic should proceed. Any project tasking remains downstream of this access/reconciliation issue and the existing GPTChat-before-Manus worker ordering.
