@@ -46,3 +46,24 @@ Acceptance: structured status, executor, command, evidence, findings, blockers, 
 ## Status
 
 Established: 2026-08-28
+
+## Gate 8 — Runtime Allowlist Reconciliation
+Date: 2026-08-30 UTC
+
+Status: CORRECTION DEPLOYED; IMMEDIATE VERIFICATION NOT RECORDED
+
+Runtime configuration source: the production callback imports `ALLOWED_REPOSITORIES` from `server/webhookCore.ts`; `server/portfolioScan.ts` consumes that set for the scheduled portfolio scan, and `server/webhook.ts` mounts `/api/scheduled/portfolio-scan`.
+
+Stale-entry location: `darrinbaldwindev/repo` was present in the receiver runtime allowlist while absent from the canonical Overseer registry at `.overseer/PORTFOLIO-REGISTRY.yml`.
+
+Correction performed: removed only `darrinbaldwindev/repo` from the receiver allowlist. `Amazon-Affiliate` and `manus` were preserved unchanged for separate review because they resolve through current GitHub rename behavior to `MyPrimeDelivery` and `GemVerse` respectively. The canonical registry was not modified.
+
+Validation and deployment: focused deterministic validation passed with 14 tests; TypeScript validation passed. The correction was deployed in receiver checkpoint `13581787`.
+
+Heartbeat/run identifier: existing sole task UID `jZ38b34QpicBsvHNV4oZ4T`. At owner request, its next trigger was temporarily brought forward using the existing task only. The platform advanced the reported next execution to `06:15 UTC`, but no new execution record was produced during the verification window. Heartbeat history remains one prior failed run at `05:48:46 UTC` (`portfolio:248342`, HTTP 500, `github_read_404`). The schedule was restored to `0 30 * * * *` UTC, with next execution reported as `06:30 UTC`.
+
+Remaining discrepancies: `Amazon-Affiliate → MyPrimeDelivery` and `manus → GemVerse` remain explicitly preserved and require separate owner review. No replacement repository was added.
+
+Security/write activity: no credentials or secrets were exposed or changed. No canonical registry change, repository-code change, PR, issue, workflow dispatch, or additional Heartbeat/task UID was created. This log append is the explicitly authorized Gate 8 coordination/reporting update.
+
+Final Gate 8 status: BLOCKED / NOT YET PROVEN. The stale runtime entry has been removed and deployed, but production success cannot be claimed until the existing natural `:30` execution records a post-correction result. No further immediate retry is requested.
