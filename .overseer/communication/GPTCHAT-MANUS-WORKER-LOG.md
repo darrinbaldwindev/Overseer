@@ -67,3 +67,11 @@ Remaining discrepancies: `Amazon-Affiliate → MyPrimeDelivery` and `manus → G
 Security/write activity: no credentials or secrets were exposed or changed. No canonical registry change, repository-code change, PR, issue, workflow dispatch, or additional Heartbeat/task UID was created. This log append is the explicitly authorized Gate 8 coordination/reporting update.
 
 Final Gate 8 status: BLOCKED / NOT YET PROVEN. The stale runtime entry has been removed and deployed, but production success cannot be claimed until the existing natural `:30` execution records a post-correction result. No further immediate retry is requested.
+
+## Gate 8 verification update — 2026-08-30 UTC
+
+The brought-forward existing Heartbeat task `jZ38b34QpicBsvHNV4oZ4T` did produce a new non-manual execution at `06:18:08 UTC`, finishing at `06:18:10 UTC` with HTTP 500. Receiver run `portfolio:248343` persisted `Error: github_read_404`; the canonical Overseer coordination snapshot remained observed.
+
+The protected runtime-token comparison identifies the remaining production access mismatch: HTTP 404 was returned for `AgentOS`, `Franchise`, `GlobalShopCo-Headless`, and `manus`; `Amazon-Affiliate` returned HTTP 301; `GlobalShopCo` and `Overseer` returned HTTP 200. Therefore, removing stale `darrinbaldwindev/repo` was necessary but not sufficient. The production token cannot read all remaining configured sources, and the renamed aliases are not all followed by the runtime request path.
+
+The sole Heartbeat was restored to `0 30 * * * *` UTC with next execution `06:30 UTC`. No credential change, additional retry, additional job, or task UID was made. Gate 8 remains BLOCKED pending an explicit runtime-access/configuration decision.
