@@ -569,3 +569,56 @@ No credentials, permissions, schedules, Heartbeat configuration, repositories, w
 [3] [Manus API v2 agents overview](https://open.manus.ai/docs/v2/agents-overview)  
 [4] [Manus API v2 webhooks overview](https://open.manus.ai/docs/v2/webhooks-overview)  
 [5] [Manus API v2 Open App capability matrix](https://open.manus.ai/docs/v2/open-app)
+
+
+## CORE-006 — Local Worker Execution Bridge — 2026-08-31
+
+**To:** CHATGPT Overseer  
+**From:** Manus  
+**STATUS:** COMPLETED (local proving bridge; canonical push not performed)  
+**Task:** CORE-006  
+**Repository:** `darrinbaldwindev/AgentOS`  
+**Base commit:** `bd8a7531de43f46aae8833ac703ac4fa861eda04`  
+**Result commit:** `06dc316c54d1163312698e9655bfe79e0361d542`  
+**Result pushed:** NO; local fresh-snapshot result only.  
+**Runtime entrypoint:** `src/dispatch/local-host.mjs` / `createLocalExecutionHost({ root }).runOnce()`  
+**Execution host:** controlled local Node.js execution host in a fresh checkout  
+**Worker:** `agentos:deterministic-skill-agent`  
+**Capability:** `repository_read`, `documentation`, `deterministic_validation` (worker fixture grants only repository_read and documentation)  
+**Transport:** local repository-backed dispatch; no external provider or paid API  
+**Transaction/task ID:** `agentos-e2e-001` / mission `core-006-local-bridge`
+
+### Lifecycle and execution evidence
+
+The single isolated fixture was copied to a temporary execution root and consumed by the real `pollDispatch` → `runWithContinuation` → `runNextTask` → `claimNextTask` path. The existing authority policy accepted issuer `agentos:overseer`, receiver `agentos:deterministic-skill-agent`, and the granted read/documentation capabilities. The worker contract was invoked and returned a correlated response containing the exact task ID, worker ID, non-destructive GlobalShopCo validation result, evidence, next action, and creation timestamp.
+
+The task file was persisted through the local repository-backed adapter at `.agentos/dispatch/tasks/agentos-e2e-001.json`. The append-only audit file `.agentos/dispatch/audit/events.jsonl` recorded the observed sequence `claimed → working → verification → completed → verified`. The host reloaded the completed task, checked non-empty persisted evidence, and then appended the independent `verified` event. Completion was not treated as verification; no scheduler or Heartbeat event was involved.
+
+**Actual worker execution evidenced: YES.** The focused runtime test passed while asserting worker ID, task correlation, successful worker output, persisted completed-task evidence, and the five audit events.  
+**Verification:** YES, independent post-persistence check passed.  
+**Production impact:** NONE.
+
+### Tests
+
+Focused command:
+
+```bash
+node --test tests/local-host.test.mjs tests/dispatch-runner.test.mjs tests/dispatch-poll.test.mjs
+```
+
+Result: **4 passed, 0 failed**.
+
+Full command:
+
+```bash
+npm test
+```
+
+Result: **171 passed, 3 failed**. The three failures are unrelated to CORE-006: one fallback UI static test and two existing Overseer session eligibility/gate expectation tests. No production or external-provider path was exercised.
+
+### Changes made
+
+Added `src/dispatch/local-host.mjs`, `tests/local-host.test.mjs`, and `docs/CORE006_LOCAL_EXECUTION_BRIDGE.md`. Updated only the isolated fresh-snapshot fixture to supply the dispatch contract’s required `mission_id`; canonical remote AgentOS was not modified. The bridge reuses existing queue polling, authority validation, atomic/optimistic persistence, deterministic worker, lifecycle transitions, and append-only evidence semantics. No second worker architecture was created.
+
+**Remaining blocker:** Canonical AgentOS still needs owner review of the local result commit before any push or integration. The local bridge proves the installed-PC execution foundation, but it is not yet canonical or production-installed.  
+**Next recommended action:** owner review of `06dc316c54d1163312698e9655bfe79e0361d542`, then separately authorize canonical push/integration and a fresh checkout verification.
