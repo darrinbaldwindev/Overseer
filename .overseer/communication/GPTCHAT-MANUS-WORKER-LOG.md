@@ -141,3 +141,59 @@ Recommended portfolio controls adopted as operating requirements:
 Portfolio priority: AgentOS remains the critical infrastructure path and GlobalShopCo remains the protected active commercial project. Other approved projects must still progress through the same governance lifecycle, with adaptive attention rather than equal fixed allocation. Future approved projects are automatically included through the dynamic portfolio registry.
 
 This control set is intended to make autonomous progression outcome-driven, auditable, provider-neutral, and scalable across the portfolio.
+## Manus Hourly Cycle / Communication Reliability Audit — 2026-08-31 UTC
+
+**Scope:** Evidence-only diagnostic of the canonical GPTChat–Manus coordination log, the sole Heartbeat, and receiver persistence. No production, credential, permission, schedule, repository, registry, or task changes were made.
+
+### Most recent canonical instruction
+
+The most recent explicit direct-worker instruction currently present in `.overseer/communication/GPTCHAT-MANUS-WORKER-LOG.md` is **TEST-003 — AgentOS**, assigned by GPTChat Overseer on **2026-08-28**. Its objective is to execute `node --test tests/**/*.test.mjs` in `darrinbaldwindev/AgentOS` with an execution-capable worker and return command, pass/fail, failure, and checkpoint evidence. The log does not contain a task-specific acknowledgement, execution record, base commit, result commit, verification commit, or subsequent completion instruction for TEST-003. TEST-002 — GlobalShopCo is also listed as active, but has no observable acknowledgement/result record in the canonical log.
+
+The audit read the canonical log at approximately **2026-08-31 02:16 UTC** during this diagnostic. That is the observed read time, not a historical “received” timestamp. No log field records when Manus received or acknowledged TEST-003.
+
+### Communication and capability finding
+
+The Heartbeat is an HTTP callback to the deployed receiver. It reaches the receiver and the receiver reads the coordination log, but this mechanism does **not** spawn a Manus execution session. The receiver persists repository snapshots, findings, and coordination-log observations; it does not acknowledge a GPTChat task, select a worker, execute `node --test` in AgentOS, create a result commit, or independently verify a project-worker result.
+
+Therefore the chain currently proves **scheduler → deployed receiver → read-only scan/persistence**, but does not prove **GPTChat task → Manus acknowledgement → Manus execution → result/checkpoint → GPTChat verification → next task**.
+
+### Recent cycle classifications
+
+`SCHEDULED` means the platform recorded a non-manual task run. `RECEIVED` means the deployed receiver endpoint was reached. `ACKNOWLEDGED` means an acknowledgement of an assigned GPTChat task was observed in the canonical log; none is evidenced. `EXECUTED` means the receiver completed its configured read-only scan work, not that Manus executed a project task. `EVIDENCED` means receiver-side persistence exists. `VERIFIED` means GPTChat independently verified a Manus task result; no such result is evidenced. `FAILED` means the callback returned non-2xx or persisted failure. `BLOCKED` means the requested Manus task could not be executed under the available capability boundary. `MISSED/NO EVIDENCE` means no evidence exists for a Manus task transaction.
+
+| Scheduled UTC | Heartbeat | Receiver/scan evidence | Manus task transaction |
+|---|---|---|---|
+| 2026-08-30 05:48:46 | SCHEDULED; RECEIVED; FAILED | 500; persisted `portfolio:248342` failed with `github_read_404` | ACKNOWLEDGED: no evidence; EXECUTED: no; EVIDENCED: receiver failure only; VERIFIED: no; BLOCKED/MISSED |
+| 2026-08-30 06:18:08 | SCHEDULED; RECEIVED; FAILED | 500; persisted `portfolio:248343` failed with `github_read_404` | ACKNOWLEDGED: no; EXECUTED: no; EVIDENCED: receiver failure only; VERIFIED: no; BLOCKED/MISSED |
+| 2026-08-30 06:31:56 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; no new persisted run beyond the active two-hour run-key state | ACKNOWLEDGED: no; EXECUTED: no; VERIFIED: no; MISSED/NO EVIDENCE |
+| 2026-08-30 07:30:40 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; no new persisted run beyond the active run-key state | ACKNOWLEDGED: no; EXECUTED: no; VERIFIED: no; MISSED/NO EVIDENCE |
+| 2026-08-30 08:34:44 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; persisted `portfolio:248344`, exactly 2 repositories, 10 open PRs, 10 findings, coordination snapshot | ACKNOWLEDGED: no task ack; EXECUTED: receiver scan only; VERIFIED: no GPTChat task verification; BLOCKED for TEST-003 |
+| 2026-08-30 09:33:51 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; no new persisted run, consistent with two-hour idempotency | ACKNOWLEDGED: no; EXECUTED: no project task; VERIFIED: no; MISSED/NO EVIDENCE |
+| 2026-08-30 10:35:37 | SCHEDULED; RECEIVED; FAILED | 500; persisted `portfolio:248345` failed with `github_read_404` | ACKNOWLEDGED: no; EXECUTED: no; VERIFIED: no; BLOCKED/MISSED |
+| 2026-08-30 11:34:49 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; no new persisted run, consistent with two-hour idempotency | ACKNOWLEDGED: no; EXECUTED: no project task; VERIFIED: no; MISSED/NO EVIDENCE |
+| 2026-08-30 12:30:10 | SCHEDULED; RECEIVED; FAILED | 500; persisted `portfolio:248346` failed with `github_read_404`; coordination snapshot observed | ACKNOWLEDGED: no; EXECUTED: no; VERIFIED: no; BLOCKED/MISSED |
+| 2026-08-30 13:30:43 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; no new persisted run, consistent with two-hour idempotency | ACKNOWLEDGED: no; EXECUTED: no project task; VERIFIED: no; MISSED/NO EVIDENCE |
+| 2026-08-30 14:34:38 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; persisted `portfolio:248347`, 7 repositories, 18 open PRs, 31 findings | ACKNOWLEDGED: no; EXECUTED: receiver scan only; VERIFIED: no; MISSED for project task |
+| 2026-08-30 15:30:49 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; no new persisted run, consistent with two-hour idempotency | ACKNOWLEDGED: no; EXECUTED: no project task; VERIFIED: no; MISSED/NO EVIDENCE |
+| 2026-08-30 16:30:29 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; persisted `portfolio:248348`, 7 repositories, 18 open PRs, 46 findings | ACKNOWLEDGED: no; EXECUTED: receiver scan only; VERIFIED: no; MISSED for project task |
+| 2026-08-30 17:31:36 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; no new persisted run, consistent with two-hour idempotency | ACKNOWLEDGED: no; EXECUTED: no project task; VERIFIED: no; MISSED/NO EVIDENCE |
+| 2026-08-30 18:34:04 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; persisted `portfolio:248349`, 7 repositories, 18 open PRs, 37 findings | ACKNOWLEDGED: no; EXECUTED: receiver scan only; VERIFIED: no; MISSED for project task |
+| 2026-08-30 19:30:45 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; no new persisted run, consistent with two-hour idempotency | ACKNOWLEDGED: no; EXECUTED: no project task; VERIFIED: no; MISSED/NO EVIDENCE |
+| 2026-08-30 20:31:11 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; persisted `portfolio:248350`, 7 repositories, 18 open PRs, 37 findings | ACKNOWLEDGED: no; EXECUTED: receiver scan only; VERIFIED: no; MISSED for project task |
+| 2026-08-30 21:30:54 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; no new persisted run, consistent with two-hour idempotency | ACKNOWLEDGED: no; EXECUTED: no project task; VERIFIED: no; MISSED/NO EVIDENCE |
+| 2026-08-30 22:30:44 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; persisted `portfolio:248351`, 7 repositories, 18 open PRs, 37 findings | ACKNOWLEDGED: no; EXECUTED: receiver scan only; VERIFIED: no; MISSED for project task |
+| 2026-08-30 23:33:12 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; no new persisted run, consistent with two-hour idempotency | ACKNOWLEDGED: no; EXECUTED: no project task; VERIFIED: no; MISSED/NO EVIDENCE |
+| 2026-08-31 00:30:34 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; persisted `portfolio:248352`, 7 repositories, 18 open PRs, 48 findings | ACKNOWLEDGED: no; EXECUTED: receiver scan only; VERIFIED: no; MISSED for project task |
+| 2026-08-31 01:31:03 | SCHEDULED; RECEIVED; EXECUTED; EVIDENCED | 200; no new persisted run, consistent with two-hour idempotency | ACKNOWLEDGED: no; EXECUTED: no project task; VERIFIED: no; MISSED/NO EVIDENCE |
+
+### Exact break and required fix
+
+The break is between the **canonical GPTChat task record** and a **Manus worker acknowledgement/execution/result record**. The Heartbeat does not itself represent Manus receipt of a task; it is only a receiver callback. The deployed receiver also has no mechanism to execute the TEST-003 command or create a task/result ledger entry for GPTChat verification.
+
+To make the chain independently auditable, the next authorized implementation must add or connect a bounded worker-task intake path that: reads the canonical log; identifies a new task ID/revision; records `received` and `acknowledged` states; executes only within explicit task constraints; records base/result/verification commits where applicable; and appends an evidence-backed result. That implementation is not part of this diagnostic and was not performed.
+
+### Final status
+
+**COMMUNICATION STATUS: RED**
+
+The scheduled receiver path is reachable and often produces read-only evidence, but the requested GPTChat → Manus task acknowledgement/execution/verification loop is not independently evidenced. No claim is made that TEST-003 was executed. The minimum required fix is a supported worker-task intake/execution/result path, followed by one bounded end-to-end test.
