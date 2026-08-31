@@ -197,3 +197,53 @@ To make the chain independently auditable, the next authorized implementation mu
 **COMMUNICATION STATUS: RED**
 
 The scheduled receiver path is reachable and often produces read-only evidence, but the requested GPTChat → Manus task acknowledgement/execution/verification loop is not independently evidenced. No claim is made that TEST-003 was executed. The minimum required fix is a supported worker-task intake/execution/result path, followed by one bounded end-to-end test.
+
+
+## TEST-004 — Overseer Transaction / Communication Reliability Test — 2026-08-31
+
+**TEST ID:** TEST-004  
+**Worker:** Manus  
+**Repository:** `darrinbaldwindev/Overseer`  
+**Base commit:** `c46203337cb3e2cd812bc361fc0f8aa99ba77eee` (`main`, fresh canonical clone)  
+**Result commit:** `82e063cfae11450a2da7dddb87494b96a1c82eb3` (local fresh-snapshot commit; not pushed to canonical remote)  
+**Verification state:** Focused transaction contract verified locally; end-to-end GPTChat → Manus transaction remains unverified.
+
+### Commands and results
+
+1. `gh repo clone darrinbaldwindev/AgentOS <fresh-dir>/AgentOS -- --quiet` and `gh repo clone darrinbaldwindev/Overseer <fresh-dir>/Overseer -- --quiet` — PASS. Fresh snapshots established. AgentOS HEAD was `2f1146bdaa976b13ecc10684c68ec52d265909a9`; Overseer HEAD was `c46203337cb3e2cd812bc361fc0f8aa99ba77eee`; both clean on `main` and tracking `origin/main`.
+2. `PYTHONPATH=. pytest -q tests/test_orchestrator_contract.py` on base — initial collection issue without `PYTHONPATH`; with repository root supplied, 1 existing contract failed because the implementation returned a raw dictionary while the test required an auditable `.state` result (`1 failed, 2 passed`).
+3. Authorized transaction-scope fix applied locally: `src/orchestrator.py` now returns `TransactionOutcome`, exposes `SCHEDULED`, `RECEIVED`, `ACKNOWLEDGED`, `EXECUTING`, `COMPLETED`, `FAILED`, `BLOCKED`, `VERIFIED`, requires explicit evidence before completion, and keeps verification independent. The contract records `RECEIVED → ACKNOWLEDGED → EXECUTING → COMPLETED/VERIFIED`, and blocks missing-freshness, missing-commit, and missing-evidence cases.
+4. `PYTHONPATH=. pytest -q tests/test_orchestrator_contract.py` on result commit — **7 passed in 0.03s**.
+5. `PYTHONPATH=. pytest -q` on result commit — **36 passed, 2 failed**. The two failures are outside the authorized transaction scope: `tests/test_evidence.py::test_extract_evidence_from_tree` (dependency manifest/CI workflow extraction expectation) and `tests/test_portfolio_dry_run.py::test_portfolio_dry_run_composes_real_domain_layers` (expected evidence count). They were not changed.
+6. `git diff --check` — PASS. Final local result tree clean after commit.
+
+### Lifecycle and safety findings
+
+| State/control | Evidence-backed result |
+|---|---|
+| `SCHEDULED` | Explicit enum state exists; scheduler events remain outside the worker function and are not treated as worker execution. No scheduler-to-worker integration test exists in this repository. |
+| `RECEIVED` | Recorded when a fresh valid transaction enters the worker contract. |
+| `ACKNOWLEDGED` | Recorded separately after receipt. |
+| `EXECUTING` | Recorded immediately before the adapter executes. |
+| `COMPLETED` | Recorded only when execution returns explicit evidence and independent verification is false. |
+| `FAILED` | Recorded when the execution adapter raises. |
+| `BLOCKED` | Recorded for stale/missing base data and for execution results without explicit evidence. |
+| `VERIFIED` | Recorded only when the independent `verify` callback returns true after evidence exists. |
+
+The tests prove that scheduler firing is not automatically worker execution, execution is not automatically verification, stale or missing base commits block execution, and evidence-less results cannot be marked completed or verified. The original defect—recording a completion-like state but returning a raw result without auditable state—was fixed within the authorized transaction scope.
+
+### GPTChat → Manus chain
+
+The canonical log contains TEST-003 AgentOS assigned by GPTChat Overseer on 2026-08-28 and TEST-002 GlobalShopCo. The fresh log read found no task-specific Manus acknowledgement, execution command/result, base commit, result commit, verification commit, or subsequent completion instruction for either task. The Heartbeat history proves receiver callbacks and read-only scan persistence, but the Heartbeat is an HTTP callback and does not itself spawn a Manus worker transaction. Therefore the chain `task → acknowledgement → execution → result → verification` is **not yet end-to-end evidenced**.
+
+### Fixes made
+
+Only the local transaction-contract fix and its deterministic tests were made. No canonical repository push, merge, deployment, credentials, permissions, schedules, Heartbeats, registry entries, project repositories, PRs, issues, workflows, or external notifications were changed. The local result commit is available for owner review but is not represented as integrated into the canonical remote branch.
+
+### Remaining blockers and next recommended task
+
+The exact break remains the absence of a supported task-intake/result-ledger integration that connects canonical GPTChat instructions to the worker contract and records acknowledgement, execution, result evidence, and independent verification. The next recommended task is an owner-authorized, isolated integration test or adapter that consumes one named task ID, records the lifecycle against the fresh base commit, and appends its result to the canonical log; it must not merge, deploy, change credentials, or alter protected schedules without separate authorization.
+
+**COMMUNICATION STATUS: RED** — scheduler-to-receiver delivery is evidenced, but GPTChat task acknowledgement/execution/result/verification is not independently evidenced.
+
+**TRANSACTION STATUS: PARTIALLY VERIFIED** — the local transaction contract is verified by 7/7 focused tests and the safety gates are observable; the end-to-end GPTChat-to-Manus transaction is not verified, and the complete suite has two unrelated failures.
