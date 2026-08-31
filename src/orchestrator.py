@@ -1,10 +1,13 @@
-"""Small deterministic orchestration contract for the Manus runtime.
+"""Deterministic orchestration and evidence-gated transaction contracts.
 
-The Manus agent supplies GitHub adapters and persistence implementations. This
-module defines the order in which those capabilities are invoked.
+The worker supplies repository discovery, execution and persistence adapters.
+This module defines the safety-critical order in which those capabilities may
+be used. It deliberately does not grant autonomous permission to change
+credentials, permissions, protected schedules, or other owner-controlled state.
 """
 
 from dataclasses import dataclass
+from enum import Enum
 from typing import Callable, Iterable, Any
 
 
@@ -15,6 +18,16 @@ class ScanResult:
     evidence_count: int
     finding_count: int
     health_score: float | None
+
+
+class TransactionState(str, Enum):
+    ASSIGNED = "assigned"
+    ACKNOWLEDGED = "acknowledged"
+    EXECUTING = "executing"
+    COMPLETED_UNVERIFIED = "completed_unverified"
+    VERIFIED = "verified"
+    FAILED = "failed"
+    BLOCKED = "blocked"
 
 
 def run_repository_scan(
@@ -30,3 +43,41 @@ def run_repository_scan(
     findings = list(analyse(evidence))
     health = score(findings)
     return ScanResult(repository, "complete", len(evidence), len(findings), health)
+
+
+def run_delegated_transaction(
+    *,
+    task_id: str,
+    repository: str,
+    worker: str,
+    base_snapshot: Any,
+    execute: Callable[[], Any],
+    verify: Callable[[Any], bool],
+    record: Callable[[TransactionState], None],
+) -> Any:
+    """Run a worker transaction only from a fresh base and never overclaim verification.
+
+    The caller owns the actual repository/provider adapters. This contract makes
+    the lifecycle observable and prevents a successful execution from being
+    treated as VERIFIED until an independent verifier returns true.
+    """
+    del task_id, repository, worker  # retained as audit context at adapter level
+    if not isinstance(base_snapshot, dict) or not base_snapshot.get("fresh"):
+        raise ValueError("delegated transaction requires a fresh repository snapshot")
+    if not base_snapshot.get("commit"):
+        raise ValueError("delegated transaction requires a base commit")
+
+    record(TransactionState.ACKNOWLEDGED)
+    record(TransactionState.EXECUTING)
+    try:
+        result = execute()
+    except Exception:
+        record(TransactionState.FAILED)
+        raise
+
+    if verify(result):
+        record(TransactionState.VERIFIED)
+        return result
+
+    record(TransactionState.COMPLETED_UNVERIFIED)
+    return result
