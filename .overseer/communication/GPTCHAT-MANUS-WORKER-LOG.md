@@ -247,3 +247,45 @@ The exact break remains the absence of a supported task-intake/result-ledger int
 **COMMUNICATION STATUS: RED** — scheduler-to-receiver delivery is evidenced, but GPTChat task acknowledgement/execution/result/verification is not independently evidenced.
 
 **TRANSACTION STATUS: PARTIALLY VERIFIED** — the local transaction contract is verified by 7/7 focused tests and the safety gates are observable; the end-to-end GPTChat-to-Manus transaction is not verified, and the complete suite has two unrelated failures.
+
+
+## TEST-005 — Durable Intake / Result-Ledger Integration — 2026-08-31
+
+**TEST ID:** TEST-005  
+**Repository:** `darrinbaldwindev/Overseer`  
+**Base commit:** `9a1bdfc94f7c63e71768a4075c76c9fe7a229ddc` on fresh `main` snapshot  
+**Worker:** Manus  
+**Task/transaction ID:** `TEST-005` / focused fixtures `TX-001`, `TX-FAILED`, `TX-BLOCKED`, `TX-SILENT`, `TX-DUP`, `TX-EVIDENCE`, `TX-RECOVER`  
+**Result commit:** `453df1512624a43c2d04e49288557118f125f5c3`  
+**Pushed:** No. Local fresh-snapshot commit only; canonical remote code was not pushed or merged.
+
+### Implementation changes
+
+Added `src/state/transaction_ledger.py`, a provider-neutral durable JSON ledger with atomic replacement persistence, stable transaction identity and delivery idempotency, repository/branch/base-commit/task/worker metadata, append-only transition events, result commit, evidence, recovery, and scheduler-event separation. The normal auditable lifecycle is `task_created → dispatched → received → acknowledged → executing → completed → evidence_recorded → verified`. Failed execution, stale/mismatched base, missing acknowledgement, and evidence-less results remain distinct states and are not rewritten as successful.
+
+The previous transaction contract in `src/orchestrator.py` was also corrected within the authorized transaction scope so it returns an auditable `TransactionOutcome`, exposes the required lifecycle states, blocks stale/missing base data, requires evidence before completion/verification, and keeps independent verification separate from execution.
+
+### Exact commands and test results
+
+- Fresh snapshots: `gh repo clone darrinbaldwindev/AgentOS ...` and `gh repo clone darrinbaldwindev/Overseer ...`; AgentOS HEAD `2f1146bdaa976b13ecc10684c68ec52d265909a9`, Overseer HEAD `9a1bdfc94f7c63e71768a4075c76c9fe7a229ddc`; both clean `main` snapshots.
+- `PYTHONPATH=. pytest -q tests/test_transaction_ledger.py tests/test_action_queue.py tests/test_orchestrator_contract.py` — **21 passed**.
+- `PYTHONPATH=. pytest -q` — **46 passed, 2 failed**. The two known unrelated failures are `tests/test_evidence.py::test_extract_evidence_from_tree` (dependency-manifest/CI-workflow extraction expectations) and `tests/test_portfolio_dry_run.py::test_portfolio_dry_run_composes_real_domain_layers` (evidence count expectation). They are outside this ledger scope and were not changed.
+- `git diff --check` — PASS; final local result tree clean.
+
+### Concrete ledger evidence
+
+The focused tests prove: successful full lifecycle through independent verification; failed transaction persistence; blocked stale-base mismatch; missing acknowledgement distinct from execution failure; duplicate delivery returns the existing record and leaves one transaction; completion/evidence recording/verification require non-empty evidence; result commit is retained; a new ledger instance recovers persisted state; and scheduler events create no worker transaction. The ledger enum distinguishes scheduled, task-created, dispatched, received, acknowledged, executing, completed, failed, blocked, acknowledgement-missing, evidence-recorded, and verified states.
+
+### End-to-end and verification status
+
+This is a durable ledger implementation and deterministic contract test, not an end-to-end GPTChat-to-Manus runtime integration. The canonical GPTChat log contains TEST-003/TEST-002 task assignments but no observable Manus intake acknowledgement, worker execution, result commit, or independent verification record. The Heartbeat remains a receiver callback and is not counted as worker execution. Therefore no end-to-end transaction is claimed.
+
+Only the isolated local Overseer result commit and tests were changed. No credentials, permissions, protected schedules, Heartbeats, project repositories, PRs, issues, workflows, or production settings were changed. The canonical Worker Log was updated separately with this report; the code result remains unpushed pending owner review.
+
+### Remaining blockers and next task
+
+The implementation is not yet connected to the live GPTChat-to-Manus dispatch path, and the full suite retains two unrelated failures. The next task is an owner-authorized isolated adapter test that consumes one named canonical-log task, creates one durable ledger record, invokes one provider-neutral worker adapter, records result evidence, and performs independent verification without merging/pushing/deploying or changing protected settings.
+
+**COMMUNICATION STATUS: RED** — no end-to-end task acknowledgement/execution/result/verification chain is observable.  
+**TRANSACTION STATUS: VERIFIED** — the isolated transaction contract and durable ledger behavior pass the focused 21-test suite; this does not imply end-to-end integration.  
+**LEDGER STATUS: VERIFIED** — durable persistence, append-only events, idempotency, recovery, evidence gates, and scheduler separation pass focused tests.
