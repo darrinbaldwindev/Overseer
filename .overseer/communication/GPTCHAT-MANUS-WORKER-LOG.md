@@ -90,7 +90,7 @@ Final Gate 8 status: BLOCKED / NOT YET PROVEN. The stale runtime entry has been 
 
 ## Gate 8 verification update — 2026-08-30 UTC
 
-The brought-forward existing Heartbeat task `jZ38b34QpicBsvHNV4oZ4T` did produce a new non-manual execution at `06:18:08 UTC`, finishing at `06:18:10 UTC` with HTTP 500. Receiver run `portfolio:248343` persisted `Error: github_read_404`; the canonical Overseer coordination snapshot remained observed.
+The brought-forward existing Heartbeat task `jZ38b34QpicBsvHNV4oZ4T` did produce a new non-manual execution at `06:18:08 UTC`, finishing at `06:18:10 UTC` with HTTP 500. Receiver run `portfolio:248343` persisted `Error: github_read_404`; the canonical Overseer coordination snapshot remained observed. 
 
 The protected runtime-token comparison identifies the remaining production access mismatch: HTTP 404 was returned for `AgentOS`, `Franchise`, `GlobalShopCo-Headless`, and `manus`; `Amazon-Affiliate` returned HTTP 301; `GlobalShopCo` and `Overseer` returned HTTP 200. Therefore, removing stale `darrinbaldwindev/repo` was necessary but not sufficient. The production token cannot read all remaining configured sources, and the renamed aliases are not all followed by the runtime request path.
 
@@ -120,3 +120,24 @@ Owner direction: No Overseer should work from a stale repository. Every Overseer
 Operational requirement: record the current commit/branch and, where applicable, the worker base commit, result commit, and verification state. Workers must synchronize their local workspace to the current approved GitHub state before execution. Cached scans, old reports, or prior conversation state are not sufficient substitutes for a fresh repository check.
 
 This rule applies recursively to Project Overseers and sub-agents and is now a core worker-governance invariant for the GPTChat ↔ Manus operating model.
+
+## Governance Update — Portfolio Progression Controls
+
+Date: 2026-08-31 UTC
+
+Owner direction: All approved projects are to be treated as real progression workstreams, not passive monitoring targets. Each project should have a measurable current milestone, next milestone, acceptance criteria, evidence state, and progression/health status.
+
+Recommended portfolio controls adopted as operating requirements:
+
+1. **Measurable Definition of Progress:** every project tracks current milestone, next milestone, acceptance criteria, evidence, and completion/progression status.
+2. **Project Health:** report each project as Healthy, Attention, Blocked, or Dormant, with last meaningful progress, blocker, and next action.
+3. **Stale-State Detection:** if repository state changes between task assignment and worker completion, the Overseer must determine whether the task/result remains valid before acceptance.
+4. **Task Ledger:** delegated work should carry a unique task ID and record assigned, acknowledged, executing, completed/failed/blocked, verified state plus base/result/verification commit where applicable.
+5. **Worker Escalation:** when a worker cannot complete a task, the Project Overseer should evaluate other approved workers by capability and authority before escalating to the owner.
+6. **Local Workspace Synchronization:** workers should synchronize their local workspace from canonical GitHub before execution; GitHub remains the canonical source of truth.
+7. **No Busywork:** if no useful authorised work exists, record that state rather than manufacturing activity.
+8. **Cross-Project Learning:** reusable skills, failures, testing patterns, provider limitations, and successful workflows should be captured for reuse in AgentOS.
+
+Portfolio priority: AgentOS remains the critical infrastructure path and GlobalShopCo remains the protected active commercial project. Other approved projects must still progress through the same governance lifecycle, with adaptive attention rather than equal fixed allocation. Future approved projects are automatically included through the dynamic portfolio registry.
+
+This control set is intended to make autonomous progression outcome-driven, auditable, provider-neutral, and scalable across the portfolio.
