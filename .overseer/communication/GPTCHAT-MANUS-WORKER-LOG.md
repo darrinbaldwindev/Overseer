@@ -342,3 +342,51 @@ The controlled local provider-neutral worker transaction is end-to-end through t
 ### Remaining blockers and next task
 
 The local implementation is not canonical until owner-authorized review and push/merge. The full suite retains two unrelated failures. The GPTChat-to-Manus live intake/acknowledgement path remains absent. The next smallest task is an owner-authorized isolated live-dispatch adapter test using one named log task, one transaction ID, and the same ledger contract, without changing credentials, protected schedules, or permissions.
+
+
+## TEST-007 — Vertical Communication Fix — 2026-08-31
+
+**TEST:** TEST-007  
+**Repository:** `darrinbaldwindev/Overseer`  
+**Base commit:** `b9051095122e175a35ad787ad8fc1fdedcfc9c3b` on a fresh clean `main` snapshot  
+**Worker:** Manus  
+**Transaction ID:** No live worker transaction was created; `TEST-007-TX-001` was reserved only as the requested test identifier and was not advanced or claimed.  
+**Result commit:** `324479a30d9a694d12ff875e746a6814fea4a105`  
+**Pushed:** No. The result commit is local only; canonical source remains unchanged.
+
+### Implementation changes
+
+Implemented the smallest provider-neutral `WorkerTransactionAdapter` around the durable ledger in `src/transactionLedger.py`, exposing `dispatch`, `receive`, `acknowledge`, `start`, `complete`, `fail`, `block`, `record_evidence`, and `verify`. The durable ledger now uses atomic JSON persistence, append-only timestamped lifecycle events, delivery idempotency, worker-specific receipt/acknowledgement, stale-base blocking, distinct failed/blocked/missed/missing-ack states, result-commit retention, evidence-gated completion/evidence, independent verification, recovery, and scheduler-event separation. The orchestrator contract returns an auditable outcome and distinguishes COMPLETED from VERIFIED. Existing ledger tests were isolated to temporary persistence.
+
+### Focused evidence
+
+Command: `PYTHONPATH=. pytest -q tests/test_vertical_communication.py tests/test_transaction_ledger.py tests/test_orchestrator_contract.py`  
+Result: **17 passed**.
+
+The focused tests prove transaction IDs and lifecycle state retention, worker-specific acknowledgement, scheduler observation creating zero worker transactions, duplicate delivery idempotency, execution blocked before receipt, result evidence required for completion, independent evidence required for verification, stale-base blocking, persisted recovery, and distinct missing-ack/failed/blocked/missed outcomes.
+
+### Full-suite evidence
+
+Command: `PYTHONPATH=. pytest -q`  
+Result: **46 passed, 2 failed**. The two failures are unrelated pre-existing domain-layer expectations: `tests/test_evidence.py::test_extract_evidence_from_tree` omits dependency-manifest and CI-workflow extraction, and `tests/test_portfolio_dry_run.py::test_portfolio_dry_run_composes_real_domain_layers` expects an evidence count of 3 while implementation returns 2. No unrelated tests or source were changed.
+
+### Live communication boundary
+
+Fresh canonical inspection found no authenticated GPTChat dispatch endpoint, callback, connector, or external worker adapter capable of submitting `TEST-007-TX-001` to Manus. The existing Heartbeat/receiver is a scheduler/observation path and cannot be treated as RECEIVED or ACKNOWLEDGED. In accordance with the hard rule, no live transaction was created, no lifecycle stage was claimed, and no local adapter test was represented as live communication. The smallest missing capability is an owner-authorized provider-specific transport adapter or intake endpoint that invokes the provider-neutral `dispatch(task_id)` contract and returns a transaction-bound receipt/acknowledgement. Credentials, permissions, protected schedules, and external settings were not changed.
+
+**Stage | Status | Evidence**  
+CREATED | NOT OBSERVED | No live intake record created.  
+DISPATCHED | NOT OBSERVED | No supported external dispatch path.  
+RECEIVED | NOT OBSERVED | Heartbeat is not a worker receipt.  
+ACKNOWLEDGED | NOT OBSERVED | No worker-bound acknowledgement.  
+EXECUTING | NOT OBSERVED | No live worker invocation.  
+COMPLETED | NOT OBSERVED | No live result.  
+EVIDENCED | NOT OBSERVED | No live transaction evidence.  
+VERIFIED | NOT OBSERVED | No live transaction to independently verify.
+
+**COMMUNICATION STATUS: RED** — GPTChat-to-Manus live delivery and acknowledgement are not observable.  
+**TRANSACTION STATUS: PARTIALLY VERIFIED** — the provider-neutral contract is test-proven, but no live transaction exists.  
+**CANONICAL INTEGRATION: PARTIALLY VERIFIED** — adapter and ledger changes are proven in local result commit `324479a30d9a694d12ff875e746a6814fea4a105`, not pushed; the live transport remains absent.
+
+**Remaining blocker:** owner-authorized provider-specific transport/intake capability that can create a transaction-bound receipt and acknowledgement without altering protected schedules or credentials.  
+**Next task:** design and owner-authorize one minimal transport adapter contract, then run one real `TEST-008` transaction through it; do not treat scheduler firing as delivery.
