@@ -1,5 +1,5 @@
-schema_version: 2
-last_discovery: 2026-08-27
+schema_version: 3
+last_discovery: 2026-08-31
 repositories:
   - id: agentos
     full_name: darrinbaldwindev/AgentOS
@@ -13,7 +13,7 @@ repositories:
     default_branch: agent/overseer/initial-project-timeline
     visibility: public
     archived: false
-    priority: high
+    priority: critical
     scan_status: scanned
   - id: globalshopco-headless
     full_name: darrinbaldwindev/GlobalShopCo-Headless
@@ -60,7 +60,6 @@ repositories:
     full_name: darrinbaldwindev/MyPrimeDelivery
     default_branch: agent/overseer/initial-project-timeline
     visibility: public
-    archived: false
     priority: medium
     scan_status: inventory-only
   - id: prs
@@ -90,6 +89,29 @@ relationships:
   - from: globalshopco
     to: globalshopco-headless
     type: related_to
+research_handoff:
+  canonical_location: reports/2026-08-31-gemini-mission-009-portfolio-handoff.md
+  source_class: Gemini research intelligence
+  implementation_evidence_required: true
+  independent_verification_required: true
+  current_status: transferred-awaiting-chatgpt-overseer-review
+  coverage:
+    agentos: transferred-verified
+    globalshopco: transferred-verified
+    globalshopco-headless: missing-direct-research
+    ghost-kitchen: no-dedicated-research
+    myprime-delivery: no-dedicated-research
+    gemverse: no-dedicated-research
+    franchise: no-dedicated-research
+    prs: no-dedicated-research
+    other: not-established
+  rules:
+    - Gemini intelligence must not be treated as implementation evidence.
+    - Repository claims require verification against current repository state.
+    - Existing issues/backlogs must be reconciled before creating duplicate work.
+    - Facts, verified findings, inferences, recommendations, and hypotheses must remain explicitly classified.
+    - AgentOS and GlobalShopCo remain protected priorities.
+    - Do not modify production scheduler state or credentials for research handoff.
 portfolio_events:
   - date: 2026-08-27
     event: repository rename reconciliation
@@ -97,3 +119,6 @@ portfolio_events:
   - date: 2026-08-27
     event: portfolio rediscovery
     action: added currently accessible GemVerse, MyPrimeDelivery, PRS, and GhostKitchen repositories to the registry
+  - date: 2026-08-31
+    event: Gemini Mission 009 handoff
+    action: recorded portfolio research handoff in reports/2026-08-31-gemini-mission-009-portfolio-handoff.md and linked it from the canonical portfolio registry; status remains awaiting independent CHATGPT Overseer review
