@@ -390,3 +390,38 @@ VERIFIED | NOT OBSERVED | No live transaction to independently verify.
 
 **Remaining blocker:** owner-authorized provider-specific transport/intake capability that can create a transaction-bound receipt and acknowledgement without altering protected schedules or credentials.  
 **Next task:** design and owner-authorize one minimal transport adapter contract, then run one real `TEST-008` transaction through it; do not treat scheduler firing as delivery.
+
+
+## TEST-008 — Minimal Provider-Specific Intake Transport Audit — 2026-08-31
+
+**TEST:** TEST-008  
+**Repository:** `darrinbaldwindev/Overseer`  
+**Worker:** Manus  
+**Fresh base commit:** `43beb0130c50489b7a76b73dd9492a35bf7510ff` on clean `main`  
+**Result commit:** `dda893910b43b14287efb7d8e21f33c873e2f364`  
+**Pushed:** No; canonical source remains unchanged.
+
+### Implementation
+
+Added `src/pipeline/worker_transport.py`, a provider-neutral `WorkerIntakeTransport` boundary around the existing durable `ActionStore`. The adapter persists the report-derived task before submission, constructs a stable task/transaction/delivery envelope, requires a provider receipt matching all identifiers, and raises an explicit `TransportUnavailable` when no provider submit function or receipt exists. It contains no provider SDK and performs no implicit network or repository action. Existing orchestrator outcome behavior was corrected so a result with evidence can be returned as COMPLETED when independent verification is false, never silently as VERIFIED. Existing ledger tests use isolated temporary persistence.
+
+### Test evidence
+
+Focused command: `PYTHONPATH=. pytest -q tests/test_worker_transport.py tests/test_transaction_ledger.py tests/test_orchestrator_contract.py`  
+Result: **12 passed**.
+
+The focused tests cover durable report intake, provider receipt matching, no-transport refusal, mismatched receipt rejection, lifecycle/persistence/evidence gates, duplicate delivery, scheduler separation, worker-specific acknowledgements, stale-base blocking, and recovery.
+
+Full command: `PYTHONPATH=. pytest -q`  
+Result: **41 passed, 2 failed**. The failures are unrelated pre-existing domain-layer expectations in `tests/test_evidence.py::test_extract_evidence_from_tree` and `tests/test_portfolio_dry_run.py::test_portfolio_dry_run_composes_real_domain_layers`. No unrelated source or tests were changed.
+
+### Live transaction boundary
+
+No supported provider-specific GPTChat-to-Manus transport, connector, authenticated intake endpoint, or dispatch callback was available in the fresh canonical repository or configured runtime. The new adapter therefore has a deliberately injectable `submit` boundary but does not simulate a provider. No live transaction ID was created, and no RECEIVED, ACKNOWLEDGED, EXECUTING, COMPLETED, EVIDENCED, or VERIFIED state is claimed for a real worker transaction. The Heartbeat remains an observation/scheduler path and is not used as a worker receipt.
+
+**COMMUNICATION STATUS: RED** — no live GPTChat-to-Manus delivery/acknowledgement is observable.  
+**TRANSACTION STATUS: PARTIALLY VERIFIED** — provider-specific intake contract and receipt guards pass locally; no live transaction exists.  
+**CANONICAL INTEGRATION: PARTIALLY VERIFIED** — result exists only in local commit and is not pushed.
+
+**Remaining blocker:** an owner-authorized provider-specific transport configuration that can invoke the adapter and return a transaction-bound receipt. Credentials, permissions, protected schedules, Heartbeat state, and external settings were not changed.  
+**Next task:** configure or authorize one real provider transport, then run exactly one `TEST-009` transaction through the adapter and durable ledger; do not treat scheduler firing as dispatch.
