@@ -289,3 +289,56 @@ The implementation is not yet connected to the live GPTChat-to-Manus dispatch pa
 **COMMUNICATION STATUS: RED** — no end-to-end task acknowledgement/execution/result/verification chain is observable.  
 **TRANSACTION STATUS: VERIFIED** — the isolated transaction contract and durable ledger behavior pass the focused 21-test suite; this does not imply end-to-end integration.  
 **LEDGER STATUS: VERIFIED** — durable persistence, append-only events, idempotency, recovery, evidence gates, and scheduler separation pass focused tests.
+
+
+## TEST-006 — Canonical Ledger Integration + End-to-End Worker Transaction — 2026-08-31
+
+**TEST ID:** TEST-006  
+**Repository:** `darrinbaldwindev/Overseer`  
+**Fresh Overseer base:** `ef31302afaa5c3da62c8148d1b0e9fdf493bfcf1` on clean `main` snapshot  
+**Worker:** Manus  
+**Transaction ID:** `TEST-006-TXN-20260831T0314Z`  
+**Task:** Run one provider-neutral read-only deterministic transaction against `darrinbaldwindev/AgentOS` from fresh AgentOS base `2f1146bdaa976b13ecc10684c68ec52d265909a9`, retain result evidence, persist the ledger, and independently verify it.  
+**Result commit:** `11d76515c83cef94eda1f0956c50fffc7bfb51be` (local fresh-snapshot commit)  
+**Pushed:** No. The TEST-006 implementation remains unpushed; no canonical remote code was changed.
+
+### Implementation changes
+
+Integrated a provider-neutral durable intake/result ledger in `src/transactionLedger.py`. It creates durable records, records append-only lifecycle events with timestamps and actors, binds acknowledgements to the assigned worker, preserves failed/blocked/missed/missing-ack states, rejects stale base commits, prevents duplicate delivery from creating another transaction, requires evidence for result/evidence states, requires an independent verifier for `VERIFIED`, records result commits, recovers persisted records, and treats scheduler observations as non-worker events. The `WorkerIntake` facade connects task intake to dispatch, receipt, worker acknowledgement, execution, result persistence, and independent verification.
+
+The existing `src/orchestrator.py` contract was updated to return an auditable outcome and keep completion distinct from verification. No credentials, permissions, protected schedules, Heartbeats, production settings, or unrelated repositories were changed.
+
+### Lifecycle evidence
+
+| State | Evidence |
+|---|---|
+| CREATED | Ledger `create` persisted `TEST-006-TXN-20260831T0314Z` with GPTChat Overseer, Manus, AgentOS, branch `main`, and fresh base `2f1146bdaa976b13ecc10684c68ec52d265909a9`. |
+| DISPATCHED | `WorkerIntake.receive_task` called `TransactionLedger.intake`; append-only event recorded. |
+| RECEIVED | `WorkerIntake.execute` recorded receipt before worker acknowledgement. |
+| ACKNOWLEDGED | Worker-specific `Manus` acknowledgement accepted; mismatched worker tests reject. |
+| EXECUTING | Worker adapter entered execution state. |
+| COMPLETED | Deterministic operation returned result evidence and result commit `local-test-result`. |
+| EVIDENCED | Persisted artifact evidence `persisted:transactions.json` recorded. |
+| VERIFIED | Independent `GPTChat Overseer` verification matched transaction ID, base commit, result commit, and event sequence. |
+
+The saved transaction output showed event states exactly `CREATED, DISPATCHED, RECEIVED, ACKNOWLEDGED, EXECUTING, COMPLETED, EVIDENCED, VERIFIED`; `recovered_state=VERIFIED`; `recovered_event_count=8`; `verification_evidence_count=1`; and scheduler observation `created_transactions=0`.
+
+### Test commands and results
+
+- Fresh snapshots: `gh repo clone darrinbaldwindev/Overseer ... -- --depth=1` and `gh repo clone darrinbaldwindev/AgentOS ... -- --depth=1`; Overseer base `ef31302afaa5c3da62c8148d1b0e9fdf493bfcf1`, AgentOS base `2f1146bdaa976b13ecc10684c68ec52d265909a9`; both clean `main` snapshots.
+- Focused: `PYTHONPATH=. pytest -q tests/test_transaction_integration.py tests/test_orchestrator_contract.py tests/test_action_queue.py` — **19 passed**.
+- Full: `PYTHONPATH=. pytest -q` — **44 passed, 2 failed**. Unrelated failures: `tests/test_evidence.py::test_extract_evidence_from_tree` (dependency-manifest and CI-workflow extraction expectations) and `tests/test_portfolio_dry_run.py::test_portfolio_dry_run_composes_real_domain_layers` (evidence-count expectation). No unrelated test was changed.
+- `git diff --check` — PASS; final local result tree clean after commit.
+
+### End-to-end boundary and status
+
+The controlled local provider-neutral worker transaction is end-to-end through the canonical intake facade and durable ledger, with independent verification and persistence recovery. It is not an externally dispatched live GPTChat-to-Manus transaction: no authenticated live intake endpoint or external GPTChat dispatch was available in the current canonical repository, and the local result commit was not pushed. Therefore the auditable local transaction is proven, but the external communication chain remains unproven.
+
+**COMMUNICATION STATUS: RED** — no observable live GPTChat task delivery and acknowledgement record exists.  
+**TRANSACTION STATUS: VERIFIED** — the single controlled worker transaction reached VERIFIED with persisted evidence and independent verification.  
+**LEDGER STATUS: VERIFIED** — focused tests and recovery output prove durable lifecycle, idempotency, failure/block/missed distinctions, stale-base protection, evidence gating, and scheduler separation.  
+**CANONICAL INTEGRATION STATUS: PARTIALLY VERIFIED** — the integration is present and test-proven in local commit `11d76515c83cef94eda1f0956c50fffc7bfb51be`, but it is not pushed and no live GPTChat dispatch adapter is evidenced.
+
+### Remaining blockers and next task
+
+The local implementation is not canonical until owner-authorized review and push/merge. The full suite retains two unrelated failures. The GPTChat-to-Manus live intake/acknowledgement path remains absent. The next smallest task is an owner-authorized isolated live-dispatch adapter test using one named log task, one transaction ID, and the same ledger contract, without changing credentials, protected schedules, or permissions.
