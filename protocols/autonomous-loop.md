@@ -2,7 +2,13 @@
 
 ## Purpose
 
-Define the repeatable heartbeat used by the Manus Desktop Overseer.
+Define the repeatable, evidence-gated heartbeat used by every Project Overseer and the Portfolio Overseer. The loop applies to current and future approved projects and must operate from fresh canonical repository state.
+
+## Core invariant
+
+**No Overseer may perform substantive work, assign/delegate work, verify work, or make repository-state-based recommendations from stale state.** A scheduler firing is not a successful worker transaction.
+
+An incomplete active project must always have either a useful next action or an explicit blocker/capability gap. Never manufacture work merely to avoid an idle status.
 
 ## Loop
 
@@ -11,107 +17,140 @@ WAKE
   ↓
 LOAD CONTROL PLANE
   ↓
-DISCOVER PORTFOLIO
+DISCOVER CURRENT APPROVED PORTFOLIO
   ↓
-RECOVER STATE
+FRESH REPOSITORY SNAPSHOT
   ↓
-CALCULATE PRIORITIES
+RECOVER / RECONCILE STATE
   ↓
-EXECUTE SCANS
+CALCULATE PRIORITIES + CURRENT VERTICAL MILESTONE
   ↓
-ANALYSE FINDINGS
+CHECK WORKER/CAPABILITY AVAILABILITY
   ↓
-COMPARE HISTORY
+ASSIGN / DELEGATE NEXT AUTHORISED ACTION
   ↓
-CROSS-ANALYSE PORTFOLIO
+WORKER SYNCHRONIZES TO APPROVED BASE
   ↓
-UPDATE STATE
+EXECUTE
+  ↓
+FRESH POST-WORK SCAN
+  ↓
+INDEPENDENT VERIFICATION
+  ↓
+UPDATE TASK / FINDING / PROJECT STATE
+  ↓
+PERSIST EVIDENCE + TRANSACTION RESULT
   ↓
 GENERATE REPORT
   ↓
 VERIFY PERSISTENCE
   ↓
+QUEUE NEXT ACTION / BLOCKER / CAPABILITY ACQUISITION
+  ↓
 SLEEP / WAIT FOR NEXT TRIGGER
 ```
 
-## Wake
+## Fresh Repository Gate
 
-A cycle may begin from a scheduled run, an owner request, a repository change, a detected failure, or another explicitly authorized trigger.
+Before any substantive operation, record where available:
 
-Record the trigger in the scan manifest.
+- repository;
+- canonical branch;
+- current commit/base SHA;
+- relevant working-tree state;
+- scan timestamp;
+- worker and task ID when applicable.
 
-## Load Control Plane
+A cached scan, old report, or prior conversation is not sufficient. If the fresh snapshot cannot be established, the Overseer must not perform repository-state-dependent delegation or verification.
 
-Load the current charter, configuration, integration contract, scan engine and applicable protocols before acting.
+## Portfolio Discovery
 
-If control-plane files cannot be loaded reliably, do not perform privileged autonomous actions.
+Discover the current approved portfolio from the canonical registry every cycle. Never rely on a hard-coded project list. Newly approved projects enter the lifecycle automatically; removed/unapproved projects are not assigned new work.
 
-## Recover State
+## Progression
 
-Load the previous portfolio registry, repository state, active findings and most recent scan manifest.
+For every incomplete active project, maintain:
 
-If state is missing or corrupted, initialize conservatively and record the limitation.
+- current vertical milestone;
+- next milestone;
+- acceptance criteria;
+- current health;
+- next useful action;
+- evidence state;
+- blocker/capability gap if applicable.
 
-## Prioritization
+If the current task completes, calculate the next milestone-aligned task. If the required capability is unavailable, create a capability-acquisition or escalation action rather than manufacturing unrelated work.
 
-Prioritize work using:
+## Worker Delegation
 
-1. Critical/high active findings.
-2. Security-sensitive changes.
-3. Repositories with material changes since the previous scan.
-4. Failed or incomplete previous scans.
-5. Newly discovered repositories.
-6. Regressions.
-7. Remaining repositories according to cadence.
+Select workers by capability, authority, availability, reliability and applicable resource policy. A worker must synchronize to the approved repository state before execution and report the base commit used.
 
-Priority must never silently exclude repositories forever. Deferred repositories remain in the queue.
+External provider plugins/integrations are treated as capabilities behind provider adapters. Use only the capabilities required and authorised for the task. Prefer an appropriate local AgentOS capability when it can safely satisfy the requirement.
 
-## Scan Execution
+## Transaction Evidence
 
-Execute the repository scan protocol against each selected repository.
+Each delegated transaction should record:
 
-Independent repository scans may be performed concurrently when the runtime permits, but persistence operations for the same state record must remain serialized and auditable.
+- task ID;
+- assigning Overseer;
+- worker;
+- repository/project;
+- base commit;
+- assigned/acknowledged/executing/completed/failed/blocked state;
+- command/action performed where applicable;
+- result evidence;
+- result commit where applicable;
+- verification state and verification evidence.
+
+**Scheduled, woken, or pinged is not equivalent to received, acknowledged, executed, completed, or verified.**
+
+## Failure Recovery
+
+For a failed, silent, stale, or incomplete worker transaction:
+
+1. identify the exact failed stage;
+2. preserve evidence;
+3. retry only when safe and useful;
+4. resize/decompose the task if appropriate;
+5. select another approved capable worker when appropriate;
+6. create a capability-acquisition action if no worker can perform it;
+7. escalate to the owner only for genuine authority, permission, safety, credential, or capability decisions.
+
+Never claim completion without evidence.
 
 ## Analysis
 
-After individual scans, perform portfolio intelligence analysis.
+After individual scans, perform portfolio intelligence analysis. Systemic findings must link back to repository-level evidence. Cross-project reusable fixes, skills, tests, failures and provider limitations should be captured for AgentOS reuse.
 
-Systemic findings must link back to their repository-level evidence.
+## Health / GREEN Definition
+
+For active projects:
+
+- **GREEN:** no known material unresolved issue preventing healthy operation, and the project is demonstrably progressing through its vertical path.
+- **YELLOW:** progress is possible but a material issue, dependency or degraded capability needs attention.
+- **RED:** blocked, failing, unsafe, or materially unhealthy.
+- **VERIFYING:** work exists but evidence/independent verification is incomplete.
+- **COMPLETE:** Definition of Done has been evidenced.
+- **DORMANT:** explicitly inactive by project policy/owner direction.
+
+Do not mark GREEN solely because a scheduler fired, a repository is reachable, or tests have not reported a failure.
 
 ## State Update
 
-Update repository state, finding lifecycle events, portfolio registry and scan manifest.
-
-Never erase historical evidence to make current state cleaner.
+Update repository state, task lifecycle, finding lifecycle, project milestone state, worker capability state, portfolio registry and scan manifest as applicable. Never erase historical evidence to make current state cleaner.
 
 ## Reporting
 
-The owner-facing report should emphasize:
+Owner-facing reports should include successful and unsuccessful transactions, task lifecycle counts, material changes, evidence/commits, current health by project, blockers, and next actions. Distinguish scheduler events from actual worker transactions.
 
-- what changed;
-- what is broken;
-- what is risky;
-- what improved;
-- what remains unresolved;
-- what requires owner attention;
-- what Overseer will inspect next.
+## Verification / Persistence Gate
 
-Avoid flooding the owner with unchanged low-value observations.
-
-## Verification
-
-Before completing a cycle, verify that required state and reports were persisted.
-
-A persistence failure is itself a material operational event.
+Before completing a cycle, verify that required state, evidence and reports were persisted. A persistence failure is itself a material operational event.
 
 ## Next Trigger
 
-The next cycle should be selected based on policy and portfolio state rather than an arbitrary fixed sequence.
-
-Critical findings and material regressions should shorten the next review interval when scheduling capability exists.
+The next cycle should use current portfolio state, blockers, material changes and useful work to prioritize attention. Critical findings may shorten review intervals when scheduling capability exists. The standard hourly wake is a baseline, not permission to skip fresh state or verification.
 
 ## Safety Interlock
 
-The autonomous loop cannot elevate its own authority.
-
-Changing from `observe_report` to a more permissive mode requires an explicit policy change outside the autonomous reasoning loop.
+The autonomous loop cannot elevate its own authority. Changes to permissions, credentials, protected schedules, destructive operations, or other owner-controlled settings require explicit authorization.
