@@ -475,3 +475,97 @@ The smallest viable bridge is: owner-authorize one Manus API/Open App transport;
 **LIVE TRANSPORT: UNAVAILABLE.**
 
 **No production changes, credential changes, protected schedule changes, permission changes, repository code changes, workflow dispatches, or simulated transactions were performed.**
+
+
+## TEST-010 — Transport Enablement Specification — 2026-08-31
+
+**TEST:** TEST-010  
+**Worker:** Manus  
+**Repository:** `darrinbaldwindev/Overseer`  
+**Fresh canonical base:** `e12ff5700d556e9b1f45addf955f735f6badc3ac` on `main`  
+**TEST-009 canonicality:** VERIFIED. TEST-009 is present in the canonical Worker Log; its verified append commit is `e12ff5700d556e9b1f45addf955f735f6badc3ac`. TEST-009 implementation changes remained local/unpushed.  
+**Result commit:** none. **Pushed:** NO.
+
+### Transport options and actual availability
+
+| Mechanism | Current availability | Auth/configuration | Target | Inbound dispatch / ACK / result | Security and owner action |
+|---|---|---|---|---|---|
+| Manus API v2 `task.create` | **UNAVAILABLE in current environment** | API key, or Open App OAuth with `create_task`/`manage_all_tasks`; `use_connectors` only if connectors are used | A new Manus task; returns a task ID | Supports inbound task creation; API acceptance is not worker ACK; result via polling or webhook | Least ambiguous task identity. Owner must create/authorize API integration and provide secret through the secret manager, never chat/GitHub |
+| Manus API v2 `task.sendMessage` | **UNAVAILABLE in current environment** | Same task scopes; API key or authorized Open App | Existing task ID, or documented `agent-default-main_task` shortcut | Supports inbound message delivery; no native worker ACK; result via polling/webhook for a task created by the authorized app | Smallest message path, but shared/default target is weaker isolation. Owner must select a dedicated task policy or explicitly approve default-agent target |
+| `task.listMessages` polling | **UNAVAILABLE in current environment** | Same API credential and task visibility as the task endpoint | Returned/known task ID | Result retrieval; polling alone does not prove receipt/ACK unless a worker message is observed | No inbound transport by itself; safe bounded prototype option after task creation |
+| Manus task webhooks (`task_created`, `task_stopped`) | **UNAVAILABLE in current environment** | Open App webhook URL plus webhook registration/configuration; HTTPS endpoint; signature verification | Tasks created through that Open App only | Strong result delivery and task lifecycle evidence; webhook does not itself create/dispatch tasks or establish worker ACK | Preferred production result channel, but requires owner Open App settings and callback deployment |
+| Existing GPTChat Worker Log / GitHub | **AVAILABLE only as a coordination log** | GitHub read/write access to the selected log repository | `.overseer/communication/GPTCHAT-MANUS-WORKER-LOG.md` | Records instructions and reports; does not dispatch Manus tasks or provide Manus receipt/ACK/result | Append-only coordination evidence only; not a transport substitute |
+| Existing Heartbeat | **ACTIVE for scheduled receiver scans only** | Existing platform task identity | `/api/scheduled/portfolio-scan` | Scheduler firing/receiver completion; does not represent GPTChat-to-Manus delivery | Must not be counted as worker transaction or ACK; no schedule change authorized |
+
+The current environment has no configured Manus API/task/webhook integration, no configured API key/Open App, no authorized task target, and no webhook. The canonical repository’s `report_handoff.py` persists GPTChat findings into `ActionStore` and intentionally stops before delegation. These facts were checked against the fresh snapshot and current session configuration; documentation alone was not treated as availability evidence.
+
+### Preferred viable path
+
+**Preferred transport:** Manus API v2 `task.create` using a dedicated Open App or first-party API integration, followed by bounded `task.listMessages` polling for the first acceptance test. Add a dedicated HTTPS `task_stopped` webhook as the production result channel after the one-task proof. This is the smallest path that creates a distinct task ID and can be correlated to a transaction without using the shared default agent or Heartbeat. A webhook is **not required for the first bounded test** if polling is used, but is recommended for production reliability.
+
+**Transport currently available:** NO.
+
+### Exact owner action checklist
+
+**Safe to configure now, once the owner confirms the target:**
+
+1. Select a dedicated Manus Open App or first-party API integration for Overseer; do not use a shared/default task unless explicitly approved.
+2. Set a single task target policy: create one new task per worker transaction (`task.create`) and retain the returned `task_id`.
+3. Define the provider-neutral correlation fields: `transaction_id`, `task_id`, `worker=Manus`, repository, base commit, and dispatch/delivery IDs.
+4. Prepare the receiver’s result-ingestion contract to accept provider receipts and task results without treating HTTP acceptance as ACK or completion as verification.
+5. Prepare one harmless `TEST-011-TX-001` payload with no repository writes, credentials, schedule changes, or commercial actions.
+
+**Requires owner authorization/configuration:**
+
+1. Authorize the Manus API/Open App integration and its account/app setting.
+2. Grant only `create_task` for the first test; use `manage_all_tasks` only if an explicit existing-task policy requires it. Add `use_connectors` only if a connector is genuinely needed.
+3. Provide the API credential through the platform secret manager; never expose it in chat or commit it to GitHub.
+4. Approve the dedicated task target/project/instruction policy and whether the default agent shortcut is prohibited.
+5. For production result delivery, configure a dedicated HTTPS webhook URL in the Open App and enable signature verification; otherwise approve bounded polling for TEST-011 only.
+6. Authorize one transaction and one result-verification window; do not authorize broad autonomous task creation.
+
+**Not available/unsupported in the current environment:**
+
+- No verified direct GPTChat-to-Manus transport exists through the current GitHub log or Heartbeat.
+- No configured API/Open App credential or task target is available.
+- A Heartbeat firing cannot serve as worker receipt, acknowledgement, execution, or verification.
+- Documentation cannot be treated as account availability.
+
+### AgentOS/Overseer changes
+
+**AgentOS code change required:** NO for transport enablement itself. TEST-008/TEST-009 already define local provider-neutral boundaries, but their result commits are not canonical. After owner transport configuration, a minimal canonical adapter may be required to call the selected API and persist task/delivery IDs; that change must be separately authorized and tested. No code change was made in TEST-010.
+
+**Focused tests:** Not run; TEST-010 is a specification-only audit and no code changed.  
+**Full suite:** Not run; repeating unrelated suites would not establish transport availability and would consume unnecessary execution resources.
+
+### TEST-011 acceptance procedure
+
+After owner configuration, run exactly one harmless transaction with ID `TEST-011-TX-001`:
+
+1. Record repository, branch, fresh base commit, worker `Manus`, transaction ID, and task policy in the durable ledger.
+2. Create exactly one Manus task using the approved transport and persist the provider task ID and API receipt. Mark `CREATED` then `DISPATCHED`; do not mark `RECEIVED` from API HTTP success.
+3. Observe a provider task-created/message receipt or equivalent provider evidence and record `RECEIVED`.
+4. Require a worker-generated acknowledgement tied to the transaction/task ID and record `ACKNOWLEDGED`; absence becomes `ACKNOWLEDGEMENT_MISSING`, not `FAILED`.
+5. Observe execution start and record `EXECUTING`.
+6. Accept only a provider result that includes the task/transaction correlation and record `COMPLETED`, `FAILED`, or `BLOCKED` as appropriate.
+7. Persist immutable provider receipt, result payload hash/metadata, and any result commit; record `EVIDENCE_RECORDED` only after non-empty evidence exists.
+8. Independently compare the result against the declared base commit and acceptance criteria; only then record `VERIFIED`. Completion must never imply verification.
+9. Confirm exactly one transaction ID and one provider task ID, with no duplicate successful transaction on retry. Record every failure and missed stage historically.
+10. Append the complete evidence to the canonical Worker Log and report `COMMUNICATION`, `TRANSACTION`, and `LEDGER` statuses separately.
+
+### Security and final status
+
+No credentials, permissions, schedules, Heartbeat configuration, repositories, worker registries, protected infrastructure, or external settings were changed. No simulated or repeated live transaction was performed.
+
+**COMMUNICATION STATUS: RED** — no genuine GPTChat → Manus dispatch/acknowledgement/result chain is currently observable.  
+**TRANSPORT STATUS: UNAVAILABLE** — documented APIs exist, but no configured/authenticated path is available in this environment.  
+**OWNER ACTION REQUIRED: YES.**  
+**NEXT GATE: TEST-011** after owner enables the selected transport and authorizes the one-task acceptance test.
+
+### References
+
+[1] [Manus API v2 task.create](https://open.manus.ai/docs/v2/task.create)  
+[2] [Manus API v2 task.sendMessage](https://open.manus.ai/docs/v2/task.sendMessage)  
+[3] [Manus API v2 agents overview](https://open.manus.ai/docs/v2/agents-overview)  
+[4] [Manus API v2 webhooks overview](https://open.manus.ai/docs/v2/webhooks-overview)  
+[5] [Manus API v2 Open App capability matrix](https://open.manus.ai/docs/v2/open-app)
