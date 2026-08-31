@@ -425,3 +425,53 @@ No supported provider-specific GPTChat-to-Manus transport, connector, authentica
 
 **Remaining blocker:** an owner-authorized provider-specific transport configuration that can invoke the adapter and return a transaction-bound receipt. Credentials, permissions, protected schedules, Heartbeat state, and external settings were not changed.  
 **Next task:** configure or authorize one real provider transport, then run exactly one `TEST-009` transaction through the adapter and durable ledger; do not treat scheduler firing as dispatch.
+
+
+## TEST-009 — GPTChat → Manus Transport Boundary Resolution — 2026-08-31
+
+**TEST:** TEST-009  
+**Worker:** Manus  
+**Repository:** `darrinbaldwindev/Overseer`  
+**Fresh canonical base:** `43beb0130c50489b7a76b73dd9492a35bf7510ff` on `main`  
+**Transport examined:** canonical `src/pipeline/report_handoff.py`, `src/state/action_queue.py`, `src/state/action_store.py`, canonical `src/transactionLedger.py`; documented Manus API v2 task and webhook interfaces; configured session integrations.  
+**TEST-008 state:** result commit `dda893910b43b14287efb7d8e21f33c873e2f364` is local/unpushed; TEST-008 changes are not canonical.  
+**Result commit:** none.  
+**Pushed:** NO.
+
+### Transport map
+
+The current canonical path is `GPTChat Overseer report → ingest_gptchat_report → ActionStore.ingest → durable action-state task`. `report_handoff.py` explicitly stops before delegation; no dispatch implementation, provider transport, Manus API client, configured task/inbox target, or result webhook is present in the canonical repository. The next missing edge is **dispatch/transport from a persisted task to a real Manus task or message**.
+
+### Supported options checked
+
+The documented Manus API v2 provides legitimate task transport endpoints: `task.create` and `task.sendMessage`, with `task.listMessages` for polling and task webhooks for lifecycle result delivery. The default-agent shortcut is `agent-default-main_task`. These endpoints require an API key or an OAuth Open App with `create_task`/`manage_all_tasks`; connector use additionally requires `use_connectors`. Webhooks are configured per Open App and are scoped to tasks created through that app. Documentation references: https://open.manus.ai/docs/v2/task.create, https://open.manus.ai/docs/v2/task.sendMessage, https://open.manus.ai/docs/v2/agents-overview, https://open.manus.ai/docs/v2/webhooks-overview, https://open.manus.ai/docs/v2/open-app.
+
+The available session configuration contains no configured Manus API/task/webhook integration. No credential was inspected in plaintext, created, changed, or logged. GitHub integration is available for repository operations but is not itself a Manus task-delivery transport; the canonical repository contains no GitHub workflow/webhook that dispatches a GPTChat task to Manus.
+
+### Live transaction gate
+
+**LIVE TRANSPORT: UNAVAILABLE in the current authorized environment.** No `TEST-009-TX-001` was created. No scheduler, Heartbeat, receiver scan, HTTP 200, persisted intake record, local test, or API documentation was treated as Manus RECEIVED/ACKNOWLEDGED/EXECUTING/COMPLETED/VERIFIED evidence. No live transaction stages are claimed.
+
+| Stage | Status | Evidence |
+|---|---|---|
+| Task created | BLOCKED | No authorized Manus API credential/task-create path configured |
+| Dispatched | BLOCKED | `report_handoff.py` stops before delegation; no transport client |
+| Manus received | MISSED/NO EVIDENCE | No live task/message receipt |
+| Manus acknowledged | MISSED/NO EVIDENCE | No provider receipt or acknowledgement |
+| Executing | MISSED/NO EVIDENCE | No live task execution record |
+| Result | MISSED/NO EVIDENCE | No live provider result |
+| Evidence persisted | BLOCKED | Ledger can persist locally, but no live transaction existed to attach evidence to |
+| Independently verified | BLOCKED | Verification requires a real result and independent evidence |
+
+### Implementation decision
+
+No code fix was applied. The missing edge is not a demonstrated defect in the provider-neutral ledger; it is an unconfigured external transport and authorization boundary. Adding an API client without an owner-approved API key/Open App, target task policy, webhook callback URL, signature verification configuration, and task-visibility decision would be an unsafe credential/integration change and would not prove delivery.
+
+The smallest viable bridge is: owner-authorize one Manus API/Open App transport; configure least-privilege `create_task` (or `task.sendMessage` access to a named task) and, for result delivery, a dedicated HTTPS webhook or bounded polling; bind one transaction ID to task ID and delivery ID; persist provider receipts and webhook events; then run exactly one harmless `TEST-010-TX-001` and independently verify its result. Do not use the Heartbeat as worker acknowledgement.
+
+**COMMUNICATION STATUS: RED** — no live GPTChat-to-Manus delivery/acknowledgement/result chain is observable.  
+**TRANSACTION STATUS: PARTIALLY VERIFIED** — provider-neutral ledger contracts are tested, but no real TEST-009 transaction exists.  
+**CANONICAL INTEGRATION: PARTIALLY VERIFIED** — canonical report handoff stops before transport; TEST-008/adapter result remains unpushed.  
+**LIVE TRANSPORT: UNAVAILABLE.**
+
+**No production changes, credential changes, protected schedule changes, permission changes, repository code changes, workflow dispatches, or simulated transactions were performed.**
