@@ -7,39 +7,19 @@
 
 | Mission | Date | Scope | Result | Evidence boundary |
 |---|---|---|---|---|
-| 001 | 2026-09-01 | AgentOS test/control foundation | PARTIALLY_COMPLETE | Repository evidence; end-to-end live assurance open |
-| 002 | 2026-09-01 | Green Agent vertical slice | PARTIALLY_COMPLETE | Repository/test evidence; production autonomy unproven |
-| 003 | 2026-09-01 | Portfolio access/control-plane inspection | PARTIALLY_COMPLETE | Live repository metadata/files |
-| 004 | 2026-09-01 | Portfolio rename reconciliation | COMPLETE | Live GitHub metadata + registry |
-| 005 | 2026-09-01 | Portfolio-wide control/status sweep | COMPLETE | Live repository/issue/CI metadata |
-| 006 | 2026-09-01 | PRS verification deep dive | PARTIALLY_COMPLETE | PRS repository/workflow evidence |
-| 007 | 2026-09-01 | AgentOS assurance scan | COMPLETE | Repository/test evidence |
-| 008 | 2026-09-01 | Project Overseer wake/response foundation | PARTIALLY_COMPLETE | Protocol/validator; live wake open |
-| 009 | 2026-09-01 | Worker-pool scaling strategy | PARTIALLY_COMPLETE | Architecture/repository evidence |
-| 010 | 2026-09-01 | Elastic worker pool review | PARTIALLY_COMPLETE | PR/repository review |
-| 011 | 2026-09-01 | Elastic worker deterministic proof | PARTIALLY_COMPLETE | Fixture/test implementation |
-| 012 | 2026-09-01 | CI/evidence gate inspection | PARTIALLY_COMPLETE | Workflow metadata |
-| 013 | 2026-09-01 | CI evidence recheck | COMPLETE | Live GitHub Actions evidence |
-| 014 | 2026-09-01 | Portfolio control-plane scan | PARTIALLY_COMPLETE | Registry/repository evidence |
-| 015 | 2026-09-01 | Portfolio repository deep scan | PARTIALLY_COMPLETE | Live repository files |
-| 016 | 2026-09-01 | Portfolio branch/path reconciliation | PARTIALLY_COMPLETE | GitHub metadata/tree |
-| 017 | 2026-09-01 | Portfolio health/evidence contract | COMPLETE | Control-plane schema/docs |
-| 018 | 2026-09-01 | Project Overseer response contract | COMPLETE | Schema/tests |
-| 019 | 2026-09-01 | Project Overseer response validation | COMPLETE | Validator/tests |
-| 020 | 2026-09-01 | Deterministic local Project Overseer cycle | COMPLETE | AgentOS implementation + deterministic tests; live runtime remains unproven |
-| 021 | 2026-09-01 | GitHub-backed Project Overseer wake cycle | COMPLETE | AgentOS implementation + deterministic adapter tests; live GitHub wake execution remains unproven |
-| 022 | 2026-09-01 | Scheduled Project Overseer wake runner | COMPLETE | GitHub Actions workflow + deterministic wake-suite invocation; real task execution remains disabled |
-| 023 | 2026-09-01 | CI regression investigation | PARTIALLY_COMPLETE | Actual workflow failure observed; fixture drift identified |
-| 024 | 2026-09-01 | Commit-scoped CI evidence gate | PARTIALLY_COMPLETE | Evidence correlation gap identified |
-| 025 | 2026-09-01 | Dispatch concurrency scan | PARTIALLY_COMPLETE | Lease/idempotency gap identified |
-| 026 | 2026-09-01 | Task lease hardening | PARTIALLY_COMPLETE | Lease primitive + tests added; wake integration remains open |
-| 027 | 2026-09-02 | Atomic lease-store reference hardening | COMPLETE | Deterministic in-memory lease store + tests; production distributed atomicity remains unproven |
+| 001–026 | 2026-09-01 | Prior AgentOS/portfolio control work | Recorded previously | See individual mission history |
+| 027 | 2026-09-02 | Atomic lease-store reference hardening | COMPLETE | Deterministic in-memory lease store + tests; production distributed atomicity unproven |
+| 028 | 2026-09-02 | Lease integration into GitHub wake | PARTIALLY_COMPLETE | Lease enforced in wake path; adapter-level regression added subsequently |
+| 029 | 2026-09-02 | Idempotency reference hardening | COMPLETE | Deterministic in-memory idempotency store + tests; distributed persistence unproven |
+| 030 | 2026-09-02 | Idempotent GitHub wake integration | COMPLETE | Wake path now rejects previously completed task IDs; deterministic regression test added |
 
-## Mission 027 summary
+## Mission 030 summary
 
-Added `src/dispatch/lease-store.mjs` as a deterministic reference persistence seam with atomic single-process acquire semantics, owner-bound renewal/release and expiry takeover. Added `tests/lease-store.test.mjs` covering active-lease rejection, expiry takeover and owner checks. Added `docs/LEASE_IDEMPOTENCY_GATE.md` defining the promotion requirements and explicitly stating that the in-memory store is not distributed locking.
+Integrated the idempotency guard into `src/dispatch/github-wake.mjs` alongside the lease guard. A task must acquire a lease and pass the idempotency begin check before execution. On completion, the canonical response is persisted through the idempotency store before the durable response audit event is emitted. A repeated wake for the same task is rejected as `already_completed` without invoking inspection/action.
 
-This intentionally does not claim production concurrency safety. The next implementation must use the actual backing persistence adapter's conditional/atomic operation and test it under competing-runner conditions.
+Added `tests/github-wake-idempotency.test.mjs` proving that a completed task cannot be completed twice through the wake path.
+
+**Evidence boundary:** this proves deterministic in-process lease/idempotency orchestration. It does not prove distributed atomicity between independent GitHub runners. The next gate is an actual persistence adapter with conditional atomic operations plus fresh CI evidence.
 
 ## Control rules
 
@@ -57,7 +37,8 @@ This intentionally does not claim production concurrency safety. The next implem
 12. A GitHub-backed adapter is not equivalent to a live wake service.
 13. A workflow definition is not evidence of a completed workflow run.
 14. A lease primitive is not equivalent to atomic distributed locking until the backing store provides the required concurrency semantics.
+15. An in-memory idempotency store is not evidence of distributed idempotency.
 
 ## Next mission target
 
-Integrate the lease store with the GitHub wake adapter through an explicit persistence interface, enforce lease ownership during execution, and add competing-runner/idempotency tests at the adapter boundary. Then obtain fresh CI evidence before any write-capable autonomy promotion.
+Introduce an explicit persistence interface for leases/idempotency so the GitHub adapter can supply atomic conditional operations, then add adapter-level competing-runner tests and fresh CI verification.
