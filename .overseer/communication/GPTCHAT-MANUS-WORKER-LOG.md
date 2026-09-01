@@ -662,3 +662,16 @@ PRS BOUNDARY: Preserved as an independent assurance boundary; no duplicate evalu
 PRODUCTION/SAFETY: No production scan, provider invocation, repository mutation, permission change, credential change, protected schedule change, Shopify/WordPress action, or remote AgentOS push occurred.
 STATUS: Green Agent local slice VERIFIED; canonical integration PARTIALLY VERIFIED; live autonomy remains unavailable pending owner-authorized push and transport.
 NEXT RECOMMENDED TASK: Review local commit `b46116cae7e32eb11ce596f29694c600686359b6`; then separately authorize canonical push and an isolated transport-backed transaction using this Green Agent contract.
+
+
+## GREEN AGENT CANONICAL PUSH REVIEW — 2026-09-01
+
+REVIEW STATUS: READY FOR OWNER REVIEW; REMOTE PUSH NOT AUTHORIZED BY REVIEW
+REPOSITORY: `darrinbaldwindev/AgentOS`
+REMOTE BASE: `b9051234f75bd234307114ceeb713372061a48d0`
+LOCAL RESULT: `b46116cae7e32eb11ce596f29694c600686359b6` (clean descendant; not pushed)
+CHANGED FILES: `runtime/green-agent.mjs`, `tests/green-agent.test.mjs`, `docs/GREEN_AGENT_VERTICAL_SLICE.md`
+VALIDATION: Previously captured focused 11/11 and full 177/177 tests passed. Review confirmed the diff contains no network calls, subprocess execution, credential handling, protected-schedule mutation, provider invocation, Shopify/WordPress action, or repository write path.
+BOUNDARIES: Task handoffs default to empty capabilities and `execution_authority: false`; closure requires verified worker evidence and independently verified post-work rescan evidence. PRS remains independent.
+DECISION: The local change is narrowly scoped and test-backed. A separate explicit owner authorization is still required before pushing the commit, opening a PR, merging, or installing it for users. No remote AgentOS code or production state changed.
+NEXT ACTION: Owner reviews the three-file diff and explicitly authorizes remote push/PR or continued local-only status.
