@@ -29,14 +29,16 @@
 | 020 | 2026-09-01 | Deterministic local Project Overseer cycle | COMPLETE | AgentOS implementation + deterministic tests; live runtime remains unproven |
 | 021 | 2026-09-01 | GitHub-backed Project Overseer wake cycle | COMPLETE | AgentOS implementation + deterministic adapter tests; live GitHub wake execution remains unproven |
 | 022 | 2026-09-01 | Scheduled Project Overseer wake runner | COMPLETE | GitHub Actions workflow + deterministic wake-suite invocation; real task execution remains disabled |
+| 023 | 2026-09-01 | CI regression investigation | PARTIALLY_COMPLETE | Actual workflow failure observed; fixture drift identified |
+| 024 | 2026-09-01 | Commit-scoped CI evidence gate | PARTIALLY_COMPLETE | Evidence correlation gap identified |
+| 025 | 2026-09-01 | Dispatch concurrency scan | PARTIALLY_COMPLETE | Lease/idempotency gap identified |
+| 026 | 2026-09-01 | Task lease hardening | PARTIALLY_COMPLETE | Lease primitive + tests added; wake integration remains open |
 
-## Mission 022 summary
+## Mission 026 summary
 
-Added `.github/workflows/project-overseer-wake.yml` to provide a safe scheduled/manual trigger. It runs hourly at minute 17 and can also be manually dispatched. The workflow has `contents: read` only, a bounded 10-minute runtime, and a concurrency group that prevents cancellation of an in-progress run. It currently executes the deterministic local/GitHub wake and response tests rather than mutating portfolio repositories.
+Added `src/dispatch/lease.mjs` with fail-closed task lease acquisition, renewal and owner-only release. Added `tests/lease.test.mjs` plus a duplicate-runner guard test covering active lease rejection.
 
-Added `docs/PROJECT-OVERSEER-WAKE-RUNNER.md` documenting the safety boundary and promotion gate. Write-capable execution and external-provider execution remain intentionally disabled until authority, lease/idempotency, audit, rollback and independent assurance controls are proven.
-
-**Evidence boundary:** the workflow definition is implemented, but this mission does not claim that GitHub has already executed the new workflow or that real portfolio tasks are being autonomously executed.
+The lease layer is intentionally separate from the current worker claim path until it can be integrated without weakening existing authority and state-transition rules. The scheduled wake workflow was also updated to execute the lease and wake regression suites. This remains implementation evidence only; the workflow must run successfully against the updated commit before the lease layer can be treated as verified.
 
 ## Control rules
 
@@ -53,7 +55,8 @@ Added `docs/PROJECT-OVERSEER-WAKE-RUNNER.md` documenting the safety boundary and
 11. No duplicate runtime/router/assurance engine may be introduced.
 12. A GitHub-backed adapter is not equivalent to a live wake service.
 13. A workflow definition is not evidence of a completed workflow run.
+14. A lease primitive is not equivalent to atomic distributed locking until the backing store provides the required concurrency semantics.
 
 ## Next mission target
 
-Verify the scheduled runner's actual GitHub Actions execution, then harden lease/idempotency and observable run evidence before enabling any write-capable autonomous task execution.
+Integrate lease acquisition into the GitHub wake cycle with an adapter-level atomic/conditional claim where supported, add recovery/expiry tests, then obtain fresh CI evidence. Keep write permissions disabled until the complete chain is independently assured.
