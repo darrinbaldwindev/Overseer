@@ -646,3 +646,19 @@ NEXT RECOMMENDED TASK: Owner-authorized canonical review of the evidence-gating 
 PRODUCTION IMPACT: NONE
 COMMUNICATION STATUS: RED
 TRANSACTION STATUS: PARTIALLY VERIFIED
+
+
+## GREEN AGENT VERTICAL SLICE — 2026-09-01
+
+STATUS: LOCAL VERTICAL SLICE COMPLETE; CANONICAL PUSH NOT PERFORMED
+REPOSITORY: `darrinbaldwindev/AgentOS`
+FRESH BASE: `b905123` (canonical `main`)
+LOCAL RESULT COMMIT: `b46116cae7e32eb11ce596f29694c600686359b6` (not pushed)
+IMPLEMENTATION: Added `runtime/green-agent.mjs` and deterministic `tests/green-agent.test.mjs`, plus `docs/GREEN_AGENT_VERTICAL_SLICE.md`.
+PROOF: A deterministic portfolio scan produces a machine-readable Green Report with evidence-backed findings, severity/confidence/state ranking, and stable project/finding correlation. Reobservations create a new current artifact and supersede the prior artifact without deleting historical failures. Auto-taskable findings are handed to the existing AgentOS task boundary with empty capabilities and `execution_authority: false`. Closure requires verified worker result evidence and independently verified post-work rescan evidence; a still-present finding reopens rather than closes.
+FOCUSED TESTS: `node --test tests/green-agent.test.mjs tests/overseer-auditor.test.mjs tests/overseer-decision-loop.test.mjs tests/dispatch.test.mjs` — 11 passed, 0 failed.
+FULL TESTS: `npm test` — 177 passed, 0 failed.
+PRS BOUNDARY: Preserved as an independent assurance boundary; no duplicate evaluator was added.
+PRODUCTION/SAFETY: No production scan, provider invocation, repository mutation, permission change, credential change, protected schedule change, Shopify/WordPress action, or remote AgentOS push occurred.
+STATUS: Green Agent local slice VERIFIED; canonical integration PARTIALLY VERIFIED; live autonomy remains unavailable pending owner-authorized push and transport.
+NEXT RECOMMENDED TASK: Review local commit `b46116cae7e32eb11ce596f29694c600686359b6`; then separately authorize canonical push and an isolated transport-backed transaction using this Green Agent contract.
