@@ -25,15 +25,15 @@
 | 015 | 2026-09-01 | Portfolio repository deep scan | PARTIALLY_COMPLETE — inventory-only projects inspected; control-plane and status gaps remain | Live repository files; no project GREEN claims without tests/evidence |
 | 016 | 2026-09-01 | Portfolio branch/path reconciliation | PARTIALLY_COMPLETE — MyPrimeDelivery default branch confirmed; repository content exists despite README-path API mismatch | Live GitHub repository metadata and tree evidence |
 | 017 | 2026-09-01 | Portfolio health/evidence contract | COMPLETE — common machine-readable health contract and continuous monitoring contract established in canonical Overseer control plane | Control-plane documentation/schema; project-level adoption and live monitoring remain unproven |
+| 018 | 2026-09-01 | Project Overseer response contract | COMPLETE — machine-readable response schema and deterministic guard tests added to AgentOS | Repository/schema/test evidence; live wake execution remains unproven |
 
-## Mission 017 summary
+## Mission 018 summary
 
-- Added `schemas/PORTFOLIO_HEALTH_CONTRACT.v1.json` as the canonical machine-readable baseline.
-- Added `docs/PORTFOLIO_HEALTH_MONITORING_CONTRACT.md` defining equal baseline checks, GREEN rules, wake/response behaviour and fail-safe dispositions.
-- Required baseline signals include repository access, tests, security, Project Overseer freshness, evidence freshness, PRS and Green Agent status.
-- Explicitly prevented missing evidence from being promoted to GREEN by inference.
-- Explicitly prevented repository/branch failures from being silently substituted with another project.
-- Kept the contract as an evidence/control-plane layer rather than creating a duplicate runtime, scheduler, router or assurance engine.
+- Confirmed the accepted Project Overseer wake protocol already defines the required receive → inspect → authority gate → bounded execution → verification → durable response lifecycle. fileciteturn240file0L2-L2
+- Added `schemas/project-overseer-response-v1.json` to make the response envelope machine-discoverable.
+- Added deterministic tests covering complete response acceptance, incomplete response rejection, and prevention of Project Overseer self-declaration of GREEN.
+- Preserved Green Agent and PRS independence: Project Overseer reports evidence; it does not self-assure GREEN.
+- The remaining integration gap is live wake/dispatch execution rather than another contract definition.
 
 ## Control rules
 
@@ -48,7 +48,8 @@
 9. Inventory-only status must be replaced only by evidence-backed status, never by assumption.
 10. A repository access failure must be distinguished from a branch/path mismatch and must not be silently substituted with another repository.
 11. Every canonical project should expose a common health/evidence contract before being eligible for portfolio-wide GREEN.
+12. Project Overseer responses cannot self-declare GREEN; GREEN requires independent evidence/assurance.
 
 ## Next mission target
 
-Map the health contract onto each canonical project and implement the minimum local evidence emitter/wake integration where safely possible, starting with AgentOS, PRS and the Project Overseer control plane. Then validate the same contract across the remaining projects without weakening the baseline.
+Connect the existing mission envelope and response contract to the real AgentOS dispatch/wake path using deterministic local execution first. Prove receive → inspect → bounded action → verification → response, including blocked/failure paths, before introducing external provider execution.
