@@ -27,20 +27,21 @@
 | 018 | 2026-09-01 | Project Overseer response contract | COMPLETE | Schema/tests |
 | 019 | 2026-09-01 | Project Overseer response validation | COMPLETE | Validator/tests |
 | 020 | 2026-09-01 | Deterministic local Project Overseer cycle | COMPLETE | AgentOS implementation + deterministic tests; live runtime remains unproven |
+| 021 | 2026-09-01 | GitHub-backed Project Overseer wake cycle | COMPLETE | AgentOS implementation + deterministic adapter tests; live GitHub wake execution remains unproven |
 
-## Mission 020 summary
+## Mission 021 summary
 
-Implemented the first executable local Project Overseer cycle in AgentOS. The cycle claims an authorised queued task, transitions it through working and verification, invokes bounded inspection/action callbacks, persists terminal state, generates the canonical Project Overseer response envelope, and validates that response before returning it. A blocked path produces BLOCKED rather than falsely completing.
+Implemented the next execution layer around the existing durable GitHub dispatch surface.
 
 Added:
-- `src/dispatch/local-cycle.mjs`
-- `tests/local-cycle.test.mjs`
+- `src/dispatch/github-wake.mjs`
+- `tests/github-wake.test.mjs`
 
-The repository's existing dispatch layer already provides queued-task claiming, authority checks and state transitions; the new cycle composes those existing primitives rather than creating another router. fileciteturn247file0L2-L2
+The cycle reads the existing audit-backed queue, resolves the current task before acting, claims only an authorised queued task, persists state transitions, invokes bounded inspection/action callbacks, records verification evidence, persists a terminal state, validates the Project Overseer response envelope, and appends the durable response event. A disappeared task fails closed to IDLE.
 
-The durable dispatch store rejects duplicate task IDs and persists cloned task state. fileciteturn248file0L2-L2
+This composes the existing repository adapter, which already maps task state and audit events to `.agentos/dispatch/tasks/` and `.agentos/dispatch/audit/events.jsonl`. fileciteturn249file0L2-L2 The existing response contract requires exact task correlation and evidence-backed completion. fileciteturn250file0L2-L2
 
-**Evidence boundary:** this proves deterministic local orchestration in repository code/tests. It does not prove a continuously running external wake process, production scheduler, distributed execution or independent PRS/Green Agent assurance.
+**Evidence boundary:** deterministic tests prove the local GitHub-adapter orchestration semantics. They do not prove that a GitHub event, scheduled runner or external worker is actually invoking this cycle in production.
 
 ## Control rules
 
@@ -55,7 +56,8 @@ The durable dispatch store rejects duplicate task IDs and persists cloned task s
 9. Missing evidence cannot be promoted to GREEN by inference.
 10. Project Overseers cannot self-declare GREEN.
 11. No duplicate runtime/router/assurance engine may be introduced.
+12. A GitHub-backed adapter is not equivalent to a live wake service.
 
 ## Next mission target
 
-Add an executable GitHub-backed wake cycle around the existing dispatch store, with fail-closed behaviour, durable response persistence, and commit-scoped verification. Then connect health observations to Project Overseer wake/escalation without bypassing authority or independent assurance.
+Wire the wake cycle into a safe scheduled/event-driven runner with explicit authority, concurrency/lease protection and observable run evidence. Validate the runner against the canonical health contract, then begin project-by-project rollout.
