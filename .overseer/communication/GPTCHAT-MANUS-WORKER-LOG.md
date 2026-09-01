@@ -704,3 +704,24 @@ REMAINING OWNER ACTION: Authorize and configure a legitimate authenticated Manus
 NEXT RECOMMENDED ACTION: TEST-011 — after owner-configured transport exists, create one uniquely correlated pre-authorized read-only transaction, capture task creation/acknowledgement/result, persist it in the durable ledger, independently verify the evidence, and append the complete chain. Until then, keep live autonomy RED.
 PRODUCTION IMPACT: NONE
 COMMUNICATION STATUS: RED — no independently correlated live worker transaction exists.
+
+## ISSUE #41 WORKER-CONSENT / HUMAN-INTERVENTION REGISTRY — 2026-09-01
+
+STATUS: Local Issue #41 mission completed against a fresh canonical AgentOS snapshot. No canonical AgentOS push, live Manus transport, credential request, production change, protected schedule change, Shopify/WordPress action, or external provider activation occurred.
+CANONICAL BASE: `darrinbaldwindev/AgentOS` main at `b46116cae7e32eb11ce596f29694c600686359b6`, which already contains the prior Green Agent commit.
+CURRENT CONSENT IMPLEMENTATION: Added provider-neutral `src/dispatch/consent.mjs` and guarded `src/dispatch/runner.mjs`. `pre_authorized` requires explicit `authority.execution_authority: true` and no prohibited capability; `confirmation_required` covers explicit false or `requires_confirmation: true` and blocks before worker invocation; `prohibited` hard-blocks policy/authority violations and cannot be overridden by confirmation. Legacy tasks without an explicit value remain compatibility-classified as `legacy_pre_authorized`.
+HUMAN INTERVENTION REGISTRY STATUS: Added `src/dispatch/intervention-registry.mjs` using the existing `runtime/file-persistence.mjs` contract and a single new `intervention` entity type. Records are idempotent by stable intervention identity, durable across reload, and support open → approved → implemented → verified → closed, with closure evidence required.
+GREEN AGENT INTEGRATION: No duplicate assurance platform was created. The registry is provider-neutral and suitable for future Green Agent recommendation of recurring interventions; Green Agent still recommends and does not directly remediate.
+PRS INTEGRATION: No second verifier was created. Closure requires explicit closure evidence whose verifier can be the independent PRS boundary; this local slice does not claim independent PRS execution.
+WORK PERFORMED: Reconciled Issue #41 with CORE-006, existing dispatch authority, runner, file persistence, Green Agent, and the documented scheduler/PRS boundaries. Added `runtime/file-persistence.mjs` support for `intervention`, runner callback support for durable intervention recording, `tests/intervention-registry.test.mjs`, and `docs/CONSENT_BOUNDARY.md`.
+FILES CHANGED: `runtime/file-persistence.mjs`, `src/dispatch/consent.mjs`, `src/dispatch/intervention-registry.mjs`, `src/dispatch/runner.mjs`, `tests/intervention-registry.test.mjs`, `docs/CONSENT_BOUNDARY.md`.
+COMMIT: Local result `a3df90893fbeb693a51ee07b6aacdebacfd07d77`, parent `b46116cae7e32eb11ce596f29694c600686359b6`; not pushed.
+FOCUSED TESTS: `node --test tests/intervention-registry.test.mjs tests/dispatch-runner.test.mjs tests/dispatch-authority.test.mjs tests/dispatch-worker.test.mjs tests/green-agent.test.mjs` — 12 passed, 0 failed.
+FULL TESTS: `npm test` — 180 passed, 0 failed, independently rerun after correcting the test-file placement so the new registry tests were included.
+INDEPENDENT VERIFICATION: `git diff --check` passed; changed-file safety inspection found no network calls, subprocess execution, credential handling, protected-schedule mutation, provider activation, or repository writes. Registry persistence/reload and duplicate-record behavior were directly tested. No live transport was invoked.
+LIVE MANUS TRANSACTION: NO.
+COMMUNICATION STATUS: RED — no actual correlated AgentOS → authorised Manus worker transaction has been independently evidenced.
+OWNER ACTION REQUIRED: YES.
+EXACT OWNER ACTION: Configure and authorize a legitimate authenticated Manus API/Open App or first-party transport target, with a bounded callback/webhook or polling path, connector scope, and expiry/review window; then authorize one read-only TEST-011 transaction and independent verification. Do not infer live autonomy from this local commit or passing tests.
+NEXT RECOMMENDED TASK: TEST-011 — after owner-configured transport exists, create one uniquely correlated pre-authorized read-only transaction, record task creation/acknowledgement/result in the durable ledger, independently verify it, and append the complete chain.
+PRODUCTION IMPACT: NONE
