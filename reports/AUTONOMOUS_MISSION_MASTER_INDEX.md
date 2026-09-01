@@ -28,20 +28,15 @@
 | 019 | 2026-09-01 | Project Overseer response validation | COMPLETE | Validator/tests |
 | 020 | 2026-09-01 | Deterministic local Project Overseer cycle | COMPLETE | AgentOS implementation + deterministic tests; live runtime remains unproven |
 | 021 | 2026-09-01 | GitHub-backed Project Overseer wake cycle | COMPLETE | AgentOS implementation + deterministic adapter tests; live GitHub wake execution remains unproven |
+| 022 | 2026-09-01 | Scheduled Project Overseer wake runner | COMPLETE | GitHub Actions workflow + deterministic wake-suite invocation; real task execution remains disabled |
 
-## Mission 021 summary
+## Mission 022 summary
 
-Implemented the next execution layer around the existing durable GitHub dispatch surface.
+Added `.github/workflows/project-overseer-wake.yml` to provide a safe scheduled/manual trigger. It runs hourly at minute 17 and can also be manually dispatched. The workflow has `contents: read` only, a bounded 10-minute runtime, and a concurrency group that prevents cancellation of an in-progress run. It currently executes the deterministic local/GitHub wake and response tests rather than mutating portfolio repositories.
 
-Added:
-- `src/dispatch/github-wake.mjs`
-- `tests/github-wake.test.mjs`
+Added `docs/PROJECT-OVERSEER-WAKE-RUNNER.md` documenting the safety boundary and promotion gate. Write-capable execution and external-provider execution remain intentionally disabled until authority, lease/idempotency, audit, rollback and independent assurance controls are proven.
 
-The cycle reads the existing audit-backed queue, resolves the current task before acting, claims only an authorised queued task, persists state transitions, invokes bounded inspection/action callbacks, records verification evidence, persists a terminal state, validates the Project Overseer response envelope, and appends the durable response event. A disappeared task fails closed to IDLE.
-
-This composes the existing repository adapter, which already maps task state and audit events to `.agentos/dispatch/tasks/` and `.agentos/dispatch/audit/events.jsonl`. fileciteturn249file0L2-L2 The existing response contract requires exact task correlation and evidence-backed completion. fileciteturn250file0L2-L2
-
-**Evidence boundary:** deterministic tests prove the local GitHub-adapter orchestration semantics. They do not prove that a GitHub event, scheduled runner or external worker is actually invoking this cycle in production.
+**Evidence boundary:** the workflow definition is implemented, but this mission does not claim that GitHub has already executed the new workflow or that real portfolio tasks are being autonomously executed.
 
 ## Control rules
 
@@ -57,7 +52,8 @@ This composes the existing repository adapter, which already maps task state and
 10. Project Overseers cannot self-declare GREEN.
 11. No duplicate runtime/router/assurance engine may be introduced.
 12. A GitHub-backed adapter is not equivalent to a live wake service.
+13. A workflow definition is not evidence of a completed workflow run.
 
 ## Next mission target
 
-Wire the wake cycle into a safe scheduled/event-driven runner with explicit authority, concurrency/lease protection and observable run evidence. Validate the runner against the canonical health contract, then begin project-by-project rollout.
+Verify the scheduled runner's actual GitHub Actions execution, then harden lease/idempotency and observable run evidence before enabling any write-capable autonomous task execution.
