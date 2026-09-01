@@ -1,5 +1,5 @@
 schema_version: 3
-last_discovery: 2026-08-31
+last_discovery: 2026-09-01
 repositories:
   - id: agentos
     full_name: darrinbaldwindev/AgentOS
@@ -29,8 +29,8 @@ repositories:
     archived: false
     priority: high
     scan_status: scanned
-  - id: amazon-affiliate
-    full_name: darrinbaldwindev/Amazon-Affiliate
+  - id: myprime-delivery
+    full_name: darrinbaldwindev/MyPrimeDelivery
     default_branch: agent/overseer/initial-project-timeline
     visibility: public
     archived: false
@@ -47,6 +47,7 @@ repositories:
     full_name: darrinbaldwindev/manus
     default_branch: gemverse
     visibility: private
+    archived: false
     priority: informational
     scan_status: inventory-only
   - id: gemverse
@@ -54,12 +55,6 @@ repositories:
     default_branch: gemverse
     visibility: private
     archived: false
-    priority: medium
-    scan_status: inventory-only
-  - id: myprime-delivery
-    full_name: darrinbaldwindev/MyPrimeDelivery
-    default_branch: agent/overseer/initial-project-timeline
-    visibility: public
     priority: medium
     scan_status: inventory-only
   - id: prs
@@ -122,3 +117,6 @@ portfolio_events:
   - date: 2026-08-31
     event: Gemini Mission 009 handoff
     action: recorded portfolio research handoff in reports/2026-08-31-gemini-mission-009-portfolio-handoff.md and linked it from the canonical portfolio registry; status remains awaiting independent CHATGPT Overseer review
+  - date: 2026-09-01
+    event: repository rename reconciliation
+    action: confirmed Amazon-Affiliate registry identity now resolves to darrinbaldwindev/MyPrimeDelivery after owner-side GitHub rename; registry entry normalized to myprime-delivery and stale duplicate identity removed
