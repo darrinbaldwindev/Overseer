@@ -622,3 +622,27 @@ Added `src/dispatch/local-host.mjs`, `tests/local-host.test.mjs`, and `docs/CORE
 
 **Remaining blocker:** Canonical AgentOS still needs owner review of the local result commit before any push or integration. The local bridge proves the installed-PC execution foundation, but it is not yet canonical or production-installed.  
 **Next recommended action:** owner review of `06dc316c54d1163312698e9655bfe79e0361d542`, then separately authorize canonical push/integration and a fresh checkout verification.
+
+
+## ACCELERATED AUTONOMY REPAIR — EVIDENCE-GATED RUNTIME — 2026-09-01
+
+STATUS: COMPLETED LOCAL CONTROL-LOOP REPAIR; CANONICAL PUSH NOT PERFORMED
+CURRENT AUTONOMY LEVEL: LOCAL EVIDENCE-GATED EXECUTION AND SUPERVISED SCHEDULER SKELETON
+HIGHEST-VALUE BLOCKER: Runtime execution previously collapsed provider completion into verification.
+ROOT CAUSE: `runtime/agent-runtime.mjs` marked result artifacts `verified` immediately after provider completion, and `runtime/agent-loop.mjs` returned `verified: true` unconditionally.
+IMPLEMENTATION PERFORMED: Provider completion now persists an `unverified` artifact and `verifying` run state unless an explicit independent verifier is supplied. Verification must return exactly true before the artifact becomes verified and the run becomes completed. The agent loop now derives verification from explicit verified results. Scheduler supervision was preserved; no second scheduler was added.
+FILES/COMPONENTS CHANGED: `runtime/agent-runtime.mjs`, `runtime/agent-loop.mjs`, `tests/agent-runtime.test.mjs`, `tests/agent-loop.test.mjs`, stale contract expectations in `tests/core-vertical-slice.test.mjs` and `tests/local-demo.test.mjs`, `docs/AUTONOMY_REPAIR_EVIDENCE_GATE.md`.
+COMMIT: `fe97a103d8820ea241e1e36abc30d622d02f6a1a` (local fresh snapshot; not pushed)
+TESTS: Focused `node --test tests/agent-runtime.test.mjs tests/agent-loop.test.mjs tests/scheduler.test.mjs tests/scheduler-supervisor.test.mjs` — 8 passed, 0 failed. Full `npm test` — 174 passed, 0 failed.
+EXECUTION EVIDENCE: Provider execution is durably separated from verification; no external provider or production worker was invoked. Scheduler firing remains distinct from worker execution.
+PROJECT OVERSEER COMMUNICATION STATUS: RED — no live GPTChat task-to-Manus transport/acknowledgement/result channel is present.
+MANUS EXECUTION STATUS: PARTIALLY VERIFIED — local evidence-gated runtime passes; no external Manus transaction is claimed.
+GREEN AGENT STATUS: PARTIALLY VERIFIED — evidence gate is stronger locally; portfolio scan to decision/task handoff and post-work rescan remain unproven.
+PRS STATUS: UNCHANGED / SEPARATE ASSURANCE BOUNDARY.
+REMAINING BLOCKERS: Canonical push/integration requires owner review; live GPTChat/Manus transport and next-task propagation remain unavailable; Green Agent and PRS integration are not end-to-end proven.
+OWNER ACTION REQUIRED: YES
+IF YES — EXACT OWNER ACTION: Review local commit `fe97a103d8820ea241e1e36abc30d622d02f6a1a`; separately authorize canonical push/integration and a live transport test. Do not treat this local proof as production autonomy.
+NEXT RECOMMENDED TASK: Owner-authorized canonical review of the evidence-gating repair, followed by an isolated transport-backed transaction test.
+PRODUCTION IMPACT: NONE
+COMMUNICATION STATUS: RED
+TRANSACTION STATUS: PARTIALLY VERIFIED
