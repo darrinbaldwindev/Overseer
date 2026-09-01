@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/darrinbaldwindev/Overseer/blob/main/schemas/PORTFOLIO_HEALTH_CONTRACT.v1.json",
+  "title": "Portfolio Health Evidence Contract v1",
+  "type": "object",
+  "required": ["schema_version", "repository", "commit", "checked_at", "health", "checks"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "repository": {"type": "string", "pattern": "^[^/]+/[^/]+$"},
+    "commit": {"type": "string", "minLength": 7},
+    "checked_at": {"type": "string", "format": "date-time"},
+    "health": {"enum": ["GREEN", "AMBER", "RED", "BLOCKED"]},
+    "checks": {
+      "type": "object",
+      "required": ["access", "tests", "security", "overseer", "evidence", "prs", "green_agent"],
+      "properties": {
+        "access": {"enum": ["PASS", "FAIL", "UNKNOWN"]},
+        "tests": {"enum": ["PASS", "FAIL", "NOT_APPLICABLE", "UNKNOWN"]},
+        "security": {"enum": ["PASS", "FAIL", "UNKNOWN"]},
+        "overseer": {"enum": ["ACTIVE", "STALE", "BLOCKED", "UNKNOWN"]},
+        "evidence": {"enum": ["FRESH", "STALE", "MISSING", "UNKNOWN"]},
+        "prs": {"enum": ["ASSURED", "FAILED", "PENDING", "NOT_APPLICABLE", "UNKNOWN"]},
+        "green_agent": {"enum": ["GREEN", "AMBER", "RED", "UNKNOWN"]}
+      },
+      "additionalProperties": false
+    },
+    "findings": {"type": "array", "items": {"type": "string"}},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "next_action": {"type": "string"}
+  },
+  "additionalProperties": false
+}
