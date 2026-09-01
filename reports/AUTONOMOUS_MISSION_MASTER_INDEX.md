@@ -26,14 +26,15 @@
 | 016 | 2026-09-01 | Portfolio branch/path reconciliation | PARTIALLY_COMPLETE — MyPrimeDelivery default branch confirmed; repository content exists despite README-path API mismatch | Live GitHub repository metadata and tree evidence |
 | 017 | 2026-09-01 | Portfolio health/evidence contract | COMPLETE — common machine-readable health contract and continuous monitoring contract established in canonical Overseer control plane | Control-plane documentation/schema; project-level adoption and live monitoring remain unproven |
 | 018 | 2026-09-01 | Project Overseer response contract | COMPLETE — machine-readable response schema and deterministic guard tests added to AgentOS | Repository/schema/test evidence; live wake execution remains unproven |
+| 019 | 2026-09-01 | Project Overseer response validation | COMPLETE — executable response validator and regression tests added to AgentOS | Repository/schema/test evidence; CI/live wake execution still requires proof |
 
-## Mission 018 summary
+## Mission 019 summary
 
-- Confirmed the accepted Project Overseer wake protocol already defines the required receive → inspect → authority gate → bounded execution → verification → durable response lifecycle. fileciteturn240file0L2-L2
-- Added `schemas/project-overseer-response-v1.json` to make the response envelope machine-discoverable.
-- Added deterministic tests covering complete response acceptance, incomplete response rejection, and prevention of Project Overseer self-declaration of GREEN.
-- Preserved Green Agent and PRS independence: Project Overseer reports evidence; it does not self-assure GREEN.
-- The remaining integration gap is live wake/dispatch execution rather than another contract definition.
+- Added `scripts/validate-project-overseer-response.mjs` as an executable validator for the canonical response envelope.
+- Added deterministic fixture data for valid and prohibited self-GREEN responses.
+- Added `tests/project-overseer-response-validator.test.mjs` covering complete response acceptance, missing-field rejection and self-reported GREEN rejection.
+- Existing `package.json` already runs `tests/**/*.test.mjs`, so the new regression suite is included by the canonical test command. fileciteturn243file0L2-L2
+- Preserved the architectural rule that wake triggers do not themselves grant authority and Project Overseers cannot self-assure GREEN.
 
 ## Control rules
 
