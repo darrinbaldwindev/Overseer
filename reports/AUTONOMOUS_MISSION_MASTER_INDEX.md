@@ -23,18 +23,17 @@
 | 013 | 2026-09-01 | CI evidence recheck | COMPLETE — corrected prior over-broad CI conclusion; AgentOS has active successful CI, but Mission 011 head remained separately unverified | Live GitHub Actions evidence |
 | 014 | 2026-09-01 | Portfolio control-plane scan | PARTIALLY_COMPLETE — four inventory-only entries identified and mission index staleness detected | Portfolio registry + repository evidence |
 | 015 | 2026-09-01 | Portfolio repository deep scan | PARTIALLY_COMPLETE — inventory-only projects inspected; control-plane and status gaps remain | Live repository files; no project GREEN claims without tests/evidence |
+| 016 | 2026-09-01 | Portfolio branch/path reconciliation | PARTIALLY_COMPLETE — MyPrimeDelivery default branch confirmed; repository content exists despite README-path API mismatch | Live GitHub repository metadata and tree evidence |
 
-## Mission 015 summary
+## Mission 016 summary
 
-- Re-scanned the canonical portfolio registry.
-- Confirmed 10 current registry entries.
-- Inspected GlobalShopCo-Headless, GhostKitchen, GemVerse, Franchise, PRS and MyPrimeDelivery repository state.
-- Confirmed GlobalShopCo-Headless remains intentionally non-production and has an explicit pending implementation authority.
-- Confirmed GhostKitchen has architecture/scope but is still early-stage.
-- Confirmed GemVerse's current `gemverse` branch README remains minimal and identifies itself as Manus Repo, requiring governance/identity clarity.
-- Confirmed Franchise has substantive business/financial rules but production implementation must keep contractual and financial assumptions configurable.
-- Confirmed PRS remains at v0.1 assurance-contract/evaluator implementation stage.
-- Confirmed MyPrimeDelivery's registry branch reference could not be resolved by the repository content API, so branch/default-branch reconciliation remains an open evidence item rather than a guessed fix.
+- Rechecked the canonical portfolio registry and its current 10-entry scope.
+- Verified `darrinbaldwindev/MyPrimeDelivery` exists and has default branch `agent/overseer/initial-project-timeline`.
+- Verified that branch contains a non-trivial project tree with architecture, project contract and multiple Overseer handoff/evidence records.
+- The earlier README retrieval failure is therefore a content-path/API discrepancy, not evidence that the repository is inaccessible or empty.
+- Preserved the distinction between repository accessibility and project health.
+- Confirmed the portfolio registry still has inventory-only entries requiring deeper health evidence.
+- Identified the next control-plane requirement: every project needs a common, machine-discoverable health/evidence contract so Green Agent can monitor it consistently.
 
 ## Control rules
 
@@ -48,7 +47,8 @@
 8. Owner-controlled production, credentials, permissions and protected scheduler state remain outside autonomous authority unless separately authorised.
 9. Inventory-only status must be replaced only by evidence-backed status, never by assumption.
 10. A repository access failure must be distinguished from a branch/path mismatch and must not be silently substituted with another repository.
+11. Every canonical project should expose a common health/evidence contract before being eligible for portfolio-wide GREEN.
 
 ## Next mission target
 
-Reconcile remaining portfolio repository branch/path identities, then establish a repeatable health/evidence scan contract for every project so the Green Agent can continuously monitor all projects rather than discovering issues only during ad-hoc scans.
+Establish the common portfolio health/evidence contract in the Overseer control plane and map each canonical repository to it, without creating duplicate project runtimes or overriding project-specific authority.
