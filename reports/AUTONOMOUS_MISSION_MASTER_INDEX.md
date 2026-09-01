@@ -33,12 +33,13 @@
 | 024 | 2026-09-01 | Commit-scoped CI evidence gate | PARTIALLY_COMPLETE | Evidence correlation gap identified |
 | 025 | 2026-09-01 | Dispatch concurrency scan | PARTIALLY_COMPLETE | Lease/idempotency gap identified |
 | 026 | 2026-09-01 | Task lease hardening | PARTIALLY_COMPLETE | Lease primitive + tests added; wake integration remains open |
+| 027 | 2026-09-02 | Atomic lease-store reference hardening | COMPLETE | Deterministic in-memory lease store + tests; production distributed atomicity remains unproven |
 
-## Mission 026 summary
+## Mission 027 summary
 
-Added `src/dispatch/lease.mjs` with fail-closed task lease acquisition, renewal and owner-only release. Added `tests/lease.test.mjs` plus a duplicate-runner guard test covering active lease rejection.
+Added `src/dispatch/lease-store.mjs` as a deterministic reference persistence seam with atomic single-process acquire semantics, owner-bound renewal/release and expiry takeover. Added `tests/lease-store.test.mjs` covering active-lease rejection, expiry takeover and owner checks. Added `docs/LEASE_IDEMPOTENCY_GATE.md` defining the promotion requirements and explicitly stating that the in-memory store is not distributed locking.
 
-The lease layer is intentionally separate from the current worker claim path until it can be integrated without weakening existing authority and state-transition rules. The scheduled wake workflow was also updated to execute the lease and wake regression suites. This remains implementation evidence only; the workflow must run successfully against the updated commit before the lease layer can be treated as verified.
+This intentionally does not claim production concurrency safety. The next implementation must use the actual backing persistence adapter's conditional/atomic operation and test it under competing-runner conditions.
 
 ## Control rules
 
@@ -59,4 +60,4 @@ The lease layer is intentionally separate from the current worker claim path unt
 
 ## Next mission target
 
-Integrate lease acquisition into the GitHub wake cycle with an adapter-level atomic/conditional claim where supported, add recovery/expiry tests, then obtain fresh CI evidence. Keep write permissions disabled until the complete chain is independently assured.
+Integrate the lease store with the GitHub wake adapter through an explicit persistence interface, enforce lease ownership during execution, and add competing-runner/idempotency tests at the adapter boundary. Then obtain fresh CI evidence before any write-capable autonomy promotion.
