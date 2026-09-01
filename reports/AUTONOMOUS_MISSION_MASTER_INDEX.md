@@ -11,15 +11,14 @@
 | 027 | 2026-09-02 | Atomic lease-store reference hardening | COMPLETE | Deterministic in-memory lease store + tests; production distributed atomicity unproven |
 | 028 | 2026-09-02 | Lease integration into GitHub wake | PARTIALLY_COMPLETE | Lease enforced in wake path; adapter-level regression added subsequently |
 | 029 | 2026-09-02 | Idempotency reference hardening | COMPLETE | Deterministic in-memory idempotency store + tests; distributed persistence unproven |
-| 030 | 2026-09-02 | Idempotent GitHub wake integration | COMPLETE | Wake path now rejects previously completed task IDs; deterministic regression test added |
+| 030 | 2026-09-02 | Idempotent GitHub wake integration | COMPLETE | Wake path rejects previously completed task IDs; deterministic regression test added |
+| 031 | 2026-09-02 | Production persistence contract | COMPLETE | Explicit lease/idempotency adapter contract + stable completion-key function + deterministic tests; real backing adapter remains open |
 
-## Mission 030 summary
+## Mission 031 summary
 
-Integrated the idempotency guard into `src/dispatch/github-wake.mjs` alongside the lease guard. A task must acquire a lease and pass the idempotency begin check before execution. On completion, the canonical response is persisted through the idempotency store before the durable response audit event is emitted. A repeated wake for the same task is rejected as `already_completed` without invoking inspection/action.
+Added `src/dispatch/persistence.mjs` defining the required production persistence interface for atomic lease and idempotency operations, plus a stable completion-key function. Added `tests/persistence.test.mjs` covering valid adapters, fail-closed rejection of incomplete adapters, and key stability.
 
-Added `tests/github-wake-idempotency.test.mjs` proving that a completed task cannot be completed twice through the wake path.
-
-**Evidence boundary:** this proves deterministic in-process lease/idempotency orchestration. It does not prove distributed atomicity between independent GitHub runners. The next gate is an actual persistence adapter with conditional atomic operations plus fresh CI evidence.
+This closes the architectural ambiguity between reference in-memory stores and the production persistence boundary. It does not claim that a real distributed backing store is implemented.
 
 ## Control rules
 
@@ -41,4 +40,4 @@ Added `tests/github-wake-idempotency.test.mjs` proving that a completed task can
 
 ## Next mission target
 
-Introduce an explicit persistence interface for leases/idempotency so the GitHub adapter can supply atomic conditional operations, then add adapter-level competing-runner tests and fresh CI verification.
+Implement the production-backed persistence adapter using an available atomic/conditional store, wire it into the GitHub wake runner, and run competing-runner plus failure-recovery tests. Do not enable write-capable autonomy until those tests and independent assurance are green.
