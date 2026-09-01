@@ -24,16 +24,16 @@
 | 014 | 2026-09-01 | Portfolio control-plane scan | PARTIALLY_COMPLETE — four inventory-only entries identified and mission index staleness detected | Portfolio registry + repository evidence |
 | 015 | 2026-09-01 | Portfolio repository deep scan | PARTIALLY_COMPLETE — inventory-only projects inspected; control-plane and status gaps remain | Live repository files; no project GREEN claims without tests/evidence |
 | 016 | 2026-09-01 | Portfolio branch/path reconciliation | PARTIALLY_COMPLETE — MyPrimeDelivery default branch confirmed; repository content exists despite README-path API mismatch | Live GitHub repository metadata and tree evidence |
+| 017 | 2026-09-01 | Portfolio health/evidence contract | COMPLETE — common machine-readable health contract and continuous monitoring contract established in canonical Overseer control plane | Control-plane documentation/schema; project-level adoption and live monitoring remain unproven |
 
-## Mission 016 summary
+## Mission 017 summary
 
-- Rechecked the canonical portfolio registry and its current 10-entry scope.
-- Verified `darrinbaldwindev/MyPrimeDelivery` exists and has default branch `agent/overseer/initial-project-timeline`.
-- Verified that branch contains a non-trivial project tree with architecture, project contract and multiple Overseer handoff/evidence records.
-- The earlier README retrieval failure is therefore a content-path/API discrepancy, not evidence that the repository is inaccessible or empty.
-- Preserved the distinction between repository accessibility and project health.
-- Confirmed the portfolio registry still has inventory-only entries requiring deeper health evidence.
-- Identified the next control-plane requirement: every project needs a common, machine-discoverable health/evidence contract so Green Agent can monitor it consistently.
+- Added `schemas/PORTFOLIO_HEALTH_CONTRACT.v1.json` as the canonical machine-readable baseline.
+- Added `docs/PORTFOLIO_HEALTH_MONITORING_CONTRACT.md` defining equal baseline checks, GREEN rules, wake/response behaviour and fail-safe dispositions.
+- Required baseline signals include repository access, tests, security, Project Overseer freshness, evidence freshness, PRS and Green Agent status.
+- Explicitly prevented missing evidence from being promoted to GREEN by inference.
+- Explicitly prevented repository/branch failures from being silently substituted with another project.
+- Kept the contract as an evidence/control-plane layer rather than creating a duplicate runtime, scheduler, router or assurance engine.
 
 ## Control rules
 
@@ -51,4 +51,4 @@
 
 ## Next mission target
 
-Establish the common portfolio health/evidence contract in the Overseer control plane and map each canonical repository to it, without creating duplicate project runtimes or overriding project-specific authority.
+Map the health contract onto each canonical project and implement the minimum local evidence emitter/wake integration where safely possible, starting with AgentOS, PRS and the Project Overseer control plane. Then validate the same contract across the remaining projects without weakening the baseline.
