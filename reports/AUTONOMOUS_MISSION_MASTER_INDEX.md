@@ -17,7 +17,8 @@
 | 033 | 2026-09-02 | GREEN verification continuation and evidence hardening | COMPLETE | Canonical main workflow and persistence path rechecked; verification PR #60 passed its complete test suite before merge |
 | 034 | 2026-09-02 | Fresh canonical Project Overseer Wake verification | COMPLETE | Fresh main push run 33576900256 succeeded; main AgentOS Tests run 33576900258 succeeded; 211/211 tests passed in the full AgentOS suite |
 | 035 | 2026-09-02 | Source-agent provenance in Overseer communication | COMPLETE | Fresh AgentOS Tests run 33577276349 succeeded; fresh Project Overseer Wake run 33577276237 succeeded; source_agent regression path verified |
-| 036 | 2026-09-02 | Shared GitHub conditional persistence adapter | PARTIALLY_COMPLETE | Adapter implemented and verified; async wake integration added; first full-suite run exposed a test-fixture encoding defect, repaired in commit b28a362; fresh verification pending |
+| 036 | 2026-09-02 | Shared GitHub conditional persistence adapter | COMPLETE_FOR_IMPLEMENTATION_SCOPE | Adapter implemented; async wake compatibility verified; fresh Project Overseer Wake run 33579408404 succeeded; AgentOS Tests run 33579408372 succeeded; 212/212 suite tests passed; deterministic persistence gate 21/21 passed. Production promotion remains blocked pending live-equivalent concurrency/recovery and independent assurance. |
+| 037 | 2026-09-02 | Distributed persistence concurrency and failure-recovery assurance | IN_PROGRESS | Add race/recovery tests that exercise conditional conflicts and lease expiry/recovery; preserve read-only workflow permissions; route resulting evidence through Green Agent and PRS before production write enablement |
 
 ## Mission 035 summary
 
@@ -27,9 +28,17 @@ Regression fixtures explicitly exercise an example worker source (`agentos:repo-
 
 ## Mission 036 summary
 
-A shared GitHub Contents API persistence adapter was added at `src/dispatch/github-contents-persistence.mjs`, with an async production-store adapter and wake-cycle compatibility. The adapter uses conditional GitHub Contents updates/deletes as the shared compare-and-swap boundary for lease and completion records. Regression tests cover acquisition, release, renewal protection, and completion replay.
+A shared GitHub Contents API persistence adapter was added at `src/dispatch/github-contents-persistence.mjs`. It uses conditional GitHub Contents updates/deletes with content SHA values as the adapter's compare-and-swap boundary for lease and completion records, and the wake cycle supports its asynchronous persistence surface.
 
-The initial fresh suite after wake integration failed because the new test decoded an encoded path before looking it up in the fake backing store. That test-only defect was corrected in commit `b28a362251137d2c310df6b98e847a2d96fdb561`. New Project Overseer Wake run `33578008035` and AgentOS Tests run `33578007999` are pending fresh verification at the time of this log update. No GREEN claim is made.
+Fresh canonical verification now passes after the earlier test-fixture defect was repaired: Project Overseer Wake run `33579408404` succeeded and AgentOS Tests run `33579408372` succeeded. The persistence-focused gate reports 21/21 passing tests, including competing-owner rejection, owner-conditional renewal/release, and completion replay. Mission 036 is complete for implementation and deterministic verification.
+
+The production boundary remains explicit: the current evidence does not yet prove live distributed runner behavior or failure recovery. The wake workflow remains read-only and no production write credential is enabled.
+
+## Mission 037 summary
+
+Mission 037 begins the final technical assurance stage for persistence. The target is not another deterministic happy-path test; it is evidence that competing runners cannot both acquire an expired lease, stale owners cannot renew/release over a newer owner, completion remains first-writer-wins under a race, and an abandoned execution can recover after lease expiry without creating duplicate successful completion. Tests must model conditional conflicts at the backing-store boundary and preserve fail-closed behavior.
+
+After the technical gate passes, evidence must be reviewed independently by Green Agent and PRS. Neither assurance layer may be treated as execution authority or replaced by the worker's own test results.
 
 ## Control rules
 
@@ -49,7 +58,5 @@ The initial fresh suite after wake integration failed because the new test decod
 14. A lease primitive is not equivalent to atomic distributed locking until the backing store provides the required concurrency semantics.
 15. An in-memory idempotency store is not evidence of distributed idempotency.
 16. Agent-originated communication must preserve source-agent provenance where available.
-
-## Next mission target
-
-Mission 037: once fresh verification clears, add real concurrent-runner and failure-recovery verification and route the evidence through independent Green Agent and PRS assurance. Do not enable write-capable autonomy until those gates are green.
+17. Implemented persistence is not production-approved persistence.
+18. Production write autonomy requires technical concurrency/recovery evidence plus independent Green Agent and PRS assurance.
