@@ -18,6 +18,8 @@
 | Correspondence | Date | Source | Target | Mission(s) | Subject | Status | Evidence |
 |---|---|---|---|---|---|---|---|
 | C-001 | 2026-09-02 | CHATGPT Overseer | Portfolio control | 047 | Correspondence, mission and worker reconciliation control established | RECORDED | `MISSION-047-CORRESPONDENCE-AND-WORKER-RECONCILIATION-CONTROL.md` |
+| C-002 | 2026-09-02 | User / CHATGPT Overseer | Portfolio control | 048 | Autonomous continuation and worker expansion directive | RECORDED | `MISSION-048-LOCAL-INSTALL-DOCTOR-WORKER-ROSTER.md` |
+| C-003 | 2026-09-02 | CHATGPT Overseer | AgentOS Project Control | 048, 049 | First-boot persistence handoff and next manual-wake dependency | RECORDED | `CORRESPONDENCE-C-003.md` |
 
 ## Reconciliation rules
 
