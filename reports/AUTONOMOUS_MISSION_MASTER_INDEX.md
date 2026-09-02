@@ -16,15 +16,13 @@
 | 032 | 2026-09-02 | Project Overseer hourly wake schedule repair | COMPLETE_PENDING_FRESH_CI | Fixtures repaired, exact schedule guard added, Actions v5 normalized, persistence timing/completion-key consistency corrected; fresh post-fix Actions evidence still required |
 | 033 | 2026-09-02 | GREEN verification continuation and evidence hardening | COMPLETE | Canonical main workflow and persistence path rechecked; verification PR #60 passed its complete test suite before merge |
 | 034 | 2026-09-02 | Fresh canonical Project Overseer Wake verification | COMPLETE | Fresh main push run 33576900256 succeeded; main AgentOS Tests run 33576900258 succeeded; 211/211 tests passed in the full AgentOS suite |
-| 035 | 2026-09-02 | Source-agent provenance in Overseer communication | IN_PROGRESS_PENDING_FRESH_CI | Response schema, local wake, GitHub wake and regression fixtures updated to preserve source_agent provenance; fresh CI currently running |
+| 035 | 2026-09-02 | Source-agent provenance in Overseer communication | COMPLETE | Fresh AgentOS Tests run 33577276349 succeeded; fresh Project Overseer Wake run 33577276237 succeeded; source_agent regression path verified |
 
 ## Mission 035 summary
 
 The communication chain was strengthened so Project Overseer responses can identify the originating agent when a worker/agent supplies the result. `source_agent` is now supported in the canonical Project Overseer response schema. Both local and GitHub-backed wake cycles propagate `result.source_agent` when supplied, otherwise defaulting to the receiving Project Overseer identity. GitHub response audit events also persist the source agent so provenance survives the communication record rather than appearing only in presentation text.
 
-Regression fixtures now explicitly exercise an example worker source (`agentos:repo-worker`) and assert that the response and audit record retain that provenance. This is deliberately additive: the field remains optional at the v1 schema level so existing valid responses are not broken, while new agent-originated responses can visibly identify their source.
-
-Fresh Actions verification is required before Mission 035 is promoted to COMPLETE. The current AgentOS Tests run is executing against commit `f1d78a74e637772188c5bddeb571ba348ce91a63`, with Project Overseer Wake also triggered by the same change. No GREEN claim is made for this material change until those fresh runs pass.
+Regression fixtures explicitly exercise an example worker source (`agentos:repo-worker`) and assert that the response and audit record retain that provenance. Fresh verification completed successfully: AgentOS Tests run `33577276349` and Project Overseer Wake run `33577276237` both succeeded against the provenance change. Mission 035 is therefore complete for this scope.
 
 ## Control rules
 
@@ -47,4 +45,4 @@ Fresh Actions verification is required before Mission 035 is promoted to COMPLET
 
 ## Next mission target
 
-After Mission 035 passes fresh CI, continue with the production-backed persistence adapter using an available atomic/conditional store, then competing-runner and failure-recovery tests. Do not enable write-capable autonomy until those tests and independent assurance are green.
+Mission 036: design and implement the production-backed persistence adapter using an available atomic/conditional store, then add competing-runner and failure-recovery tests. Do not enable write-capable autonomy until those tests and independent assurance are green.
