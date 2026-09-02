@@ -17,7 +17,7 @@
 | 033 | 2026-09-02 | GREEN verification continuation and evidence hardening | COMPLETE | Canonical main workflow and persistence path rechecked; verification PR #60 passed its complete test suite before merge |
 | 034 | 2026-09-02 | Fresh canonical Project Overseer Wake verification | COMPLETE | Fresh main push run 33576900256 succeeded; main AgentOS Tests run 33576900258 succeeded; 211/211 tests passed in the full AgentOS suite |
 | 035 | 2026-09-02 | Source-agent provenance in Overseer communication | COMPLETE | Fresh AgentOS Tests run 33577276349 succeeded; fresh Project Overseer Wake run 33577276237 succeeded; source_agent regression path verified |
-| 036 | 2026-09-02 | Shared GitHub conditional persistence adapter | PARTIALLY_COMPLETE | Adapter and concurrency/replay regression tests implemented; fresh Project Overseer Wake run 33577722884 and AgentOS Tests run 33577722882 succeeded; live competing-runner/failure-recovery evidence remains required |
+| 036 | 2026-09-02 | Shared GitHub conditional persistence adapter | PARTIALLY_COMPLETE | Adapter implemented and verified; async wake integration added; first full-suite run exposed a test-fixture encoding defect, repaired in commit b28a362; fresh verification pending |
 
 ## Mission 035 summary
 
@@ -27,9 +27,9 @@ Regression fixtures explicitly exercise an example worker source (`agentos:repo-
 
 ## Mission 036 summary
 
-A shared GitHub Contents API persistence adapter was added at `src/dispatch/github-contents-persistence.mjs`. It uses GitHub's conditional create/update/delete behavior as the compare-and-swap boundary for shared lease records and completion records, while preserving the existing persistence contract. Regression tests cover competing acquisition, stale ownership protection, release, and completion replay.
+A shared GitHub Contents API persistence adapter was added at `src/dispatch/github-contents-persistence.mjs`, with an async production-store adapter and wake-cycle compatibility. The adapter uses conditional GitHub Contents updates/deletes as the shared compare-and-swap boundary for lease and completion records. Regression tests cover acquisition, release, renewal protection, and completion replay.
 
-Fresh verification succeeded on the adapter commits: Project Overseer Wake run `33577722884` and AgentOS Tests run `33577722882`. This is not yet production GREEN because the repository does not have live multi-runner/failure-injection evidence proving the GitHub-backed adapter under real competing runners.
+The initial fresh suite after wake integration failed because the new test decoded an encoded path before looking it up in the fake backing store. That test-only defect was corrected in commit `b28a362251137d2c310df6b98e847a2d96fdb561`. New Project Overseer Wake run `33578008035` and AgentOS Tests run `33578007999` are pending fresh verification at the time of this log update. No GREEN claim is made.
 
 ## Control rules
 
@@ -52,4 +52,4 @@ Fresh verification succeeded on the adapter commits: Project Overseer Wake run `
 
 ## Next mission target
 
-Mission 037: wire the shared GitHub persistence adapter into the GitHub wake path behind an explicit production-mode boundary, add real concurrent-runner and failure-recovery verification, then route the evidence through independent Green Agent and PRS assurance. Do not enable write-capable autonomy until those gates are green.
+Mission 037: once fresh verification clears, add real concurrent-runner and failure-recovery verification and route the evidence through independent Green Agent and PRS assurance. Do not enable write-capable autonomy until those gates are green.
