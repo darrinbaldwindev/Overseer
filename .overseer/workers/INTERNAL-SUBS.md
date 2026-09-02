@@ -37,6 +37,10 @@ Workers are instantiated/selected as needed; this registry does not imply six co
 - Keep provider choice separate from capability/skill identity.
 - Prefer reuse of existing repository primitives, including skill memory and scan infrastructure.
 - Only create a dedicated persistent worker process when there is a demonstrated need; otherwise treat these as ready-to-dispatch internal roles.
+- Every autonomous portfolio cycle must reconcile useful outputs from all available workers/providers, including Gemini, Manus and other model workers, against current repository state.
+- Worker/provider outputs are intelligence or candidate evidence until independently verified; they must never self-certify consequential implementation or GREEN status.
+- Preserve source-agent/provider provenance on useful handoffs so downstream Overseers can distinguish origin from independent verification.
+- Before creating new work from a worker/provider recommendation, reconcile it with the canonical portfolio registry, existing backlog/issues and current implementation to prevent duplicate runtimes, routers or assurance engines.
 
 ## Initial readiness
 
