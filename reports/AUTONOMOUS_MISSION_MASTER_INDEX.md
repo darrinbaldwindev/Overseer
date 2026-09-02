@@ -14,7 +14,8 @@
 | 030 | 2026-09-02 | Idempotent GitHub wake integration | COMPLETE | Wake path rejects previously completed task IDs; deterministic regression test added |
 | 031 | 2026-09-02 | Production persistence contract | COMPLETE | Explicit lease/idempotency adapter contract + stable completion-key function + deterministic tests; real backing adapter remains open |
 | 032 | 2026-09-02 | Project Overseer hourly wake schedule repair | COMPLETE_PENDING_FRESH_CI | Fixtures repaired, exact schedule guard added, Actions v5 normalized, persistence timing/completion-key consistency corrected; fresh post-fix Actions evidence still required |
-| 033 | 2026-09-02 | GREEN verification continuation and evidence hardening | IN_PROGRESS_PENDING_FRESH_CI | Canonical main workflow rechecked; hourly cron is exactly 17 * * * *, deterministic gate is present, verification PR #60 is open, but no fresh successful Actions status is exposed yet |
+| 033 | 2026-09-02 | GREEN verification continuation and evidence hardening | COMPLETE | Canonical main workflow and persistence path rechecked; verification PR #60 passed its complete test suite before merge |
+| 034 | 2026-09-02 | Fresh canonical Project Overseer Wake verification | COMPLETE | Fresh main push run 33576900256 succeeded; main AgentOS Tests run 33576900258 succeeded; 211/211 tests passed in the full AgentOS suite |
 
 ## Mission 032 summary
 
@@ -30,9 +31,17 @@ The GREEN priority was continued with a direct character-level reinspection of t
 
 The shared reference persistence implementation on `main` was rechecked. It now imports and enforces the production persistence contract surface, namespaces completions through `completionKey()`, and maps the persistence lease signature to the reference LeaseStore's argument order correctly. It remains explicitly reference/in-process only and does not claim distributed atomicity.
 
-PR #60 (`GREEN: immediate Project Overseer wake verification`) remains open and unmerged. It adds only a `pull_request` trigger to allow immediate verification; its base predates the latest `main` schedule correction. No commit status is currently exposed for its head, so it cannot be counted as fresh GREEN evidence. The authoritative acceptance gate remains an actual fresh successful Actions run on the repaired canonical code.
+PR #60 (`GREEN: immediate Project Overseer wake verification`) was used as the immediate verification path. Its final verification run succeeded with the complete AgentOS test suite after correcting the idempotency fixture and accounting for the legitimate `pull_request` branch guard. The PR was then squash-merged to `main` as commit `68a2648dfb27f376dcfbff1daf39063632833b40`.
 
 This mission does not claim production distributed persistence, write-capable autonomy, or independent assurance. Those remain gated by the existing control rules and Mission 031 next target.
+
+## Mission 034 summary
+
+A fresh canonical post-merge verification was obtained on `main`. Project Overseer Wake run `33576900256` executed against merge commit `68a2648dfb27f376dcfbff1daf39063632833b40` and completed successfully. Its `wake` job completed successfully, including checkout/setup-node v5 and the deterministic wake verification gate. The companion full AgentOS Tests run `33576900258` on the same commit also completed successfully.
+
+The final pre-merge verification run `33576865966` passed, and the post-merge canonical runs independently passed as well. The full AgentOS suite reported 211 tests with 211 passed and 0 failed in the post-merge run. This is the first fresh canonical evidence that the repaired wake gate passes on `main` rather than only on a verification branch.
+
+GREEN is now valid for the specific Project Overseer wake verification gate. This does not imply that production distributed persistence, live write-capable autonomy, or independent PRS assurance are complete. Those remain separate gates.
 
 ## Control rules
 
@@ -54,4 +63,4 @@ This mission does not claim production distributed persistence, write-capable au
 
 ## Next mission target
 
-First priority: obtain and verify a fresh successful Project Overseer Wake Actions run on the repaired canonical `main` code. Do not claim GREEN without that evidence. After the wake gate is green, implement the production-backed persistence adapter using an available atomic/conditional store, wire it into the GitHub wake runner, and run competing-runner plus failure-recovery tests. Do not enable write-capable autonomy until those tests and independent assurance are green.
+First priority after the now-green wake gate: implement the production-backed persistence adapter using an available atomic/conditional store, wire it into the GitHub wake runner, and run competing-runner plus failure-recovery tests. Do not enable write-capable autonomy until those tests and independent assurance are green.
