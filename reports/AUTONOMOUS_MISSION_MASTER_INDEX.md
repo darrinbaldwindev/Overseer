@@ -19,6 +19,7 @@
 | 035 | 2026-09-02 | Source-agent provenance in Overseer communication | COMPLETE | Fresh AgentOS Tests run 33577276349 succeeded; fresh Project Overseer Wake run 33577276237 succeeded; source_agent regression path verified |
 | 036 | 2026-09-02 | Shared GitHub conditional persistence adapter | COMPLETE_FOR_IMPLEMENTATION_SCOPE | Adapter implemented; async wake compatibility verified; fresh Project Overseer Wake run 33579408404 succeeded; AgentOS Tests run 33579408372 succeeded; 212/212 suite tests passed; deterministic persistence gate 21/21 passed. Production promotion remains blocked pending live-equivalent concurrency/recovery and independent assurance. |
 | 037 | 2026-09-02 | Distributed persistence concurrency and failure-recovery assurance | TECHNICAL_GATE_PASSED_PENDING_INDEPENDENT_ASSURANCE | Added race/recovery tests covering concurrent lease acquisition, expired-lease takeover, stale-owner protection, completion first-writer-wins, and abandoned-execution recovery. Fresh Project Overseer Wake run 33582098844 succeeded and AgentOS Tests run 33582098841 succeeded. Production write autonomy remains blocked pending independent Green Agent and PRS assurance. |
+| 038 | 2026-09-02 | Independent assurance routing for Mission 037 | COMPLETE_FOR_HANDOFF_PENDING_RESULTS | Created the durable Mission 037 assurance packet and opened PRS issue #13 with exact commit, workflow evidence, claims, limitations and production boundary. Green Agent remains an independent assurance requirement; no production write authority enabled. |
 
 ## Mission 035 summary
 
@@ -41,6 +42,10 @@ Mission 037 began the distributed persistence assurance stage. The new concurren
 The fresh canonical Project Overseer Wake run `33582098844` succeeded, and the fresh AgentOS Tests run `33582098841` succeeded on commit `5a020421fc1b3645ce8b65dfc86634c7095655e5`. This passes the technical test gate for the modeled conditional-conflict/recovery behavior.
 
 This is still not production approval. The fake backing service models the required GitHub conditional semantics but is not a live multi-runner GitHub experiment. The production boundary therefore remains read-only until the evidence is independently reviewed by Green Agent and PRS. No write permission has been enabled.
+
+## Mission 038 summary
+
+The Mission 037 evidence has now been packaged for independent challenge rather than being self-certified by the AgentOS worker path. The assurance packet records the exact target commit, successful CI runs, technical claims, limitations and production boundary. PRS issue #13 requests an independent evidence-backed disposition. Green Agent remains separate and must not be replaced by the worker's own test suite.
 
 ## Control rules
 
