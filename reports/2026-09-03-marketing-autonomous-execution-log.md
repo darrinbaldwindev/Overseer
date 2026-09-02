@@ -15,9 +15,9 @@
 
 | Project | Action | Evidence/result |
 |---|---|---|
-| AgentOS | Fresh market scan + commercial wedge refinement + execution log | `AgentOS/docs/MARKETING-EXECUTION-2026-09-03.md` |
+| AgentOS | Fresh market scan + commercial wedge refinement + competitive signal record | `AgentOS/docs/MARKETING-EXECUTION-2026-09-03.md`; `AgentOS/docs/MARKETING-COMPETITIVE-SIGNAL-2026-09-03.md` |
 | GlobalShopCo | AU-first commercial test + free-delivery/economics gate + execution log | `GlobalShopCo/docs/MARKETING-EXECUTION-2026-09-03.md` |
-| Affiliate-Websites | AU affiliate-network scan + verification schema + execution log | `Affiliate-Websites/docs/MARKETING-EXECUTION-2026-09-03.md` |
+| Affiliate-Websites | AU network scan + initial opportunity shortlist + verification schema | `Affiliate-Websites/docs/AU-AFFILIATE-OPPORTUNITY-SHORTLIST-2026-09-03.md` |
 | PRS | Buyer/market signal scan + proof-led positioning + execution log | `PRS/docs/MARKETING-EXECUTION-2026-09-03.md` |
 | Franchise | Buyer guidance scan + separate acquisition funnels + execution log | `Franchise/docs/MARKETING-EXECUTION-2026-09-03.md` |
 | GhostKitchen | One-kitchen/one-concept commercial test + funnel definition + execution log | `GhostKitchen/docs/MARKETING-EXECUTION-2026-09-03.md` |
@@ -27,15 +27,33 @@
 | Overseer | Portfolio control/reporting and this durable execution record | This file |
 | manus codebase | No execution; product identity/ownership remains unverified | Boundary retained; no unsupported marketing artifact created |
 
-## Cross-portfolio result
+## Additional autonomous execution — current cycle
 
-Marketing has moved every actionable project from a static role contract into an explicit execution state. P0 projects received fresh commercial work; P1 projects received bounded market/proof work; discovery-gated projects received evidence recovery work instead of invented positioning.
+### AgentOS
+Current market evidence materially strengthens the existence of the management/governance/orchestration problem. Gartner now separately describes AI Agent Management Platforms, Guardian Agents and AI Governance Platforms. The marketing conclusion remains a hypothesis: test AgentOS as a governed cross-model/cross-agent execution layer, rather than as another generic agent builder. Market evidence does not prove AgentOS capability.
+
+### Affiliate-Websites
+Built an initial AU opportunity shortlist using current Commission Factory/Awin evidence. Initial candidates include EMU Australia, lululemon, My Muscle Chef, Priceline Pharmacy, Samsung, Qantas, ShopBack and Afterpay. These are **RESEARCHED, NOT PUBLISHABLE**. Commission rate alone is explicitly not the ranking criterion; consumer usefulness, restrictions, attribution, AU fit, content opportunity and economics must be verified.
+
+### MyPrimeDelivery
+Repository inspection found a project contract confirming governance-only state and explicitly unverified commercial model, workflow, geography and technology. Marketing remains discovery-gated.
+
+### GemVerse
+Archive-transfer evidence identifies product/system materials including puzzle catalog, Harmony Index, community system and monetization design, but explicitly requires creator/current-decision confirmation before treating them as active. Marketing remains discovery-gated.
+
+## Evidence classifications
+
+- FACT/VERIFIED: repository records and current source pages actually inspected.
+- VERIFIED MARKET SIGNAL: current external market research.
+- HYPOTHESIS: proposed positioning or commercial opportunity requiring validation.
+- UNKNOWN: demand, WTP, conversion, CAC, implementation completeness or commercial performance where no evidence exists.
+- No unsupported commercial claim has been upgraded to fact.
 
 ## Current gates
 
-1. AgentOS — validate one concrete cross-system customer workflow.
-2. GlobalShopCo — verify first AU category/program/product economics and conversion path.
-3. Affiliate-Websites — build verified AU program/category shortlist and measurable outbound-click journey.
+1. AgentOS — validate one concrete cross-system customer workflow and build proof from actual implementation.
+2. GlobalShopCo — independently verify top AU category/program/product economics and conversion path.
+3. Affiliate-Websites — independently verify the top five AU affiliate candidates, then create publishability scorecards.
 4. PRS — validate buyer/problem fit.
 5. Franchise/GhostKitchen — validate first commercial acquisition loops.
 6. Headless — hand implementation a first-journey conversion/measurement specification.
