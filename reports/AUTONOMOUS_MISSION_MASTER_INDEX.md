@@ -16,32 +16,15 @@
 | 032 | 2026-09-02 | Project Overseer hourly wake schedule repair | COMPLETE_PENDING_FRESH_CI | Fixtures repaired, exact schedule guard added, Actions v5 normalized, persistence timing/completion-key consistency corrected; fresh post-fix Actions evidence still required |
 | 033 | 2026-09-02 | GREEN verification continuation and evidence hardening | COMPLETE | Canonical main workflow and persistence path rechecked; verification PR #60 passed its complete test suite before merge |
 | 034 | 2026-09-02 | Fresh canonical Project Overseer Wake verification | COMPLETE | Fresh main push run 33576900256 succeeded; main AgentOS Tests run 33576900258 succeeded; 211/211 tests passed in the full AgentOS suite |
+| 035 | 2026-09-02 | Source-agent provenance in Overseer communication | IN_PROGRESS_PENDING_FRESH_CI | Response schema, local wake, GitHub wake and regression fixtures updated to preserve source_agent provenance; fresh CI currently running |
 
-## Mission 032 summary
+## Mission 035 summary
 
-The hourly Project Overseer wake workflow was inspected against its latest failed scheduled run. The failure was traced to test fixtures lagging behind the canonical dispatch/wake contracts: GitHub wake fixtures did not supply the required lease/idempotency stores, and local-cycle fixtures did not supply `acceptance_criteria`. The fixtures were corrected without weakening production validation. The wake workflow was updated to run on `main` updates in addition to its existing hourly schedule, while retaining manual dispatch. The verification gate was expanded to include persistence-contract and shared-reference-persistence tests.
+The communication chain was strengthened so Project Overseer responses can identify the originating agent when a worker/agent supplies the result. `source_agent` is now supported in the canonical Project Overseer response schema. Both local and GitHub-backed wake cycles propagate `result.source_agent` when supplied, otherwise defaulting to the receiving Project Overseer identity. GitHub response audit events also persist the source agent so provenance survives the communication record rather than appearing only in presentation text.
 
-A further consistency defect was found in the in-process reference adapter: it accepted the persistence surface but used raw task IDs for completion storage instead of the canonical `completionKey()` namespace, and its lease calls required explicit argument-order alignment with the persistence contract. Those defects were corrected and regression coverage was strengthened for canonical completion keys plus exact lease acquisition/expiry timing.
+Regression fixtures now explicitly exercise an example worker source (`agentos:repo-worker`) and assert that the response and audit record retain that provenance. This is deliberately additive: the field remains optional at the v1 schema level so existing valid responses are not broken, while new agent-originated responses can visibly identify their source.
 
-The failed scheduled run is explicitly not counted as validation of the repaired code because it executed an earlier commit before the repair commits. The current canonical `main` workflow is configured for hourly execution at minute 17 and includes the expanded deterministic verification gate. A fresh Actions execution on the repaired commit is required before the wake verification can be promoted to GREEN.
-
-## Mission 033 summary
-
-The GREEN priority was continued with a direct character-level reinspection of the canonical workflow and verification path. The live `main` workflow currently contains the exact schedule `17 * * * *`, with no top-of-hour `0 * * * *` schedule, retains `workflow_dispatch` and `push` to `main`, uses serialized concurrency, read-only contents permissions, a 10-minute timeout, Actions checkout/setup-node v5, and the complete deterministic test list including the exact schedule guard and persistence tests.
-
-The shared reference persistence implementation on `main` was rechecked. It now imports and enforces the production persistence contract surface, namespaces completions through `completionKey()`, and maps the persistence lease signature to the reference LeaseStore's argument order correctly. It remains explicitly reference/in-process only and does not claim distributed atomicity.
-
-PR #60 (`GREEN: immediate Project Overseer wake verification`) was used as the immediate verification path. Its final verification run succeeded with the complete AgentOS test suite after correcting the idempotency fixture and accounting for the legitimate `pull_request` branch guard. The PR was then squash-merged to `main` as commit `68a2648dfb27f376dcfbff1daf39063632833b40`.
-
-This mission does not claim production distributed persistence, write-capable autonomy, or independent assurance. Those remain gated by the existing control rules and Mission 031 next target.
-
-## Mission 034 summary
-
-A fresh canonical post-merge verification was obtained on `main`. Project Overseer Wake run `33576900256` executed against merge commit `68a2648dfb27f376dcfbff1daf39063632833b40` and completed successfully. Its `wake` job completed successfully, including checkout/setup-node v5 and the deterministic wake verification gate. The companion full AgentOS Tests run `33576900258` on the same commit also completed successfully.
-
-The final pre-merge verification run `33576865966` passed, and the post-merge canonical runs independently passed as well. The full AgentOS suite reported 211 tests with 211 passed and 0 failed in the post-merge run. This is the first fresh canonical evidence that the repaired wake gate passes on `main` rather than only on a verification branch.
-
-GREEN is now valid for the specific Project Overseer wake verification gate. This does not imply that production distributed persistence, live write-capable autonomy, or independent PRS assurance are complete. Those remain separate gates.
+Fresh Actions verification is required before Mission 035 is promoted to COMPLETE. The current AgentOS Tests run is executing against commit `f1d78a74e637772188c5bddeb571ba348ce91a63`, with Project Overseer Wake also triggered by the same change. No GREEN claim is made for this material change until those fresh runs pass.
 
 ## Control rules
 
@@ -60,7 +43,8 @@ GREEN is now valid for the specific Project Overseer wake verification gate. Thi
 13. A workflow definition is not evidence of a completed workflow run.
 14. A lease primitive is not equivalent to atomic distributed locking until the backing store provides the required concurrency semantics.
 15. An in-memory idempotency store is not evidence of distributed idempotency.
+16. Agent-originated communication must preserve source-agent provenance where available.
 
 ## Next mission target
 
-First priority after the now-green wake gate: implement the production-backed persistence adapter using an available atomic/conditional store, wire it into the GitHub wake runner, and run competing-runner plus failure-recovery tests. Do not enable write-capable autonomy until those tests and independent assurance are green.
+After Mission 035 passes fresh CI, continue with the production-backed persistence adapter using an available atomic/conditional store, then competing-runner and failure-recovery tests. Do not enable write-capable autonomy until those tests and independent assurance are green.
