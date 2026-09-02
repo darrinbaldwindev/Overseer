@@ -3,6 +3,7 @@
 **Date:** 2026-09-02
 **Owner:** CHATGPT Overseer
 **Status:** VERIFIED_FOR_REPOSITORY_AND_CI; LOCAL-HOST_EXECUTION PENDING
+**Correspondence:** C-005
 
 ## Objective
 Advance the AgentOS local runtime vertically rather than broadening horizontally. Replace the manual-wake execution shortcut with the canonical conflict-safe dispatch runner and add the minimum governed budget boundary required for a bounded mission execution.
@@ -38,6 +39,6 @@ Project identity → Mission → Verified Worker → Scoped Task → Budget → 
 - Do not treat GitHub scheduled telemetry as GREEN without observable mailbox evidence.
 
 ## Next dependency
-The next vertical dependency is the **real authorized worker boundary**: bind the bounded wake to the existing worker registry/capability authority and prove an actual local worker transaction without bypassing consent, scope or budget controls. Path authority must be enforced at the real file/tool execution boundary when that boundary is introduced.
+The next vertical dependency is the **real authorized worker boundary**: bind the bounded wake to the existing worker registry/capability authority and prove an actual local worker transaction without bypassing consent, scope or budget controls. Path authority must be enforced at the actual file/tool execution boundary when that boundary is introduced.
 
 **Source worker:** `agentos:local-wake-worker` (repository-defined deterministic worker identity; not an independently running external process).
