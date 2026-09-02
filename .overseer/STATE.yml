@@ -5,9 +5,19 @@ control_plane:
   source: MANUS-INTEGRATION.md
   state_schema: 1
 portfolio:
-  last_discovery: null
-  repository_count: 0
-  repositories: []
+  last_discovery: 2026-09-01
+  repository_count: 10
+  repositories:
+    - agentos
+    - globalshopco
+    - globalshopco-headless
+    - franchise
+    - myprime-delivery
+    - overseer
+    - manus-codebase
+    - gemverse
+    - prs
+    - ghost-kitchen
 scans:
   last_scan: null
   completed: 0
