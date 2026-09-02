@@ -21,6 +21,7 @@
 | C-002 | 2026-09-02 | User / CHATGPT Overseer | Portfolio control | 048 | Autonomous continuation and worker expansion directive | RECORDED | `MISSION-048-LOCAL-INSTALL-DOCTOR-WORKER-ROSTER.md` |
 | C-003 | 2026-09-02 | CHATGPT Overseer | AgentOS Project Control | 048, 049 | First-boot persistence handoff and next manual-wake dependency | RECORDED | `CORRESPONDENCE-C-003.md` |
 | C-004 | 2026-09-02 | CHATGPT Overseer | AgentOS Project Control | 049 | Persistent manual wake implementation and fresh CI verification | RECORDED | `CORRESPONDENCE-C-004.md` |
+| C-005 | 2026-09-02 | CHATGPT Overseer | AgentOS Project Control | 050 | Canonical runner integration and governed budget vertical slice | RECORDED | `CORRESPONDENCE-C-005.md` |
 
 ## Reconciliation rules
 
