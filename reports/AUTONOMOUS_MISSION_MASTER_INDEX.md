@@ -18,7 +18,7 @@
 | 034 | 2026-09-02 | Fresh canonical Project Overseer Wake verification | COMPLETE | Fresh main push run 33576900256 succeeded; main AgentOS Tests run 33576900258 succeeded; 211/211 tests passed in the full AgentOS suite |
 | 035 | 2026-09-02 | Source-agent provenance in Overseer communication | COMPLETE | Fresh AgentOS Tests run 33577276349 succeeded; fresh Project Overseer Wake run 33577276237 succeeded; source_agent regression path verified |
 | 036 | 2026-09-02 | Shared GitHub conditional persistence adapter | COMPLETE_FOR_IMPLEMENTATION_SCOPE | Adapter implemented; async wake compatibility verified; fresh Project Overseer Wake run 33579408404 succeeded; AgentOS Tests run 33579408372 succeeded; 212/212 suite tests passed; deterministic persistence gate 21/21 passed. Production promotion remains blocked pending live-equivalent concurrency/recovery and independent assurance. |
-| 037 | 2026-09-02 | Distributed persistence concurrency and failure-recovery assurance | IN_PROGRESS | Add race/recovery tests that exercise conditional conflicts and lease expiry/recovery; preserve read-only workflow permissions; route resulting evidence through Green Agent and PRS before production write enablement |
+| 037 | 2026-09-02 | Distributed persistence concurrency and failure-recovery assurance | TECHNICAL_GATE_PASSED_PENDING_INDEPENDENT_ASSURANCE | Added race/recovery tests covering concurrent lease acquisition, expired-lease takeover, stale-owner protection, completion first-writer-wins, and abandoned-execution recovery. Fresh Project Overseer Wake run 33582098844 succeeded and AgentOS Tests run 33582098841 succeeded. Production write autonomy remains blocked pending independent Green Agent and PRS assurance. |
 
 ## Mission 035 summary
 
@@ -36,9 +36,11 @@ The production boundary remains explicit: the current evidence does not yet prov
 
 ## Mission 037 summary
 
-Mission 037 begins the final technical assurance stage for persistence. The target is not another deterministic happy-path test; it is evidence that competing runners cannot both acquire an expired lease, stale owners cannot renew/release over a newer owner, completion remains first-writer-wins under a race, and an abandoned execution can recover after lease expiry without creating duplicate successful completion. Tests must model conditional conflicts at the backing-store boundary and preserve fail-closed behavior.
+Mission 037 began the distributed persistence assurance stage. The new concurrency test suite exercises conditional conflict behavior rather than only sequential happy paths: two runners race for a new lease; two runners race to take over an expired lease; a stale owner is prevented from releasing a newer lease; two completion writers race and exactly one response becomes authoritative; and an abandoned execution is recovered after lease expiry with a later completion remaining authoritative.
 
-After the technical gate passes, evidence must be reviewed independently by Green Agent and PRS. Neither assurance layer may be treated as execution authority or replaced by the worker's own test results.
+The fresh canonical Project Overseer Wake run `33582098844` succeeded, and the fresh AgentOS Tests run `33582098841` succeeded on commit `5a020421fc1b3645ce8b65dfc86634c7095655e5`. This passes the technical test gate for the modeled conditional-conflict/recovery behavior.
+
+This is still not production approval. The fake backing service models the required GitHub conditional semantics but is not a live multi-runner GitHub experiment. The production boundary therefore remains read-only until the evidence is independently reviewed by Green Agent and PRS. No write permission has been enabled.
 
 ## Control rules
 
