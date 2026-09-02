@@ -23,6 +23,7 @@
 | 039 | 2026-09-02 | Green Agent evidence-packet challenge capability | IMPLEMENTED_AND_CI_VERIFIED | Added deterministic Green Agent assurance-packet challenge and regression tests. Fresh AgentOS Tests run 33588127657 and Project Overseer Wake run 33588127696 completed successfully on the relevant change lineage. No Green Agent Mission 037 assurance result is claimed. PRS issue #13 was updated with the boundary. |
 | 040 | 2026-09-02 | Portfolio worker/provider-source reconciliation and control-plane repair | COMPLETE_FOR_CONTROL_SCOPE | Reconciled Gemini mission archive; repaired stale Overseer STATE.yml registry divergence; strengthened all-worker/provider provenance and reconciliation rules. No production credentials or scheduler state changed. |
 | 041 | 2026-09-02 | Fresh AgentOS scheduler/wake reliability baseline reconciliation | COMPLETE_FOR_TRIAGE | Fresh AgentOS main commit a7e3f4aca67d1bdbb377c8a55db6048aec8f0fbe passed AgentOS Tests run 33588833586 and Project Overseer Wake run 33588833569. Reconciled the newly durable Gemini-sourced scheduler/wake reliability handoff: current code does not yet implement `inspect_schedule_health()` or `wake_trace_id` continuity, so these remain implementation gaps rather than assumed capabilities. Closed stale AgentOS issue #58 after verifying the canonical wake fixtures now satisfy the required dispatch contract and fresh CI is successful. |
+| 042 | 2026-09-02 | Scheduler/wake reliability Phase 1: trace, useful-progress evidence, Green health evaluator | COMPLETE_FOR_PHASE1_CI | Added `wake_trace_id` continuity through GitHub/local wake task and response paths, explicit heartbeat/useful-progress timestamps, response-schema support, and read-only Green Agent `inspectScheduleHealth()` with deterministic missed/stalled/duplicate/SLA-drift tests. Initial CI exposed one incorrect paused fixture; it was corrected. Fresh AgentOS Tests run 33592806904 and Project Overseer Wake run 33592806918 both succeeded on main commit 2ce453b24d00ddfcee2680b7317d6648dd766414. Scheduler reliability remains NOT_GREEN pending real expected-wake evidence integration and deeper Phase 3 recovery/clock tests. |
 
 ## Mission 041 summary
 
@@ -33,6 +34,18 @@ The handoff identifies four concrete reliability gaps: omission detection for mi
 Fresh CI evidence is strong for the current baseline: AgentOS Tests run `33588833586` and Project Overseer Wake run `33588833569` both completed successfully against the same commit. A stale P0 issue (#58) describing an earlier dispatch fixture regression was closed as completed only after current main fixtures were inspected and fresh CI confirmed success; the canonical fixture now contains `mission_id`, `acceptance_criteria`, and authority capabilities.
 
 This mission does not declare scheduler reliability GREEN. It establishes the current baseline and routes the next work toward Phase 1/2/3 reliability implementation under the existing scheduler/Green Agent/PRS boundaries.
+
+## Mission 042 summary
+
+Source worker: **Gemini** supplied the scheduler/wake reliability handoff; implementation and verification were performed by **CHATGPT Overseer** against current AgentOS state. Phase 1 was implemented without introducing a second scheduler, runtime, state store, or assurance engine.
+
+The existing GitHub wake cycle now creates or preserves a `wake_trace_id`, stamps the scheduler wake boundary, propagates the trace through the claimed task, response and audit evidence, and records `system_heartbeat_at`. Useful progress is recorded deterministically when the worker returns implementation, verification, or evidence; heartbeat alone does not update `last_useful_work_at`. The local cycle uses the same trace/progress vocabulary. The Project Overseer response schema now permits `wake_trace_id` while retaining fail-closed additional-property protection.
+
+Green Agent now exposes a pure read-only `inspectScheduleHealth()` evaluator over existing expected-wake and task evidence. It detects `MISSED_WAKE`, `WAKE_LATENCY_BREACH`, `STALLED_WORK_DETECTED`, and `DUPLICATE_WAKE`, while exempting legitimate paused/cancelled/approved-pending expected work. Deterministic tests cover dropped wake, unproductive heartbeat, duplicate execution trace, SLA drift, and legitimate pause/cancellation.
+
+The first fresh full-suite run exposed one fixture error: the paused wake case was not actually marked paused. That test was corrected and a fresh run then passed **226/226 tests** in AgentOS Tests run `33592806904`; the matching Project Overseer Wake run `33592806918` also succeeded. This failure-and-repair cycle is retained as evidence rather than hidden.
+
+Mission 042 is **COMPLETE_FOR_PHASE1_CI**, not scheduler-reliability GREEN. The remaining evidence boundary is material: expected-wake records are still an input to the Green evaluator rather than a live scheduler ledger; production distributed wake behavior remains unproven; Phase 3 failure-injection/recovery and clock-drift integration evidence still needs expansion; and PRS/Green independent assurance for consequential production claims remains required.
 
 ## Control rules
 
