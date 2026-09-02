@@ -13,15 +13,24 @@
 | 029 | 2026-09-02 | Idempotency reference hardening | COMPLETE | Deterministic in-memory idempotency store + tests; distributed persistence unproven |
 | 030 | 2026-09-02 | Idempotent GitHub wake integration | COMPLETE | Wake path rejects previously completed task IDs; deterministic regression test added |
 | 031 | 2026-09-02 | Production persistence contract | COMPLETE | Explicit lease/idempotency adapter contract + stable completion-key function + deterministic tests; real backing adapter remains open |
-| 032 | 2026-09-02 | Project Overseer hourly wake schedule repair | COMPLETE_PENDING_FRESH_CI | Fixtures repaired, main-branch trigger added, persistence gate expanded, and reference adapter aligned to canonical completion-key contract; fresh post-fix Actions evidence is still required |
+| 032 | 2026-09-02 | Project Overseer hourly wake schedule repair | COMPLETE_PENDING_FRESH_CI | Fixtures repaired, exact schedule guard added, Actions v5 normalized, persistence timing/completion-key consistency corrected; fresh post-fix Actions evidence still required |
+| 033 | 2026-09-02 | GREEN verification continuation and evidence hardening | IN_PROGRESS_PENDING_FRESH_CI | Canonical main workflow rechecked; hourly cron is exactly 17 * * * *, deterministic gate is present, verification PR #60 is open, but no fresh successful Actions status is exposed yet |
 
 ## Mission 032 summary
 
-The hourly Project Overseer wake workflow was inspected against its latest failed scheduled run. The failure was traced to test fixtures lagging behind the canonical dispatch/wake contracts: GitHub wake fixtures did not supply the required lease/idempotency stores, and local-cycle fixtures did not supply `acceptance_criteria`. The fixtures were corrected without weakening production validation. The wake workflow was updated to run on `main` updates in addition to its existing hourly schedule, while retaining manual dispatch. The verification gate was then expanded to include persistence-contract and shared-reference-persistence tests.
+The hourly Project Overseer wake workflow was inspected against its latest failed scheduled run. The failure was traced to test fixtures lagging behind the canonical dispatch/wake contracts: GitHub wake fixtures did not supply the required lease/idempotency stores, and local-cycle fixtures did not supply `acceptance_criteria`. The fixtures were corrected without weakening production validation. The wake workflow was updated to run on `main` updates in addition to its existing hourly schedule, while retaining manual dispatch. The verification gate was expanded to include persistence-contract and shared-reference-persistence tests.
 
-A further consistency defect was found in the new in-process reference adapter: it accepted the persistence surface but used raw task IDs for completion storage instead of the canonical `completionKey()` namespace. That defect was corrected with commit `3c3729111e0a847dc4bea4aed744a93d475fb645`, and the adapter now asserts the persistence contract at construction and uses the canonical completion key for get/put operations.
+A further consistency defect was found in the in-process reference adapter: it accepted the persistence surface but used raw task IDs for completion storage instead of the canonical `completionKey()` namespace, and its lease calls required explicit argument-order alignment with the persistence contract. Those defects were corrected and regression coverage was strengthened for canonical completion keys plus exact lease acquisition/expiry timing.
 
-The failed scheduled run is explicitly not counted as validation of the repaired code because it executed commit `fa76ad31c48b96832e630e43c06e6a9360401ea9`, before the repair commits. The current wake workflow definition is present on `main`, including the hourly schedule and the expanded deterministic verification gate. A fresh Actions execution on the repaired commit is required before the wake verification can be promoted to GREEN.
+The failed scheduled run is explicitly not counted as validation of the repaired code because it executed an earlier commit before the repair commits. The current canonical `main` workflow is configured for hourly execution at minute 17 and includes the expanded deterministic verification gate. A fresh Actions execution on the repaired commit is required before the wake verification can be promoted to GREEN.
+
+## Mission 033 summary
+
+The GREEN priority was continued with a direct character-level reinspection of the canonical workflow and verification path. The live `main` workflow currently contains the exact schedule `17 * * * *`, with no top-of-hour `0 * * * *` schedule, retains `workflow_dispatch` and `push` to `main`, uses serialized concurrency, read-only contents permissions, a 10-minute timeout, Actions checkout/setup-node v5, and the complete deterministic test list including the exact schedule guard and persistence tests.
+
+The shared reference persistence implementation on `main` was rechecked. It now imports and enforces the production persistence contract surface, namespaces completions through `completionKey()`, and maps the persistence lease signature to the reference LeaseStore's argument order correctly. It remains explicitly reference/in-process only and does not claim distributed atomicity.
+
+PR #60 (`GREEN: immediate Project Overseer wake verification`) remains open and unmerged. It adds only a `pull_request` trigger to allow immediate verification; its base predates the latest `main` schedule correction. No commit status is currently exposed for its head, so it cannot be counted as fresh GREEN evidence. The authoritative acceptance gate remains an actual fresh successful Actions run on the repaired canonical code.
 
 This mission does not claim production distributed persistence, write-capable autonomy, or independent assurance. Those remain gated by the existing control rules and Mission 031 next target.
 
@@ -45,4 +54,4 @@ This mission does not claim production distributed persistence, write-capable au
 
 ## Next mission target
 
-Implement the production-backed persistence adapter using an available atomic/conditional store, wire it into the GitHub wake runner, and run competing-runner plus failure-recovery tests. Do not enable write-capable autonomy until those tests and independent assurance are green.
+First priority: obtain and verify a fresh successful Project Overseer Wake Actions run on the repaired canonical `main` code. Do not claim GREEN without that evidence. After the wake gate is green, implement the production-backed persistence adapter using an available atomic/conditional store, wire it into the GitHub wake runner, and run competing-runner plus failure-recovery tests. Do not enable write-capable autonomy until those tests and independent assurance are green.
