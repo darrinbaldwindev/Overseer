@@ -20,41 +20,16 @@
 | 036 | 2026-09-02 | Shared GitHub conditional persistence adapter | COMPLETE_FOR_IMPLEMENTATION_SCOPE | Adapter implemented; async wake compatibility verified; fresh Project Overseer Wake run 33579408404 succeeded; AgentOS Tests run 33579408372 succeeded; 212/212 suite tests passed; deterministic persistence gate 21/21 passed. Production promotion remains blocked pending live-equivalent concurrency/recovery and independent assurance. |
 | 037 | 2026-09-02 | Distributed persistence concurrency and failure-recovery assurance | TECHNICAL_GATE_PASSED_PENDING_INDEPENDENT_ASSURANCE | Added race/recovery tests covering concurrent lease acquisition, expired-lease takeover, stale-owner protection, completion first-writer-wins, and abandoned-execution recovery. Fresh Project Overseer Wake run 33582098844 succeeded and AgentOS Tests run 33582098841 succeeded. Production write autonomy remains blocked pending independent Green Agent and PRS assurance. |
 | 038 | 2026-09-02 | Independent assurance routing for Mission 037 | COMPLETE_FOR_HANDOFF_PENDING_RESULTS | Created the durable Mission 037 assurance packet and opened PRS issue #13 with exact commit, workflow evidence, claims, limitations and production boundary. Green Agent remains an independent assurance requirement; no production write authority enabled. |
-| 039 | 2026-09-02 | Green Agent evidence-packet challenge capability | IMPLEMENTED_PENDING_FRESH_CI | Added a deterministic Green Agent assurance-packet challenge that blocks promotion on unverified claims or blocking limitations, plus regression tests for Mission 037-style evidence. AgentOS commit 99e7bacfc121205087c6266e38503423d9234ab5 and test commit d099dc100a4f5410869250d0abcf52c04eabfa2e. Fresh CI was still in progress at handoff; no Green Agent Mission 037 assurance result is claimed. PRS issue #13 was updated with the new boundary. |
+| 039 | 2026-09-02 | Green Agent evidence-packet challenge capability | IMPLEMENTED_PENDING_FRESH_CI | Added a deterministic Green Agent assurance-packet challenge that blocks promotion on unverified claims or blocking limitations, plus regression tests for Mission 037-style evidence. AgentOS commit 99e7bacfc121205087c6266e38503423d9234ab5 and test commit d099dc100a4f5410869250d0abcf52c04eabfa2e. Fresh CI runs 33588127696 and 33588127657 subsequently completed successfully; no Green Agent Mission 037 assurance result is claimed. PRS issue #13 was updated with the new boundary. |
+| 040 | 2026-09-02 | Portfolio worker/provider-source reconciliation and control-plane repair | COMPLETE_FOR_CONTROL_SCOPE | Reconciled Gemini mission archive and confirmed provider/worker intelligence is non-authoritative until independently verified. Canonical Overseer registry contains 10 repositories; stale STATE.yml zero-repository state was repaired to mirror registry identity/count. Internal worker-pool rules now require every autonomous cycle to reconcile all available worker/provider outputs, preserve provenance, prevent duplicate work, and route consequential claims through independent verification. No production credentials or scheduler state changed. |
 
-## Mission 039 summary
+## Mission 040 summary
 
-Mission 039 advanced the independent Green Agent path rather than self-certifying Mission 037. The Green Agent now exposes a deterministic evidence-packet challenge that evaluates each supplied claim's evidence and explicitly treats blocking limitations as a promotion barrier. It only permits GREEN promotion when every claim has verified evidence and no blocking limitation is declared. Regression coverage includes the Mission 037 pattern: deterministic race evidence may be verified while the absence of a live multi-runner experiment remains a blocking limitation, preventing production promotion.
+Mission 040 established the portfolio-wide rule requested by the owner: every autonomous cycle must inspect useful contributions from all available workers/providers, not only the primary execution path. The Gemini archive was explicitly reconciled; it records 33 expected mission positions, 29 recovered or partially recovered and 4 unrecoverable, and maintains the boundary that Gemini intelligence is not implementation evidence. Useful Gemini recommendations remain eligible for reconciliation against current repositories, backlog and tests, with source attribution preserved.
 
-The change was committed to AgentOS at `99e7bacfc121205087c6266e38503423d9234ab5`; companion tests were committed at `d099dc100a4f5410869250d0abcf52c04eabfa2e`. Fresh Project Overseer Wake run `33588127696` and AgentOS Tests run `33588127657` were observed running with the relevant test steps already successful; final workflow completion had not yet been observed when this mission log was written. Therefore Mission 039 is not marked CI-complete.
+The canonical Overseer registry was then checked directly. It contains 10 repositories. `.overseer/STATE.yml` was stale and reported zero repositories, so it was safely repaired using only registry-derived identity/discovery data; scan counters and findings were deliberately left unchanged rather than fabricated. The worker-pool operating rules were strengthened so future autonomous cycles must reconcile all available worker/provider outputs, including Gemini and Manus, preserve source provenance, prevent duplicate runtimes/routers/assurance engines, and require independent verification for consequential claims.
 
-PRS issue #13 received a handoff update noting that this capability does not replace PRS and does not constitute a PRS or Green Agent assurance result. Production write autonomy remains blocked.
-
-## Mission 035 summary
-
-The communication chain was strengthened so Project Overseer responses can identify the originating agent when a worker/agent supplies the result. `source_agent` is now supported in the canonical Project Overseer response schema. Both local and GitHub-backed wake cycles propagate `result.source_agent` when supplied, otherwise defaulting to the receiving Project Overseer identity. GitHub response audit events also persist the source agent so provenance survives the communication record rather than appearing only in presentation text.
-
-Regression fixtures explicitly exercise an example worker source (`agentos:repo-worker`) and assert that the response and audit record retain that provenance. Fresh verification completed successfully: AgentOS Tests run `33577276349` and Project Overseer Wake run `33577276237` both succeeded against the provenance change. Mission 035 is therefore complete for this scope.
-
-## Mission 036 summary
-
-A shared GitHub Contents API persistence adapter was added at `src/dispatch/github-contents-persistence.mjs`. It uses conditional GitHub Contents updates/deletes with content SHA values as the adapter's compare-and-swap boundary for lease and completion records, and the wake cycle supports its asynchronous persistence surface.
-
-Fresh canonical verification now passes after the earlier test-fixture defect was repaired: Project Overseer Wake run `33579408404` succeeded and AgentOS Tests run `33579408372` succeeded. The persistence-focused gate reports 21/21 passing tests, including competing-owner rejection, owner-conditional renewal/release, and completion replay. Mission 036 is complete for implementation and deterministic verification.
-
-The production boundary remains explicit: the current evidence does not yet prove live distributed runner behavior or failure recovery. The wake workflow remains read-only and no production write credential is enabled.
-
-## Mission 037 summary
-
-Mission 037 began the distributed persistence assurance stage. The new concurrency test suite exercises conditional conflict behavior rather than only sequential happy paths: two runners race for a new lease; two runners race to take over an expired lease; a stale owner is prevented from releasing a newer lease; two completion writers race and exactly one response becomes authoritative; and an abandoned execution is recovered after lease expiry with a later completion remaining authoritative.
-
-The fresh canonical Project Overseer Wake run `33582098844` succeeded, and the fresh AgentOS Tests run `33582098841` succeeded on commit `5a020421fc1b3645ce8b65dfc86634c7095655e5`. This passes the technical test gate for the modeled conditional-conflict/recovery behavior.
-
-This is still not production approval. The fake backing service models the required GitHub conditional semantics but is not a live multi-runner GitHub experiment. The production boundary therefore remains read-only until the evidence is independently reviewed by Green Agent and PRS. No write permission has been enabled.
-
-## Mission 038 summary
-
-The Mission 037 evidence has now been packaged for independent challenge rather than being self-certified by the AgentOS worker path. The assurance packet records the exact target commit, successful CI runs, technical claims, limitations and production boundary. PRS issue #13 requests an independent evidence-backed disposition. Green Agent remains separate and must not be replaced by the worker's own test suite.
+This mission does not claim that all portfolio repositories are currently scanned or GREEN. It establishes the control rule and repairs a concrete registry/state divergence without weakening authority boundaries.
 
 ## Control rules
 
@@ -76,3 +51,5 @@ The Mission 037 evidence has now been packaged for independent challenge rather 
 16. Agent-originated communication must preserve source-agent provenance where available.
 17. Implemented persistence is not production-approved persistence.
 18. Production write autonomy requires technical concurrency/recovery evidence plus independent Green Agent and PRS assurance.
+19. Every autonomous portfolio cycle must reconcile useful outputs from all available workers/providers, including Gemini, Manus and future agents, against fresh repository state and existing backlog before creating or changing work.
+20. Worker/provider intelligence is not independent assurance; consequential claims require independent verification and, where applicable, Green Agent plus PRS.
