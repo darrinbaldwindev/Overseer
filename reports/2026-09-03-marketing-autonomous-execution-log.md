@@ -1,64 +1,56 @@
 # Portfolio Marketing Autonomous Execution — 2026-09-03
 
 **Owner:** Marketing Overseer
-**Scope:** All currently registered projects plus discovered Affiliate-Websites
+**Scope:** AgentOS, GlobalShopCo and Affiliate-Websites only
 **Status:** EXECUTED / EVIDENCE-GATED
 
 ## Governance pre-check
 
-- Canonical portfolio registry confirms 10 registered repository identities; Affiliate-Websites remains a discovered application and has not been silently added to governance.
-- Mission reconciliation shows Mission 051 as the latest verified CHATGPT Overseer mission boundary. This marketing execution is logged as a workstream execution record and does not invent a new global mission ID.
-- Correspondence index shows C-006 as the latest known correspondence. No C-007 is fabricated by this workstream.
+- Marketing scope is now explicitly narrowed to AgentOS, GlobalShopCo and Affiliate-Websites.
+- Mission reconciliation remains Mission 051 as the latest verified CHATGPT Overseer mission boundary.
+- Correspondence index remains C-006 as the latest known correspondence.
+- No new mission or correspondence ID has been fabricated.
 - Marketing did not alter runtime, scheduler, credentials, permissions, production deployment or financial authority.
 
-## Actions completed
-
-| Project | Action | Evidence/result |
-|---|---|---|
-| AgentOS | Fresh market scan + commercial wedge refinement + competitive signal record | `AgentOS/docs/MARKETING-EXECUTION-2026-09-03.md`; `AgentOS/docs/MARKETING-COMPETITIVE-SIGNAL-2026-09-03.md` |
-| GlobalShopCo | AU-first commercial test + free-delivery/economics gate + execution log | `GlobalShopCo/docs/MARKETING-EXECUTION-2026-09-03.md` |
-| Affiliate-Websites | AU network scan + initial opportunity shortlist + verification schema | `Affiliate-Websites/docs/AU-AFFILIATE-OPPORTUNITY-SHORTLIST-2026-09-03.md` |
-| PRS | Buyer/market signal scan + proof-led positioning + execution log | `PRS/docs/MARKETING-EXECUTION-2026-09-03.md` |
-| Franchise | Buyer guidance scan + separate acquisition funnels + execution log | `Franchise/docs/MARKETING-EXECUTION-2026-09-03.md` |
-| GhostKitchen | One-kitchen/one-concept commercial test + funnel definition + execution log | `GhostKitchen/docs/MARKETING-EXECUTION-2026-09-03.md` |
-| GlobalShopCo-Headless | Conversion/SEO/measurement specification direction + execution log | `GlobalShopCo-Headless/docs/MARKETING-EXECUTION-2026-09-03.md` |
-| MyPrimeDelivery | Repository/contract reconciliation + discovery gate + execution log | `MyPrimeDelivery/docs/MARKETING-EXECUTION-2026-09-03.md` |
-| GemVerse | Archive-aware proposition discovery + evidence gate + execution log | `GemVerse/docs/MARKETING-EXECUTION-2026-09-03.md` |
-| Overseer | Portfolio control/reporting and this durable execution record | This file |
-| manus codebase | No execution; product identity/ownership remains unverified | Boundary retained; no unsupported marketing artifact created |
-
-## Additional autonomous execution — current cycle
+## Current execution
 
 ### AgentOS
-Current market evidence materially strengthens the existence of the management/governance/orchestration problem. Gartner now separately describes AI Agent Management Platforms, Guardian Agents and AI Governance Platforms. The marketing conclusion remains a hypothesis: test AgentOS as a governed cross-model/cross-agent execution layer, rather than as another generic agent builder. Market evidence does not prove AgentOS capability.
+- Added `docs/MARKETING-WEDGE-TEST-PLAN-2026-09-03.md`.
+- The test is a falsifiable governed cross-system exception-resolution workflow.
+- The document requires actual implementation evidence before any integration, action permission, autonomy or outcome claim is made.
+- New commit: `11cdb207eb3d4659e62c7f6a990ee4d26770d313`.
+- Current gate: identify one currently implemented workflow that can actually be demonstrated.
+
+### GlobalShopCo
+- Added `docs/MARKETING-AU-VERTICAL-CANDIDATES-2026-09-03.md`.
+- Current candidate set: women's fashion/boho, pet products, home & garden, hobbies/recreational goods and health & beauty.
+- Current marketing recommendation is **women's fashion/boho as the first candidate to investigate**, because it aligns with existing project direction; pet products are the strongest alternative based on current category growth signals.
+- This is not a final commercial selection. Product-level supplier, fulfilment, delivery and free-delivery contribution evidence is still required.
+- New commit: `5ccb12de6bcc1e3f9e53e5792c3d253551061ca4`.
 
 ### Affiliate-Websites
-Built an initial AU opportunity shortlist using current Commission Factory/Awin evidence. Initial candidates include EMU Australia, lululemon, My Muscle Chef, Priceline Pharmacy, Samsung, Qantas, ShopBack and Afterpay. These are **RESEARCHED, NOT PUBLISHABLE**. Commission rate alone is explicitly not the ranking criterion; consumer usefulness, restrictions, attribution, AU fit, content opportunity and economics must be verified.
+- Added `docs/AU-AFFILIATE-VERIFIED-CANDIDATES-2026-09-03.md`.
+- Current evidence set covers EMU Australia, My Muscle Chef, Linen House, Windsor Smith, The Somewhere Co. and SNDYS.
+- EMU Australia currently has the cleanest initial programme evidence; My Muscle Chef is a strong content-led candidate; SNDYS remains held back because its current directory headline conflicts with programme-copy commission information.
+- These are verified network-program signals, not blanket publication approval.
+- New commit: `a410a3997a3e0f72c9f4bfeae84e8ac6e6be1d12`.
 
-### MyPrimeDelivery
-Repository inspection found a project contract confirming governance-only state and explicitly unverified commercial model, workflow, geography and technology. Marketing remains discovery-gated.
+## External market evidence used in this cycle
 
-### GemVerse
-Archive-transfer evidence identifies product/system materials including puzzle catalog, Harmony Index, community system and monetization design, but explicitly requires creator/current-decision confirmation before treating them as active. Marketing remains discovery-gated.
+- Gartner (April 2026) identifies control-plane authority as a key consideration when selecting AI agent orchestrators.
+- Gartner (May 2026) warns that governance must vary by agent autonomy level and predicts governance failures will cause some enterprises to demote or decommission autonomous agents.
+- Gartner (June/August 2026) continues to describe governance and layered oversight as central to scaling agentic AI.
+- Australia Post's 2026 eCommerce Report reports $82.6b Australian online spend in 2025, with major category growth across fashion, home, electronics, hobbies, health/beauty and pet products.
+- Commission Factory current programme pages were used for individual AU affiliate-program evidence.
 
-## Evidence classifications
-
-- FACT/VERIFIED: repository records and current source pages actually inspected.
-- VERIFIED MARKET SIGNAL: current external market research.
-- HYPOTHESIS: proposed positioning or commercial opportunity requiring validation.
-- UNKNOWN: demand, WTP, conversion, CAC, implementation completeness or commercial performance where no evidence exists.
-- No unsupported commercial claim has been upgraded to fact.
+External sources are market intelligence only; they do not prove project implementation or product-market fit.
 
 ## Current gates
 
-1. AgentOS — validate one concrete cross-system customer workflow and build proof from actual implementation.
-2. GlobalShopCo — independently verify top AU category/program/product economics and conversion path.
-3. Affiliate-Websites — independently verify the top five AU affiliate candidates, then create publishability scorecards.
-4. PRS — validate buyer/problem fit.
-5. Franchise/GhostKitchen — validate first commercial acquisition loops.
-6. Headless — hand implementation a first-journey conversion/measurement specification.
-7. MyPrimeDelivery/GemVerse — recover authoritative proposition evidence before commercial claims.
+1. **AgentOS:** implementation owner identifies a demonstrable workflow; Marketing then prepares the buyer-facing proof narrative and measurement plan.
+2. **GlobalShopCo:** verify 5–10 actual SKUs in the leading candidate vertical and calculate contribution after delivery/transaction costs.
+3. **Affiliate-Websites:** complete individual programme verification for the strongest candidates and create publishability scorecards.
 
 ## Handoff
 
-This record is the durable Marketing Overseer report for the 2026-09-03 autonomous execution cycle. ChatGPT Overseer should treat project-repository evidence as current implementation evidence and external research as market intelligence only.
+This file remains the canonical Marketing Overseer durable record for this execution cycle. The three selected projects are now the only active Marketing Overseer workstream scope until changed by higher authority.
