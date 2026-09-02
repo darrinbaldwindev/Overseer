@@ -17,12 +17,19 @@
 | 033 | 2026-09-02 | GREEN verification continuation and evidence hardening | COMPLETE | Canonical main workflow and persistence path rechecked; verification PR #60 passed its complete test suite before merge |
 | 034 | 2026-09-02 | Fresh canonical Project Overseer Wake verification | COMPLETE | Fresh main push run 33576900256 succeeded; main AgentOS Tests run 33576900258 succeeded; 211/211 tests passed in the full AgentOS suite |
 | 035 | 2026-09-02 | Source-agent provenance in Overseer communication | COMPLETE | Fresh AgentOS Tests run 33577276349 succeeded; fresh Project Overseer Wake run 33577276237 succeeded; source_agent regression path verified |
+| 036 | 2026-09-02 | Shared GitHub conditional persistence adapter | PARTIALLY_COMPLETE | Adapter and concurrency/replay regression tests implemented; fresh Project Overseer Wake run 33577722884 and AgentOS Tests run 33577722882 succeeded; live competing-runner/failure-recovery evidence remains required |
 
 ## Mission 035 summary
 
 The communication chain was strengthened so Project Overseer responses can identify the originating agent when a worker/agent supplies the result. `source_agent` is now supported in the canonical Project Overseer response schema. Both local and GitHub-backed wake cycles propagate `result.source_agent` when supplied, otherwise defaulting to the receiving Project Overseer identity. GitHub response audit events also persist the source agent so provenance survives the communication record rather than appearing only in presentation text.
 
 Regression fixtures explicitly exercise an example worker source (`agentos:repo-worker`) and assert that the response and audit record retain that provenance. Fresh verification completed successfully: AgentOS Tests run `33577276349` and Project Overseer Wake run `33577276237` both succeeded against the provenance change. Mission 035 is therefore complete for this scope.
+
+## Mission 036 summary
+
+A shared GitHub Contents API persistence adapter was added at `src/dispatch/github-contents-persistence.mjs`. It uses GitHub's conditional create/update/delete behavior as the compare-and-swap boundary for shared lease records and completion records, while preserving the existing persistence contract. Regression tests cover competing acquisition, stale ownership protection, release, and completion replay.
+
+Fresh verification succeeded on the adapter commits: Project Overseer Wake run `33577722884` and AgentOS Tests run `33577722882`. This is not yet production GREEN because the repository does not have live multi-runner/failure-injection evidence proving the GitHub-backed adapter under real competing runners.
 
 ## Control rules
 
@@ -45,4 +52,4 @@ Regression fixtures explicitly exercise an example worker source (`agentos:repo-
 
 ## Next mission target
 
-Mission 036: design and implement the production-backed persistence adapter using an available atomic/conditional store, then add competing-runner and failure-recovery tests. Do not enable write-capable autonomy until those tests and independent assurance are green.
+Mission 037: wire the shared GitHub persistence adapter into the GitHub wake path behind an explicit production-mode boundary, add real concurrent-runner and failure-recovery verification, then route the evidence through independent Green Agent and PRS assurance. Do not enable write-capable autonomy until those gates are green.
