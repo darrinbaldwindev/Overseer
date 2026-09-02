@@ -24,39 +24,24 @@
 
 ### GlobalShopCo
 - Inspected current primary supplier evidence for Daring Diva Australia and Dropshipzone.
-- Daring Diva evidence confirms AU dropshipping, direct-to-customer fulfilment, 15% reseller commission, stock updates and same-day dispatch cutoff; its public catalogue also exposes current retail-price/shipping observations.
-- Dropshipzone evidence confirms AU supplier inventory/dropship capability, no MOQ, direct fulfilment and retailer-paid shipping; Fashion and Pet Care are supported categories.
-- Added pet-specific supplier pipeline evidence for Southern Pet Dropship, Pet Now and Petgo.
-- Southern Pet Dropship confirms direct-to-customer Australian fulfilment, no signup/account/minimum-spend fees, and published freight starting at $6.09 in metro South Australia; Pet Now confirms Australian multi-warehouse dropshipping; Petgo confirms direct dropship with 5% processing up to $150 / 2% above $150 plus actual freight.
-- Added `docs/MARKETING-AU-PET-SUPPLIER-PIPELINE-2026-09-03.md`.
-- New commit: `0ec4410e34901178e4a515f5c19620953bc53370`.
-- Marketing classification: supplier/fulfilment evidence strengthened; SKU-level supplier cost, shipping, stock and contribution remain UNKNOWN; no first vertical approved.
-- Current gate: obtain 5–10 actual women's fashion/boho SKUs and 5–10 pet SKUs with supplier economics and fulfilment evidence.
+- Added pet-specific supplier evidence for Southern Pet Dropship, Pet Now and Petgo.
+- Southern Pet evidence is particularly useful: it identifies pet accessories as the main profit opportunity for online pet stores, gives 50–90% markup guidance for selected pet toys and 50–90% profit guidance for Snooza bedding, while also exposing Australia-wide shipping tables, product weights/cubic data and frequent stock updates.
+- Added `docs/MARKETING-AU-PET-VERTICAL-PRIORITY-2026-09-03.md`.
+- New commit: `54cb6a2a2e717f4dfbb62650cc94b237c73940d1`.
+- Marketing classification: PET ACCESSORIES is now a stronger evidence-backed vertical candidate, but supplier markup claims are not GlobalShopCo realised margins and SKU-level contribution remains UNKNOWN.
+- Current gate: obtain 5–10 actual pet accessory SKUs and 5–10 women's fashion/boho SKUs with supplier cost, weight, delivery, stock, returns and contribution calculations.
 
 ### Affiliate-Websites
-- Performed primary-source checks across the five leading candidates.
-- EMU Australia: current Commission Factory listing shows 10% full-price / 5% sale standard affiliate rates, 30-day tracking, 45-day validation, AOV over $125 and free shipping; final publisher/account eligibility remains a gate.
-- My Muscle Chef: current programme page retains the 6% new / 3% returning qualification rather than treating the 3% directory headline as universal.
-- Linen House: current programme signal remains 5% with 30-day tracking and >$180 AOV.
-- Windsor Smith: current programme signal remains 5% non-sale / 2% sale with 30-day tracking and selected-publisher approval caveat.
-- The Somewhere Co.: current programme signal remains 2% default / 4% new customer with 30-day tracking and product feed.
-- SNDYS remains HOLD because of the previously identified commission-rate conflict.
-- Recorded in `docs/AU-AFFILIATE-PRIMARY-SOURCE-VERIFICATION-2026-09-03.md`.
-- New commit: `ffb8ec3d0fbed9667d6131ac646fc79107b660f2`.
-- Marketing classification: VERIFIED PROGRAM SIGNALS, **not** unconditional PUBLISHABLE approval.
-
-## External market evidence used in this cycle
-
-- Gartner 2026 research continues to support the market relevance of AI governance/control-plane positioning, but this remains market intelligence rather than proof of AgentOS capability or demand.
-- Australia Post 2026 eCommerce evidence continues to support testing AU ecommerce categories rather than selecting on market size alone.
-- Current primary supplier and affiliate-programme pages were used to tighten commercial evidence boundaries.
-
-External sources are market intelligence/evidence inputs only; they do not prove project implementation or product-market fit.
+- Performed current primary-source checks across the leading five programmes.
+- Added `docs/AU-AFFILIATE-CONTENT-STRATEGY-2026-09-03.md`.
+- New commit: `7650cabf889fe256ea9944ce778b00b5187e86fe`.
+- Strategic decision: build around consumer decisions/comparisons rather than generic affiliate-programme lists; commission is treated as an internal commercial variable rather than the primary consumer-facing ranking criterion.
+- EMU, My Muscle Chef, Linen House, Windsor Smith and The Somewhere Co. remain verified programme signals with final publication eligibility/terms gates. SNDYS remains HOLD.
 
 ## Current gates
 
 1. **AgentOS:** implementation owner identifies a demonstrable customer-relevant workflow; Marketing binds proof and measurement to it.
-2. **GlobalShopCo:** verify 5–10 actual SKUs in women's fashion/boho and pet and calculate contribution after delivery/transaction costs. Pet now has a stronger supplier/fulfilment evidence pipeline.
+2. **GlobalShopCo:** verify 5–10 actual SKUs in women's fashion/boho and pet and calculate contribution after delivery/transaction costs. Pet accessories has strengthened as a candidate but is not approved.
 3. **Affiliate-Websites:** complete final publisher/account-level eligibility and terms checks before any candidate is labelled PUBLISHABLE.
 
 ## Handoff
