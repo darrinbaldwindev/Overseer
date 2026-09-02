@@ -22,6 +22,7 @@
 | C-003 | 2026-09-02 | CHATGPT Overseer | AgentOS Project Control | 048, 049 | First-boot persistence handoff and next manual-wake dependency | RECORDED | `CORRESPONDENCE-C-003.md` |
 | C-004 | 2026-09-02 | CHATGPT Overseer | AgentOS Project Control | 049 | Persistent manual wake implementation and fresh CI verification | RECORDED | `CORRESPONDENCE-C-004.md` |
 | C-005 | 2026-09-02 | CHATGPT Overseer | AgentOS Project Control | 050 | Canonical runner integration and governed budget vertical slice | RECORDED | `CORRESPONDENCE-C-005.md` |
+| C-006 | 2026-09-02 | CHATGPT Overseer | AgentOS Project Control | 051 | Governed worker-registry binding and execution-contract verification | RECORDED | `CORRESPONDENCE-C-006.md` |
 
 ## Reconciliation rules
 
