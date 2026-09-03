@@ -14,6 +14,16 @@
 
 ## Material work completed this cycle
 
+### AgentOS — Windows scheduler bridge marketing evidence reconciliation
+- Fresh repository inspection found new Windows scheduler bridge implementation/acceptance evidence after the previous marketing record.
+- `docs/SCHEDULER_BRIDGE_ACCEPTANCE.md` defines the target path `Windows Task Scheduler -> scheduler-tick.mjs -> governed local-wake -> registered worker -> durable local evidence`.
+- The documented bridge is disabled by default, bounded to one wake per invocation, and requires explicit enablement for the first runtime acceptance test.
+- Acceptance requires a fresh `COMPLETED` scheduler record with unique task/wake trace identifiers, mission and worker provenance, timestamp and durable evidence, followed by exact reconciliation against persistent AgentOS state.
+- Updated `docs/MARKETING-IMPLEMENTATION-EVIDENCE-SCHEDULER-2026-09-03.md` to incorporate the Windows bridge evidence.
+- AgentOS marketing evidence commit: `a45ed9f035fa663ad14ba293492f7f9f75aed96d`.
+- Classification: **VERIFIED REPOSITORY IMPLEMENTATION / HOST EXECUTION STILL UNKNOWN**.
+- No production or unattended-runtime claim has been upgraded.
+
 ### PRS buyer validation
 - Existing buyer-validation research frame remains hypothesis-only.
 - Added `docs/BUYER-VALIDATION-INTERVIEW-PROTOCOL-2026-09-03.md` to PRS.
@@ -24,10 +34,6 @@
 - Fresh primary-source review completed for Petzyo, Kurgo, Snooza and Pet Circle.
 - Updated `docs/AU-PET-AFFILIATE-PRIMARY-VERIFICATION-2026-09-03.md`.
 - Commit: `87031f849ad98a5f48ba045ca62e92b6faad062a`.
-- Petzyo: merchant-owned affiliate portal is active and accepts partner applications; ABN/company fields are exposed.
-- Kurgo: merchant-owned affiliate programme is active with a 30-day attribution window; AU/NZ customer routing is through an Australian partner, so US direct-store policies cannot be assumed to be AU policy.
-- Snooza: merchant-owned Australian product/stockist evidence is strong, but the affiliate relationship remains a network-level signal until independently confirmed from the merchant/live account.
-- Pet Circle: network evidence remains useful but detailed commission terms must be represented from programme copy rather than a conflicting headline rate.
 - Classification: **PRIMARY-SOURCE VERIFIED SIGNAL / PUBLISHABILITY HOLD**.
 - No candidate is PUBLISHABLE until actual publisher approval, current terms, attribution, AU customer path, product suitability and freshness are verified.
 
@@ -38,10 +44,10 @@ GitHub installation currently exposes these repositories: AgentOS, Affiliate-Web
 ## Current marketing evidence state
 
 ### AgentOS
-- `runtime/local-wake.mjs` implements a persistent local Project Overseer wake cycle bound to existing governed worker registry and canonical boot/dispatch/authority/persistence primitives.
-- Classification: **VERIFIED REPOSITORY IMPLEMENTATION of a bounded local wake path**.
-- Still unverified: physical host installation, host execution, unattended scheduling, production/provider execution and customer outcome.
-- Gate: host-level installation → doctor → boot → wake → durable-state → verification evidence.
+- Repository evidence now covers governed GitHub wake testing, persistent local Project Overseer wake, and a defined Windows scheduler bridge acceptance path.
+- Classification: **VERIFIED REPOSITORY IMPLEMENTATION of bounded governed wake paths**.
+- Still unverified: physical host installation, host execution, a fresh accepted Windows scheduler round trip, unattended scheduling, production/provider execution and customer outcome.
+- Gate: install → doctor → boot → register scheduler → confirm disabled state → explicit first-test enablement → scheduler round trip → durable-state reconciliation.
 
 ### GlobalShopCo
 - Pet accessories remains a strengthened first-vertical candidate.
@@ -81,7 +87,7 @@ GitHub installation currently exposes these repositories: AgentOS, Affiliate-Web
 ## Portfolio-wide priority queue
 
 **P0 — Evidence required before commercial claims**
-1. AgentOS: host-level proof of local wake implementation.
+1. AgentOS: host-level proof of local wake/scheduler implementation.
 2. GlobalShopCo: actual SKU economics for pet and women's fashion/boho.
 3. Affiliate-Websites: publisher/account eligibility and current terms.
 
@@ -110,4 +116,4 @@ GitHub installation currently exposes these repositories: AgentOS, Affiliate-Web
 
 ## Handoff
 
-This record remains the canonical Marketing Overseer durable record for this execution cycle. Material work completed: PRS buyer-validation protocol (`783f76c48c482fc57b61aec181e12fe57652cf15`) and AU pet primary-source verification update (`87031f849ad98a5f48ba045ca62e92b6faad062a`). Latest verified mission remains Mission 051; latest known correspondence remains C-006. No new mission or correspondence ID was created.
+This record remains the canonical Marketing Overseer durable record for this execution cycle. New material work: AgentOS Windows scheduler bridge evidence reconciliation (`a45ed9f035fa663ad14ba293492f7f9f75aed96d`). Previous material work remains recorded above. Latest verified mission remains Mission 051; latest known correspondence remains C-006. No new mission or correspondence ID was created.
