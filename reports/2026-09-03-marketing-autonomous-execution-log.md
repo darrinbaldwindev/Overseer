@@ -14,6 +14,14 @@
 
 ## Material work completed this cycle
 
+### GlobalShopCo — authenticated supplier economics gate
+- Fresh repository inspection found `docs/suppliers/ELEGANTER_AUTHENTICATED_EVIDENCE_REQUEST_PACK_2026-09-04.md`.
+- The pack correctly converts remaining public-evidence gaps into a bounded supplier-account verification request rather than treating public retail pricing as trade cost.
+- Required evidence covers account/channel eligibility, authenticated 5–10 SKU trade pricing and freight, fulfilment/tracking, dropship presentation, returns/damage handling, SKU-level compliance evidence where applicable, and catalogue/feed capability.
+- The decision gate requires authenticated eligibility, authenticated cost/freight, understood returns and fulfilment, applicable SKU compliance evidence, sufficient margin after free-delivery/payment/operating costs, and no material legal/safety/customer-trust blocker.
+- Status: **IMPLEMENTED PROCUREMENT/VALIDATION ASSET — SUPPLIER ACCOUNT EVIDENCE STILL REQUIRED**.
+- No supplier or SKU has been upgraded to economically viable or approved based on this document alone.
+
 ### AgentOS — Windows scheduler bridge marketing evidence reconciliation
 - Fresh repository inspection found new Windows scheduler bridge implementation/acceptance evidence after the previous marketing record.
 - `docs/SCHEDULER_BRIDGE_ACCEPTANCE.md` defines the target path `Windows Task Scheduler -> scheduler-tick.mjs -> governed local-wake -> registered worker -> durable local evidence`.
@@ -52,6 +60,7 @@ GitHub installation currently exposes these repositories: AgentOS, Affiliate-Web
 ### GlobalShopCo
 - Pet accessories remains a strengthened first-vertical candidate.
 - Fashion/boho and pet still require SKU-level economics before approval.
+- Eleganter now has a bounded authenticated-evidence request pack, but supplier account response is not yet evidence.
 - Gate: 5–10 actual SKUs in each candidate vertical with supplier cost, stock, weight, delivery, customer price, returns and contribution after free-delivery/transaction costs.
 
 ### Affiliate-Websites
@@ -88,7 +97,7 @@ GitHub installation currently exposes these repositories: AgentOS, Affiliate-Web
 
 **P0 — Evidence required before commercial claims**
 1. AgentOS: host-level proof of local wake/scheduler implementation.
-2. GlobalShopCo: actual SKU economics for pet and women's fashion/boho.
+2. GlobalShopCo: authenticated supplier economics for candidate SKUs.
 3. Affiliate-Websites: publisher/account eligibility and current terms.
 
 **P1 — Convert existing evidence into proof assets**
@@ -108,6 +117,7 @@ GitHub installation currently exposes these repositories: AgentOS, Affiliate-Web
 - Research is not implementation evidence.
 - Repository implementation is not host execution evidence.
 - Supplier-reported margins are not realised GlobalShopCo margins.
+- Supplier request packs are not supplier responses.
 - Affiliate commission percentage is not a forecast of earnings or conversion.
 - Merchant affiliate-programme existence is not publisher acceptance.
 - Australian merchant/product availability is not automatically Australian affiliate attribution.
@@ -116,4 +126,4 @@ GitHub installation currently exposes these repositories: AgentOS, Affiliate-Web
 
 ## Handoff
 
-This record remains the canonical Marketing Overseer durable record for this execution cycle. New material work: AgentOS Windows scheduler bridge evidence reconciliation (`a45ed9f035fa663ad14ba293492f7f9f75aed96d`). Previous material work remains recorded above. Latest verified mission remains Mission 051; latest known correspondence remains C-006. No new mission or correspondence ID was created.
+This record remains the canonical Marketing Overseer durable record for this execution cycle. New material work: GlobalShopCo authenticated supplier evidence request pack identified and incorporated into the marketing evidence gate. Latest verified mission remains Mission 051; latest known correspondence remains C-006. No new mission or correspondence ID was created.
