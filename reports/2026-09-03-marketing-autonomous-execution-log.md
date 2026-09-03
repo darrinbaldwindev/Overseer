@@ -22,6 +22,20 @@
 - Status: **IMPLEMENTED PROCUREMENT/VALIDATION ASSET — SUPPLIER ACCOUNT EVIDENCE STILL REQUIRED**.
 - No supplier or SKU has been upgraded to economically viable or approved based on this document alone.
 
+### GlobalShopCo — agentic commerce discoverability evidence
+- Added `docs/MARKETING-AGENTIC-COMMERCE-DISCOVERABILITY-2026-09-04.md`.
+- Commit: `8b4ea20e14204a052834c88f7cd2220fb24481f7`.
+- Fresh PwC Australia evidence published 17 August 2026 identifies AI agents increasingly researching products, evaluating options and potentially completing purchases, and recommends retailers become discoverable, trustworthy, structured and transactable.
+- Marketing classification: **VERIFIED MARKET SIGNAL; FUTURE DESIGN/MARKETING REQUIREMENT**.
+- The evidence strengthens the existing requirement for clean, provenance-backed, fresh product data. It does not prove GlobalShopCo traffic, revenue, agent-readiness or transaction capability.
+
+### Affiliate-Websites — AU agentic commerce discoverability evidence
+- Added `docs/AU-AGENTIC-COMMERCE-DISCOVERABILITY-2026-09-04.md`.
+- Commit: `7231620f10b242e0cc344082037c3bc3335dcf49`.
+- The document connects current comparison fields (verification, payout, tracking, trust, source and freshness) to future machine/AI discovery while preserving existing affiliate evidence gates.
+- Classification: **VERIFIED MARKET SIGNAL / INFERENCE FOR FUTURE DISTRIBUTION**.
+- No programme is labelled AI-agent-ready and no affiliate revenue forecast has been created.
+
 ### AgentOS — Windows scheduler bridge marketing evidence reconciliation
 - Fresh repository inspection found new Windows scheduler bridge implementation/acceptance evidence after the previous marketing record.
 - `docs/SCHEDULER_BRIDGE_ACCEPTANCE.md` defines the target path `Windows Task Scheduler -> scheduler-tick.mjs -> governed local-wake -> registered worker -> durable local evidence`.
@@ -61,10 +75,12 @@ GitHub installation currently exposes these repositories: AgentOS, Affiliate-Web
 - Pet accessories remains a strengthened first-vertical candidate.
 - Fashion/boho and pet still require SKU-level economics before approval.
 - Eleganter now has a bounded authenticated-evidence request pack, but supplier account response is not yet evidence.
+- Agentic commerce is now a documented future discoverability/design requirement, not a current performance claim.
 - Gate: 5–10 actual SKUs in each candidate vertical with supplier cost, stock, weight, delivery, customer price, returns and contribution after free-delivery/transaction costs.
 
 ### Affiliate-Websites
 - AU pet affiliate research and primary-source verification have advanced, but account-level acceptance remains unavailable from repository/public evidence.
+- Agentic commerce is documented as a future machine-discovery opportunity; no programme is treated as AI-agent-ready without technical evidence.
 - Gate: actual publisher-account approval and current programme terms before PUBLISHABLE status.
 
 ### GhostKitchen
@@ -122,8 +138,9 @@ GitHub installation currently exposes these repositories: AgentOS, Affiliate-Web
 - Merchant affiliate-programme existence is not publisher acceptance.
 - Australian merchant/product availability is not automatically Australian affiliate attribution.
 - Archived product material is not active product scope without an authoritative current decision.
+- Market trend evidence is not proof of project-level demand, traffic, revenue or readiness.
 - Unknowns remain UNKNOWN until evidence changes their classification.
 
 ## Handoff
 
-This record remains the canonical Marketing Overseer durable record for this execution cycle. New material work: GlobalShopCo authenticated supplier evidence request pack identified and incorporated into the marketing evidence gate. Latest verified mission remains Mission 051; latest known correspondence remains C-006. No new mission or correspondence ID was created.
+This record remains the canonical Marketing Overseer durable record for this execution cycle. Material work added this cycle: current Australian agentic-commerce evidence incorporated into GlobalShopCo and Affiliate-Websites as bounded future discoverability/design requirements. Latest verified mission remains Mission 051; latest known correspondence remains C-006. No new mission or correspondence ID was created.
