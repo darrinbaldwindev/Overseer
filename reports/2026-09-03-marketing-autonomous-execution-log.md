@@ -14,13 +14,13 @@
 
 ## Material work completed this cycle
 
-### GlobalShopCo — authenticated supplier economics gate
-- Fresh repository inspection found `docs/suppliers/ELEGANTER_AUTHENTICATED_EVIDENCE_REQUEST_PACK_2026-09-04.md`.
-- The pack correctly converts remaining public-evidence gaps into a bounded supplier-account verification request rather than treating public retail pricing as trade cost.
-- Required evidence covers account/channel eligibility, authenticated 5–10 SKU trade pricing and freight, fulfilment/tracking, dropship presentation, returns/damage handling, SKU-level compliance evidence where applicable, and catalogue/feed capability.
-- The decision gate requires authenticated eligibility, authenticated cost/freight, understood returns and fulfilment, applicable SKU compliance evidence, sufficient margin after free-delivery/payment/operating costs, and no material legal/safety/customer-trust blocker.
-- Status: **IMPLEMENTED PROCUREMENT/VALIDATION ASSET — SUPPLIER ACCOUNT EVIDENCE STILL REQUIRED**.
-- No supplier or SKU has been upgraded to economically viable or approved based on this document alone.
+### GlobalShopCo — pet vertical GTM gate
+- Added `docs/MARKETING-PET-VERTICAL-GTM-GATE-2026-09-04.md`.
+- Initial commit: `bddc0379a6a4c8b71fb808985462d9a2e538efff`; citation-clean correction: `0ea5080ae4986dc6961bcf8fe81d548e122022eb`.
+- The gate incorporates current Australia Post 2026 eCommerce evidence: $1.4B online pet-product spend in 2025, +15.2% YoY, 1.2m households buying online, 37% of category spend online, and $120.62 average online basket.
+- Marketing classification: **VERIFIED MARKET SIGNAL / HIGH-PRIORITY VERTICAL RECOMMENDATION**.
+- The gate explicitly prevents market size from being substituted for SKU profitability.
+- Pet remains NOT APPROVED FOR LAUNCH until authenticated supplier eligibility, cost/freight, stock/tracking, pricing, free-delivery cost, transaction cost, returns and conservative positive contribution are evidenced.
 
 ### GlobalShopCo — agentic commerce discoverability evidence
 - Added `docs/MARKETING-AGENTIC-COMMERCE-DISCOVERABILITY-2026-09-04.md`.
@@ -72,10 +72,10 @@ GitHub installation currently exposes these repositories: AgentOS, Affiliate-Web
 - Gate: install → doctor → boot → register scheduler → confirm disabled state → explicit first-test enablement → scheduler round trip → durable-state reconciliation.
 
 ### GlobalShopCo
-- Pet accessories remains a strengthened first-vertical candidate.
+- Pet accessories remains a strengthened and now high-priority first-vertical candidate, supported by current Australian online category evidence.
 - Fashion/boho and pet still require SKU-level economics before approval.
 - Eleganter now has a bounded authenticated-evidence request pack, but supplier account response is not yet evidence.
-- Agentic commerce is now a documented future discoverability/design requirement, not a current performance claim.
+- Agentic commerce is a documented future discoverability/design requirement, not a current performance claim.
 - Gate: 5–10 actual SKUs in each candidate vertical with supplier cost, stock, weight, delivery, customer price, returns and contribution after free-delivery/transaction costs.
 
 ### Affiliate-Websites
@@ -143,4 +143,4 @@ GitHub installation currently exposes these repositories: AgentOS, Affiliate-Web
 
 ## Handoff
 
-This record remains the canonical Marketing Overseer durable record for this execution cycle. Material work added this cycle: current Australian agentic-commerce evidence incorporated into GlobalShopCo and Affiliate-Websites as bounded future discoverability/design requirements. Latest verified mission remains Mission 051; latest known correspondence remains C-006. No new mission or correspondence ID was created.
+This record remains the canonical Marketing Overseer durable record for this execution cycle. Material work added this cycle: current Australian pet eCommerce evidence converted into a bounded GlobalShopCo pet GTM gate, alongside existing agentic-commerce evidence. Latest verified mission remains Mission 051; latest known correspondence remains C-006. No new mission or correspondence ID was created.
