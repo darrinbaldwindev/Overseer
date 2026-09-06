@@ -33,6 +33,152 @@ The strategic marketing requirement is to make AgentOS approachable to anybody w
 - The naming work therefore does not claim product-market fit, customer preference, conversion improvement or a validated winning name.
 - Security, local-file handling, quality/review and safety messaging remain evidence-gated; the naming artifact explicitly prevents the view terminology from weakening those trust requirements.
 
+## Independent creator + affiliate acquisition research — 2026-09-06
+
+### Decision context
+Marketing independently researched the actual creator/influencer/AI-media acquisition landscape requested for AgentOS, including named creators, legitimate public contact routes, commercial models, affiliate structures, creator economics, creator testing, advertising rights, Australia-vs-global strategy and competitor lessons. This research is intended for comparison with the parallel Gemini research and is not treated as validated market demand.
+
+### Evidence boundary
+- Creator names and channel relevance were researched against current public sources.
+- Audience figures are time-sensitive and can differ between public sources; where figures could not be reliably established they are **UNKNOWN** rather than invented.
+- Creator pricing/rate cards are generally **UNKNOWN** unless publicly published. Third-party estimates are not to be used as committed AgentOS budget assumptions.
+- Public business contact routes only; no scraped/private contact information.
+- No creator has been represented as willing to promote AgentOS unless independently confirmed.
+
+### Priority creator shortlist
+1. **Jeff Su** — very high fit for AI productivity/professional workflows; public partnership programme and audience figures.
+2. **Nate Herk** — very high fit for AI automation/agents/business workflows; public sponsorship route.
+3. **Matt Wolfe** — very high fit for AI tools/discovery and FutureTools ecosystem; public sponsorship/contact route.
+4. **Aurelius Tjin** — very high fit for practical AI/productivity and useful Australian-market test; public business/partnership route.
+5. **The Rundown AI / Rowan Cheung** — high-value AI media/newsletter distribution opportunity rather than conventional influencer-only acquisition.
+6. **Ben Tossell / Ben's Bites** — strong AI-builder/founder audience and published partner/advertising model.
+7. **Futurepedia** — major AI education/media channel; formal sponsorship route and explicit sponsorship qualification criteria.
+8. **Kevin Stratvert** — large mainstream productivity/technology audience with substantial AI relevance and public business contact.
+9. **Liam Ottley** — strong business/AI-automation fit; commercial accessibility and current audience figures require further direct validation.
+10. **Skill Leap AI** — practical AI education opportunity with sponsorship/advertising route.
+
+Additional researched candidates include **AI Samson, MattVidPro, Yassine Sdiri, AI Explained, The AI Advantage, Paul Roetzer / Marketing AI Institute, Allie K. Miller, Aitrepreneur, Greg Isenberg and Yannic Kilcher**. Their priority remains below the first ten pending fit/contact/commercial validation.
+
+### Key commercial findings
+- Creator monetisation is not one model: fixed sponsorship, affiliate, hybrid sponsorship+affiliate, product review/free access, ambassador/strategic partnership and media sponsorship all exist.
+- Published SaaS examples support recurring affiliate economics. HubSpot currently advertises 30% recurring commission for up to one year with a 180-day cookie and performance tiers. Notion currently advertises up to $50 per activated signup plus 20% of year-one revenue, although its affiliate programme is not currently accepting new affiliates.
+- Ben's Bites publishes advertising rates for newsletter placements, demonstrating that specialist AI media can operate as a paid distribution channel rather than conventional influencer marketing.
+- Exact creator rates should be obtained directly; third-party sponsorship estimates remain informational only.
+
+### AgentOS recommended affiliate model
+**RECOMMENDATION:** Start with **90-day attribution + 25% qualifying recurring commission for 12 months**.
+
+Rules proposed for validation:
+- $29 **Sip** purchases are commissionable.
+- $99 **Cup** purchases are commissionable.
+- $29 → $99 upgrades retain the original creator attribution.
+- $99 → qualifying subscription upgrades retain the original attribution within the applicable rules.
+- Lifetime recurring commission should not be the initial default; consider it later for exceptional strategic partners.
+- Proven high-performing partners may eventually receive 30% or bespoke economics.
+
+Rationale: first-purchase-only economics under-reward creators for customer quality and upgrades; a 12-month recurring period provides meaningful upside without prematurely committing AgentOS to lifetime margin sharing.
+
+### Second-bite economics
+The $29 tier should be treated as a **conversion-rescue mechanism**, not as the intended commercial destination. If a creator sends a customer who initially chooses $29 and later upgrades to $99, the creator should retain attribution and commission. This aligns creator incentives with the desired customer journey rather than forcing creators to optimise only for immediate $99 purchases.
+
+### Recommended creator progression
+**Independent challenge → free access → genuine testing → voluntary/independent content → affiliate relationship → measured performance → paid sponsorship/boosting → strategic partnership.**
+
+Paid sponsorship remains appropriate where a creator or media organisation requires production compensation or has a formal advertising model. Free access must never be treated as a guarantee of publication or positive coverage.
+
+### AgentOS Creator Challenge
+Recommended first campaign concept: **THE AGENTOS BREAK-IT CHALLENGE**.
+
+Creators receive AgentOS access and several real-world tasks. They are encouraged to compare AgentOS against their existing AI workflow and deliberately attempt to make it fail. They can observe the planning/execution/challenge/assurance process and publish an independent conclusion if they choose.
+
+The working demonstration flow is:
+**Willow → Plan → Isla → Execute → Jack → Challenge/permission → Henry → Assure**.
+
+No scripted positive review and no unsupported product claims.
+
+### Creator content → paid advertising
+Creator content can become paid advertising where rights and platform mechanisms permit, but usage rights must be explicitly negotiated. The creator agreement should separately address organic publishing, paid advertising, duration, territories, platforms, editing/derivative rights, whitelisting/boosting, raw footage and termination/revocation. Do not assume payment for production transfers advertising rights.
+
+### Australia vs global
+**RECOMMENDATION:** English-speaking global strategy from the outset, with Australia as a controlled initial market. Australia provides a useful local validation market, including Australian creator testing, while US/UK/global creators and AI media test broader demand.
+
+### Micro/mid/large creator strategy
+**HYPOTHESIS:** the best AgentOS acquisition economics may come from highly relevant mid-sized specialist creators rather than the largest audiences. Optimisation should be based on qualified activation, retained customer, upgrade and CAC rather than follower count.
+
+### Competitor lessons
+- Major AI/SaaS vendors increasingly use ecosystem/partner models alongside traditional marketing.
+- OpenAI's partner ecosystem demonstrates the importance of measurable AI adoption outcomes and partner distribution.
+- Google is investing heavily in creator/brand matching and creator-based advertising infrastructure.
+- Anthropic's partner strategy separates partner capability from referral/deal economics and provides a useful precedent for eventually distinguishing Creator/Marketing Partners from implementation/technology partners.
+
+## Marketing decision
+
+### KEEP
+- Free → test → affiliate → paid relationship.
+- $99 as the intended/main commercial proposition.
+- $29 as a conversion-rescue option.
+- 90-day attribution as a reasonable starting hypothesis.
+- Recurring creator economics.
+- Independent creator testing.
+- Creator content as potential paid advertising, subject to explicit rights.
+
+### CHANGE
+- Use **AgentOS Creator & Partner Programme** rather than treating all distribution as influencer marketing.
+- Do not pay every creator upfront; escalate economics based on evidence.
+- Optimise for qualified activation, retained revenue and upgrade rather than followers.
+- Tailor pitches to consumer/productivity, automation/business, technical and media audiences.
+
+### BUILD
+- Creator CRM and relationship pipeline.
+- Creator briefing kit.
+- AgentOS Creator Challenge.
+- Affiliate terms and attribution specification.
+- Creator-specific landing/tracking links.
+- Content-rights agreement.
+- Creator performance dashboard.
+- Disclosure/compliance policy.
+- Creator qualification score.
+
+### TEST
+- Ten-creator pilot: mix large, mid-sized and specialist creators.
+- Response/acceptance rate.
+- Activation and task completion.
+- Publication/content rate.
+- Clicks and registrations.
+- $29 conversions.
+- $99 conversions.
+- $29 → $99 upgrades.
+- Subscription conversion and retention.
+- CAC, LTV/CAC and creator earnings.
+
+### DO NOT DO
+- Buy fake reviews or require positive reviews.
+- Script creator conclusions.
+- Hide affiliate/sponsorship relationships.
+- Make unsupported AI/security/privacy claims.
+- Commit large sponsorship budgets before performance evidence.
+- Launch lifetime commissions before AgentOS has validated LTV/churn/margins.
+- Optimise around follower count alone.
+- Assume free access guarantees coverage.
+- Use creator content in paid advertising without negotiated rights.
+- Allow affiliate economics to influence AgentOS capability selection.
+
+## Final recommendation
+
+The strongest independent conclusion is that AgentOS should treat creators as a **measurable distribution and evidence channel**, not simply an advertising expense.
+
+The preferred operating sequence is:
+
+**Creator discovery → independent challenge → evidence → affiliate → performance → paid amplification → strategic partnership.**
+
+The immediate commercial hypothesis is:
+
+**90-day attribution + 25% qualifying recurring commission for 12 months, with $29, $99 and subsequent qualifying upgrades retaining creator attribution.**
+
+The first campaign should be the **AgentOS Break-It Challenge**, initially with approximately ten carefully selected creators/media partners rather than a large-scale paid campaign.
+
+This research remains **RECOMMENDATION / HYPOTHESIS pending direct creator responses and real conversion data**. It does not establish creator willingness, final rates, product-market fit or validated CAC/LTV.
+
 ## Portfolio reconciliation
 
 - **AgentOS:** Cycle 75 confirms fresh exact-head CI and Windows Local Acceptance #1 for PR #71, but PR #71 remains draft/unmerged and production readiness is not claimed.
@@ -58,19 +204,22 @@ The strategic marketing requirement is to make AgentOS approachable to anybody w
 5. Validate one concrete AgentOS customer/problem wedge against real user evidence.
 6. Capture PRS buyer/problem/WTP evidence.
 7. Run GhostKitchen first-concept/local-demand test.
+8. Begin creator/AI-media qualification from the ranked AgentOS list; obtain direct contact confirmation, current audience evidence and actual commercial quotes before committing spend.
 
 **P2 — portfolio proposition recovery**
-8. Franchise evidence-led recruitment/customer acquisition assets.
-9. GemVerse authoritative product snapshot.
-10. MyPrimeDelivery authoritative project-definition snapshot.
-11. GlobalShopCo-Headless proposition alignment.
+9. Franchise evidence-led recruitment/customer acquisition assets.
+10. GemVerse authoritative product snapshot.
+11. MyPrimeDelivery authoritative project-definition snapshot.
+12. GlobalShopCo-Headless proposition alignment.
 
 ## Status classification
 
 - Naming artifact: **IMPLEMENTED as documentation; NOT VALIDATED; NOT an approved UI/product rename.**
+- Creator/affiliate research: **IMPLEMENTED as independent research; NOT VALIDATED commercially; direct creator response and conversion evidence required.**
+- Affiliate model: **RECOMMENDATION / HYPOTHESIS**, not an approved financial policy.
 - Commercial progression: **STRATEGY / HYPOTHESIS**, not a verified pricing outcome.
 - Portfolio marketing status: **AMBER / evidence-gated**.
 
 ## Handoff
 
-Durable marketing work is recorded in this canonical Overseer report and the AgentOS repository artifact. The work is ready for upstream CHATGPT Overseer review without creating a new mission or correspondence ID. Next highest-value marketing action is real-user validation of the leading view-name candidates while continuing the existing commercial evidence gates across the portfolio.
+Durable marketing work is recorded in this canonical Overseer report and the AgentOS repository research artifacts. This independent creator/affiliate research is ready for upstream CHATGPT Overseer comparison against the parallel Gemini research without creating a new mission or correspondence ID. Next highest-value marketing action is direct creator qualification and a controlled ten-creator challenge, while continuing the existing commercial evidence gates across the portfolio.
