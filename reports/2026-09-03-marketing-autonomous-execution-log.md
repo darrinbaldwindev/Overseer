@@ -152,86 +152,208 @@ Supporting explanation:
 ### Guardrails
 Marketing must not claim that AgentOS will always select the cheapest model, always save money, or always substitute free models. Those claims require verified implementation and measured evidence. Capability selection must remain based on suitability, policy, availability, reliability, user settings and other approved criteria—not affiliate commission or commercial partner ranking.
 
-## Marketing decision
+## AgentOS commercial UX, tiering and 30-day onboarding — 2026-09-06
 
-### KEEP
-- Free → test → affiliate → paid relationship.
-- $99 as the intended/main commercial proposition.
-- $29 as a conversion-rescue option.
-- 90-day attribution as a reasonable starting hypothesis.
-- Recurring creator economics.
-- Independent creator testing.
-- Creator content as potential paid advertising, subject to explicit rights.
+### User-originated commercial direction
+The AgentOS commercial model is refined as:
 
-### CHANGE
-- Use **AgentOS Creator & Partner Programme** rather than treating all distribution as influencer marketing.
-- Do not pay every creator upfront; escalate economics based on evidence.
-- Optimise for qualified activation, retained revenue and upgrade rather than followers.
-- Tailor pitches to consumer/productivity, automation/business, technical and media audiences.
-- Elevate **“You already have AI. AgentOS helps you make the most of it.”** as a leading mass-market positioning hypothesis alongside **“One platform. Every AI.”**
+- **FREE — Taste / Assistant:** a very limited but genuinely useful experience. Free should demonstrate the core AgentOS concept without becoming the complete product. The user should be able to become productive using capable free AI, but limits should constrain breadth, complexity, memory, automation, premium AI and/or connected actions rather than making the product feel broken.
+- **$29/year — Co-worker:** approximately **$0.56/week**. This is the natural first paid progression: materially more than Free, but deliberately far below $99 to encourage adoption and later upgrade. The value should come from more capability, a substantially larger free-AI capability pool, better AI, more complex/multi-step jobs, more memory/context, more connections, automation and greater capacity.
+- **$99/year — Operator:** approximately **$1.90/week**. This is the intended/main commercial destination for users who want AgentOS to take on serious work. It should emphasise autonomy, automation, high capacity, broad/high-quality AI capability, complex jobs, persistent context, batch/background work, stronger assurance/recovery and business/power-user functionality.
+- **Subscriptions / BYO AI:** for serious users needing extra or specialist features/capability. AgentOS should use connected AI subscriptions/providers subject to permission, policy, availability and provider terms rather than forcing one model vendor.
 
-### BUILD
-- Creator CRM and relationship pipeline.
-- Creator briefing kit.
-- AgentOS Creator Challenge.
-- Affiliate terms and attribution specification.
-- Creator-specific landing/tracking links.
-- Content-rights agreement.
-- Creator performance dashboard.
-- Disclosure/compliance policy.
-- Creator qualification score.
-- Marketing message test for **One platform. Every AI. / Make the most of AI. / You already have AI. AgentOS helps you make the most of it.**
+### Commercial principle
+The strongest current progression is:
 
-### TEST
-- Ten-creator pilot: mix large, mid-sized and specialist creators.
-- Response/acceptance rate.
-- Activation and task completion.
-- Publication/content rate.
-- Clicks and registrations.
-- $29 conversions.
-- $99 conversions.
-- $29 → $99 upgrades.
-- Subscription conversion and retention.
-- CAC, LTV/CAC and creator earnings.
-- Test whether “make the most of AI” increases comprehension, activation and conversion versus architecture-led messaging.
+**FREE — Try it / get productive.**  
+**$29/year — Work with it / Co-worker.**  
+**$99/year — Put it to work / Operator.**  
+**Subscriptions — Give it more capability.**
 
-### DO NOT DO
-- Buy fake reviews or require positive reviews.
-- Script creator conclusions.
-- Hide affiliate/sponsorship relationships.
-- Make unsupported AI/security/privacy claims.
-- Commit large sponsorship budgets before performance evidence.
-- Launch lifetime commissions before AgentOS has validated LTV/churn/margins.
-- Optimise around follower count alone.
-- Assume free access guarantees coverage.
-- Use creator content in paid advertising without negotiated rights.
-- Allow affiliate economics to influence AgentOS capability selection.
-- Claim guaranteed savings or guaranteed free-model substitution before implementation and measured evidence support those claims.
+The commercial ladder should sell **delegation, capability, persistence and autonomy**, not a raw number of plugins or models.
 
-## Final recommendation
+### Free AI plugins / capability pool
+The earlier concept of progressively increasing free-AI plugins is retained as an **underlying capability/entitlement mechanism**, not the headline marketing proposition.
 
-The strongest independent conclusion is that AgentOS should treat creators as a **measurable distribution and evidence channel**, not simply an advertising expense.
+- Free: useful free-AI capability pool.
+- $29: substantially expanded capability pool, including more specialist/better free AI and greater premium access.
+- $99: broadest/highest-quality practical capability pool plus significantly broader premium access.
 
-The preferred operating sequence is:
+Marketing should communicate outcomes and capability, not plugin inventory. Preferred routing message remains conceptually **“the right AI for the task, automatically”**, subject to implementation/evidence.
 
-**Creator discovery → independent challenge → evidence → affiliate → performance → paid amplification → strategic partnership.**
+Plugin trust categories remain useful: **Verified, Provider, Community, Local, Experimental**. AgentOS remains the authority/orchestration layer; plugins provide capabilities and cannot bypass AgentOS governance.
 
-The preferred mass-market message should increasingly focus on the value of the AI the customer already has:
+### Autonomy as primary tier axis
+The strongest current product interpretation from independent analysis and Gemini challenge is:
 
+- **FREE / Assistant:** useful everyday assistance; limited complexity/context/persistence.
+- **$29 / Co-worker:** multi-step delegation, persistent project context, connected services and repeatable workflows.
+- **$99 / Operator:** ongoing/background automation, higher-capacity jobs, batch processing, broader integrations and greater autonomy within defined authority.
+
+Do not reduce Free to a manually operated tool-selection experience; the AgentOS promise remains natural-language delegation with automatic capability routing.
+
+### AI routing
+AgentOS should route based on **capability/suitability, policy, availability, reliability, user settings and cost/usage**, not affiliate commission or partner ranking.
+
+Suggested visibility:
+- Everyday: routing largely invisible.
+- Essentials: simple indication such as **Free AI / Advanced AI (Paid)** where useful.
+- Tech Head: detailed provider/model/capability routing, usage and cost telemetry, local/BYOK routing rules and diagnostics.
+
+Do not claim “optimal AI” unless AgentOS can prove an objective optimisation. Safer working language: **“AgentOS chose the AI for this job.”**
+
+Do not expose private chain-of-thought. Tech Head should receive useful decision summaries, execution traces, evidence and diagnostics instead.
+
+### AI budget and value
+AI budgeting is a desirable feature and should be framed as user control:
+
+- Monthly/weekly budget.
+- Per-task approval threshold.
+- Provider/workspace limits where appropriate.
+- Behaviour when budget is reached: continue, ask, use suitable lower-cost AI, or stop.
+- **AI Budget Guard:** if a task may exceed the remaining budget, Jack presents the choice before execution.
+
+Usage/value visibility should differ by view and tier:
+- Everyday/Free: minimal or no financial dashboard; avoid cognitive load.
+- $29/Essentials: simple usage vs allowance.
+- $99/Tech Head: granular spend/usage/cost tracing.
+
+“Estimated savings” must not become a core marketing claim without a defensible baseline. Prefer factual metrics such as actual provider cost, premium AI usage, tasks routed to lower-cost/free AI, API calls orchestrated and compute/processing time where reliably measured. If estimated value is later shown, label it clearly and expose methodology.
+
+### Recovery / Undo
+**RECOMMENDATION:** treat **Undo / Revert / Recovery** as a first-class AgentOS capability, alongside governance and assurance.
+
+Classify actions as:
+- **Reversible:** one-click undo where technically possible.
+- **Compensatable:** a known reverse/compensating action exists.
+- **Irreversible:** requires stronger approval and explicit warning.
+
+This supports the broader chain:
+**Understand → Plan → Permission → Execute → Assure → Recover → Deliver.**
+
+### Context Spaces
+**RECOMMENDATION:** introduce a future **Context Spaces** concept for isolated, portable project/knowledge contexts, e.g. Personal, Business, GlobalShopCo, Marketing. A Context Space may contain authorised files, memory, instructions, connected services and workflows. This remains a product recommendation pending implementation.
+
+### Prove It / Evidence
+**RECOMMENDATION:** expose a user-friendly **“Why?” / “How do you know?” / “Prove It”** pathway. Henry should present understandable evidence in Everyday/Essentials and detailed evidence/trace in Tech Head. Evidence should cover sources, inputs, checks and actions without exposing private chain-of-thought.
+
+### Graceful degradation
+**RECOMMENDATION:** when premium AI is unavailable or budget/quota is exhausted, AgentOS should be able to offer suitable alternatives rather than simply fail, subject to quality/policy constraints. The user should be informed when the expected capability/quality changes.
+
+### Self-healing / recovery
+**HYPOTHESIS / ROADMAP:** AgentOS could diagnose failures, select an approved fallback, re-check policy, retry and verify. It must not be permitted to arbitrarily rewrite itself or bypass governance merely to make a task succeed.
+
+## AgentOS 30-day free-user onboarding journey — 2026-09-06
+
+### Strategic decision
+The **30-day Free upgrade routine** should be a value-discovery/onboarding journey rather than an aggressive sales campaign. Free is a very limited taste; the routine progressively introduces users to Willow, Isla, Jack and Henry and demonstrates what the $29 Co-worker upgrade enables.
+
+### Character introduction sequence
+**Days 1–7 — Willow / Plan**
+- Willow introduces herself as the part of AgentOS that understands the user's goal and plans the work.
+- Demonstrate planning with a simple useful task.
+- Softly reveal that Co-worker can handle more complex planning/jobs.
+
+**Days 8–14 — Isla / Execute**
+- Isla introduces herself as the part that gets the work done.
+- Demonstrate multi-step execution.
+- Explain that Co-worker enables more complex multi-step and connected work.
+
+**Days 15–21 — Jack / Guardian**
+- Jack introduces himself as the part that protects the user's authority and permissions.
+- Demonstrate an approval moment, such as permission before sending an email.
+- Reinforce that the user remains in control.
+
+**Days 22–30 — Henry / Assure**
+- Henry introduces himself as the part that checks work before it is called finished.
+- Demonstrate evidence/assurance.
+- Explain that Operator can apply assurance to more complex/ongoing work.
+
+### Day-30 culmination
+The four characters should come together as **one AgentOS team**:
+
+**Willow — Plans**  
+**Isla — Does**  
+**Jack — Protects**  
+**Henry — Checks**
+
+Key message:
+**They are not four different AI products. They are the different jobs AgentOS performs.**
+
+The upgrade moment should be:
+
+**“You've had a taste. Ready for more?”**
+
+Then:
+- **$29/year — Co-worker:** more capability, more AI, more complex work.
+- **$99/year — Operator:** more autonomy, more automation, more serious work.
+
+### Onboarding principle
+**RECOMMENDATION:** Do not tell Free users everything AgentOS can do. Let AgentOS introduce itself by doing useful work.
+
+The four characters should therefore be experienced through actual tasks, not merely tutorial cards. The user should finish the 30 days understanding that they do not need to learn AI; they need to tell AgentOS what they want done.
+
+### 30-day routine guardrails
+- No manipulative countdown pressure.
+- No fabricated savings or performance claims.
+- Upgrade prompts should be contextual and tied to demonstrated capability.
+- Do not make Free deliberately broken.
+- Preserve user history/context/settings through upgrades where technically appropriate.
+- The $29 tier should be a natural first paid step and conversion bridge, not a dead-end.
+- The $99 tier remains the desired destination for users who depend on AgentOS for serious/ongoing work.
+
+## Current consolidated AgentOS marketing/product hypothesis — 2026-09-06
+
+### One AgentOS
+**One AgentOS. Different views.**
+
+Every view is the same underlying AgentOS. View choice controls presentation, information density and technical exposure—not the fundamental intelligence, authority, trust or user-control model.
+
+### Experience views
+- **Everyday:** simplest, novice-friendly interface. Large central command/task area, contextual suggestions, active work, approvals, deliverables, recent work and simple connected accounts.
+- **Essentials:** workflow-oriented interface. Adds workspaces/projects, connections, automations, evidence/source viewer, usage and quality/speed preferences.
+- **Tech Head:** technical command centre. Adds execution traces, routing, workers, integrations, permissions, policies, data flow, logs, diagnostics, usage/cost and advanced configuration.
+
+Core layout should remain recognisably the same across views so users do not feel they are moving between three different products. Deeper panels are progressively disclosed rather than the whole furniture being rearranged.
+
+### Universal trust/control
+Never paywall:
+- Stop/kill capability.
+- Basic approvals/permissions.
+- Privacy controls.
+- Basic evidence/assurance.
+- Result history.
+- User authority and ability to revoke access.
+
+### Core UX principle
+**Users give AgentOS jobs, not prompts.**
+
+The user should not manually choose Willow, Isla, Jack, Henry or a model for normal operation. AgentOS should orchestrate the team automatically and surface each role when useful.
+
+### Preferred simple mental model
+**Tell AgentOS what you want done.**
+
+Suggested home interaction:
+- Large command bar.
+- Contextual “Give AgentOS a job” suggestions.
+- Active work.
+- Needs you / approvals.
+- Finished & checked.
+- Recent work.
+
+### Commercial mental model
+**Free — Get productive.**  
+**$29/year — Work with AgentOS.**  
+**$99/year — Put AgentOS to work.**  
+**Subscriptions — Bring more AI/capability.**
+
+Supporting brand language:
+**One platform. Every AI.**  
+**Make the most of AI.**  
 **You already have AI. AgentOS helps you make the most of it.**
 
-Supported by:
-
-**One platform. Every AI.**  
-**Make the most of AI.**
-
-The immediate commercial hypothesis remains:
-
-**90-day attribution + 25% qualifying recurring commission for 12 months, with $29, $99 and subsequent qualifying upgrades retaining creator attribution.**
-
-The first creator campaign remains the **AgentOS Break-It Challenge**, with the language now better suited to mainstream audiences as **“Give AgentOS a real job”** / **“Put AgentOS to the test”** rather than making “try to break it” the public-facing campaign line.
-
-This research and positioning remain **RECOMMENDATION / HYPOTHESIS pending direct creator responses, implemented capability verification and real conversion data**. It does not establish creator willingness, final rates, product-market fit or validated CAC/LTV.
+### Evidence status
+The above is a **consolidated marketing/product recommendation and hypothesis**, not a claim of implemented functionality, validated pricing, product-market fit or final UI. Implementation, economics, provider availability, plugin catalogue, user behaviour, conversion, WTP, CAC/LTV and capability performance remain evidence-gated.
 
 ## Portfolio reconciliation
 
@@ -260,22 +382,13 @@ This research and positioning remain **RECOMMENDATION / HYPOTHESIS pending direc
 7. Run GhostKitchen first-concept/local-demand test.
 8. Begin creator/AI-media qualification from the ranked AgentOS list; obtain direct contact confirmation, current audience evidence and actual commercial quotes before committing spend.
 9. Test **“You already have AI. AgentOS helps you make the most of it.”** against alternative AgentOS acquisition messages with real users/traffic when a safe test surface is available.
+10. Validate Free → $29 → $99 annual pricing/entitlement architecture, including the 30-day onboarding routine and whether autonomy/scope is a stronger upgrade driver than plugin/model counts.
+11. Validate the four-character 30-day onboarding sequence with novice users for comprehension, trust, engagement and upgrade intent.
 
 **P2 — portfolio proposition recovery**
-10. Franchise evidence-led recruitment/customer acquisition assets.
-11. GemVerse authoritative product snapshot.
-12. MyPrimeDelivery authoritative project-definition snapshot.
-13. GlobalShopCo-Headless proposition alignment.
+12. Franchise evidence-led recruitment/customer acquisition assets.
+13. Continue evidence recovery for GemVerse, MyPrimeDelivery and GlobalShopCo-Headless.
 
-## Status classification
+## Status
 
-- Naming artifact: **IMPLEMENTED as documentation; NOT VALIDATED; NOT an approved UI/product rename.**
-- Creator/affiliate research: **IMPLEMENTED as independent research; NOT VALIDATED commercially; direct creator response and conversion evidence required.**
-- Affiliate model: **RECOMMENDATION / HYPOTHESIS**, not an approved financial policy.
-- “Make the most of AI” positioning: **RECOMMENDATION / HYPOTHESIS**, not validated messaging or a guaranteed savings claim.
-- Commercial progression: **STRATEGY / HYPOTHESIS**, not a verified pricing outcome.
-- Portfolio marketing status: **AMBER / evidence-gated**.
-
-## Handoff
-
-Durable marketing work is recorded in this canonical Overseer report and the AgentOS repository research artifacts. The independent creator/affiliate research and new “make the most of AI” positioning are ready for upstream CHATGPT Overseer comparison and future validation without creating a new mission or correspondence ID. Next highest-value marketing action is direct creator qualification plus message testing, while continuing the existing commercial evidence gates across the portfolio.
+**MARKETING OVERSEER STATUS: AMBER — executed/researched/recommended, with product, pricing, economics and user-response claims remaining validation-gated.**
