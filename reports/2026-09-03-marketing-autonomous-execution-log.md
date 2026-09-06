@@ -7,68 +7,70 @@
 ## Governance pre-check
 
 - Marketing responsibility is portfolio-wide; temporary priority focus must not be interpreted as a scope restriction.
-- Latest verified CHATGPT Overseer mission boundary remains Mission 051.
-- Latest known correspondence remains C-006.
-- No new mission or correspondence ID has been fabricated.
+- Current portfolio control state was reconciled against the canonical Overseer registry and the latest available Portfolio Overseer evidence.
+- Latest portfolio evidence is Cycle 75, dated 2026-09-06, with disposition **AMBER — no GREEN declaration**. Cycle 75 confirms AgentOS PR #71 remains OPEN / DRAFT / UNMERGED and preserves owner/reviewer governance.
 - Marketing does not alter runtime, scheduler, credentials, permissions, production deployment or financial authority.
+- No new mission or correspondence ID was fabricated.
 
-## Latest autonomous cycle — blocker reconciliation
+## Current autonomous cycle — AgentOS mass-market naming
 
-### GlobalShopCo — authenticated pet SKU economics
-- Re-scanned the canonical AU pet SKU evidence and searched the repository for supplier-cost evidence for the exact prioritised GiGwi SKUs.
-- Current evidence still shows exact SKU identity, listed weights, public stock observations and supplier-published freight bands, but supplier product cost remains **LOGIN REQUIRED / UNKNOWN**. fileciteturn260file0L2-L2
-- The repository's existing calculator independently confirms supplier cost and final parcel/cubic freight are required before an economics pass; public retail prices cannot substitute for supplier cost. fileciteturn262file0L2-L2
-- No invented supplier costs or margin assumptions were introduced.
-- Decision remains: **CANDIDATE / ECONOMICS UNKNOWN / NOT LAUNCH-READY**.
+### Decision context
+The strategic marketing requirement is to make AgentOS approachable to anybody who wants to use AI while preserving the principle that every experience is the **full AgentOS**. The lowest-complexity view therefore must not be called **Basic** if that wording implies reduced capability or an entry-level version.
 
-### Affiliate-Websites — AU pet publisher acceptance
-- Re-scanned the AU pet affiliate verification record for Petzyo, Kurgo, Snooza and Pet Circle.
-- Evidence confirms the programmes/signals and Australian relevance where stated, but the Affiliate-Websites publisher account's advertiser-specific acceptance remains **UNKNOWN**. fileciteturn264file0L2-L2
-- The publication gate requires live publisher approval, current commission rules/exclusions, promotional-method rules, attribution, product/feed freshness and current merchant shipping/returns before PUBLISHABLE status. fileciteturn264file0L2-L2
-- Decision remains: **VERIFIED SIGNAL / PUBLISHABILITY HOLD**.
+### Work executed
+- Reconciled the existing AgentOS marketing role document, which currently describes Simple / Essentials / Tech Head as experience communication rather than separate capability claims.
+- Created `AgentOS/docs/MARKETING-VIEW-NAMING-TEST-2026-09-06.md` at commit `0968875710525665856df2abb15f73edf99707ad`.
+- The artifact evaluates **Everyday**, **Simple**, **Personal**, **Natural** and **Open** as naming candidates.
+- Current marketing recommendation is **Everyday** as the preferred working candidate, with **Simple** as the control and **Personal** as an alternative. This remains a **HYPOTHESIS / VALIDATION REQUIRED**, not an approved product/UI rename.
+- Established the governing language rule: **One AgentOS. Different views.** Every view is 100% AgentOS; views change presentation, visibility and control exposure rather than intelligence/capability.
+- Explicitly separated the commercial progression **Free → $29 → $99 → subscription** from the experience-view progression **Everyday → Essentials → Tech Head**. Neither ladder should be marketed as a substitute for the other.
+- Added a validation plan covering comprehension, full-capability perception, audience fit, progression fit, commercial neutrality and trust fit.
 
-## Durable evidence already completed this cycle
+## AgentOS evidence boundary
 
-- GlobalShopCo pet GTM gate: final citation-clean commit `0ea5080ae4986dc6961bcf8fe81d548e122022eb`.
-- GlobalShopCo pet SKU economics input sheet: commit `c30bff12cc95f7d6e2008a928382bf792d61b4bd`.
-- GlobalShopCo agentic-commerce evidence: commit `8b4ea20e14204a052834c88f7cd2220fb24481f7`.
-- Affiliate-Websites AU affiliate publishability gate: commit `f736f68c526f8d47705043cf1952b566b42de97a`.
-- Affiliate-Websites AU agentic-commerce evidence: commit `7231620f10b242e0cc344082037c3bc3335dcf49`.
-- AgentOS scheduler marketing evidence: commit `a45ed9f035fa663ad14ba293492f7f9f75aed96d`.
-- PRS buyer-validation interview protocol: commit `783f76c48c482fc57b61aec181e12fe57652cf15`.
-- Affiliate-Websites AU pet primary verification: commit `87031f849ad98a5f48ba045ca62e92b6faad062a`.
+- Current repository evidence supports treating Simple / Essentials / Tech Head as experience communication rather than distinct capability claims.
+- Current ICP/wedge documentation remains **HYPOTHESIS / VALIDATION REQUIRED**; buyer, frequency, WTP, measurable outcomes and implementation completeness are still UNKNOWN.
+- The naming work therefore does not claim product-market fit, customer preference, conversion improvement or a validated winning name.
+- Security, local-file handling, quality/review and safety messaging remain evidence-gated; the naming artifact explicitly prevents the view terminology from weakening those trust requirements.
 
-## Portfolio evidence state
+## Portfolio reconciliation
 
-- **AgentOS:** governed wake paths repository-verified; physical host installation/execution, fresh scheduler round trip, unattended scheduling, production/provider execution and customer outcomes remain UNKNOWN.
-- **GlobalShopCo:** pet accessories is a high-priority candidate, not launch-approved; exact supplier costs remain UNKNOWN; authenticated supplier response is still required.
+- **AgentOS:** Cycle 75 confirms fresh exact-head CI and Windows Local Acceptance #1 for PR #71, but PR #71 remains draft/unmerged and production readiness is not claimed.
+- **GlobalShopCo:** pet accessories remains a candidate rather than launch-approved; authenticated supplier economics remain required.
 - **Affiliate-Websites:** AU pet candidates remain HOLD pending publisher-account acceptance/current terms.
 - **PRS:** buyer/problem/WTP evidence remains UNKNOWN.
-- **GhostKitchen:** winning concept, local demand, CAC, contribution and repeat remain UNKNOWN.
-- **Franchise:** use proof-led positioning and transparent economics; separate franchisee recruitment from end-customer acquisition.
-- **GemVerse:** current proposition, audience, launch scope and monetisation remain UNKNOWN.
-- **MyPrimeDelivery:** commercial model, customer experience, geography, technology and providers remain UNKNOWN.
-- **GlobalShopCo-Headless:** related implementation surface unless evidence establishes independent proposition.
-- **Overseer:** portfolio-wide marketing oversight remains governed by the existing control system.
+- **GhostKitchen:** winning concept/local demand/CAC/contribution/repeat remain UNKNOWN.
+- **Franchise:** proof-led recruitment/customer acquisition remains the appropriate direction; evidence gate still applies.
+- **GemVerse:** current proposition/audience/launch/monetisation remain UNKNOWN.
+- **MyPrimeDelivery:** current commercial model/customer experience/geography/technology/providers remain UNKNOWN.
+- **GlobalShopCo-Headless:** remains a related implementation surface unless independent proposition evidence emerges.
+- **Overseer:** existing governance remains canonical; no duplicate marketing mission universe created.
 
-## Priority queue
+## Priority queue after this run
 
-**P0 — Evidence required before commercial claims**
-1. AgentOS host-level execution evidence.
-2. GlobalShopCo authenticated supplier economics for 5–10 candidate SKUs.
-3. Affiliate-Websites publisher/account eligibility and current terms.
+**P0 — evidence / owner gates**
+1. Preserve AgentOS PR #71 owner/reviewer decision boundary; do not self-merge or alter scheduler state.
+2. Obtain authenticated GlobalShopCo supplier economics for 5–10 candidate SKUs.
+3. Obtain Affiliate-Websites publisher/account eligibility and current programme terms.
 
-**P1 — Convert existing evidence into proof**
-4. PRS buyer/problem validation.
-5. GhostKitchen first-concept/local-demand test.
-6. Franchise proof-led recruitment/customer acquisition assets after evidence gate.
+**P1 — commercial validation**
+4. Test AgentOS experience-view naming with real users: Everyday vs Simple vs Personal.
+5. Validate one concrete AgentOS customer/problem wedge against real user evidence.
+6. Capture PRS buyer/problem/WTP evidence.
+7. Run GhostKitchen first-concept/local-demand test.
 
-**P2 — Recover proposition before expansion**
-7. GemVerse authoritative product snapshot.
-8. MyPrimeDelivery authoritative project-definition snapshot.
-9. GlobalShopCo-Headless proposition alignment.
-10. Overseer marketing standards/reporting integration.
+**P2 — portfolio proposition recovery**
+8. Franchise evidence-led recruitment/customer acquisition assets.
+9. GemVerse authoritative product snapshot.
+10. MyPrimeDelivery authoritative project-definition snapshot.
+11. GlobalShopCo-Headless proposition alignment.
+
+## Status classification
+
+- Naming artifact: **IMPLEMENTED as documentation; NOT VALIDATED; NOT an approved UI/product rename.**
+- Commercial progression: **STRATEGY / HYPOTHESIS**, not a verified pricing outcome.
+- Portfolio marketing status: **AMBER / evidence-gated**.
 
 ## Handoff
 
-This remains the canonical Marketing Overseer durable record. Latest verified mission remains Mission 051 and latest known correspondence remains C-006. No new mission or correspondence ID was created. Current blocker status is evidence-based: supplier trade cost and publisher-account acceptance remain unavailable, so no commercial gate has been falsely advanced.
+Durable marketing work is recorded in this canonical Overseer report and the AgentOS repository artifact. The work is ready for upstream CHATGPT Overseer review without creating a new mission or correspondence ID. Next highest-value marketing action is real-user validation of the leading view-name candidates while continuing the existing commercial evidence gates across the portfolio.
