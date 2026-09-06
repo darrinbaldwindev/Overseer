@@ -111,6 +111,47 @@ Creator content can become paid advertising where rights and platform mechanisms
 - Google is investing heavily in creator/brand matching and creator-based advertising infrastructure.
 - Anthropic's partner strategy separates partner capability from referral/deal economics and provides a useful precedent for eventually distinguishing Creator/Marketing Partners from implementation/technology partners.
 
+## New AgentOS marketing positioning — make the most of AI — 2026-09-06
+
+### User-originated strategic insight
+The marketing proposition should explicitly communicate that AgentOS is not merely a place to bring together paid AI subscriptions. It should also help users make effective use of capable **free AI models** when a task does not justify consuming paid credits.
+
+### Working message
+**AgentOS brings your AI together — and makes the most of it.**
+
+Supporting explanation:
+- Use the AI subscriptions you already pay for when you need their extra power.
+- Use capable free AI when you don't.
+- AgentOS can help choose/use the right AI for the job, subject to actual implemented capabilities and evidence.
+- The commercial benefit is framed as making better use of the user's existing AI resources, not as a guaranteed saving or guaranteed model-routing outcome.
+
+### Strong candidate consumer messages
+1. **You already have AI. AgentOS helps you make the most of it.**
+2. **Why use premium AI credits for every job?**
+3. **Paid AI when you need the extra power. Free AI when you don't.**
+4. **Don't worry about which AI to use. Tell AgentOS what you want done.**
+5. **One platform. Every AI. Make the most of AI.**
+
+### Positioning architecture
+**Problem:** users may have multiple paid AI subscriptions, free AI options, tools and credits but do not always know which is appropriate for each task.
+
+**AgentOS promise:** help bring those AI capabilities together and make better use of the available options.
+
+**Brand line:** **One platform. Every AI.**
+
+**Supporting line:** **Make the most of AI.**
+
+**Mass-market proposition:** **You already have AI. AgentOS helps you make the most of it.**
+
+### Evidence classification
+- **RECOMMENDATION:** Make “make the most of AI” a major marketing theme.
+- **HYPOTHESIS:** This may be a stronger mass-market acquisition proposition than leading with governance/architecture.
+- **HYPOTHESIS:** Users may respond strongly to the perceived value of avoiding unnecessary premium-credit consumption.
+- **UNKNOWN:** Actual savings, routing accuracy, model availability, user preference and conversion impact until implemented capability and real-user testing establish them.
+
+### Guardrails
+Marketing must not claim that AgentOS will always select the cheapest model, always save money, or always substitute free models. Those claims require verified implementation and measured evidence. Capability selection must remain based on suitability, policy, availability, reliability, user settings and other approved criteria—not affiliate commission or commercial partner ranking.
+
 ## Marketing decision
 
 ### KEEP
@@ -127,6 +168,7 @@ Creator content can become paid advertising where rights and platform mechanisms
 - Do not pay every creator upfront; escalate economics based on evidence.
 - Optimise for qualified activation, retained revenue and upgrade rather than followers.
 - Tailor pitches to consumer/productivity, automation/business, technical and media audiences.
+- Elevate **“You already have AI. AgentOS helps you make the most of it.”** as a leading mass-market positioning hypothesis alongside **“One platform. Every AI.”**
 
 ### BUILD
 - Creator CRM and relationship pipeline.
@@ -138,6 +180,7 @@ Creator content can become paid advertising where rights and platform mechanisms
 - Creator performance dashboard.
 - Disclosure/compliance policy.
 - Creator qualification score.
+- Marketing message test for **One platform. Every AI. / Make the most of AI. / You already have AI. AgentOS helps you make the most of it.**
 
 ### TEST
 - Ten-creator pilot: mix large, mid-sized and specialist creators.
@@ -150,6 +193,7 @@ Creator content can become paid advertising where rights and platform mechanisms
 - $29 → $99 upgrades.
 - Subscription conversion and retention.
 - CAC, LTV/CAC and creator earnings.
+- Test whether “make the most of AI” increases comprehension, activation and conversion versus architecture-led messaging.
 
 ### DO NOT DO
 - Buy fake reviews or require positive reviews.
@@ -162,6 +206,7 @@ Creator content can become paid advertising where rights and platform mechanisms
 - Assume free access guarantees coverage.
 - Use creator content in paid advertising without negotiated rights.
 - Allow affiliate economics to influence AgentOS capability selection.
+- Claim guaranteed savings or guaranteed free-model substitution before implementation and measured evidence support those claims.
 
 ## Final recommendation
 
@@ -171,13 +216,22 @@ The preferred operating sequence is:
 
 **Creator discovery → independent challenge → evidence → affiliate → performance → paid amplification → strategic partnership.**
 
-The immediate commercial hypothesis is:
+The preferred mass-market message should increasingly focus on the value of the AI the customer already has:
+
+**You already have AI. AgentOS helps you make the most of it.**
+
+Supported by:
+
+**One platform. Every AI.**  
+**Make the most of AI.**
+
+The immediate commercial hypothesis remains:
 
 **90-day attribution + 25% qualifying recurring commission for 12 months, with $29, $99 and subsequent qualifying upgrades retaining creator attribution.**
 
-The first campaign should be the **AgentOS Break-It Challenge**, initially with approximately ten carefully selected creators/media partners rather than a large-scale paid campaign.
+The first creator campaign remains the **AgentOS Break-It Challenge**, with the language now better suited to mainstream audiences as **“Give AgentOS a real job”** / **“Put AgentOS to the test”** rather than making “try to break it” the public-facing campaign line.
 
-This research remains **RECOMMENDATION / HYPOTHESIS pending direct creator responses and real conversion data**. It does not establish creator willingness, final rates, product-market fit or validated CAC/LTV.
+This research and positioning remain **RECOMMENDATION / HYPOTHESIS pending direct creator responses, implemented capability verification and real conversion data**. It does not establish creator willingness, final rates, product-market fit or validated CAC/LTV.
 
 ## Portfolio reconciliation
 
@@ -205,21 +259,23 @@ This research remains **RECOMMENDATION / HYPOTHESIS pending direct creator respo
 6. Capture PRS buyer/problem/WTP evidence.
 7. Run GhostKitchen first-concept/local-demand test.
 8. Begin creator/AI-media qualification from the ranked AgentOS list; obtain direct contact confirmation, current audience evidence and actual commercial quotes before committing spend.
+9. Test **“You already have AI. AgentOS helps you make the most of it.”** against alternative AgentOS acquisition messages with real users/traffic when a safe test surface is available.
 
 **P2 — portfolio proposition recovery**
-9. Franchise evidence-led recruitment/customer acquisition assets.
-10. GemVerse authoritative product snapshot.
-11. MyPrimeDelivery authoritative project-definition snapshot.
-12. GlobalShopCo-Headless proposition alignment.
+10. Franchise evidence-led recruitment/customer acquisition assets.
+11. GemVerse authoritative product snapshot.
+12. MyPrimeDelivery authoritative project-definition snapshot.
+13. GlobalShopCo-Headless proposition alignment.
 
 ## Status classification
 
 - Naming artifact: **IMPLEMENTED as documentation; NOT VALIDATED; NOT an approved UI/product rename.**
 - Creator/affiliate research: **IMPLEMENTED as independent research; NOT VALIDATED commercially; direct creator response and conversion evidence required.**
 - Affiliate model: **RECOMMENDATION / HYPOTHESIS**, not an approved financial policy.
+- “Make the most of AI” positioning: **RECOMMENDATION / HYPOTHESIS**, not validated messaging or a guaranteed savings claim.
 - Commercial progression: **STRATEGY / HYPOTHESIS**, not a verified pricing outcome.
 - Portfolio marketing status: **AMBER / evidence-gated**.
 
 ## Handoff
 
-Durable marketing work is recorded in this canonical Overseer report and the AgentOS repository research artifacts. This independent creator/affiliate research is ready for upstream CHATGPT Overseer comparison against the parallel Gemini research without creating a new mission or correspondence ID. Next highest-value marketing action is direct creator qualification and a controlled ten-creator challenge, while continuing the existing commercial evidence gates across the portfolio.
+Durable marketing work is recorded in this canonical Overseer report and the AgentOS repository research artifacts. The independent creator/affiliate research and new “make the most of AI” positioning are ready for upstream CHATGPT Overseer comparison and future validation without creating a new mission or correspondence ID. Next highest-value marketing action is direct creator qualification plus message testing, while continuing the existing commercial evidence gates across the portfolio.
