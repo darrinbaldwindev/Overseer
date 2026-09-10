@@ -1,10 +1,10 @@
 schema_version: 3
-last_discovery: 2026-09-01
+last_discovery: 2026-09-10
 repositories:
   - id: agentos
     full_name: darrinbaldwindev/AgentOS
     default_branch: main
-    visibility: private
+    visibility: public
     archived: false
     priority: critical
     scan_status: scanned
@@ -18,14 +18,14 @@ repositories:
   - id: globalshopco-headless
     full_name: darrinbaldwindev/GlobalShopCo-Headless
     default_branch: main
-    visibility: private
+    visibility: public
     archived: false
     priority: high
-    scan_status: inventory-only
+    scan_status: scanned
   - id: franchise
     full_name: darrinbaldwindev/Franchise
     default_branch: main
-    visibility: private
+    visibility: public
     archived: false
     priority: high
     scan_status: scanned
@@ -43,34 +43,34 @@ repositories:
     archived: false
     priority: critical
     scan_status: scanned
-  - id: manus-codebase
-    full_name: darrinbaldwindev/manus
-    default_branch: gemverse
-    visibility: private
-    archived: false
-    priority: informational
-    scan_status: inventory-only
   - id: gemverse
     full_name: darrinbaldwindev/GemVerse
     default_branch: gemverse
-    visibility: private
+    visibility: public
     archived: false
     priority: medium
-    scan_status: inventory-only
+    scan_status: scanned
   - id: prs
     full_name: darrinbaldwindev/PRS
     default_branch: main
     visibility: public
     archived: false
-    priority: medium
-    scan_status: inventory-only
+    priority: high
+    scan_status: scanned
   - id: ghost-kitchen
     full_name: darrinbaldwindev/GhostKitchen
     default_branch: main
     visibility: public
     archived: false
     priority: medium
-    scan_status: inventory-only
+    scan_status: scanned
+  - id: affiliate-websites
+    full_name: darrinbaldwindev/Affiliate-Websites
+    default_branch: main
+    visibility: public
+    archived: false
+    priority: high
+    scan_status: scanned
 relationships:
   - from: overseer
     to: all
@@ -99,6 +99,7 @@ research_handoff:
     gemverse: no-dedicated-research
     franchise: no-dedicated-research
     prs: no-dedicated-research
+    affiliate-websites: dedicated-country-and-master-workstreams-active
     other: not-established
   rules:
     - Gemini intelligence must not be treated as implementation evidence.
@@ -120,3 +121,6 @@ portfolio_events:
   - date: 2026-09-01
     event: repository rename reconciliation
     action: confirmed Amazon-Affiliate registry identity now resolves to darrinbaldwindev/MyPrimeDelivery after owner-side GitHub rename; registry entry normalized to myprime-delivery and stale duplicate identity removed
+  - date: 2026-09-10
+    event: live portfolio rediscovery and scan reconciliation
+    action: verified 10 accessible public repositories; removed stale manus-codebase identity; added Affiliate-Websites; refreshed default branches, visibility, and scan status from live GitHub evidence
