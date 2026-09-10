@@ -23,7 +23,7 @@ def generate_candidates(evidence: Iterable[Evidence]) -> list[CandidateFinding]:
     paths = {item.path for item in items}
     findings: list[CandidateFinding] = []
 
-    env_paths = tuple(sorted(path for path in paths if path == ".env" or path.endswith("/.env") or path.endswith("/.env.local")))
+    env_paths = tuple(sorted(path for path in paths if path.rsplit("/", 1)[-1] in {".env", ".env.local"}))
     if env_paths:
         findings.append(CandidateFinding(
             "ENV-FILE-PRESENT", "Potential", "Medium", "security", "Medium",

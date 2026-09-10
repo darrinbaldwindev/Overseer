@@ -84,3 +84,17 @@ def test_missed_transaction_remains_distinct_from_success():
     assert counts[State.MISSED.value] == 0
     assert counts[State.EVIDENCED.value] == 1
     assert counts[State.VERIFIED.value] == 0
+
+@pytest.mark.parametrize('evidence', ['', '  ', None, False])
+def test_empty_verification_claim_does_not_mutate_transaction(evidence):
+    _, tx = make_transaction()
+    for state in [State.DISPATCHED, State.RECEIVED, State.ACKNOWLEDGED, State.EXECUTING]:
+        tx.transition(state)
+    tx.transition(State.COMPLETED, evidence='result')
+    tx.transition(State.EVIDENCED)
+    before = list(tx.events)
+    with pytest.raises(ValueError, match='non-empty'):
+        tx.verify(evidence)
+    assert tx.state is State.EVIDENCED
+    assert tx.verification_evidence == []
+    assert tx.events == before

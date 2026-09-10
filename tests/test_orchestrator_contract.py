@@ -45,3 +45,18 @@ def test_delegated_transaction_requires_fresh_base():
             verify=lambda result: True,
             record=lambda state: None,
         )
+
+@pytest.mark.parametrize('value', ['false', 1, {'passed': False}])
+def test_truthy_verifier_claim_never_means_verified(value):
+    states = []
+    run_delegated_transaction(task_id='T', repository='owner/repo', worker='W',
+        base_snapshot={'commit': 'abc', 'fresh': True}, execute=lambda: {'ok': True},
+        verify=lambda result: value, record=states.append)
+    assert TransactionState.VERIFIED not in states
+
+
+def test_string_freshness_blocks_before_execution():
+    with pytest.raises(ValueError, match='fresh'):
+        run_delegated_transaction(task_id='T', repository='owner/repo', worker='W',
+            base_snapshot={'commit': 'abc', 'fresh': 'false'},
+            execute=lambda: pytest.fail('must not execute'), verify=lambda result: True, record=lambda state: None)
