@@ -1,0 +1,68 @@
+..............F.....F.F................                                  [100%]
+=================================== FAILURES ===================================
+_______________________ test_extract_evidence_from_tree ________________________
+
+    def test_extract_evidence_from_tree():
+        result = extract_evidence([
+            "README.md",
+            "pyproject.toml",
+            ".github/workflows/ci.yml",
+            "tests/test_app.py",
+            "Dockerfile",
+        ])
+>       assert {(item.kind, item.path) for item in result} == {
+            ("documentation", "README.md"),
+            ("dependency_manifest", "pyproject.toml"),
+            ("ci_workflow", ".github/workflows/ci.yml"),
+            ("test", "tests/test_app.py"),
+            ("container", "Dockerfile"),
+        }
+E       AssertionError: assert {('container'...test_app.py')} == {('ci_workflo...test_app.py')}
+E         
+E         Extra items in the right set:
+E         ('ci_workflow', '.github/workflows/ci.yml')
+E         ('dependency_manifest', 'pyproject.toml')
+E         Use -v to get more diff
+
+tests/test_evidence.py:12: AssertionError
+____ test_delegated_transaction_does_not_mark_verified_without_verification ____
+
+    def test_delegated_transaction_does_not_mark_verified_without_verification():
+        states = []
+    
+        result = run_delegated_transaction(
+            task_id="TEST-001",
+            repository="owner/repo",
+            worker="worker-a",
+            base_snapshot={"commit": "abc", "fresh": True},
+            execute=lambda: {"result": "ok", "commit": "def"},
+            verify=lambda result: False,
+            record=lambda state: states.append(state),
+        )
+    
+>       assert result.state is TransactionState.COMPLETED_UNVERIFIED
+               ^^^^^^^^^^^^
+E       AttributeError: 'dict' object has no attribute 'state'
+
+tests/test_orchestrator_contract.py:33: AttributeError
+______________ test_portfolio_dry_run_composes_real_domain_layers ______________
+
+    def test_portfolio_dry_run_composes_real_domain_layers():
+        paths = {
+            "owner/a": ["README.md", ".github/workflows/ci.yml", "tests/test_a.py"],
+            "owner/b": ["README.md", ".env.local"],
+        }
+    
+        result = run_portfolio_dry_run(paths, lambda repo: paths[repo], health_score)
+    
+        assert result.repositories_scanned == 2
+>       assert result.results[0].evidence_count == 3
+E       AssertionError: assert 2 == 3
+E        +  where 2 = DryRunResult(repository='owner/a', evidence_count=2, finding_count=0, finding_states=(), health_score=100.0).evidence_count
+
+tests/test_portfolio_dry_run.py:14: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_evidence.py::test_extract_evidence_from_tree - AssertionErr...
+FAILED tests/test_orchestrator_contract.py::test_delegated_transaction_does_not_mark_verified_without_verification
+FAILED tests/test_portfolio_dry_run.py::test_portfolio_dry_run_composes_real_domain_layers
+3 failed, 36 passed in 0.10s

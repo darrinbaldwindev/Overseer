@@ -1,0 +1,328 @@
+FFFFFFFFFFFF                                                             [100%]
+=================================== FAILURES ===================================
+___ test_green_cannot_borrow_remaining_assignment_identity[None-delivery_id] ___
+
+field = 'delivery_id', value = None
+
+    @pytest.mark.parametrize("field", ["delivery_id", "request_id", "host_id", "actor_id", "issuer", "config_identity"])
+    @pytest.mark.parametrize("value", [None, "different-assignment"])
+    def test_green_cannot_borrow_remaining_assignment_identity(field, value):
+        data = packet()
+        data["green"][field] = value
+>       assert_failed(data, f"green_{field}")
+
+tests/test_remote_receipt.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = {'receipt': {'delivery_id': 'assigned-delivery_id', 'request_id': 'assigned-request_id', 'project_id': 'assigned-proje...equest_id': 'assigned-request_id', 'project_id': 'assigned-project_id', 'mission_id': 'assigned-mission_id', ...}, ...}
+check_id = 'green_delivery_id'
+
+    def assert_failed(data, check_id):
+        result = evaluate_remote_receipt(**data)
+>       assert result["disposition"] == "failed"
+E       AssertionError: assert 'verified' == 'failed'
+E         
+E         - failed
+E         + verified
+
+tests/test_remote_receipt.py:23: AssertionError
+___ test_green_cannot_borrow_remaining_assignment_identity[None-request_id] ____
+
+field = 'request_id', value = None
+
+    @pytest.mark.parametrize("field", ["delivery_id", "request_id", "host_id", "actor_id", "issuer", "config_identity"])
+    @pytest.mark.parametrize("value", [None, "different-assignment"])
+    def test_green_cannot_borrow_remaining_assignment_identity(field, value):
+        data = packet()
+        data["green"][field] = value
+>       assert_failed(data, f"green_{field}")
+
+tests/test_remote_receipt.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = {'receipt': {'delivery_id': 'assigned-delivery_id', 'request_id': 'assigned-request_id', 'project_id': 'assigned-proje...-delivery_id', 'request_id': None, 'project_id': 'assigned-project_id', 'mission_id': 'assigned-mission_id', ...}, ...}
+check_id = 'green_request_id'
+
+    def assert_failed(data, check_id):
+        result = evaluate_remote_receipt(**data)
+>       assert result["disposition"] == "failed"
+E       AssertionError: assert 'verified' == 'failed'
+E         
+E         - failed
+E         + verified
+
+tests/test_remote_receipt.py:23: AssertionError
+_____ test_green_cannot_borrow_remaining_assignment_identity[None-host_id] _____
+
+field = 'host_id', value = None
+
+    @pytest.mark.parametrize("field", ["delivery_id", "request_id", "host_id", "actor_id", "issuer", "config_identity"])
+    @pytest.mark.parametrize("value", [None, "different-assignment"])
+    def test_green_cannot_borrow_remaining_assignment_identity(field, value):
+        data = packet()
+        data["green"][field] = value
+>       assert_failed(data, f"green_{field}")
+
+tests/test_remote_receipt.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = {'receipt': {'delivery_id': 'assigned-delivery_id', 'request_id': 'assigned-request_id', 'project_id': 'assigned-proje...equest_id': 'assigned-request_id', 'project_id': 'assigned-project_id', 'mission_id': 'assigned-mission_id', ...}, ...}
+check_id = 'green_host_id'
+
+    def assert_failed(data, check_id):
+        result = evaluate_remote_receipt(**data)
+>       assert result["disposition"] == "failed"
+E       AssertionError: assert 'verified' == 'failed'
+E         
+E         - failed
+E         + verified
+
+tests/test_remote_receipt.py:23: AssertionError
+____ test_green_cannot_borrow_remaining_assignment_identity[None-actor_id] _____
+
+field = 'actor_id', value = None
+
+    @pytest.mark.parametrize("field", ["delivery_id", "request_id", "host_id", "actor_id", "issuer", "config_identity"])
+    @pytest.mark.parametrize("value", [None, "different-assignment"])
+    def test_green_cannot_borrow_remaining_assignment_identity(field, value):
+        data = packet()
+        data["green"][field] = value
+>       assert_failed(data, f"green_{field}")
+
+tests/test_remote_receipt.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = {'receipt': {'delivery_id': 'assigned-delivery_id', 'request_id': 'assigned-request_id', 'project_id': 'assigned-proje...equest_id': 'assigned-request_id', 'project_id': 'assigned-project_id', 'mission_id': 'assigned-mission_id', ...}, ...}
+check_id = 'green_actor_id'
+
+    def assert_failed(data, check_id):
+        result = evaluate_remote_receipt(**data)
+>       assert result["disposition"] == "failed"
+E       AssertionError: assert 'verified' == 'failed'
+E         
+E         - failed
+E         + verified
+
+tests/test_remote_receipt.py:23: AssertionError
+_____ test_green_cannot_borrow_remaining_assignment_identity[None-issuer] ______
+
+field = 'issuer', value = None
+
+    @pytest.mark.parametrize("field", ["delivery_id", "request_id", "host_id", "actor_id", "issuer", "config_identity"])
+    @pytest.mark.parametrize("value", [None, "different-assignment"])
+    def test_green_cannot_borrow_remaining_assignment_identity(field, value):
+        data = packet()
+        data["green"][field] = value
+>       assert_failed(data, f"green_{field}")
+
+tests/test_remote_receipt.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = {'receipt': {'delivery_id': 'assigned-delivery_id', 'request_id': 'assigned-request_id', 'project_id': 'assigned-proje...equest_id': 'assigned-request_id', 'project_id': 'assigned-project_id', 'mission_id': 'assigned-mission_id', ...}, ...}
+check_id = 'green_issuer'
+
+    def assert_failed(data, check_id):
+        result = evaluate_remote_receipt(**data)
+>       assert result["disposition"] == "failed"
+E       AssertionError: assert 'verified' == 'failed'
+E         
+E         - failed
+E         + verified
+
+tests/test_remote_receipt.py:23: AssertionError
+_ test_green_cannot_borrow_remaining_assignment_identity[None-config_identity] _
+
+field = 'config_identity', value = None
+
+    @pytest.mark.parametrize("field", ["delivery_id", "request_id", "host_id", "actor_id", "issuer", "config_identity"])
+    @pytest.mark.parametrize("value", [None, "different-assignment"])
+    def test_green_cannot_borrow_remaining_assignment_identity(field, value):
+        data = packet()
+        data["green"][field] = value
+>       assert_failed(data, f"green_{field}")
+
+tests/test_remote_receipt.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = {'receipt': {'delivery_id': 'assigned-delivery_id', 'request_id': 'assigned-request_id', 'project_id': 'assigned-proje...equest_id': 'assigned-request_id', 'project_id': 'assigned-project_id', 'mission_id': 'assigned-mission_id', ...}, ...}
+check_id = 'green_config_identity'
+
+    def assert_failed(data, check_id):
+        result = evaluate_remote_receipt(**data)
+>       assert result["disposition"] == "failed"
+E       AssertionError: assert 'verified' == 'failed'
+E         
+E         - failed
+E         + verified
+
+tests/test_remote_receipt.py:23: AssertionError
+_ test_green_cannot_borrow_remaining_assignment_identity[different-assignment-delivery_id] _
+
+field = 'delivery_id', value = 'different-assignment'
+
+    @pytest.mark.parametrize("field", ["delivery_id", "request_id", "host_id", "actor_id", "issuer", "config_identity"])
+    @pytest.mark.parametrize("value", [None, "different-assignment"])
+    def test_green_cannot_borrow_remaining_assignment_identity(field, value):
+        data = packet()
+        data["green"][field] = value
+>       assert_failed(data, f"green_{field}")
+
+tests/test_remote_receipt.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = {'receipt': {'delivery_id': 'assigned-delivery_id', 'request_id': 'assigned-request_id', 'project_id': 'assigned-proje...equest_id': 'assigned-request_id', 'project_id': 'assigned-project_id', 'mission_id': 'assigned-mission_id', ...}, ...}
+check_id = 'green_delivery_id'
+
+    def assert_failed(data, check_id):
+        result = evaluate_remote_receipt(**data)
+>       assert result["disposition"] == "failed"
+E       AssertionError: assert 'verified' == 'failed'
+E         
+E         - failed
+E         + verified
+
+tests/test_remote_receipt.py:23: AssertionError
+_ test_green_cannot_borrow_remaining_assignment_identity[different-assignment-request_id] _
+
+field = 'request_id', value = 'different-assignment'
+
+    @pytest.mark.parametrize("field", ["delivery_id", "request_id", "host_id", "actor_id", "issuer", "config_identity"])
+    @pytest.mark.parametrize("value", [None, "different-assignment"])
+    def test_green_cannot_borrow_remaining_assignment_identity(field, value):
+        data = packet()
+        data["green"][field] = value
+>       assert_failed(data, f"green_{field}")
+
+tests/test_remote_receipt.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = {'receipt': {'delivery_id': 'assigned-delivery_id', 'request_id': 'assigned-request_id', 'project_id': 'assigned-proje...quest_id': 'different-assignment', 'project_id': 'assigned-project_id', 'mission_id': 'assigned-mission_id', ...}, ...}
+check_id = 'green_request_id'
+
+    def assert_failed(data, check_id):
+        result = evaluate_remote_receipt(**data)
+>       assert result["disposition"] == "failed"
+E       AssertionError: assert 'verified' == 'failed'
+E         
+E         - failed
+E         + verified
+
+tests/test_remote_receipt.py:23: AssertionError
+_ test_green_cannot_borrow_remaining_assignment_identity[different-assignment-host_id] _
+
+field = 'host_id', value = 'different-assignment'
+
+    @pytest.mark.parametrize("field", ["delivery_id", "request_id", "host_id", "actor_id", "issuer", "config_identity"])
+    @pytest.mark.parametrize("value", [None, "different-assignment"])
+    def test_green_cannot_borrow_remaining_assignment_identity(field, value):
+        data = packet()
+        data["green"][field] = value
+>       assert_failed(data, f"green_{field}")
+
+tests/test_remote_receipt.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = {'receipt': {'delivery_id': 'assigned-delivery_id', 'request_id': 'assigned-request_id', 'project_id': 'assigned-proje...equest_id': 'assigned-request_id', 'project_id': 'assigned-project_id', 'mission_id': 'assigned-mission_id', ...}, ...}
+check_id = 'green_host_id'
+
+    def assert_failed(data, check_id):
+        result = evaluate_remote_receipt(**data)
+>       assert result["disposition"] == "failed"
+E       AssertionError: assert 'verified' == 'failed'
+E         
+E         - failed
+E         + verified
+
+tests/test_remote_receipt.py:23: AssertionError
+_ test_green_cannot_borrow_remaining_assignment_identity[different-assignment-actor_id] _
+
+field = 'actor_id', value = 'different-assignment'
+
+    @pytest.mark.parametrize("field", ["delivery_id", "request_id", "host_id", "actor_id", "issuer", "config_identity"])
+    @pytest.mark.parametrize("value", [None, "different-assignment"])
+    def test_green_cannot_borrow_remaining_assignment_identity(field, value):
+        data = packet()
+        data["green"][field] = value
+>       assert_failed(data, f"green_{field}")
+
+tests/test_remote_receipt.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = {'receipt': {'delivery_id': 'assigned-delivery_id', 'request_id': 'assigned-request_id', 'project_id': 'assigned-proje...equest_id': 'assigned-request_id', 'project_id': 'assigned-project_id', 'mission_id': 'assigned-mission_id', ...}, ...}
+check_id = 'green_actor_id'
+
+    def assert_failed(data, check_id):
+        result = evaluate_remote_receipt(**data)
+>       assert result["disposition"] == "failed"
+E       AssertionError: assert 'verified' == 'failed'
+E         
+E         - failed
+E         + verified
+
+tests/test_remote_receipt.py:23: AssertionError
+_ test_green_cannot_borrow_remaining_assignment_identity[different-assignment-issuer] _
+
+field = 'issuer', value = 'different-assignment'
+
+    @pytest.mark.parametrize("field", ["delivery_id", "request_id", "host_id", "actor_id", "issuer", "config_identity"])
+    @pytest.mark.parametrize("value", [None, "different-assignment"])
+    def test_green_cannot_borrow_remaining_assignment_identity(field, value):
+        data = packet()
+        data["green"][field] = value
+>       assert_failed(data, f"green_{field}")
+
+tests/test_remote_receipt.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = {'receipt': {'delivery_id': 'assigned-delivery_id', 'request_id': 'assigned-request_id', 'project_id': 'assigned-proje...equest_id': 'assigned-request_id', 'project_id': 'assigned-project_id', 'mission_id': 'assigned-mission_id', ...}, ...}
+check_id = 'green_issuer'
+
+    def assert_failed(data, check_id):
+        result = evaluate_remote_receipt(**data)
+>       assert result["disposition"] == "failed"
+E       AssertionError: assert 'verified' == 'failed'
+E         
+E         - failed
+E         + verified
+
+tests/test_remote_receipt.py:23: AssertionError
+_ test_green_cannot_borrow_remaining_assignment_identity[different-assignment-config_identity] _
+
+field = 'config_identity', value = 'different-assignment'
+
+    @pytest.mark.parametrize("field", ["delivery_id", "request_id", "host_id", "actor_id", "issuer", "config_identity"])
+    @pytest.mark.parametrize("value", [None, "different-assignment"])
+    def test_green_cannot_borrow_remaining_assignment_identity(field, value):
+        data = packet()
+        data["green"][field] = value
+>       assert_failed(data, f"green_{field}")
+
+tests/test_remote_receipt.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = {'receipt': {'delivery_id': 'assigned-delivery_id', 'request_id': 'assigned-request_id', 'project_id': 'assigned-proje...equest_id': 'assigned-request_id', 'project_id': 'assigned-project_id', 'mission_id': 'assigned-mission_id', ...}, ...}
+check_id = 'green_config_identity'
+
+    def assert_failed(data, check_id):
+        result = evaluate_remote_receipt(**data)
+>       assert result["disposition"] == "failed"
+E       AssertionError: assert 'verified' == 'failed'
+E         
+E         - failed
+E         + verified
+
+tests/test_remote_receipt.py:23: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_remote_receipt.py::test_green_cannot_borrow_remaining_assignment_identity[None-delivery_id]
+FAILED tests/test_remote_receipt.py::test_green_cannot_borrow_remaining_assignment_identity[None-request_id]
+FAILED tests/test_remote_receipt.py::test_green_cannot_borrow_remaining_assignment_identity[None-host_id]
+FAILED tests/test_remote_receipt.py::test_green_cannot_borrow_remaining_assignment_identity[None-actor_id]
+FAILED tests/test_remote_receipt.py::test_green_cannot_borrow_remaining_assignment_identity[None-issuer]
+FAILED tests/test_remote_receipt.py::test_green_cannot_borrow_remaining_assignment_identity[None-config_identity]
+FAILED tests/test_remote_receipt.py::test_green_cannot_borrow_remaining_assignment_identity[different-assignment-delivery_id]
+FAILED tests/test_remote_receipt.py::test_green_cannot_borrow_remaining_assignment_identity[different-assignment-request_id]
+FAILED tests/test_remote_receipt.py::test_green_cannot_borrow_remaining_assignment_identity[different-assignment-host_id]
+FAILED tests/test_remote_receipt.py::test_green_cannot_borrow_remaining_assignment_identity[different-assignment-actor_id]
+FAILED tests/test_remote_receipt.py::test_green_cannot_borrow_remaining_assignment_identity[different-assignment-issuer]
+FAILED tests/test_remote_receipt.py::test_green_cannot_borrow_remaining_assignment_identity[different-assignment-config_identity]
+12 failed, 88 deselected in 0.07s

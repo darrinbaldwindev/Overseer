@@ -1,0 +1,22 @@
+▶ Mission D-REPAIR: Basic Chat host lifecycle + lock
+  ✔ A/B: start creates lock and remains listening (25.828707ms)
+  ✔ C: second active host is rejected (12.426376ms)
+  ✔ D/E/F/G: one close path waits for server and chat cleanup before lifecycle completion (2.188766ms)
+  ✔ H/I/J: normal close releases port, removes lock before waiter resolves, restart works (7.191302ms)
+  ✔ K/L: stale lock requires explicit recovery for all contenders (3.094869ms)
+  ✔ M/N: conversation survives host restart without replay (77.270789ms)
+  ✔ O: lock cleanup failure is surfaced and not reported as closed (792.899627ms)
+  ✔ closest supported CLI signal path exits only after lock removal (101.218791ms)
+  ﹣ Windows-native actual CLI ETX path performs full cleanup and immediate restart (0.350016ms) # Windows-native only
+✔ Mission D-REPAIR: Basic Chat host lifecycle + lock (1024.894327ms)
+✔ uncertain lock remains owned during competing startup: "" (13.262838ms)
+✔ uncertain lock remains owned during competing startup: "{" (5.252048ms)
+✔ uncertain lock remains owned during competing startup: "{\"pid\":999999,\"startedAt\":\"2020-01-01T00:00:00Z\"}" (7.494342ms)
+ℹ tests 12
+ℹ suites 1
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 1143.239526
