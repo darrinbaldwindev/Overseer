@@ -139,3 +139,21 @@ adds a read-only pull-request/manual Python test workflow. PRS's existing workfl
 filtered pull requests to main and skipped stacked #17; its existing test workflow
 is extended to all PR bases so stacked assurance changes receive CI too. Neither
 workflow grants production access or independent assurance.
+
+## Publication checkpoint
+
+| Draft | Published head at checkpoint | CI evidence |
+|---|---|---|
+| [PRS #17](https://github.com/darrinbaldwindev/PRS/pull/17) | `93f4019559473b701514e9aa78072373c407d55b` | Validate repository #48 [success](https://github.com/darrinbaldwindev/PRS/actions/runs/34433591909) |
+| [Overseer #46](https://github.com/darrinbaldwindev/Overseer/pull/46) | `f5444f31840d6e8100dc6b69f247f1128ab1c0a7` | Validate repository #1 [success](https://github.com/darrinbaldwindev/Overseer/actions/runs/34433599659) |
+| [AgentOS #99](https://github.com/darrinbaldwindev/AgentOS/pull/99) | `5abda2dfdb5464adb412fea76f43939800d9b906` | AgentOS Tests #586 [success](https://github.com/darrinbaldwindev/AgentOS/actions/runs/34433601392) |
+| [Affiliate-Websites #9](https://github.com/darrinbaldwindev/Affiliate-Websites/pull/9) | `ab0d6d9db648bc86a9e464a97660cac5f99dfae9` | No workflow run returned; documentation/research only |
+| [GlobalShopCo #15](https://github.com/darrinbaldwindev/GlobalShopCo/pull/15) | `ec173cb8f927cd8308151f3ce22efed1a10c8f0a` | No workflow run returned; documentation/research only |
+
+AgentOS #99 adds pending-status feedback and the existing local chat launch entry
+point; 306 local tests passed. Browser installation failed certificate validation;
+no TLS check was disabled. The composer interaction is tested, visual viewport
+acceptance is not. PRS #17 passes 115 Python tests and its existing CI now includes
+stacked bases. Overseer #46 has 49 local tests and its first CI run passed. The
+CI row above predates this documentation-only checkpoint; current PR checks
+must be consulted for the head that contains this append.
