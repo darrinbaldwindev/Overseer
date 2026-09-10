@@ -133,3 +133,9 @@ CLAIMED: historical PR/doc assertions remain labelled by source.
 IMPLEMENTED: bounded repairs and offline probes in draft branches.
 TESTED: local suites and head-associated CI listed above, with scope limits.
 ASSURED: not asserted by Work. No full bridge, production or commercial GREEN.
+
+Validation follow-through: Overseer main had no GitHub workflow, so this repair
+adds a read-only pull-request/manual Python test workflow. PRS's existing workflow
+filtered pull requests to main and skipped stacked #17; its existing test workflow
+is extended to all PR bases so stacked assurance changes receive CI too. Neither
+workflow grants production access or independent assurance.
