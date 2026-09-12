@@ -1,10 +1,10 @@
 schema_version: 3
-last_discovery: 2026-09-01
+last_discovery: 2026-09-09
 repositories:
   - id: agentos
     full_name: darrinbaldwindev/AgentOS
     default_branch: main
-    visibility: private
+    visibility: public
     archived: false
     priority: critical
     scan_status: scanned
@@ -18,14 +18,14 @@ repositories:
   - id: globalshopco-headless
     full_name: darrinbaldwindev/GlobalShopCo-Headless
     default_branch: main
-    visibility: private
+    visibility: public
     archived: false
     priority: high
     scan_status: inventory-only
   - id: franchise
     full_name: darrinbaldwindev/Franchise
     default_branch: main
-    visibility: private
+    visibility: public
     archived: false
     priority: high
     scan_status: scanned
@@ -43,17 +43,10 @@ repositories:
     archived: false
     priority: critical
     scan_status: scanned
-  - id: manus-codebase
-    full_name: darrinbaldwindev/manus
-    default_branch: gemverse
-    visibility: private
-    archived: false
-    priority: informational
-    scan_status: inventory-only
   - id: gemverse
     full_name: darrinbaldwindev/GemVerse
     default_branch: gemverse
-    visibility: private
+    visibility: public
     archived: false
     priority: medium
     scan_status: inventory-only
@@ -71,6 +64,13 @@ repositories:
     archived: false
     priority: medium
     scan_status: inventory-only
+  - id: affiliate-websites
+    full_name: darrinbaldwindev/Affiliate-Websites
+    default_branch: main
+    visibility: public
+    archived: false
+    priority: high
+    scan_status: scanned
 relationships:
   - from: overseer
     to: all
@@ -99,6 +99,7 @@ research_handoff:
     gemverse: no-dedicated-research
     franchise: no-dedicated-research
     prs: no-dedicated-research
+    affiliate-websites: no-dedicated-research
     other: not-established
   rules:
     - Gemini intelligence must not be treated as implementation evidence.
@@ -116,7 +117,10 @@ portfolio_events:
     action: added currently accessible GemVerse, MyPrimeDelivery, PRS, and GhostKitchen repositories to the registry
   - date: 2026-08-31
     event: Gemini Mission 009 handoff
-    action: recorded portfolio research handoff in reports/2026-08-31-gemini-mission-009-portfolio-handoff.md and linked it from the canonical portfolio registry; status remains awaiting independent CHATGPT Overseer review
+    action: recorded portfolio research handoff and linked it from the canonical portfolio registry
   - date: 2026-09-01
     event: repository rename reconciliation
-    action: confirmed Amazon-Affiliate registry identity now resolves to darrinbaldwindev/MyPrimeDelivery after owner-side GitHub rename; registry entry normalized to myprime-delivery and stale duplicate identity removed
+    action: normalized MyPrimeDelivery identity and removed stale duplicate identity
+  - date: 2026-09-09
+    event: live portfolio rediscovery
+    action: reconciled registry to the 10 repositories currently accessible through the authenticated GitHub installation; removed stale manus-codebase identity, added Affiliate-Websites, and refreshed branch/visibility metadata

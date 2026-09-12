@@ -2,6 +2,12 @@
 
 This directory is the persistent communication layer between the GPTChat Overseer and individual Project Overseers.
 
+## Canonical control root
+
+`.overseer/PROJECT-OVERSEERS/` is the only live Project Overseer control root.
+
+The lowercase `.overseer/project-overseers/` tree is retained as historical evidence only. It must not be used for new tasks, live state, routing, scheduling, or Project Overseer discovery. Historical material may remain there until a separately verified migration can preserve provenance without destructive cleanup.
+
 ## Operating rule
 
 Every Project Overseer must have a persistent inbox and state file. Its scheduled wake cycle must:
