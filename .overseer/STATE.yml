@@ -5,8 +5,8 @@ control_plane:
   source: MANUS-INTEGRATION.md
   state_schema: 1
 portfolio:
-  last_discovery: 2026-09-10
-  repository_count: 10
+  last_discovery: 2026-09-12
+  repository_count: 12
   repositories:
     - agentos
     - globalshopco
@@ -18,9 +18,12 @@ portfolio:
     - prs
     - ghost-kitchen
     - affiliate-websites
+    - shopify-ebay
+    - content360
 scans:
-  last_scan: 2026-09-10
+  last_scan: 2026-09-12
   completed: 10
+  inventory_only: 2
   failed: 0
 findings:
   active: 1
