@@ -1,5 +1,5 @@
 schema_version: 3
-last_discovery: 2026-09-10
+last_discovery: 2026-09-12
 repositories:
   - id: agentos
     full_name: darrinbaldwindev/AgentOS
@@ -71,6 +71,20 @@ repositories:
     archived: false
     priority: high
     scan_status: scanned
+  - id: shopify-ebay
+    full_name: darrinbaldwindev/shopify_ebay
+    default_branch: main
+    visibility: public
+    archived: false
+    priority: high
+    scan_status: inventory-only
+  - id: content360
+    full_name: darrinbaldwindev/content360
+    default_branch: main
+    visibility: public
+    archived: false
+    priority: medium
+    scan_status: inventory-only
 relationships:
   - from: overseer
     to: all
@@ -83,6 +97,9 @@ relationships:
     type: related_to
   - from: globalshopco
     to: globalshopco-headless
+    type: related_to
+  - from: shopify-ebay
+    to: globalshopco
     type: related_to
 research_handoff:
   canonical_location: reports/2026-08-31-gemini-mission-009-portfolio-handoff.md
@@ -100,6 +117,8 @@ research_handoff:
     franchise: no-dedicated-research
     prs: no-dedicated-research
     affiliate-websites: dedicated-country-and-master-workstreams-active
+    shopify-ebay: empty-repository-inventory-only
+    content360: empty-repository-inventory-only
     other: not-established
   rules:
     - Gemini intelligence must not be treated as implementation evidence.
@@ -124,3 +143,6 @@ portfolio_events:
   - date: 2026-09-10
     event: live portfolio rediscovery and scan reconciliation
     action: verified 10 accessible public repositories; removed stale manus-codebase identity; added Affiliate-Websites; refreshed default branches, visibility, and scan status from live GitHub evidence
+  - date: 2026-09-12
+    event: live portfolio inventory expansion
+    action: verified 12 accessible repositories; added empty public repositories shopify_ebay and content360 as inventory-only so control coverage cannot silently omit them or misrepresent them as implemented work
