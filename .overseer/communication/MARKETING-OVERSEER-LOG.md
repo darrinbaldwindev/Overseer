@@ -97,6 +97,58 @@
 
 ---
 
+## 2026-09-13 16:52 AEST — AgentOS / Claim-upgrade gate
+
+**Mission:** Convert Level 2 proof dependencies into an explicit marketing claim ladder and Founding Beta message gate.
+
+**Evidence reviewed:** AgentOS PR #104 current draft state and purpose; Founding Beta readiness playbook; beta competitive/adoption gap register; current owner claim-discipline instructions.
+
+**Work completed:**
+- Created `reports/2026-09-13-agentos-marketing-claim-and-beta-message-gate.md`.
+- Mapped governed execution, Windows inspection, controlled mutation, inspect→modify→test→verify, recovery, duplicate protection, verification, PRS assurance, stop/revoke, credential safety, cost governance, Night Shift and provider-neutrality claims to current status plus exact proof upgrade gates.
+- Defined BETA-PROVEN promotion rule based on pinned-build external evidence rather than testimonials or selective successes.
+- Reconciled current Marketing price source of truth to **Free → $29 → $99 → subscriptions**.
+
+**Artifact / commit:** `reports/2026-09-13-agentos-marketing-claim-and-beta-message-gate.md` @ commit `a23acd01ec46d7368949d29d7c7e931d28ab92b6`.
+
+**Claims promoted/demoted:** No broad capability claim promoted. Current governed-execution architectural wording remains safe; end-to-end Level 2 remains held.
+
+**Blockers / UNKNOWNs:** Founding Beta remains HOLD pending technical entry gate; no paid/public activation.
+
+**Publication / production status:** PREPARED / NOT PUBLISHED.
+
+**Next highest-value marketing action:** Move to GlobalShopCo + Shopify→eBay because AgentOS marketing is prepared but technically gated.
+
+---
+
+## 2026-09-13 16:58 AEST — GlobalShopCo + Shopify→eBay / Marketing launch gate
+
+**Mission:** Prepare the eBay marketing lane without inventing SKU readiness, supplier permission, freight economics or listing availability.
+
+**Evidence reviewed:**
+- GlobalShopCo `docs/ebay/AU_EBAY_PILOT_SHORTLIST_2026-09-12.md`.
+- GlobalShopCo `docs/ebay/AU_EBAY_SUPPLIER_ELIGIBILITY_MATRIX_2026-09-12.md`.
+- Current state in those sources: zero eBay-approved SKUs; five Southern Pet candidates permission-required; Home Organisation candidates HOLD/UNKNOWN; current Eleganter candidates not eligible for eBay under documented programme terms.
+
+**Work completed:**
+- Created `reports/2026-09-13-globalshopco-ebay-marketing-launch-gate.md`.
+- Defined RED / AMBER / activation-ready marketing states.
+- Prepared evidence-gated eBay listing/social structures that can be filled rapidly after supplier/channel/economic proof exists.
+- Preserved Shopify as source of truth and eBay as downstream channel.
+- Defined Content360 handoff restrictions so it cannot infer stock, margin, supplier permission, delivery economics or eBay readiness.
+
+**Artifact / commit:** `reports/2026-09-13-globalshopco-ebay-marketing-launch-gate.md` @ commit `670e76883c1a47b698195b28ae7017b68bb36798`.
+
+**Claims promoted/demoted:** No product availability or profitability claim promoted. Current eBay channel remains HOLD.
+
+**Blockers / UNKNOWNs:** written marketplace approval, authorised trade cost, stock/ownership/fulfilment, parcel/cubic freight, returns/warranty, eBay-inclusive conservative contribution and owner activation approval.
+
+**Publication / production status:** PREPARED / HOLD / NOT PUBLISHED.
+
+**Next highest-value marketing action:** Move to GlobalShopCo Headless / Affiliate Websites and prepare evidence-safe acquisition/SEO structures that do not depend on unresolved product or affiliate approvals.
+
+---
+
 ## Existing Marketing Overseer artifact index
 
 ### AgentOS beta / competitive / positioning
@@ -105,6 +157,10 @@
 - `reports/2026-09-13-agentos-beta-competitive-adoption-overseer-handoff.md`
 - `reports/2026-09-13-agentos-three-way-ecosystem-research-comparison.md`
 - `reports/2026-09-13-agentos-ai-layer-north-star-and-pc-control-boundary.md`
+- `reports/2026-09-13-agentos-marketing-claim-and-beta-message-gate.md`
+
+### GlobalShopCo / Shopify→eBay
+- `reports/2026-09-13-globalshopco-ebay-marketing-launch-gate.md`
 
 ### Content360
 - `reports/2026-09-13-content360-overseer-repo-scan-reconciliation.md`
