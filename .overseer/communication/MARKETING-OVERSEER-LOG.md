@@ -197,6 +197,32 @@
 
 ---
 
+## 2026-09-13 17:15 AEST — GhostKitchen / Franchise pre-launch marketing gate
+
+**Mission:** Prepare safe concept-validation positioning without turning early architecture/research into a franchise offer or earnings claim.
+
+**Evidence reviewed:**
+- GhostKitchen README: delivery-first platform; prepared-food delivery template is primary current focus; standardise operating system while customising approved concept; validate unit economics before franchise pricing.
+- `docs/PROJECT-STATE.md`: no final food concept, franchise fee/royalty or kitchen/equipment specification approved; unknowns must remain assumptions/pending decisions.
+- `docs/PILOT-RESEARCH-PLAN-v1.md`: test multiple delivery-cost scenarios; do not convert market/competitor/supplier evidence into guaranteed revenue, margin, franchisee earnings or final commercial terms.
+
+**Work completed:**
+- Created `reports/2026-09-13-ghostkitchen-prelaunch-marketing-gate.md`.
+- Defined safe platform-level positioning, customer/operator discovery wording, concept-marketing gate and stronger commercial/franchise-marketing gate.
+- Prohibited payback, earnings, turnkey-profit and final-franchise-term claims.
+
+**Artifact / commit:** `reports/2026-09-13-ghostkitchen-prelaunch-marketing-gate.md` @ commit `c669521390ee329226b1c04008960bd8fbc09953`.
+
+**Claims promoted/demoted:** Safe to describe the delivery-first operating-system direction; no concept, profitability or franchise-sale claim promoted.
+
+**Blockers / UNKNOWNs:** final concept; prototype menu; recipe/portion costs; packaging/delivery tests; customer value evidence; actual kitchen pilot; real operating economics; legal/franchise work; approved fees/terms.
+
+**Publication / production status:** PREPARED / RESEARCH-ONLY / NOT OFFERED FOR SALE.
+
+**Next highest-value marketing action:** Maintain evidence monitoring across AgentOS/GlobalShopCo/Affiliate/GhostKitchen and upgrade prepared assets only when their proof gates clear. Competitive monitoring remains useful for AgentOS; production/publication action now requires new evidence or owner authority.
+
+---
+
 ## Existing Marketing Overseer artifact index
 
 ### AgentOS beta / competitive / positioning
@@ -213,6 +239,9 @@
 
 ### Affiliate Websites
 - `reports/2026-09-13-affiliate-websites-editorial-acquisition-gate.md`
+
+### GhostKitchen / Franchise
+- `reports/2026-09-13-ghostkitchen-prelaunch-marketing-gate.md`
 
 ### Content360
 - `reports/2026-09-13-content360-overseer-repo-scan-reconciliation.md`
