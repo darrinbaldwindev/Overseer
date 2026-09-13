@@ -1,10 +1,24 @@
 schema_version: 3
-last_discovery: 2026-09-01
+last_discovery: 2026-09-13
 repositories:
   - id: agentos
     full_name: darrinbaldwindev/AgentOS
     default_branch: main
-    visibility: private
+    visibility: public
+    archived: false
+    priority: critical
+    scan_status: scanned
+  - id: prs
+    full_name: darrinbaldwindev/PRS
+    default_branch: main
+    visibility: public
+    archived: false
+    priority: high
+    scan_status: inventory-only
+  - id: overseer
+    full_name: darrinbaldwindev/Overseer
+    default_branch: main
+    visibility: public
     archived: false
     priority: critical
     scan_status: scanned
@@ -18,14 +32,28 @@ repositories:
   - id: globalshopco-headless
     full_name: darrinbaldwindev/GlobalShopCo-Headless
     default_branch: main
-    visibility: private
+    visibility: public
     archived: false
     priority: high
+    scan_status: inventory-only
+  - id: affiliate-websites
+    full_name: darrinbaldwindev/Affiliate-Websites
+    default_branch: main
+    visibility: public
+    archived: false
+    priority: high
+    scan_status: inventory-only
+  - id: ghost-kitchen
+    full_name: darrinbaldwindev/GhostKitchen
+    default_branch: main
+    visibility: public
+    archived: false
+    priority: medium
     scan_status: inventory-only
   - id: franchise
     full_name: darrinbaldwindev/Franchise
     default_branch: main
-    visibility: private
+    visibility: public
     archived: false
     priority: high
     scan_status: scanned
@@ -36,40 +64,26 @@ repositories:
     archived: false
     priority: medium
     scan_status: scanned
-  - id: overseer
-    full_name: darrinbaldwindev/Overseer
+  - id: gemverse
+    full_name: darrinbaldwindev/GemVerse
+    default_branch: gemverse
+    visibility: public
+    archived: false
+    priority: medium
+    scan_status: inventory-only
+  - id: shopify-ebay
+    full_name: darrinbaldwindev/shopify_ebay
     default_branch: main
     visibility: public
     archived: false
     priority: critical
-    scan_status: scanned
-  - id: manus-codebase
-    full_name: darrinbaldwindev/manus
-    default_branch: gemverse
-    visibility: private
-    archived: false
-    priority: informational
     scan_status: inventory-only
-  - id: gemverse
-    full_name: darrinbaldwindev/GemVerse
-    default_branch: gemverse
-    visibility: private
-    archived: false
-    priority: medium
-    scan_status: inventory-only
-  - id: prs
-    full_name: darrinbaldwindev/PRS
+  - id: content360
+    full_name: darrinbaldwindev/content360
     default_branch: main
     visibility: public
     archived: false
-    priority: medium
-    scan_status: inventory-only
-  - id: ghost-kitchen
-    full_name: darrinbaldwindev/GhostKitchen
-    default_branch: main
-    visibility: public
-    archived: false
-    priority: medium
+    priority: high
     scan_status: inventory-only
 relationships:
   - from: overseer
@@ -84,6 +98,12 @@ relationships:
   - from: globalshopco
     to: globalshopco-headless
     type: related_to
+  - from: shopify-ebay
+    to: globalshopco
+    type: sales_channel_for
+  - from: content360
+    to: all
+    type: marketing_content_support
 research_handoff:
   canonical_location: reports/2026-08-31-gemini-mission-009-portfolio-handoff.md
   source_class: Gemini research intelligence
@@ -99,6 +119,9 @@ research_handoff:
     gemverse: no-dedicated-research
     franchise: no-dedicated-research
     prs: no-dedicated-research
+    affiliate-websites: not-established
+    shopify-ebay: not-established
+    content360: not-established
     other: not-established
   rules:
     - Gemini intelligence must not be treated as implementation evidence.
@@ -120,3 +143,6 @@ portfolio_events:
   - date: 2026-09-01
     event: repository rename reconciliation
     action: confirmed Amazon-Affiliate registry identity now resolves to darrinbaldwindev/MyPrimeDelivery after owner-side GitHub rename; registry entry normalized to myprime-delivery and stale duplicate identity removed
+  - date: 2026-09-13
+    event: authenticated portfolio inventory reconciliation
+    action: fresh installed-repository discovery returned exactly 12 accessible repositories; removed stale manus entry and added Affiliate-Websites, shopify_ebay, and content360; synchronized current default branches and visibility
