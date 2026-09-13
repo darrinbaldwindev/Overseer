@@ -149,6 +149,54 @@
 
 ---
 
+## 2026-09-13 17:04 AEST — GlobalShopCo Headless / Marketing readiness
+
+**Mission:** Prepare marketing architecture without treating the non-production headless vertical slice as a live storefront.
+
+**Evidence reviewed:** `darrinbaldwindev/GlobalShopCo-Headless` README/current boundary: approved scope is a non-production test product fetched from Shopify, presented by WordPress and handed to Shopify cart/checkout; Shopify remains product/price/inventory/cart/checkout/order authority; no production deployment, product publication, analytics or release process is authorised.
+
+**Work completed:**
+- Created `reports/2026-09-13-globalshopco-headless-marketing-readiness.md`.
+- Defined safe IA, product-page content contract, SEO/AEO structure, trust UX and future measurement plan.
+- Explicitly prohibited independent WordPress price/stock truth.
+
+**Artifact / commit:** `reports/2026-09-13-globalshopco-headless-marketing-readiness.md` @ commit `02192ee7fbf29a2d9551e23cd353b9a0357d7c06`.
+
+**Claims promoted/demoted:** None. Headless remains non-production.
+
+**Blockers / UNKNOWNs:** authorised environment; tested Storefront API; canonical rendering; safe stale/error behavior; checkout handoff; legal/privacy; analytics authority; approved products; publication approval.
+
+**Publication / production status:** PREPARED / NOT PUBLISHED.
+
+**Next highest-value marketing action:** Affiliate Websites editorial acquisition / monetisation gate.
+
+---
+
+## 2026-09-13 17:09 AEST — Affiliate Websites / Editorial acquisition gate
+
+**Mission:** Enable useful editorial/SEO preparation while preserving publisher/account approval gates for monetised CTAs.
+
+**Evidence reviewed:**
+- Affiliate-Websites canonical architecture: WordPress presentation; PostgreSQL/Supabase canonical structured data; Rewards API controlled commercial-resolution boundary; semantic CTA context rather than raw tracking logic.
+- Overseer verified-program register/application-readiness work: publisher-affiliate candidates verified at network level; account approval still required before monetised outbound use.
+
+**Work completed:**
+- Created `reports/2026-09-13-affiliate-websites-editorial-acquisition-gate.md`.
+- Defined editorial-first acquisition model, country/category/programme SEO structure, trust/evidence labels, relationship-type disclosure and separate editorial vs monetised activation gates.
+- Preserved the distinction between member referral and publisher-affiliate relationship.
+
+**Artifact / commit:** `reports/2026-09-13-affiliate-websites-editorial-acquisition-gate.md` @ commit `be66a1bea89965908ac6a43e715adafbcf0c4909`.
+
+**Claims promoted/demoted:** Editorial facts may be prepared where current/country-scoped; monetised outbound CTAs remain HOLD until account/program approval and commercial resolution path are live.
+
+**Blockers / UNKNOWNs:** publisher/account acceptance; live WordPress/browser/accessibility/performance/E2E tracking; publication-time programme rechecks; jurisdiction-specific disclosure review.
+
+**Publication / production status:** PREPARED / MONETISED OUTBOUND HOLD.
+
+**Next highest-value marketing action:** GhostKitchen / Franchise pre-launch positioning and validation messaging, avoiding earnings/payback/franchise-sale claims before unit-economics and operating evidence exist.
+
+---
+
 ## Existing Marketing Overseer artifact index
 
 ### AgentOS beta / competitive / positioning
@@ -159,8 +207,12 @@
 - `reports/2026-09-13-agentos-ai-layer-north-star-and-pc-control-boundary.md`
 - `reports/2026-09-13-agentos-marketing-claim-and-beta-message-gate.md`
 
-### GlobalShopCo / Shopify→eBay
+### GlobalShopCo / Shopify→eBay / Headless
 - `reports/2026-09-13-globalshopco-ebay-marketing-launch-gate.md`
+- `reports/2026-09-13-globalshopco-headless-marketing-readiness.md`
+
+### Affiliate Websites
+- `reports/2026-09-13-affiliate-websites-editorial-acquisition-gate.md`
 
 ### Content360
 - `reports/2026-09-13-content360-overseer-repo-scan-reconciliation.md`
