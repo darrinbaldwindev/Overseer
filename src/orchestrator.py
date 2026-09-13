@@ -30,6 +30,15 @@ class TransactionState(str, Enum):
     BLOCKED = "blocked"
 
 
+@dataclass(frozen=True)
+class DelegatedResult:
+    task_id: str
+    repository: str
+    worker: str
+    state: TransactionState
+    result: Any
+
+
 def run_repository_scan(
     repository: str,
     discover: Callable[[str], Any],
@@ -54,15 +63,14 @@ def run_delegated_transaction(
     execute: Callable[[], Any],
     verify: Callable[[Any], bool],
     record: Callable[[TransactionState], None],
-) -> Any:
+) -> DelegatedResult:
     """Run a worker transaction only from a fresh base and never overclaim verification.
 
     The caller owns the actual repository/provider adapters. This contract makes
     the lifecycle observable and prevents a successful execution from being
     treated as VERIFIED until an independent verifier returns true.
     """
-    del task_id, repository, worker  # retained as audit context at adapter level
-    if not isinstance(base_snapshot, dict) or not base_snapshot.get("fresh"):
+    if not isinstance(base_snapshot, dict) or base_snapshot.get("fresh") is not True:
         raise ValueError("delegated transaction requires a fresh repository snapshot")
     if not base_snapshot.get("commit"):
         raise ValueError("delegated transaction requires a base commit")
@@ -75,9 +83,9 @@ def run_delegated_transaction(
         record(TransactionState.FAILED)
         raise
 
-    if verify(result):
+    if verify(result) is True:
         record(TransactionState.VERIFIED)
-        return result
+        return DelegatedResult(task_id, repository, worker, TransactionState.VERIFIED, result)
 
     record(TransactionState.COMPLETED_UNVERIFIED)
-    return result
+    return DelegatedResult(task_id, repository, worker, TransactionState.COMPLETED_UNVERIFIED, result)
