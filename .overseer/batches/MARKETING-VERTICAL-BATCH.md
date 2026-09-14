@@ -1,7 +1,7 @@
 # MARKETING OVERSEER — VERTICAL EXECUTION BATCH
 
 **Canonical mission:** `darrinbaldwindev/Overseer#49`  
-**Fresh scan:** 2026-09-14 23:54+ AEST with mandatory post-scan  
+**Fresh scan:** 2026-09-15 00:05+ AEST with mandatory post-scan  
 **Status:** ACTIVE / EXECUTED / REPLENISHED / EVIDENCE-GATED
 
 ## Mandatory cycle
@@ -32,52 +32,51 @@ No merge, approval, mark-ready, rebase, deployment, credentials, purchase, suppl
 - **Founding Beta remains HOLD.**
 
 ## AgentOS Frontend Overseer
-- PR #111 advanced to exact `7205b6b4e91802315f78bca1431aece0da0a5181`, OPEN / DRAFT / UNMERGED.
-- Exact-head AgentOS Tests #1157 / `34852151277` = **FAILURE overall**.
+- PR #111 moved repeatedly during this cycle and post-scan exact head is now `146f1118d34c36fdcb579450987a72a6e656c3d7`, OPEN / DRAFT / UNMERGED.
+- Exact-head AgentOS Tests #1177 / `34853649670` = **FAILURE overall**.
 - Windows Basic Chat lifecycle job = SUCCESS.
-- General Ubuntu test job = FAILURE with 329 pass / 1 fail / 1 skip.
-- Failing case is `Basic Chat canonical evidence integration -> does not leak private/raw/secret or fabricated PRS/recovery fields through snapshot evidence`.
-- Current projection now requires a canonical `dispatch.task` identity. The failing integration fixture expected projected evidence without that canonical task record, while the new projection correctly failed closed with `evidenceAvailable=false` and null mission/wake/completion/Green fields.
-- Most new identity/correlation hardening tests pass, including no-canonical-task and mission/wake mismatch cases.
-- Marketing classification: **IMPLEMENTATION-ADVANCED / WINDOWS LIFECYCLE PASS / IDENTITY-HARDENING TESTS PASS / EXACT-HEAD CI RED ON STALE INTEGRATION EXPECTATION / DRAFT-UNMERGED / NOT SHIPPED**.
-- Do not retain predecessor exact-head CI PASS label.
+- General Ubuntu test job = FAILURE with one failing inherited lifecycle assertion: `closest supported CLI signal path exits only after lock removal` (`actual='SIGINT'`, expected null).
+- The current evidence integration suite passes, including canonical `dispatch.task` identity, secret/raw/PRS/recovery exclusion, and mission/wake mismatch fail-closed behavior.
+- New readiness-projection tests pass: no-input fail-closed; Basic Chat availability only from supplied canonical chat state; host capability requires canonical evidence; physical Windows acceptance requires exact-head supervised PASS evidence; capability/physical acceptance never upgrades project-file mutation readiness.
+- Marketing classification: **IMPLEMENTATION-ADVANCED / EVIDENCE+READINESS PROJECTIONS PASS / WINDOWS LIFECYCLE PASS / EXACT-HEAD CI RED ON INHERITED UBUNTU SIGINT LIFECYCLE ASSERTION / DRAFT-UNMERGED / NOT SHIPPED**.
+- Generic Evidence Timeline, Henry/PRS, durable Revoke, live recovery and project-file mutation readiness remain incomplete/not supportable.
 
 ## GlobalShopCo + eBay
 - Current truth remains **0 eBay-ready SKUs / PILOT NOT READY / PUBLICATION HOLD**.
-- Issue #17 latest research produced OXO Good Grips organiser candidates: `48685` AMBER/P1 authorised-wholesale target; `48703` AMBER/secondary HOLD; `48695` RED/HOLD first wave.
-- Major-retailer discounting compresses margin; none enters the capped pilot.
-- Contradictory marketplace/source/inventory evidence remains fail-closed and favourable flags cannot override contradiction.
+- OXO current research family remains `48685` AMBER/P1, `48703` AMBER/secondary HOLD, `48695` RED/HOLD.
+- Conservative 13.4% FVF + 20% contribution + 5% reserve screen gives maximum combined stock+freight ceilings: `48685` A$29.54; `48703` A$28.31; `48695` A$23.38.
+- Exact authorised wholesale, freight, marketplace permission, eBay-compatible ownership/fulfilment, seller/packing identity and actual account/category fee remain UNKNOWN.
+- Contradictory marketplace/source/inventory evidence remains fail-closed; favourable flags cannot override contradiction.
 - Southern Pet remains permission/trade-economics gated.
-- Actual GlobalShopCo eBay account plan/category fee remains UNKNOWN from authoritative account evidence.
 
 ## Affiliate Websites — AU
-- Current first-party evidence verifies user rewards + member referral programmes for Octopus Group and Pureprofile.
-- Neither is treated as a verified publisher-affiliate relationship from the evidence reviewed.
-- Editorial recommendation may proceed with freshness/relationship disclosure; monetised publisher CTA remains HOLD without separate publisher permission/terms.
+- Octopus Group, Pureprofile and Toluna currently pass user-reward + member-referral evidence.
+- Publisher-affiliate rights remain UNKNOWN/HOLD for all three from evidence reviewed.
+- LifePoints AU passes user-reward evidence but its own current FAQ says it does not offer a referral programme; therefore it fails the site's referral qualification and is comparison-only.
 
 ---
 
 # EXECUTED THIS CYCLE
 
-## M-A027 — Basic Chat Evidence Timeline gap-to-MVP
-**COMPLETE** — `reports/2026-09-14-agentos-basic-chat-evidence-timeline-gap-to-mvp.md` @ `ecb678c4d87bfae2fe3e254eb74fba009c942f3e`.
+## M-A029 — Frontend evidence regression reconciliation
+**COMPLETE / SUPERSEDED BY POST-SCAN HEAD FOR CI CLASSIFICATION** — `reports/2026-09-15-agentos-frontend-evidence-regression-reconciliation.md` @ `93de19a6edab41ebffb38799fe92fa30a25e584e`.
+The earlier stale evidence-integration expectation was corrected on a later head. Post-scan moved again; current CI RED is now the inherited Ubuntu SIGINT lifecycle assertion, not evidence/readiness semantics.
 
-Defines the smallest truthful timeline from current canonical evidence and explicitly excludes PRS, recovery, revoke, cost and physical-readiness claims that lack live canonical sources.
+## M-A030 — Evidence Timeline acceptance matrix
+**COMPLETE** — `reports/2026-09-15-agentos-evidence-timeline-acceptance-matrix.md` @ `6a53bf129817432a9634cff1745524d5e89fd3db`.
+Defines Simple / Essentials / Tech Head acceptance and negative tests. Until implemented on an exact CI-green head, use `bounded What happened evidence summary`, not complete Evidence Timeline.
 
-## M-A028 — Jack permission-card canonical field gap
-**COMPLETE** — `reports/2026-09-14-agentos-jack-permission-card-canonical-field-gap.md` @ `089b2e66aacd060d25869931ad2155e5d3630b8f`.
+## M-A031 — Jack permission-card acceptance matrix
+**COMPLETE** — `reports/2026-09-15-agentos-jack-permission-card-acceptance-matrix.md` @ `474fcb025891ea38f2ed5db95e32f7464672617a`.
+Defines canonical requirements for actor/provenance/capability/scope plus missing expiry, revoke, in-flight behavior, reversibility, credential/data-egress, external communication, cost and next-approval fields.
 
-Defines missing canonical user-facing fields for expiry, revoke effect/receipt, already-running work, reversibility, credentials/data/egress, money/cost, next approval and mutation boundaries. No frontend-only authority system is allowed.
+## M-B018 — OXO organiser threshold screen
+**COMPLETE / ALL HOLD** — `reports/2026-09-15-globalshopco-oxo-organiser-commercial-threshold-screen.md` @ `181e4507642740422e79b6a5e60377468991cb8f`.
+No OXO SKU promoted; 0 eBay-ready remains controlling.
 
-## M-B017 — contradiction-aware Marketing gate mirror
-**COMPLETE** — `reports/2026-09-14-globalshopco-contradiction-aware-marketing-gate.md` @ `f3f41630a2bc7ea711c86597a91e5592ea2b17a5`.
-
-Contradictory evidence now explicitly outranks favourable evidence in Marketing state language and blocks Offer/Shop Now/current stock-price-delivery promotion until reconciled.
-
-## M-D001 — AU proof-gated shortlist
-**COMPLETE FOR FIRST TWO / EXPAND LATER** — `reports/2026-09-14-au-affiliate-proof-gated-shortlist.md` @ `f077101bd77cb3ef1dd1183e7ee79350c4bebe81`.
-
-Octopus Group + Pureprofile pass current consumer reward/member-referral evidence but remain publisher-affiliate UNKNOWN/HOLD.
+## M-D001b — AU shortlist expansion
+**COMPLETE FOR THIS PASS** — `reports/2026-09-15-au-affiliate-proof-gated-shortlist-expansion.md` @ `2d654dee4e55f82f17351559f589f4889024a112`.
+Toluna joins the editorial reward/referral shortlist; LifePoints is explicitly comparison-only because current referral is absent. Publisher monetisation remains HOLD without separate current proof.
 
 ---
 
@@ -87,19 +86,19 @@ Octopus Group + Pureprofile pass current consumer reward/member-referral evidenc
 P0 ACTIVE. Recheck #104 head/CI/ownership/auth/physical Windows/Green/PRS every cycle.
 
 ## M-A015 — Frontend claim-comprehension QA
-P0 ACTIVE. Recheck #111 current descendant and exact-head CI. Preserve fail-closed canonical task identity, Green≠PRS, Stop requested≠stopped and physical-readiness `not established`.
+P0 ACTIVE. Recheck #111 exact descendant + CI. Preserve evidence/readiness separation, Green≠PRS, Stop requested≠stopped and project-file mutation UNKNOWN.
 
 ## M-A016 — Founding Beta readiness
-P1 HOLD. Beta remains blocked by Level 2 technical gates regardless of frontend evidence improvements.
+P1 HOLD. Level 2 technical gates still control activation.
 
-## M-A029 — Evidence projection integration regression reconciliation
-P1 NEXT SAFE. Track whether the stale integration fixture is updated to include canonical `dispatch.task` identity while preserving secret/PRS/recovery exclusion. Promote only after exact-head CI PASS.
+## M-A032 — readiness-projection claim/screen acceptance
+P1 NEXT SAFE. Convert the four-state readiness projection into Simple/Essentials/Tech Head presentation requirements: Basic Chat availability ≠ host capability ≠ physical Windows acceptance ≠ mutation readiness. Require contradiction/staleness fail-closed behavior.
 
-## M-A030 — Evidence Timeline acceptance matrix
-P1 NEXT SAFE. Convert M-A027 into screen-state acceptance criteria for Simple / Essentials / Tech Head without adding runtime authority.
+## M-A033 — Evidence Timeline implementation acceptance follow-up
+P1 WATCH/NEXT SAFE. Compare future #111 descendants against M-A030. Do not call it Evidence Timeline MVP until accepted rows are present and exact-head CI is green.
 
-## M-A031 — Jack permission-card acceptance matrix
-P1 NEXT SAFE. Convert M-A028 into explicit PASS/HOLD fields and negative tests; no synthetic expiry/revoke/data-egress claims.
+## M-A034 — Jack authority-source discovery follow-up
+P1 NEXT SAFE. Watch runtime/authority lineage for canonical expiry, durable revoke+receipt, already-running-work behavior, reversibility, secret/data-egress/external-action consequence, bounded cost and next-approval fields. Do not synthesize them in frontend/Marketing.
 
 ## M-A013 — Content360 AgentOS refresh
 P1 HOLD pending evidence-supported claim movement or explicit owner approval for pre-beta education.
@@ -109,16 +108,19 @@ P1 HOLD pending evidence-supported claim movement or explicit owner approval for
 # REPLENISHED GLOBALSHOPCO + EBAY LANE
 
 ## M-B007 — exact-SKU pruning
-P0 ACTIVE. Consume new #17 evidence and reject contradiction/bulk/margin-compressed rows quickly.
+P0 ACTIVE. Consume new #17 evidence; reject contradiction/bulk/margin-compressed rows quickly.
 
 ## M-B014 — actual eBay account plan/category fee
 P0 BLOCKED-UNKNOWN. Authoritative read-only account evidence only.
 
-## M-B015c — authenticated/read-only Dropshipzone exact-SKU screen
-P0/P1 BLOCKED-UNTIL-DATA. Use existing authorised data source only; no application/contact.
+## M-B015c — authenticated/read-only exact supplier screen
+P0/P1 BLOCKED-UNTIL-DATA. Existing authorised source only; no application/contact.
 
-## M-B018 — OXO organiser commercial threshold screen
-P0/P1 NEXT SAFE. For `48685`, `48703`, `48695`, define exact maximum allowable authenticated wholesale+freight thresholds against current realistic delivered-price comps; preserve permission/account fields UNKNOWN.
+## M-B019 — OXO 48685 next-evidence gate
+P0/P1 CONDITIONAL. Pursue `48685` only if authenticated buy cost + real freight evidence becomes available and combined cost is materially below A$29.54. `48703` secondary; `48695` first-wave HOLD.
+
+## M-B020 — CARLA current-leader re-screen
+P1 NEXT SAFE. Reconcile `V178-36336` and `V178-36335` against current comps, freight/weight, permission/stock-model evidence and the same free-delivery contribution discipline. No supplier contact.
 
 ## M-B009 — first-qualified-SKU rapid-release kit
 P1 HOLD until one SKU clears all gates.
@@ -126,8 +128,8 @@ P1 HOLD until one SKU clears all gates.
 ---
 
 # AFFILIATE WEBSITES
-## M-D001b — AU shortlist expansion
-P1 NEXT SAFE. Add further AU programmes only where current primary evidence separately proves user reward, member referral and/or publisher affiliate relationship. Do not infer publisher rights.
+## M-D001c — AU true publisher-relationship proof hunt
+P1 NEXT SAFE. Find at least one AU programme/network relationship where current primary evidence proves user reward and a separate publisher-commercial route. Prefer dual relationships but never conflate member referral with publisher affiliate.
 ## M-D002 — UK proof-gated shortlist
 P1 PENDING.
 ## M-D003 — US proof-gated shortlist
@@ -143,19 +145,23 @@ P1 PENDING.
 - M-E002 evidence ladder — P2 PENDING; no earnings/payback promises.
 
 # PORTFOLIO LEARNING
-- M-F001 claim-evidence pointer index — P1 PENDING.
-- M-F002 Content360 learning loop — P2 PENDING.
+## M-F001 — claim-evidence pointer index
+P1 NEXT SAFE if higher lanes block. Build current claim→exact evidence→freshness→owner→allowed wording pointers across AgentOS, GlobalShopCo and Affiliate Websites.
+## M-F002 — Content360 learning loop
+P2 PENDING.
 
 ---
 
 # NEXT AUTONOMOUS ORDER
 At next `cont`, mandatory fresh scans first:
 1. #104 exact current head + ownership/auth/physical Windows/Green/PRS.
-2. #111 exact descendant + CI; specifically stale integration expectation vs canonical dispatch identity.
-3. GlobalShopCo #17 latest candidate/assurance evidence + authoritative eBay account evidence if any.
-4. Execute M-A029, M-A030, M-A031 if Level 2 remains blocked.
-5. Execute M-B018, then M-D001b if commerce/account data remains blocked.
-6. Mandatory post-scan; replenish batch; update canonical Marketing log and #49.
+2. #111 exact current descendant + CI; inspect whether Ubuntu SIGINT lifecycle failure persists and whether evidence/readiness projection changes.
+3. GlobalShopCo #17 latest candidate/economics/permission evidence + authoritative account evidence if any.
+4. Execute M-A032, M-A034; M-A033 as current-head evidence permits.
+5. Execute M-B020 unless authenticated OXO/account evidence unlocks M-B019 first.
+6. Execute M-D001c; then UK/US proof-gated work if higher lanes block.
+7. Execute M-F001 if useful capacity remains.
+8. Mandatory post-scan; replenish batch; update canonical Marketing log and #49.
 
 ## Protected actions
 No public beta/invitations, telemetry activation, paid campaign, eBay listing/product activation, supplier contact, account application, purchase, account/connector mutation, monetised affiliate activation without current evidence, franchise offer, merge/deploy/credentials/production autonomy.
