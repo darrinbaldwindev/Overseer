@@ -13,18 +13,22 @@ Apply the engine + matching profile to THIS project/workstream, subordinate to c
 Then immediately:
 - fresh-scan the repository/workstream;
 - locate/create/reconcile the live vertical batch at `.overseer/batches/VERTICAL-EXECUTION-BATCH.md` unless an established documented batch path already exists;
+- SHOW the owner a compact `Current Batch` in chat containing ACTIVE NOW, NEXT, BLOCKED/HOLD/UNKNOWN, VERIFIED SINCE LAST CYCLE, and BATCH SOURCE;
 - execute the fullest safe useful batch now;
 - verify exact changed state;
 - inspect/repair failures where safe;
 - fresh-scan again before replenishment;
 - reconcile concurrent changes rather than overwrite them;
 - replenish the SAME local batch;
+- SHOW the owner a compact `Updated Batch` in chat containing what moved, what remains blocked, and what is queued next;
 - durably log exact progress/blockers/heads/evidence;
 - surface portfolio-significant state to darrinbaldwindev/Overseer#49.
 
 From now on `cont`, `continue`, `continue autonomously`, and `continue autonomously vertically` trigger that COMPLETE cycle.
 
 At the start of every later cycle, re-read the canonical engine/profile before trusting a copied/local procedure. Central engine/profile changes therefore propagate to every Project Overseer on its next fresh cycle.
+
+The chat-facing batch view is a human-readable projection only. GitHub/repository/runtime/CI evidence and the durable local batch remain authoritative. Do not make an ordinary unrelated chat behave like an Overseer merely because it is open in the same ChatGPT Project.
 
 Do not create duplicate schedulers, queues, authority systems, registries, mission ledgers, persistence/memory systems, Green systems or PRS systems. Do not merge, approve, mark-ready, rebase, deploy, alter credentials, spend, contact suppliers/customers/partners, publish production content/listings, make production writes or enable production autonomy without explicit owner authorization.
 
