@@ -1,54 +1,43 @@
 # Portfolio Execution Batch Manifest
 
-**Purpose:** bounded execution manifest consumed by the existing ChatGPT schedules. This file is **not** a new scheduler, queue, mission ledger, authority source, registry, Green system, PRS system, or project source of truth. Repository/issues/runtime evidence remain authoritative.
+**Purpose:** bounded execution manifest consumed by the existing ChatGPT schedules and manual `cont` / `continue autonomously vertically` cycles. This file is not a scheduler, authority source, mission ledger, registry, Green system, PRS system, or project source of truth. Live repository/issues/runtime evidence remains authoritative.
 
-**Owner direction:** schedules stay focused on their existing priority projects. As gates become VERIFIED GREEN, equivalent work may expand into small homogeneous batches. Manual `continue autonomously vertically` remains the whole-portfolio large-batch path.
+**Manual rule:** `cont` / `continue autonomously vertically` consumes as much safe useful work from this manifest as possible, reconciles results, then replenishes this same file before returning control.
+
+**Schedule rule:** :00 consumes LANE A, :15 consumes LANE B, :30 reconciles/replenishes, :37 independently guards AgentOS/false-GREEN, :45 consumes LANE C.
 
 ## Batch lifecycle
-
-1. Execution schedules read this file and the latest durable project evidence before acting.
-2. A schedule may claim only items in its own lane and may execute several safe items in one wake when useful.
-3. Before mutation/research/test work, refresh the target repository/ref/evidence. Stale batch text never overrides current repository state.
-4. Each item is reconciled as `PENDING`, `ACTIVE`, `VERIFIED`, `BLOCKED`, `STALE`, or `SPLIT_REQUIRED` with exact evidence in the appropriate project issue/log and Overseer #49.
-5. The :30 Portfolio Checkpoint reconciles completed/blocked/stale items, removes no historical evidence, and **replenishes the next pass** with the highest-value safe adjacent work from the same scheduled priority lanes.
-6. A VERIFIED GREEN gate may replenish 2–5 homogeneous adjacent items. Repeated clean passes may cautiously increase batch size. Any mixed-confidence or failed item is split out and fails closed.
-7. No batch entry grants merge/deploy/credentials/production writes/purchases/supplier contact/listing publication/campaign activation/production autonomy.
-
-## Replenishment policy
-
-- Keep each execution lane supplied with at least one useful `PENDING` item when safe work exists.
-- Prefer implementation/test/evidence closure over scans/status-only work.
-- Do not replenish duplicate work already present in repo/issues/PRs.
-- If an item is blocked by owner authority, physical host, credentials, or external commercial evidence, retain the blocker and replenish a different safe item in the same lane.
-- Do not turn scheduler firing, issue creation, or worker claims into completion.
-- Replenishment must preserve current priority order; it does not broaden scheduled scope to the whole portfolio.
+1. Refresh target repo/ref/evidence before acting; stale manifest text never overrides live state.
+2. Execute multiple safe items when useful; blocked work must not terminate the pass while other eligible work exists.
+3. Reconcile items as `PENDING`, `ACTIVE`, `VERIFIED`, `BLOCKED`, `STALE`, or `SPLIT_REQUIRED` with exact evidence in project issues/logs and Overseer #49.
+4. VERIFIED GREEN gates may expand into small homogeneous batches, normally 2–5 equivalent items.
+5. Mixed-confidence/failed items are split and fail closed.
+6. No batch entry grants merge/deploy/credentials/production writes/purchases/supplier contact/listing publication/campaign activation/production autonomy.
 
 ---
 
 # LANE A — AGENTOS LEVEL 2 P0 (:00)
 
 ### A-001 — Continuous ownership fence
-- status: PENDING
+- status: BLOCKED
 - priority: P0
-- target: AgentOS PR #104/successor exact current head
-- action: advance the continuous ownership-preserving project-file fence across final verification -> publish/prepared recovery -> success-receipt persistence.
-- acceptance: exact-head tests/CI plus no unresolved stale/replaced-owner race for the property changed.
+- current exact head observed in manual pass: `083b7decf48038764ec846a988a5cd30d2a4fa56`
+- evidence: PR #104 remains OPEN/DRAFT/UNMERGED; current PR-triggered AgentOS Tests run `34791584537` is CANCELLED; PR body records independent Green FAIL on the unresolved check-to-publish ownership race.
+- blocker: no kernel-enforced ownership boundary held continuously through final verification -> publish/prepared recovery -> success-receipt persistence.
+- next: implement/test the smallest ownership-preserving primitive on current exact lineage; rerun exact-head Windows+Ubuntu CI; Green only on unchanged exact head.
 - batch_rule: single critical-path change until independently green.
 
 ### A-002 — Ownership adversarial regressions
-- status: PENDING
-- priority: P0
-- target: AgentOS PR #104/successor
-- action: replacement-after-verification, three-writer, stale/replaced identity, crash/replay, duplicate-result and false-success tests adjacent to A-001.
-- acceptance: deterministic regression coverage on unchanged exact head.
-- batch_rule: may group 2–5 homogeneous regression cases only after the underlying ownership primitive is stable.
+- status: BLOCKED
+- dependency: A-001 primitive must first change or otherwise gain new evidence.
+- next batch once eligible: replacement-after-verification; three-writer successor; stale/replaced identity; crash/replay; duplicate-result/false-success.
+- batch_rule: 2–5 homogeneous cases only after primitive is stable.
 
 ### A-003 — Authority/admission continuation
 - status: PENDING
-- priority: P1-after-A-001/A-002
-- target: canonical remote authority-admission / pickup lineage
-- action: bind trusted transport actor context and canonical grant evidence without self-granting request fields.
-- acceptance: fail-closed tests and no duplicate authority layer.
+- priority: P1-after-A-001/A-002 or when ownership work is temporarily blocked
+- action: bind trusted transport actor context and canonical grant evidence to existing authority-admission/pickup lineage; no self-granting request fields.
+- acceptance: fail-closed tests, no duplicate authority layer, exact task/mission/wake correlation.
 
 ---
 
@@ -58,41 +47,39 @@
 - status: PENDING
 - priority: P0-commerce
 - target: GlobalShopCo issues #9/#18
-- action: advance exact SKU candidates toward evidence-complete supplier identity, wholesale, freight, free-delivery economics, returns/warranty, stock and explicit UNKNOWN closure.
-- acceptance: missing freight or supplier/channel evidence remains HOLD.
-- batch_rule: once one gate is VERIFIED GREEN, replenish 2–5 equivalent compact candidates.
+- action: advance exact-SKU candidates toward supplier identity, wholesale, freight, free-delivery economics, returns/warranty, stock and explicit UNKNOWN closure.
+- acceptance: missing freight/supplier/channel evidence remains HOLD.
+- batch_rule: once one candidate gate is VERIFIED GREEN, process 2–5 equivalent compact candidates.
 
 ### B-002 — GlobalShopCo-Headless M3 checkout slice
-- status: PENDING
-- priority: P1-commerce
-- target: GlobalShopCo-Headless issue #3 / active M3 branch
-- action: consume current deterministic checkout/security evidence and advance the smallest non-production storefront -> Shopify checkout handoff gate.
-- acceptance: Shopify remains source of truth; no arbitrary checkout destination; deterministic tests.
-- batch_rule: small group of equivalent no-network edge cases after green.
+- status: VERIFIED
+- exact verified head: `11214e0b4a119cf237c1d3ffa10ca1df1f375d4b`
+- CI: M3 checkout validation run `34792401552` SUCCESS.
+- verified property: deterministic cart/checkout handoff plus configured Shopify checkout-host enforcement.
+- replenished adjacent batch (PENDING):
+  1. reject checkout host with valid suffix but wrong registrable host;
+  2. reject protocol downgrade / non-HTTPS checkout destination;
+  3. reject missing checkoutUrl even when cart lines exist;
+  4. preserve unavailable-variant fail-closed behavior with no redirect.
+- boundary: non-production/test-safe only; Shopify remains source of truth.
 
 ### B-003 — Shopify -> eBay readiness
 - status: PENDING
-- priority: P1-commerce
-- target: GlobalShopCo #17 + shopify_ebay
-- action: advance deterministic candidate mapping/readiness and evidence-complete pilot criteria without install/account connection/listing publication.
-- acceptance: marketplace permission, fulfilment identity, stock method and landed economics remain fail-closed.
-- batch_rule: 2–5 equivalent candidate records only after mapper/gate is green.
+- action: deterministic candidate mapping/readiness; require marketplace permission, fulfilment identity, stock method and landed economics.
+- batch_rule: 2–5 equivalent candidate records only after mapper/gate remains green.
 
 ### B-004 — Shopify -> Amazon readiness
 - status: PENDING
-- priority: P2-commerce
-- target: GlobalShopCo #23
-- action: advance seller-of-record/category/GTIN/fulfilment/economics evidence model without seller setup.
+- action: seller-of-record/category/GTIN/fulfilment/economics evidence model without seller setup.
 - acceptance: owned-site/eBay/MyPrimeDelivery state cannot imply Amazon eligibility.
-- batch_rule: small equivalent candidate set after gate verification.
 
 ### B-005 — MyPrimeDelivery synthetic WordPress slice
-- status: PENDING
-- priority: P2-commerce
-- target: MyPrimeDelivery issue #2
-- action: consume exact-head fixture CI and advance synthetic WordPress rendering/schema path without claiming live Prime/ranking evidence.
-- acceptance: no live commercial data/affiliate URL leaks; Prime/ranking remain evidence-gated.
-- batch_rule: 2–5 synthetic equivalent fixture/render cases after green.
+- status: ACTIVE
+- predecessor verified head: `f4692b80286677cc4d25d2292083439f1790f241`; Fixture validation run `34791382576` SUCCESS.
+- manual-pass implementation head: `56cf2421348390eeebc41e0de486c5707b570b09` on `agent/overseer/initial-project-timeline`.
+- work added: reusable synthetic `mpd-category-view` / `mpd-product-card` render projection, disabled positive Prime claims/CTA/local checkout for fixtures, stale-state suppression tests, CI integration.
+- next: consume exact-head CI for `56cf242...`; if SUCCESS, replenish 2–5 equivalent render edge cases (missing ranking evidence, VERIFIED destination fixture without authorised URL, optional commercial-field suppression, evidence badge mapping).
+- boundary: synthetic only; no live Prime/ranking/affiliate claims.
 
 ---
 
@@ -100,75 +87,56 @@
 
 ### C-001 — Affiliate Websites governed CTA/program evidence
 - status: PENDING
-- priority: P1-ventures
-- target: Affiliate-Websites master + AU/UK/US issues #8/#10/#11/#12
-- action: advance evidence-gated programme records and reusable CTA/data contract; consumer referral != publisher affiliate.
+- action: evidence-gated programme records + reusable CTA/data contract; consumer referral != publisher affiliate.
 - acceptance: stale/unknown/referral-only evidence cannot become verified publisher CTA.
-- batch_rule: 2–5 verified-equivalent programme records once CTA gate is green.
 
 ### C-002 — GhostKitchen economics batch
-- status: PENDING
-- priority: P1-ventures
-- target: GhostKitchen #16/#23/#24/#10
-- action: advance deterministic delivery-channel/unit-economics scenarios with public benchmarks clearly separated from project-verified costs.
-- acceptance: incomplete project economics = NOT_TESTABLE / decision-support only.
-- batch_rule: 2–5 homogeneous scenarios after calculator/validation green.
+- status: ACTIVE
+- predecessor verified head: `8cd52abf37999c7f16642aaf4a8f5c389e7939af`; Economics validation run `34791727853` SUCCESS.
+- manual-pass head: `0bc82e4a15f882dc5de3f44b3cdc542cfd6defd2`.
+- work added: expanded homogeneous decision-support scenario batch from 3 to 5 cases, including higher-commission marketplace and direct-order/no-paid-acquisition variants; all public/hypothesis evidence remains non-commercial-pass.
+- next: consume exact-head CI; if SUCCESS, add representative menu scenarios only where recipe/packaging/labour/AOV values are explicitly evidence-classified; UNKNOWN stays NOT_TESTABLE.
 
 ### C-003 — Franchise territory/tenancy validation
-- status: PENDING
-- priority: P1-ventures
-- target: Franchise #18/#19
-- action: advance fail-closed tenancy/territory fixtures and auditability without production migration.
-- acceptance: ambiguous overlap and inactive/unknown franchise routing fail closed.
-- batch_rule: 2–5 synthetic equivalent routing/tenancy cases after green.
+- status: ACTIVE
+- predecessor verified head: `b9cf83bd6c00b14694c7b3b2e3a6e9fd5fb90cf5`; Territory fixture validation run `34791807480` SUCCESS.
+- manual-pass head: `00730890a08ca47ce8783f9de8bdc850dc19ccc9`.
+- work added: routing output now includes matched active-area IDs, candidate franchises, selected franchise and explicit selection/denial reason; tests cover successful selection, inactive denial and NO_SERVICE audit evidence.
+- next: consume exact-head CI; if SUCCESS, replenish a small audit batch for version/correlation/evidence timestamp fields and synthetic tenancy-context derivation without production migration.
 
 ### C-004 — GemVerse Level 2 fixture assurance
-- status: PENDING
-- priority: P2-ventures
-- target: GemVerse Level 2 fixture/issues
-- action: advance machine-checkable exact-preimage/target/replay/recovery cases without inventing canon.
-- acceptance: partial/truncated/replayed mutation cannot masquerade as successful canon update.
-- batch_rule: several deterministic fixture cases after base validator green.
+- status: ACTIVE
+- predecessor verified head: `b56c8eced601790b0c7cbafb907b58749fc916e5`; Level 2 fixture validation run `34792510122` SUCCESS.
+- manual-pass head: `e8725d22c3761fd94496538e3f3316e565c0c1a8` on branch `gemverse`.
+- work added: homogeneous near-miss rejection batch for truncated state, wrong project identity, skipped counter and mixed state; each rejected both as complete state and authorised pre-image.
+- next: consume exact-head CI; if SUCCESS, add prepared-artifact identity/correlation and stale-replay recovery cases without altering canonical fixture state.
 
 ### C-005 — Content360 provider-neutral adapter
 - status: PENDING
-- priority: P2-ventures
-- target: content360 issue #2
-- action: consume official/public contract research when available and extend request/result schemas/mock failure cases; no credential or live publish.
-- acceptance: publish/schedule remain disabled unless explicitly approved and later verified.
-- batch_rule: 2–5 mock contract/error cases after adapter CI green.
+- action: consume official/public contract research when available; extend request/result schemas and mock failure cases; no credential/live publish.
 
 ### C-006 — Commercial Frontend workflow evidence
 - status: PENDING
-- priority: P2-ventures
-- target: Overseer Commercial Frontend issue #21
-- action: deepen Tradie/Ecommerce wedge evidence around real cross-system exception workflows and integration feasibility.
-- acceptance: customer pain/frequency/WTP remain UNKNOWN unless evidenced.
-- batch_rule: 2–5 equivalent workflow records after evidence template is stable.
+- action: deepen Tradie/Ecommerce cross-system exception evidence; customer pain/frequency/WTP remain UNKNOWN until evidenced.
 
 ### C-007 — AgentOS marketing objection acceptance
 - status: PENDING
-- priority: P2-ventures
 - target: AgentOS issue #109
-- action: turn one or more objection gates into directly testable onboarding/pricing/demo evidence without unsupported claims.
-- acceptance: planned mitigation != product evidence.
-- batch_rule: small homogeneous objection-test set after first acceptance surface is green.
+- action: convert objection gates into directly testable onboarding/pricing/demo evidence; planned mitigation != product proof.
 
 ---
 
-# ASSURANCE (:37)
+# INDEPENDENT PRS CHECKPOINT (non-consuming)
+- status: VERIFIED for evaluator-parity cleanup only
+- exact head: `a646f4033fd1b0c40135cb6f5c1286e9c7610728`
+- CI: Validate repository run `34793554142` SUCCESS.
+- meaning: legacy evaluator compatibility path now delegates to canonical semantics with exact-head repository validation. This is not AgentOS PR #104 assurance and does not imply overall PRS/AgentOS GREEN.
 
-The assurance schedule does **not** consume normal implementation items. It independently challenges the newest AgentOS Level 2 result and may mark only narrowly evidenced properties as PASS/FAIL/INSUFFICIENT. PRS runs only after Green passes the identical exact head.
+# NEXT REPLENISHER PASS
+1. Harvest CI for GhostKitchen `0bc82e4...`, Franchise `0073089...`, GemVerse `e8725d2...`, MyPrimeDelivery `56cf242...`.
+2. If green, expand only the adjacent small batches listed above.
+3. Keep AgentOS A-001 fail-closed until a changed ownership primitive and exact-head CI + independent Green exist.
+4. Continue B-001 first among unresolved commerce work; continue C-001 first among unresolved ventures work unless active CI results create an immediately executable adjacent batch.
+5. Do not let blocked external/owner-evidence work starve other safe items.
 
-# CHECKPOINT / REPLENISHER (:30)
-
-At each pass:
-- reconcile exact evidence for items acted on since the prior checkpoint;
-- mark stale entries when repository state moved;
-- keep blocked items explicit but do not let them starve other safe work;
-- replenish LANE A/B/C from their existing scheduled priority sets;
-- when a gate is repeatedly VERIFIED GREEN, add the next 2–5 homogeneous adjacent items rather than one item at a time;
-- never broaden the scheduled project universe merely to fill the batch;
-- append a concise durable reconciliation to Overseer #49.
-
-**Initial manifest state:** seeded 2026-09-14 from current active schedule priorities. All entries require fresh evidence before execution.
+**Reconciled after manual vertical batch:** 2026-09-14 10:53+10 owner-triggered cycle.
