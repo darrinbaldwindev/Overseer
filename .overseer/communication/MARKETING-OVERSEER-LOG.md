@@ -264,6 +264,7 @@
 - `reports/2026-09-13-agentos-three-way-ecosystem-research-comparison.md`
 - `reports/2026-09-13-agentos-ai-layer-north-star-and-pc-control-boundary.md`
 - `reports/2026-09-13-agentos-marketing-claim-and-beta-message-gate.md`
+- `reports/2026-09-14-agentos-marketing-level2-claim-delta.md`
 
 ### GlobalShopCo / Shopify→eBay / Headless
 - `reports/2026-09-13-globalshopco-ebay-marketing-launch-gate.md`
@@ -288,3 +289,43 @@
 - `reports/2026-09-12-content360-portfolio-learning-loop.md`
 
 **Canonical operating rule:** append future substantive cycles here with Brisbane timestamp, project/lane, mission, evidence reviewed, exact head where relevant, completed work, artifact/commit, claim changes, competitor findings, product gaps, blockers, publication state and next action.
+
+---
+
+## 2026-09-14 15:08 AEST — AgentOS / Level 2 claim reconciliation
+
+**Project/lane:** AgentOS — claims, Founding Beta and acquisition readiness.
+
+**Mission:** Refresh live Level 2 evidence after fresh-chat handover, determine whether any capability claim can be promoted, and make the current proof boundary durable for Marketing.
+
+**Evidence reviewed:**
+- `darrinbaldwindev/Overseer#49`: Level 2 remains immediate P0; evidence, exact-head runtime behavior, Green and PRS control completion claims.
+- AgentOS PR #104, `feat(local): stage governed PowerShell Windows worker on remote-bridge lineage`.
+- Exact PR head observed: `71c463a77b31ebeac2bfe00da13c684512daccf7`.
+- PR remains OPEN / DRAFT / UNMERGED.
+- Current PR body records bounded governed PowerShell scope, but also a persisting stale-ownership publish/success-receipt race for project-file mutation, the same ownership-gap class in prepared-write recovery, incomplete authenticated transport/canonical grant admission wiring, no physical Windows acceptance on the current runtime-changing head, and no current-head Green/PRS PASS.
+- Recent Overseer #49 execution evidence also confirms that cross-platform test/audit success on predecessor exact heads does not clear the core ownership blocker.
+
+**Work completed:**
+- Created `reports/2026-09-14-agentos-marketing-level2-claim-delta.md`.
+- Converted the latest ownership/admission/current-head acceptance failures into explicit marketing promotion gates.
+- Kept Founding Beta on HOLD.
+- Preserved safe problem/promise positioning while refusing to turn advanced implementation into a public Level 2 completion claim.
+
+**Artifact / commit:** `reports/2026-09-14-agentos-marketing-level2-claim-delta.md` @ commit `c592f802a6929bfd9922ed7d735e0a0cce805ca0`.
+
+**Claims promoted or demoted:**
+- No broad capability claim promoted.
+- Bounded governed Windows/PowerShell foundation remains **PROVEN only at narrow stated scope**.
+- Controlled mutation and inspect→modify→test→verify remain **NEARLY PROVEN / acceptance-gated**.
+- End-to-end autonomous Windows Level 2, guaranteed recovery, complete duplicate prevention and current-head Green+PRS assurance remain **NOT YET SUPPORTABLE**.
+
+**Competitive findings:** No new competitor claim introduced in this cycle. Existing conclusion remains: multi-model/MCP/local-model/computer-control features are insufficient differentiation by themselves; governance + evidence + recovery + assurance + provider neutrality remains the stronger strategic position.
+
+**Product gaps:** Continuous kernel-enforced mutation ownership through publish/recovery/receipt; canonical authenticated identity + grant binding; exact runtime correlation; exact-head physical Windows acceptance; exact-head Green followed by independent PRS.
+
+**Blockers / UNKNOWNs:** The core mutation ownership race remains unresolved at the marketing evidence boundary. External Founding Beta cannot be responsibly opened from current evidence.
+
+**Publication / production status:** PREPARED / NOT PUBLICLY ACTIVATED / NO PAID CAMPAIGN / NO OVERALL GREEN.
+
+**Next highest-value marketing action:** Keep AgentOS acquisition work focused on evidence-safe problem/promise messaging while technical proof advances; if no new AgentOS gate clears, continue with GlobalShopCo/eBay evidence-gated launch preparation using the latest connector/SKU eligibility state.
