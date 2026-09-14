@@ -29,19 +29,17 @@ States: `PENDING`, `ACTIVE`, `VERIFIED`, `BLOCKED`, `STALE`, `SPLIT_REQUIRED`.
 
 ### CF-A001 — Parent-state reconciliation
 - status: VERIFIED / CONTINUOUS
-- fresh 2026-09-14 scan found the parent manifest materially updated after Batch 002.
-- Commercial Frontend remains a discovery/evidence lane; no production build gate was promoted.
-- AgentOS PR #104 exact parent-manifest anchor moved to `9f53df16ae37ee6a86e66d2a808ca7f62f203d76`; exact-head AgentOS Tests run `34816222109` is FAILURE because Windows/Node26 failed while Ubuntu/Node22 passed.
-- current documented Windows failure is `tests/remote-scheduler-execution.test.mjs` / real multi-process duplicate-execution scenario with one process hitting `EPERM` on state lock creation. This is cross-platform reliability failure evidence, not proof of duplicate side effect.
+- fresh Batch 004 scan confirms parent manifest still anchors AgentOS PR #104 exact `9f53df16ae37ee6a86e66d2a808ca7f62f203d76` with Windows CI failure unresolved.
+- PR #104 remains OPEN/DRAFT/UNMERGED; no scheduler/local-wake PowerShell runtime execution enabled.
 - continuous ownership, canonical authenticated grant binding, current-head physical Windows acceptance, Green and PRS remain unresolved.
-- Marketing reconciliation commit `074eae9b...` independently preserves Founding Beta HOLD and truthful frontend incomplete/unknown state requirements.
+- production Commercial Frontend remains HOLD.
 
 ### CF-A002 — Duplicate-work / product-authority guard
 - status: VERIFIED / CONTINUOUS
-- Commercial Frontend remains vertical cockpit/commercial workflow authority only.
-- AgentOS Frontend Overseer owns detailed AgentOS screen hierarchy/interaction implementation; Commercial Frontend must reuse truthful canonical trust-state semantics rather than create a competing AgentOS UI authority.
-- architecture remains: `vertical cockpit -> shared commercial layer -> AgentOS governance/execution/verification -> customer systems of record`.
-- no CRM replacement, generic workflow builder, scheduler, authority service or system-of-record replacement created.
+- Commercial Frontend owns vertical commercial workflow/cockpit semantics only.
+- AgentOS Frontend Overseer owns AgentOS detailed screen/interaction implementation.
+- architecture remains `vertical cockpit -> shared commercial layer -> AgentOS governance/execution/verification -> customer systems of record`.
+- no CRM replacement, generic workflow builder, scheduler, authority service, Green/PRS system or system-of-record replacement created.
 
 ---
 
@@ -49,7 +47,7 @@ States: `PENDING`, `ACTIVE`, `VERIFIED`, `BLOCKED`, `STALE`, `SPLIT_REQUIRED`.
 
 ### CF-B001 — post-payment closure platform/public evidence
 - status: VERIFIED / DIRECT DEMAND UNKNOWN
-- native ServiceM8/Xero closure gap and bounded read/message primitives remain the technical hypothesis basis.
+- technical hypothesis remains Xero-paid invoice administrative closure across Xero + ServiceM8 + customer communication.
 - public/operator evidence does not satisfy direct validation.
 
 ### CF-B002 — permission/read-write matrix
@@ -65,20 +63,25 @@ States: `PENDING`, `ACTIVE`, `VERIFIED`, `BLOCKED`, `STALE`, `SPLIT_REQUIRED`.
 ### CF-B004 — Tradie synthetic exception fixture specification
 - status: VERIFIED
 - artifact: `reports/2026-09-14-commercial-frontend-tradie-synthetic-exception-spec.md`.
-- cases TR-001..TR-012; deterministic `ALLOW_PREPARE`, `REQUIRE_APPROVAL`, `BLOCK`, `VERIFY_FAILED`.
+- cases TR-001..TR-012.
 
 ### CF-B005 — Tradie synthetic harness mapping
 - status: VERIFIED AS MAPPING / IMPLEMENTATION DEFERRED
 - artifact: `reports/2026-09-14-commercial-frontend-tradie-harness-mapping.md`.
-- fresh scan found no approved Commercial Frontend runtime seam that should become a new source of execution truth.
-- mapped TR-001..TR-012 into the existing AgentOS deterministic local-only test-contract style: exact identity, idempotency, provider-free evaluation, zero live mutation, source/network escape prohibition.
-- no new runtime created.
-- next: CF-B006 cockpit state mapping using canonical AgentOS frontend truth-state conventions.
+- no duplicate runtime created.
 
 ### CF-B006 — Tradie cockpit truth-state mapping
+- status: VERIFIED
+- shared artifact: `reports/2026-09-14-commercial-frontend-shared-cockpit-truth-state-contract.md`.
+- TR outcomes now map to reusable states including `READY_TO_PREPARE`, `APPROVAL_REQUIRED`, `BLOCKED_NO_ACTION`, `VERIFICATION_FAILED`, `EVIDENCE_STALE`, `CHANGED_AFTER_APPROVAL`, `REPLAY_DENIED`.
+- external customer communication remains approval-required by default for first MVP.
+- no generic VERIFIED/Green/PRS claim allowed.
+
+### CF-B007 — Tradie value-threshold model
 - status: PENDING
-- map `ALLOW_PREPARE`, `REQUIRE_APPROVAL`, `BLOCK`, `VERIFY_FAILED`, stale evidence, changed-after-approval and replay-denied states into reusable vertical approval-card states.
-- acceptance: no generic VERIFIED/Green/PRS claims; no synthetic Jack/Henry state; changed evidence invalidates stale recommendation/approval presentation.
+- prepare a deterministic non-customer-evidence calculator for direct-validation interpretation only: payments/week × manual-closure rate × minutes/case × loaded admin cost, plus error/complaint consequence notes.
+- must not invent frequency, time, cost or WTP inputs; UNKNOWN propagates.
+- purpose: make future participant evidence comparable, not create demand proof.
 
 ---
 
@@ -90,7 +93,7 @@ States: `PENDING`, `ACTIVE`, `VERIFIED`, `BLOCKED`, `STALE`, `SPLIT_REQUIRED`.
 
 ### CF-C002 — permission/read-write matrix
 - status: VERIFIED / PARTIAL
-- Shopify action surface mapped; supplier side remains provider-specific.
+- Shopify action surface mapped; supplier side provider-specific.
 
 ### CF-C003 — GlobalShopCo portfolio leverage
 - status: VERIFIED
@@ -99,37 +102,46 @@ States: `PENDING`, `ACTIVE`, `VERIFIED`, `BLOCKED`, `STALE`, `SPLIT_REQUIRED`.
 ### CF-C004 — Ecommerce synthetic exception cockpit specification
 - status: VERIFIED
 - artifact: `reports/2026-09-14-commercial-frontend-ecommerce-synthetic-exception-spec.md`.
-- cases EC-001..EC-014 cover stock, SKU, tracking, delay, split fulfilment, hold/release, stale/contradictory evidence, replay and verify failure.
+- cases EC-001..EC-014.
 
 ### CF-C005 — supplier connector feasibility
 - status: VERIFIED / PARTIAL
-- CJdropshipping: documented API-level identity/stock/order/shop surfaces support later sandbox/mock feasibility; production authority/terms UNKNOWN.
-- Dropshipzone/New Aim: documented Shopify inventory/order/fulfilment/tracking and API-integration surface; exact API event semantics UNKNOWN.
-- DSers/AliExpress-style API-level evidence remains insufficient and therefore UNKNOWN.
+- provider feasibility split remains CJdropshipping PARTIAL PASS; Dropshipzone/New Aim PARTIAL PASS; DSers/AliExpress-style API-level evidence UNKNOWN.
 
 ### CF-C006 — Ecommerce synthetic harness mapping
 - status: VERIFIED AS MAPPING / IMPLEMENTATION DEFERRED
 - artifact: `reports/2026-09-14-commercial-frontend-ecommerce-harness-mapping.md`.
-- mapped EC-001..EC-014 into existing AgentOS deterministic local-only test-contract style without inserting a new commercial runtime into Overseer or AgentOS.
-- exact assertions cover deterministic output, replay denial, stale-evidence denial, split fulfilment scope, zero external action on BLOCK/VERIFY_FAILED and no provider/network/secret/process access.
+- no duplicate runtime created.
 
 ### CF-C007 — supplier event-order assurance specification
 - status: VERIFIED
 - artifact: `reports/2026-09-14-commercial-frontend-supplier-event-order-assurance.md`.
-- synthetic SE-001..SE-012 now cover duplicate event, out-of-order stock, stale tracking, valid supersession, contradictory same-version evidence, cross-variant/package mismatch, freshness-unproven, cancellation supersession, stale recommendation replay and verification evidence regression.
-- rule: authoritative provider version/sequence/source time may establish order only when the provider contract actually supports it; arrival time cannot invent authority.
+- SE-001..SE-012 cover duplicate/stale/out-of-order/superseding/conflicting evidence.
 
 ### CF-C008 — Ecommerce cockpit truth-state mapping
-- status: PENDING
-- map supplier exception outcomes and evidence-order dispositions to vertical cockpit states.
-- must explicitly represent stale/superseded/contradictory evidence, approval required, changed-after-approval, verification failed and no-action blocked states.
-- reuse AgentOS Frontend truth-state vocabulary where canonical; do not invent Green/PRS or execution truth.
+- status: VERIFIED
+- shared artifact: `reports/2026-09-14-commercial-frontend-shared-cockpit-truth-state-contract.md`.
+- Ecommerce outcomes map to `READY_TO_PREPARE`, `APPROVAL_REQUIRED`, `BLOCKED_NO_ACTION`, `VERIFICATION_FAILED`, `EVIDENCE_STALE`, `EVIDENCE_SUPERSEDED`, `EVIDENCE_CONFLICT`, `CHANGED_AFTER_APPROVAL`, `REPLAY_DENIED`.
+- first MVP defaults material Shopify/customer-promise mutations to explicit approval unless later narrower policy is independently authorized.
 
 ### CF-C009 — provider adapter contract evidence table
+- status: VERIFIED / PARTIAL
+- artifact: `reports/2026-09-14-commercial-frontend-provider-adapter-evidence-table.md`.
+- CJdropshipping: exact product (`pid`/SKU), variant (`vid`/variant SKU), product connection (`shopId` + platform product/variant), warehouse/storage and inventory fields are documented; universal authoritative event sequence/version remains UNKNOWN.
+- Dropshipzone/New Aim: retailer SKU binding, inventory sync behavior/cadence, product revision signal and order/tracking portal identities are documented; reviewed public API guide is supplier-side and must not be promoted to retailer API authority.
+- no provider documentation reviewed here authorizes autonomous Commercial Frontend writes.
+
+### CF-C010 — retailer-side Dropshipzone exact API schema hunt
 - status: PENDING
-- for CJdropshipping and Dropshipzone/New Aim only, enumerate which exact fields can establish provider/product/variant/order/event/time/version identity from current authoritative documentation.
-- any undocumented ordering/version semantics remain UNKNOWN.
-- no credentials, live calls or supplier contact.
+- locate authoritative public retailer integration/API documentation, if exposed, for exact product/SKU/order/inventory/tracking field names and timestamps.
+- if not publicly available, classify exact retailer API schema as UNKNOWN and stop; do not infer supplier API semantics.
+
+### CF-C011 — provider snapshot freshness policy
+- status: PENDING
+- define provider-neutral freshness handling using only documented cadence/source-time semantics.
+- CJ: endpoint-specific timestamps only where defined; no universal sequence assumption.
+- Dropshipzone: documented hourly API/SKU-list cadence may support conservative stale thresholds but not event ordering.
+- acceptance: arrival time never becomes hidden authority; stale/unproven freshness blocks mutation.
 
 ---
 
@@ -137,44 +149,49 @@ States: `PENDING`, `ACTIVE`, `VERIFIED`, `BLOCKED`, `STALE`, `SPLIT_REQUIRED`.
 
 ### CF-D001 — AgentOS dependency
 - status: BLOCKED / MONITOR
-- exact parent-manifest anchor: AgentOS PR #104 `9f53df16ae37ee6a86e66d2a808ca7f62f203d76`.
-- exact-head run `34816222109` is red on Windows/Node26.
-- ownership, authenticated authority source, current-head physical Windows, Green and PRS gates remain unresolved.
-- no Commercial Frontend production-readiness claim is allowed.
+- AgentOS PR #104 exact head remains `9f53df16ae37ee6a86e66d2a808ca7f62f203d76`, OPEN/DRAFT/UNMERGED.
+- parent manifest still records Windows/Node26 CI failure at run `34816222109`; ownership, canonical authority source, current-head physical Windows, Green and PRS unresolved.
+- no Commercial Frontend production-readiness claim allowed.
 
 ### CF-D002 — read-only prototype threshold
 - status: BLOCKED ON DIRECT EVIDENCE
 - requires at least 3 independent materially similar direct participants/observations plus feasible reads, approval boundary and measurable outcome.
-- public posts, platform docs and synthetic fixture success do not count.
+- public posts, platform docs, cockpit specs and synthetic fixtures do not count.
 
 ### CF-D003 — production build threshold
 - status: BLOCKED
 - requires approximately 10 relevant direct conversations/observations or equivalent, repeated trial intent, credible WTP signals, exact permissions/write actions, fail-closed verification, relevant AgentOS proof and no critical security/authority unknown.
 
+### CF-D004 — shared truth-state contract
+- status: VERIFIED AS PRODUCT CONTRACT / NO RUNTIME ENABLEMENT
+- artifact: `reports/2026-09-14-commercial-frontend-shared-cockpit-truth-state-contract.md`.
+- Simple / Essentials / Tech Head may differ in depth, never truth.
+- receipts are not independent assurance; worker success cannot synthesize Green; Green cannot synthesize PRS; stale/conflicting evidence cannot collapse to success.
+
 ---
 
-# COMPLETED EXECUTION PASS — VERTICAL BATCH 003 — 2026-09-14
+# COMPLETED EXECUTION PASS — VERTICAL BATCH 004 — 2026-09-14
 
 Consumed:
-1. fresh Overseer recent-commit + parent + vertical reconciliation;
-2. exact current AgentOS/Marketing dependency delta captured;
-3. existing AgentOS deterministic test convention inspected (`tests/README.md`, `tests/agentos-local-mock-api.test.mjs`);
-4. CF-C006 Ecommerce EC-001..EC-014 implementation-ready harness mapping without runtime creation;
-5. CF-B005 Tradie TR-001..TR-012 implementation-ready harness mapping without runtime creation;
-6. CF-C007 provider-neutral supplier event-order assurance SE-001..SE-012;
-7. same vertical batch reconciled and replenished.
+1. fresh Overseer parent + vertical batch reconciliation;
+2. fresh AgentOS PR #104 dependency check;
+3. one shared Tradie + Ecommerce cockpit truth-state contract aligned to current AgentOS frontend truth boundaries;
+4. deeper current first-party CJdropshipping API identity/stock/shop/order evidence pass;
+5. deeper current first-party Dropshipzone retailer inventory/binding + supplier API-boundary evidence pass;
+6. provider-neutral exact evidence envelope and explicit ordering/version UNKNOWNs;
+7. batch reconciliation/replenishment.
 
 Durable commits:
-- `20a78ea163365caec3034cc7654b5e26062a36d3` — Ecommerce harness mapping.
-- `f94e0631dce45d70f188acbdcccbdde9ab850c55` — Tradie harness mapping.
-- `f3a1f10c1373f4351526e2d5a035e56578fbc9b4` — supplier event-order assurance.
+- `087977e6abaa81a4b1e19803f9c4bf0b0cc45d6f` — shared cockpit truth-state contract.
+- `f4c0668b985e26a001cc571b1572ec0e24e41d71` — provider adapter evidence table.
 
-No production frontend code, live provider invocation, customer-system mutation, credentials, purchase, outreach, deployment or overall GREEN occurred.
+No production frontend, live connector, customer-system mutation, credentials, purchase, supplier/customer contact, deployment, Green or PRS promotion occurred.
 
 # NEXT `cont` ORDER
 
 1. Fresh scan first.
-2. CF-C008 + CF-B006 — build one reusable Commercial Frontend cockpit truth-state mapping across Ecommerce and Tradie, explicitly aligned to current AgentOS Frontend trust-state boundaries.
-3. CF-C009 — deepen CJdropshipping + Dropshipzone/New Aim adapter identity/version/time evidence table from current authoritative documentation; preserve UNKNOWN.
-4. Re-check direct-evidence and AgentOS exact-head gates.
-5. Fresh re-scan, record durable evidence, replenish this same file.
+2. CF-C010 — hunt exact retailer-side Dropshipzone public API/integration schema; preserve UNKNOWN if unavailable.
+3. CF-C011 — provider snapshot freshness policy using only documented semantics.
+4. CF-B007 — deterministic Tradie value-threshold interpretation model with UNKNOWN propagation.
+5. Re-check AgentOS/direct-evidence gates and any new Frontend/Marketing truth contracts.
+6. Fresh re-scan, record durable evidence, replenish this same file.
