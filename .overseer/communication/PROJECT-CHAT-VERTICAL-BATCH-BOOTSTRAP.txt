@@ -1,26 +1,31 @@
 READ AND APPLY NOW
 
-Read:
-1. darrinbaldwindev/Overseer/.overseer/doctrine/VERTICAL-BATCH-EXECUTION.md
-2. darrinbaldwindev/Overseer/.overseer/communication/PROJECT-CHAT-VERTICAL-BATCH-HANDOFF.md
+Read in order:
+1. darrinbaldwindev/Overseer/.overseer/doctrine/PORTFOLIO-BATCH-ENGINE.md
+2. darrinbaldwindev/Overseer/.overseer/profiles/PROJECT-BATCH-PROFILES.md — only the matching project/workstream profile
+3. darrinbaldwindev/Overseer/.overseer/doctrine/VERTICAL-BATCH-EXECUTION.md
+4. darrinbaldwindev/Overseer/.overseer/communication/PROJECT-CHAT-VERTICAL-BATCH-HANDOFF.md
 
-Apply them to THIS project/workstream only, subordinate to this project's current repository truth, architecture, control issues, tests, CI and governance.
+The Portfolio Batch Engine is the common procedure for every Project Overseer. The project profile is the approved customization layer. The live local batch contains current tasks only and must not fork the common operating procedure.
+
+Apply the engine + matching profile to THIS project/workstream, subordinate to current repository truth, architecture, control issues, tests, CI/runtime evidence and explicit owner authority.
 
 Then immediately:
 - fresh-scan the repository/workstream;
-- create or reconcile the project's own vertical batch file at `.overseer/batches/VERTICAL-EXECUTION-BATCH.md` unless an established canonical project batch path already exists;
-- fill it with the fullest safe useful batch based on fresh evidence;
-- execute the batch now rather than only planning it;
-- verify exact changed state with appropriate tests/CI/runtime/research evidence;
-- inspect and repair failures where safe;
+- locate/create/reconcile the live vertical batch at `.overseer/batches/VERTICAL-EXECUTION-BATCH.md` unless an established documented batch path already exists;
+- execute the fullest safe useful batch now;
+- verify exact changed state;
+- inspect/repair failures where safe;
 - fresh-scan again before replenishment;
 - reconcile concurrent changes rather than overwrite them;
-- replenish the SAME batch file with the next useful work;
-- durably log progress, blockers, exact heads/evidence and next batch;
-- surface portfolio-significant conflicts/blockers to darrinbaldwindev/Overseer issue #49.
+- replenish the SAME local batch;
+- durably log exact progress/blockers/heads/evidence;
+- surface portfolio-significant state to darrinbaldwindev/Overseer#49.
 
-From now on, when the owner says `cont`, `continue`, `continue autonomously`, or `continue autonomously vertically`, automatically run that COMPLETE cycle in the current turn.
+From now on `cont`, `continue`, `continue autonomously`, and `continue autonomously vertically` trigger that COMPLETE cycle.
 
-Do not create duplicate schedulers, queues, authority systems, registries, mission ledgers, persistence/memory systems, Green systems or PRS systems. Do not merge, approve, mark-ready, rebase, deploy, alter credentials, spend, contact suppliers/customers, publish production content/listings, make production writes or enable production autonomy without explicit owner authorization.
+At the start of every later cycle, re-read the canonical engine/profile before trusting a copied/local procedure. Central engine/profile changes therefore propagate to every Project Overseer on its next fresh cycle.
 
-Fresh evidence outranks batch text. Verification outranks claims. Blocked work must not starve independent safe work. UNKNOWN/HOLD/BLOCKED states remain explicit.
+Do not create duplicate schedulers, queues, authority systems, registries, mission ledgers, persistence/memory systems, Green systems or PRS systems. Do not merge, approve, mark-ready, rebase, deploy, alter credentials, spend, contact suppliers/customers/partners, publish production content/listings, make production writes or enable production autonomy without explicit owner authorization.
+
+Fresh evidence outranks batch text. Verification outranks claims. Blocked work must not starve independent safe work. UNKNOWN/HOLD/BLOCKED remain explicit. NO MODEL DECIDES ITS OWN AUTHORITY.
