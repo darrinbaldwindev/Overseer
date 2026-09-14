@@ -1,263 +1,137 @@
 # MARKETING OVERSEER — CANONICAL LOG
 
 **Owner:** Marketing Overseer / ChatGPT Overseer  
-**Canonical portfolio mission:** `darrinbaldwinddev/Overseer#49`  
+**Canonical portfolio mission:** `darrinbaldwindev/Overseer#49`  
 **Purpose:** Durable chronological index and handoff for evidence-backed portfolio marketing work.  
-**Rule:** This file indexes substantive work; it does not duplicate full reports. Evidence controls claims. No overall AgentOS GREEN is issued from Marketing.
+**Rule:** Index substantive work here; keep full detail in reports/batches. Evidence controls claims. Marketing never self-certifies overall AgentOS GREEN.
 
 ## Standing priorities
-
 1. AgentOS
 2. GlobalShopCo + Shopify→eBay
 3. GlobalShopCo Headless
 4. Affiliate Websites
 5. GhostKitchen / Franchise
-6. Other active portfolio projects where marketing work is genuinely useful
+6. Other active portfolio projects where marketing materially advances trust, adoption or revenue
 
 ## Standing governance
-
 - AgentOS Level 2 = immediate technical P0; Level 5 = strategic end-state.
-- PRS is part of AgentOS.
-- Marketing owns positioning, acquisition, beta, claims discipline and commercial recommendations; Product/Engineering/Green/PRS own technical completion evidence.
-- Content360 is downstream optimisation/distribution only; it is not a product-fact source of truth.
-- No merge, deploy, credential change, purchase, supplier contact, listing publication, paid campaign activation or production write without explicit authorization.
+- PRS is part of AgentOS and remains independently adversarial in function.
+- Marketing owns positioning, acquisition, beta preparation, claims discipline and commercial recommendations; Product/Engineering/Green/PRS own technical completion evidence.
+- Content360 is downstream optimisation/distribution only, never a product-fact source of truth.
+- No merge, deploy, credential change, purchase, supplier contact, listing publication, paid campaign activation, production write or production autonomy without explicit authority.
 - No duplicate scheduler, queue, runtime, mission ledger, worker registry, authority, persistence, memory, Green, PRS or other source-of-truth systems.
 
-## Claim status vocabulary
-
-- **PROVEN** — repository/runtime evidence supports the claim at the stated scope.
-- **BETA-PROVEN** — controlled external beta evidence supports the claim at the stated scope.
-- **NEARLY PROVEN** — implementation/evidence is materially advanced but one or more acceptance gates remain.
-- **PRODUCT DIRECTION** — intended architecture/roadmap; not current capability claim.
-- **NOT YET SUPPORTABLE** — do not use publicly as a present-tense product claim.
+## Claim vocabulary
+- **PROVEN** — repository/runtime evidence supports the exact scoped claim.
+- **BETA-PROVEN** — controlled external beta evidence supports the exact scoped claim.
+- **NEARLY PROVEN** — materially advanced but acceptance-gated.
+- **PRODUCT DIRECTION** — intended architecture/roadmap, not current capability.
+- **NOT YET SUPPORTABLE** — do not use publicly as present-tense capability.
 
 ---
 
 ## 2026-09-13 16:45 AEST — AgentOS / Marketing mission continuation
-
-**Mission:** Resume autonomous vertical Marketing Overseer work under the current owner brief; reconcile recent beta/competitive work; enforce claims against current AgentOS evidence; establish one canonical marketing log.
-
-**Evidence reviewed:**
-- `darrinbaldwindev/Overseer#49` — Level 2 immediate P0 / Level 5 strategic end-state.
-- AgentOS PR #104 `feat(local): stage governed PowerShell Windows worker on remote-bridge lineage`, current draft head observed `b3b1cb16233afb29f2d4252d83262237bb2fcbe6`.
-- PR #104 explicitly limits current operations to bounded governed PowerShell operations and explicitly does **not** enable scheduler pickup/runtime integration; physical Windows acceptance remains a separate gate.
-- `reports/2026-09-13-agentos-beta-competitive-adoption-overseer-handoff.md`.
-- `reports/2026-09-13-agentos-beta-competitive-proof-and-adoption-gaps.md`.
-- `reports/2026-09-13-agentos-founding-beta-readiness-playbook.md`.
-- `reports/2026-09-13-agentos-three-way-ecosystem-research-comparison.md`.
-- `reports/2026-09-13-agentos-ai-layer-north-star-and-pc-control-boundary.md`.
-- Current Content360 portfolio artefacts including `reports/2026-09-13-content360-overseer-repo-scan-reconciliation.md` and `reports/2026-09-13-content360-agentos-batch-a-optimisation-packet.md`.
-
-**Work completed:**
-- Created this canonical Marketing Overseer log.
-- Reconciled current AgentOS positioning to governed execution rather than generic AI chat/computer-control novelty.
-- Locked current safe working beta language: **“Give AgentOS a real job.”** Supporting idea: **“Stay in control. See what it did.”**
-- Preserved broader brand direction: **“One AI to rule them all.”** with evidence discipline around what is current vs directional.
-- Restored owner-current commercial ladder as source of truth for Marketing: **Free → $29 → $99 → subscriptions**. `$99` remains expected sale; `$29` remains second-bite conversion bridge, not default purchase.
-
-**Claims promoted:**
-- **PROVEN / safe architectural description:** AgentOS is being built around governed execution rather than simply giving AI unrestricted computer access.
-- **PROVEN / safe architectural description:** current AgentOS work includes bounded governed Windows/PowerShell execution with approvals/evidence on active draft lineage at the limited scope stated by the PR.
-
-**Claims demoted / held:**
-- `safely controls a Windows PC autonomously end-to-end` → **NOT YET SUPPORTABLE**.
-- `guarantees every result is verified` → **NOT YET SUPPORTABLE**.
-- `always recovers safely from crashes` → **NOT YET SUPPORTABLE**.
-- `completely prevents duplicate side effects` → **NOT YET SUPPORTABLE**.
-- `completely protects credentials from every model/tool` → **NOT YET SUPPORTABLE**.
-- `can instantly stop every in-flight task` → **NOT YET SUPPORTABLE**.
-- governed Level 2 inspect→modify→test→verify loop → **NEARLY PROVEN / acceptance-gated**, not a public current capability claim.
-
-**Competitive findings indexed:**
-- Multi-model support, MCP, local models, computer use, local files, scheduled/background work and command palettes are increasingly commoditised.
-- Stronger AgentOS differentiation opportunity remains: explicit authority, durable mission state, evidence, recovery, duplicate/replay protection, cost/capability controls, Green verification, PRS adversarial assurance and provider neutrality.
-- Product ideas for Overseer consideration are indexed in the three-way ecosystem comparison; they are recommendations, not current product claims.
-
-**Product gaps discovered / still active:**
-- physical Windows acceptance;
-- runtime pickup and exact correlation;
-- controlled file mutation/rollback proof;
-- restart/recovery semantics;
-- replay/idempotency/duplicate protection;
-- reliable stop/revoke semantics;
-- user-readable evidence timeline;
-- exact `VERIFIED` semantics;
-- credential/secret visibility proof;
-- restricted/untrusted-content handling;
-- connector/MCP trust and permission UX.
-
-**Blockers / UNKNOWNs:**
-- No current evidence supports public claims of end-to-end autonomous Windows Level 2.
-- External Founding Beta remains HOLD until the playbook entry gate passes.
-- Affiliate/influencer recurring attribution economics remain owner-finalisation work beyond the already-agreed 90-day cookie window.
-
-**Publication / production status:** NOT PUBLISHED / NOT ACTIVATED.
-
-**Next highest-value marketing action:** Create a current AgentOS claim-and-beta-message gate tied directly to Level 2 proof milestones, then continue to GlobalShopCo/eBay evidence-gated launch messaging while AgentOS technical proof is blocked.
-
----
+**Mission:** Resume portfolio Marketing Overseer role, reconcile AgentOS positioning, create canonical log.  
+**Evidence:** Overseer #49; AgentOS PR #104 then-active bounded governed Windows/PowerShell lineage; beta/competitive/AI-layer reports.  
+**Work:** locked governed-execution positioning; retained “Give AgentOS a real job.” / “Stay in control. See what it did.”; restored commercial ladder Free → $29 → $99 → subscriptions.  
+**Claim state:** bounded governed execution wording safe; end-to-end autonomous Windows, guaranteed verification/recovery/duplicate prevention/credential safety/instant stop NOT YET SUPPORTABLE.  
+**Publication:** NOT ACTIVATED.
 
 ## 2026-09-13 16:52 AEST — AgentOS / Claim-upgrade gate
-
-**Mission:** Convert Level 2 proof dependencies into an explicit marketing claim ladder and Founding Beta message gate.
-
-**Evidence reviewed:** AgentOS PR #104 current draft state and purpose; Founding Beta readiness playbook; beta competitive/adoption gap register; current owner claim-discipline instructions.
-
-**Work completed:**
-- Created `reports/2026-09-13-agentos-marketing-claim-and-beta-message-gate.md`.
-- Mapped governed execution, Windows inspection, controlled mutation, inspect→modify→test→verify, recovery, duplicate protection, verification, PRS assurance, stop/revoke, credential safety, cost governance, Night Shift and provider-neutrality claims to current status plus exact proof upgrade gates.
-- Defined BETA-PROVEN promotion rule based on pinned-build external evidence rather than testimonials or selective successes.
-- Reconciled current Marketing price source of truth to **Free → $29 → $99 → subscriptions**.
-
-**Artifact / commit:** `reports/2026-09-13-agentos-marketing-claim-and-beta-message-gate.md` @ commit `a23acd01ec46d7368949d29d7c7e931d28ab92b6`.
-
-**Claims promoted/demoted:** No broad capability claim promoted. Current governed-execution architectural wording remains safe; end-to-end Level 2 remains held.
-
-**Blockers / UNKNOWNs:** Founding Beta remains HOLD pending technical entry gate; no paid/public activation.
-
-**Publication / production status:** PREPARED / NOT PUBLISHED.
-
-**Next highest-value marketing action:** Move to GlobalShopCo + Shopify→eBay because AgentOS marketing is prepared but technically gated.
-
----
+**Artifact:** `reports/2026-09-13-agentos-marketing-claim-and-beta-message-gate.md` @ `a23acd01ec46d7368949d29d7c7e931d28ab92b6`.  
+**Result:** explicit claim ladder and BETA-PROVEN promotion rule; Founding Beta HOLD.
 
 ## 2026-09-13 16:58 AEST — GlobalShopCo + Shopify→eBay / Marketing launch gate
-
-**Mission:** Prepare the eBay marketing lane without inventing SKU readiness, supplier permission, freight economics or listing availability.
-
-**Evidence reviewed:**
-- GlobalShopCo `docs/ebay/AU_EBAY_PILOT_SHORTLIST_2026-09-12.md`.
-- GlobalShopCo `docs/ebay/AU_EBAY_SUPPLIER_ELIGIBILITY_MATRIX_2026-09-12.md`.
-- Current state in those sources: zero eBay-approved SKUs; five Southern Pet candidates permission-required; Home Organisation candidates HOLD/UNKNOWN; current Eleganter candidates not eligible for eBay under documented programme terms.
-
-**Work completed:**
-- Created `reports/2026-09-13-globalshopco-ebay-marketing-launch-gate.md`.
-- Defined RED / AMBER / activation-ready marketing states.
-- Prepared evidence-gated eBay listing/social structures that can be filled rapidly after supplier/channel/economic proof exists.
-- Preserved Shopify as source of truth and eBay as downstream channel.
-- Defined Content360 handoff restrictions so it cannot infer stock, margin, supplier permission, delivery economics or eBay readiness.
-
-**Artifact / commit:** `reports/2026-09-13-globalshopco-ebay-marketing-launch-gate.md` @ commit `670e76883c1a47b698195b28ae7017b68bb36798`.
-
-**Claims promoted/demoted:** No product availability or profitability claim promoted. Current eBay channel remains HOLD.
-
-**Blockers / UNKNOWNs:** written marketplace approval, authorised trade cost, stock/ownership/fulfilment, parcel/cubic freight, returns/warranty, eBay-inclusive conservative contribution and owner activation approval.
-
-**Publication / production status:** PREPARED / HOLD / NOT PUBLISHED.
-
-**Next highest-value marketing action:** Move to GlobalShopCo Headless / Affiliate Websites and prepare evidence-safe acquisition/SEO structures that do not depend on unresolved product or affiliate approvals.
-
----
+**Artifact:** `reports/2026-09-13-globalshopco-ebay-marketing-launch-gate.md` @ `670e76883c1a47b698195b28ae7017b68bb36798`.  
+**Result:** evidence-gated eBay listing/social structure; Shopify preserved as authority; zero SKU availability/profitability claims promoted.
 
 ## 2026-09-13 17:04 AEST — GlobalShopCo Headless / Marketing readiness
-
-**Mission:** Prepare marketing architecture without treating the non-production headless vertical slice as a live storefront.
-
-**Evidence reviewed:** `darrinbaldwindev/GlobalShopCo-Headless` README/current boundary: approved scope is a non-production test product fetched from Shopify, presented by WordPress and handed to Shopify cart/checkout; Shopify remains product/price/inventory/cart/checkout/order authority; no production deployment, product publication, analytics or release process is authorised.
-
-**Work completed:**
-- Created `reports/2026-09-13-globalshopco-headless-marketing-readiness.md`.
-- Defined safe IA, product-page content contract, SEO/AEO structure, trust UX and future measurement plan.
-- Explicitly prohibited independent WordPress price/stock truth.
-
-**Artifact / commit:** `reports/2026-09-13-globalshopco-headless-marketing-readiness.md` @ commit `02192ee7fbf29a2d9551e23cd353b9a0357d7c06`.
-
-**Claims promoted/demoted:** None. Headless remains non-production.
-
-**Blockers / UNKNOWNs:** authorised environment; tested Storefront API; canonical rendering; safe stale/error behavior; checkout handoff; legal/privacy; analytics authority; approved products; publication approval.
-
-**Publication / production status:** PREPARED / NOT PUBLISHED.
-
-**Next highest-value marketing action:** Affiliate Websites editorial acquisition / monetisation gate.
-
----
+**Artifact:** `reports/2026-09-13-globalshopco-headless-marketing-readiness.md` @ `02192ee7fbf29a2d9551e23cd353b9a0357d7c06`.  
+**Result:** safe IA/SEO/AEO/product-page contract; Shopify remains product/price/inventory/cart/checkout/order truth; headless remains non-production.
 
 ## 2026-09-13 17:09 AEST — Affiliate Websites / Editorial acquisition gate
+**Artifact:** `reports/2026-09-13-affiliate-websites-editorial-acquisition-gate.md` @ `be66a1bea89965908ac6a43e715adafbcf0c4909`.  
+**Result:** editorial-first acquisition allowed; monetised outbound HOLD until publisher/account/program proof.
 
-**Mission:** Enable useful editorial/SEO preparation while preserving publisher/account approval gates for monetised CTAs.
+## 2026-09-13 17:15 AEST — GhostKitchen / Franchise prelaunch gate
+**Artifact:** `reports/2026-09-13-ghostkitchen-prelaunch-marketing-gate.md` @ `c669521390ee329226b1c04008960bd8fbc09953`.  
+**Result:** delivery-first concept-validation positioning; no earnings/payback/profit/final franchise terms.
 
-**Evidence reviewed:**
-- Affiliate-Websites canonical architecture: WordPress presentation; PostgreSQL/Supabase canonical structured data; Rewards API controlled commercial-resolution boundary; semantic CTA context rather than raw tracking logic.
-- Overseer verified-program register/application-readiness work: publisher-affiliate candidates verified at network level; account approval still required before monetised outbound use.
+## 2026-09-13 22:51 AEST — Fresh-chat handoff
+**Artifact:** `.overseer/communication/MARKETING-OVERSEER-CHAT-HANDOFF.md` @ `f29532634b35acf7314260a2dd16246e6d3a3e06`.  
+**Result:** durable priorities, claim gates, Content360 boundary, project states and next operating sequence.
 
-**Work completed:**
-- Created `reports/2026-09-13-affiliate-websites-editorial-acquisition-gate.md`.
-- Defined editorial-first acquisition model, country/category/programme SEO structure, trust/evidence labels, relationship-type disclosure and separate editorial vs monetised activation gates.
-- Preserved the distinction between member referral and publisher-affiliate relationship.
+## 2026-09-14 15:08 AEST — AgentOS / Level 2 claim reconciliation
+**Evidence:** PR #104 exact head `71c463a77b31ebeac2bfe00da13c684512daccf7`, OPEN/DRAFT/UNMERGED; ownership race, admission seam, current-head physical-Windows gap, no exact-head Green→PRS.  
+**Artifact:** `reports/2026-09-14-agentos-marketing-level2-claim-delta.md` @ `c592f802a6929bfd9922ed7d735e0a0cce805ca0`.  
+**Result:** no broad claim promoted; controlled mutation and inspect→modify→test→verify remain NEARLY PROVEN/gated; Founding Beta HOLD.
 
-**Artifact / commit:** `reports/2026-09-13-affiliate-websites-editorial-acquisition-gate.md` @ commit `be66a1bea89965908ac6a43e715adafbcf0c4909`.
-
-**Claims promoted/demoted:** Editorial facts may be prepared where current/country-scoped; monetised outbound CTAs remain HOLD until account/program approval and commercial resolution path are live.
-
-**Blockers / UNKNOWNs:** publisher/account acceptance; live WordPress/browser/accessibility/performance/E2E tracking; publication-time programme rechecks; jurisdiction-specific disclosure review.
-
-**Publication / production status:** PREPARED / MONETISED OUTBOUND HOLD.
-
-**Next highest-value marketing action:** GhostKitchen / Franchise pre-launch positioning and validation messaging, avoiding earnings/payback/franchise-sale claims before unit-economics and operating evidence exist.
-
----
-
-## 2026-09-13 17:15 AEST — GhostKitchen / Franchise pre-launch marketing gate
-
-**Mission:** Prepare safe concept-validation positioning without turning early architecture/research into a franchise offer or earnings claim.
-
-**Evidence reviewed:**
-- GhostKitchen README: delivery-first platform; prepared-food delivery template is primary current focus; standardise operating system while customising approved concept; validate unit economics before franchise pricing.
-- `docs/PROJECT-STATE.md`: no final food concept, franchise fee/royalty or kitchen/equipment specification approved; unknowns must remain assumptions/pending decisions.
-- `docs/PILOT-RESEARCH-PLAN-v1.md`: test multiple delivery-cost scenarios; do not convert market/competitor/supplier evidence into guaranteed revenue, margin, franchisee earnings or final commercial terms.
-
-**Work completed:**
-- Created `reports/2026-09-13-ghostkitchen-prelaunch-marketing-gate.md`.
-- Defined safe platform-level positioning, customer/operator discovery wording, concept-marketing gate and stronger commercial/franchise-marketing gate.
-- Prohibited payback, earnings, turnkey-profit and final-franchise-term claims.
-
-**Artifact / commit:** `reports/2026-09-13-ghostkitchen-prelaunch-marketing-gate.md` @ commit `c669521390ee329226b1c04008960bd8fbc09953`.
-
-**Claims promoted/demoted:** Safe to describe the delivery-first operating-system direction; no concept, profitability or franchise-sale claim promoted.
-
-**Blockers / UNKNOWNs:** final concept; prototype menu; recipe/portion costs; packaging/delivery tests; customer value evidence; actual kitchen pilot; real operating economics; legal/franchise work; approved fees/terms.
-
-**Publication / production status:** PREPARED / RESEARCH-ONLY / NOT OFFERED FOR SALE.
-
-**Next highest-value marketing action:** Maintain evidence monitoring across AgentOS/GlobalShopCo/Affiliate/GhostKitchen and upgrade prepared assets only when their proof gates clear. Competitive monitoring remains useful for AgentOS; production/publication action now requires new evidence or owner authority.
+## 2026-09-14 15:28 AEST — Fresh-scan vertical execution batch
+**Evidence:** AgentOS PR #104 exact head `71c463...`; exact-head Tests #976 SUCCESS but core ownership/admission/physical-Windows/Green/PRS gates unresolved. GlobalShopCo/eBay connector installed/account connected but 0 eBay-ready SKUs; `V178-36336` rejected on current economics.  
+**Artifacts:**
+- `.overseer/batches/MARKETING-VERTICAL-BATCH.md` initial @ `0b520219a87119f8ab70d72e2f7e079ed731702c`.
+- `reports/2026-09-14-agentos-founding-beta-wave0-activation-pack.md` @ `e56f7f0810d8b8add0c1b8e884a796f00764f43a`.
+- `reports/2026-09-14-agentos-trust-ux-marketing-product-brief.md` @ `3ba5bd49623e2a3194fac09b253a29ce9e5de976`.
+- `reports/2026-09-14-globalshopco-ebay-marketing-readiness-delta.md` @ `69068d3ff90381fb877fe5fb2e0bdfa19fbdaa95`.
+**Result:** Wave 0 operationally prepared but HOLD; trust UX brief prepared; commerce truth separated into connector presence vs synthetic proof vs real sync vs SKU eligibility vs publication authority.  
+**Checkpoint:** Overseer #49 comment `5659434621`.
 
 ---
 
-## 2026-09-13 22:51 AEST — Marketing Overseer / Fresh-chat handoff
+## 2026-09-14 current autonomous cycle — AgentOS beta operations + competitive trust + GlobalShopCo prelaunch
 
-**Project/lane:** Portfolio-wide Marketing Overseer coordination.
+**Project/lane:** AgentOS P0/P1, then GlobalShopCo/eBay P0/P1 commercial.
 
-**Mission:** Log the current autonomous marketing state and create a durable fresh-chat handoff so a new Marketing Overseer chat can resume without re-deriving priorities, claim gates, blockers or artifact locations.
+**Mission:** Mandatory fresh scan, consume replenished Marketing batch, execute the maximum safe vertical work while technical/product activation gates remain blocked, post-scan and replenish.
 
-**Evidence reviewed:** Canonical Marketing Overseer log; current AgentOS beta/competitive/claim-gate artifacts; GlobalShopCo/eBay marketing gate; GlobalShopCo Headless readiness; Affiliate editorial acquisition gate; GhostKitchen pre-launch gate; owner’s current Marketing Overseer continuation brief.
+**Fresh evidence reviewed:**
+- AgentOS PR #104 remains OPEN / DRAFT / UNMERGED at exact head `71c463a77b31ebeac2bfe00da13c684512daccf7`.
+- Exact-head AgentOS Tests #976 / `34808263482` remains SUCCESS, but ownership/admission/current-head physical-Windows/Green/PRS gates remain unresolved.
+- Current competitor documentation for Cursor, OpenHands, Microsoft Copilot Studio/Agent 365 and Claude Code.
+- GlobalShopCo #17 current source-hunt evidence, including `V178-36023`, `V178-36045`, `V178-36126`, `V178-36336`, `CAH-67362`, `CAH-67361`; active result remains 0 eBay-ready SKUs.
 
-**Work completed:**
-- Created `.overseer/communication/MARKETING-OVERSEER-CHAT-HANDOFF.md`.
-- Consolidated role, priorities, AgentOS governed-execution positioning, claim discipline, beta HOLD state, competitive/product findings, commercial model, Content360 boundary, project-by-project marketing gates, blockers, governance and exact next-chat operating sequence.
-- Handoff explicitly instructs the next chat to refresh AgentOS PR #104/current active Level 2 evidence before upgrading any claim.
+**Work completed / artifacts:**
+- `reports/2026-09-14-agentos-founding-beta-scorecard-and-go-hold-dashboard.md` @ `3e6d3d96657ea2d26b16cef4a330cbce43ae5e58`.
+- `reports/2026-09-14-agentos-founding-beta-invitation-and-screener.md` @ `53782e28fe0a6a41021a1307e99329f59ca0d6da` — PREPARED / DO NOT SEND.
+- `reports/2026-09-14-agentos-competitive-trust-control-refresh.md` @ `abecdf2738d1a343b8234771274a15fbd204dc90`.
+- `reports/2026-09-14-globalshopco-ebay-marketing-batch-2.md` @ `25c1fa2d12f0fe1b2284379f2e9adcce5cbadc21`.
+- `reports/2026-09-14-agentos-evidence-stop-revoke-language-contract.md` @ `4a7efb43fe711e24dc8a707e6ab3ff7b8db1a0de`.
+- Marketing vertical batch replenished after execution; latest commit `434affb8c8a21e40e03a11266d0f64c79bfce2e3`.
 
-**Artifact / commit:** `.overseer/communication/MARKETING-OVERSEER-CHAT-HANDOFF.md` @ commit `f29532634b35acf7314260a2dd16246e6d3a3e06`.
+**Claims promoted/demoted:**
+- No AgentOS Level 2 capability claim promoted.
+- Beta scorecard/invitation are operational preparation only; recruitment remains HOLD.
+- Evidence Timeline / Stop / Revoke wording is PRODUCT/MARKETING CONTRACT only; implementation is not claimed.
+- Competitive conclusion strengthened: approvals, sandboxing, tool policy, audit logs and cost controls are increasingly baseline. Stronger AgentOS differentiation remains the integrated trust loop: explicit authority → bounded execution → durable evidence → recovery/replay discipline → independent Green → independent PRS → understandable result.
+- GlobalShopCo remains PRELAUNCH / 0 EBAY-READY SKUS / NO PUBLICATION AUTHORITY.
 
-**Claims promoted/demoted:** None. This is a coordination/handoff cycle only. Existing evidence gates remain unchanged.
+**Competitive findings:**
+- Cursor: sensitive-action approvals and guardrails are visible baseline behavior.
+- OpenHands: confirmation policies, security analyzer and sandbox isolation are explicit product surfaces.
+- Microsoft Copilot Studio/Agent 365: centralized agent identity, policy, risk, connector and audit governance is materially advanced.
+- Claude Code: allowed/disallowed tools, permission modes, scoped directories and gateway-based usage/cost/audit controls are explicit.
 
-**Competitive findings:** No new competitive claim added in this cycle; prior three-way ecosystem comparison remains the current indexed research basis.
+**Product gaps / recommendations:**
+- AgentOS should not market generic governance primitives as unique; focus on integrated authority/evidence/recovery/assurance semantics.
+- Evidence Timeline must distinguish intent, approval, execution, receipt, verification, Green, PRS, recovery and UNKNOWN.
+- Pause/Stop/Revoke UX must distinguish requested, acknowledged and effective states plus residual in-flight work.
+- GlobalShopCo first-launch marketing must fail closed on supplier/channel/economics/delivery/compliance UNKNOWNs.
 
-**Product gaps:** No new gap asserted; existing AgentOS gaps remain physical Windows acceptance, runtime pickup/correlation, controlled mutation/recovery/idempotency, stop/revoke, evidence/VERIFIED semantics, credential visibility and connector/MCP trust UX.
+**Blockers / UNKNOWNs:** AgentOS technical beta gate unchanged. GlobalShopCo still lacks an evidence-complete positive SKU and real Marketplace Connect acceptance. Supplier contact remains owner-gated.
 
-**Blockers / UNKNOWNs:** Same as current project gates; no production/publication blocker was bypassed.
+**Publication / production status:** NO PUBLIC BETA / NO INVITATIONS SENT / NO PAID AGENTOS CAMPAIGN / NO EBAY LISTINGS / NO SHOPIFY PRODUCT ACTIVATION / NO SUPPLIER CONTACT / NO CONNECTOR MUTATION / NO OVERALL GREEN.
 
-**Publication / production status:** HANDOFF CREATED / NO PUBLICATION / NO PRODUCTION ACTION.
-
-**Next highest-value marketing action:** In the next chat, read `Overseer#49`, this canonical log and the fresh-chat handoff; refresh AgentOS Level 2 evidence first, upgrade claims only if exact proof has crossed the relevant gate, otherwise continue the next highest-value safe marketing lane.
+**Next highest-value marketing actions:** fresh-scan first; if AgentOS gates remain unchanged, competitive trust Batch 2 (Manus/n8n/Raycast/Open Interpreter/Cline/Roo/local shells), Evidence Timeline screen spec, trust objection matrix; continuously consume GlobalShopCo #17 exact-SKU changes and maintain the active-pilot marketing pointer; if commerce remains blocked, produce the first organic Home Organisation editorial batch, then continue Headless and Affiliate editorial lanes.
 
 ---
 
-## Existing Marketing Overseer artifact index
+## Artifact index
 
-### Coordination
+### Coordination / batches
 - `.overseer/communication/MARKETING-OVERSEER-CHAT-HANDOFF.md`
+- `.overseer/batches/MARKETING-VERTICAL-BATCH.md`
 
-### AgentOS beta / competitive / positioning
+### AgentOS
 - `reports/2026-09-13-agentos-founding-beta-readiness-playbook.md`
 - `reports/2026-09-13-agentos-beta-competitive-proof-and-adoption-gaps.md`
 - `reports/2026-09-13-agentos-beta-competitive-adoption-overseer-handoff.md`
@@ -267,11 +141,16 @@
 - `reports/2026-09-14-agentos-marketing-level2-claim-delta.md`
 - `reports/2026-09-14-agentos-founding-beta-wave0-activation-pack.md`
 - `reports/2026-09-14-agentos-trust-ux-marketing-product-brief.md`
+- `reports/2026-09-14-agentos-founding-beta-scorecard-and-go-hold-dashboard.md`
+- `reports/2026-09-14-agentos-founding-beta-invitation-and-screener.md`
+- `reports/2026-09-14-agentos-competitive-trust-control-refresh.md`
+- `reports/2026-09-14-agentos-evidence-stop-revoke-language-contract.md`
 
-### GlobalShopCo / Shopify→eBay / Headless
+### GlobalShopCo / eBay / Headless
 - `reports/2026-09-13-globalshopco-ebay-marketing-launch-gate.md`
 - `reports/2026-09-13-globalshopco-headless-marketing-readiness.md`
 - `reports/2026-09-14-globalshopco-ebay-marketing-readiness-delta.md`
+- `reports/2026-09-14-globalshopco-ebay-marketing-batch-2.md`
 
 ### Affiliate Websites
 - `reports/2026-09-13-affiliate-websites-editorial-acquisition-gate.md`
@@ -291,92 +170,4 @@
 - `reports/2026-09-12-content360-affiliate-country-routing-rules.md`
 - `reports/2026-09-12-content360-portfolio-learning-loop.md`
 
-**Canonical operating rule:** append future substantive cycles here with Brisbane timestamp, project/lane, mission, evidence reviewed, exact head where relevant, completed work, artifact/commit, claim changes, competitor findings, product gaps, blockers, publication state and next action.
-
----
-
-## 2026-09-14 15:08 AEST — AgentOS / Level 2 claim reconciliation
-
-**Project/lane:** AgentOS — claims, Founding Beta and acquisition readiness.
-
-**Mission:** Refresh live Level 2 evidence after fresh-chat handover, determine whether any capability claim can be promoted, and make the current proof boundary durable for Marketing.
-
-**Evidence reviewed:**
-- `darrinbaldwindev/Overseer#49`: Level 2 remains immediate P0; evidence, exact-head runtime behavior, Green and PRS control completion claims.
-- AgentOS PR #104, `feat(local): stage governed PowerShell Windows worker on remote-bridge lineage`.
-- Exact PR head observed: `71c463a77b31ebeac2bfe00da13c684512daccf7`.
-- PR remains OPEN / DRAFT / UNMERGED.
-- Current PR body records bounded governed PowerShell scope, but also a persisting stale-ownership publish/success-receipt race for project-file mutation, the same ownership-gap class in prepared-write recovery, incomplete authenticated transport/canonical grant admission wiring, no physical Windows acceptance on the current runtime-changing head, and no current-head Green/PRS PASS.
-- Recent Overseer #49 execution evidence also confirms that cross-platform test/audit success on predecessor exact heads does not clear the core ownership blocker.
-
-**Work completed:**
-- Created `reports/2026-09-14-agentos-marketing-level2-claim-delta.md`.
-- Converted the latest ownership/admission/current-head acceptance failures into explicit marketing promotion gates.
-- Kept Founding Beta on HOLD.
-- Preserved safe problem/promise positioning while refusing to turn advanced implementation into a public Level 2 completion claim.
-
-**Artifact / commit:** `reports/2026-09-14-agentos-marketing-level2-claim-delta.md` @ commit `c592f802a6929bfd9922ed7d735e0a0cce805ca0`.
-
-**Claims promoted or demoted:**
-- No broad capability claim promoted.
-- Bounded governed Windows/PowerShell foundation remains **PROVEN only at narrow stated scope**.
-- Controlled mutation and inspect→modify→test→verify remain **NEARLY PROVEN / acceptance-gated**.
-- End-to-end autonomous Windows Level 2, guaranteed recovery, complete duplicate prevention and current-head Green+PRS assurance remain **NOT YET SUPPORTABLE**.
-
-**Competitive findings:** No new competitor claim introduced in this cycle. Existing conclusion remains: multi-model/MCP/local-model/computer-control features are insufficient differentiation by themselves; governance + evidence + recovery + assurance + provider neutrality remains the stronger strategic position.
-
-**Product gaps:** Continuous kernel-enforced mutation ownership through publish/recovery/receipt; canonical authenticated identity + grant binding; exact runtime correlation; exact-head physical Windows acceptance; exact-head Green followed by independent PRS.
-
-**Blockers / UNKNOWNs:** The core mutation ownership race remains unresolved at the marketing evidence boundary. External Founding Beta cannot be responsibly opened from current evidence.
-
-**Publication / production status:** PREPARED / NOT PUBLICLY ACTIVATED / NO PAID CAMPAIGN / NO OVERALL GREEN.
-
-**Next highest-value marketing action:** Keep AgentOS acquisition work focused on evidence-safe problem/promise messaging while technical proof advances; if no new AgentOS gate clears, continue with GlobalShopCo/eBay evidence-gated launch preparation using the latest connector/SKU eligibility state.
-
----
-
-## 2026-09-14 15:28 AEST — Marketing Overseer / Fresh-scan vertical execution batch
-
-**Project/lane:** Portfolio Marketing Overseer — AgentOS P0 plus GlobalShopCo/eBay commercial lane.
-
-**Mission:** Apply the mandatory vertical-batch doctrine to Marketing: fresh-scan live repo/control evidence, create a durable maximum-use batch, execute the highest-value safe work, post-scan again, and leave replenished next actions.
-
-**Evidence reviewed:**
-- `Overseer#49`, including current Lane A and Lane B comments.
-- AgentOS PR #104 exact head `71c463a77b31ebeac2bfe00da13c684512daccf7`, still OPEN / DRAFT / UNMERGED.
-- Exact-head AgentOS Tests run #976 / `34808263482` = SUCCESS.
-- Persistent Level 2 blockers: continuous ownership fence, canonical authenticated admission, current-head physical Windows acceptance, independent Green then PRS.
-- GlobalShopCo #17 current evidence superseding older connector-selection wording: Marketplace Connect installed and eBay AU `globalshopco` connected, but no publication authority.
-- `shopify_ebay` bounded synthetic contract evidence through `b57e0a47bdff4b699d8b6b346fe5e9e1a0bbacc3` with Fixture validation SUCCESS.
-- Fresh Commerce Lane B exact-SKU evidence rejecting `V178-36336` as NOT FIRST-LAUNCH at current public economics.
-
-**Work completed:**
-- Created `.overseer/batches/MARKETING-VERTICAL-BATCH.md` as the durable Marketing vertical manifest.
-- Prepared `reports/2026-09-14-agentos-founding-beta-wave0-activation-pack.md` with 5–8 tester Wave 0 composition, mission families, measurement, HOLD/GO gate, stop conditions and second-real-job north-star signal.
-- Prepared `reports/2026-09-14-agentos-trust-ux-marketing-product-brief.md` covering Evidence Timeline, Pause/Stop/Revoke, Restricted Mode, permissions, Connector Centre, Local/Cloud/Mixed, VERIFIED semantics, secrets/device trust and recovery-state UX.
-- Prepared `reports/2026-09-14-globalshopco-ebay-marketing-readiness-delta.md`, explicitly separating connector presence, synthetic contract proof, real connector behavior, SKU eligibility and publication authority.
-- Added durable portfolio checkpoint to `Overseer#49` comment `5659434621`.
-
-**Artifacts / commits:**
-- `.overseer/batches/MARKETING-VERTICAL-BATCH.md` @ `0b520219a87119f8ab70d72e2f7e079ed731702c`.
-- `reports/2026-09-14-agentos-founding-beta-wave0-activation-pack.md` @ `e56f7f0810d8b8add0c1b8e884a796f00764f43a`.
-- `reports/2026-09-14-agentos-trust-ux-marketing-product-brief.md` @ `3ba5bd49623e2a3194fac09b253a29ce9e5de976`.
-- `reports/2026-09-14-globalshopco-ebay-marketing-readiness-delta.md` @ `69068d3ff90381fb877fe5fb2e0bdfa19fbdaa95`.
-
-**Claims promoted/demoted:**
-- No broad AgentOS Level 2 claim promoted; exact-head CI PASS does not clear the ownership/admission/physical-Windows/Green/PRS gates.
-- AgentOS Wave 0 is **PREPARED / ACTIVATION HOLD**, not open recruitment.
-- Trust UX items are **PRODUCT DIRECTION**, not implementation claims.
-- GlobalShopCo/eBay remains **PRELAUNCH / 0 EBAY-READY SKUS / PUBLICATION HOLD**.
-- Marketplace Connect installed/account connected = verified; production-safe connector behavior = not verified.
-- `V178-36336` is demoted to **REJECT / NOT FIRST-LAUNCH** at current public economics.
-
-**Competitive findings:** No new competitor research was completed in this cycle; competitive trust/control refresh is replenished as the next AgentOS P1 research task.
-
-**Product gaps:** AgentOS still requires reliable ownership/recovery/admission/current-head physical-Windows/assurance proof; GlobalShopCo still requires evidence-complete positive-economics SKU(s) and real connector acceptance.
-
-**Blockers / UNKNOWNs:** Founding Beta remains HOLD. GlobalShopCo has 0 eBay-ready SKUs. Southern Pet remains permission-required/trade-cost gated. Real Marketplace Connect behavior remains unverified.
-
-**Publication / production status:** NO PUBLIC BETA / NO PAID CAMPAIGN / NO EBAY LISTING PUBLICATION / NO SUPPLIER CONTACT / NO CONNECTOR MUTATION / NO OVERALL GREEN.
-
-**Next highest-value marketing actions:** beta measurement schema + GO/HOLD dashboard; competitive trust/control refresh; consume next GlobalShopCo exact-SKU closure and prune weak candidates; prepare first-launch product/listing schema + organic prelaunch plan; refresh Content360 packets only after claim/SKU evidence clears.
+**Canonical operating rule:** every substantive Marketing cycle appends/reconciles this index after a mandatory fresh scan, with Brisbane context, exact evidence, artifact/commit, claim changes, blockers, publication status and next action.
