@@ -2,11 +2,13 @@
 
 **Project:** Portfolio Marketing Overseer  
 **Canonical mission:** `darrinbaldwindev/Overseer#49`  
-**Fresh scan:** 2026-09-14 16:32+ AEST  
+**Fresh scan:** 2026-09-14 17:52+ AEST  
 **Status:** ACTIVE / REPLENISHED / EVIDENCE-GATED
 
 ## Mandatory cycle
-Every `cont` / `continue autonomously` means: fresh repo + coordination scan → reconcile live heads/evidence → rebuild maximum useful vertical batch → execute highest-value safe work → verify → fresh post-scan → replenish → durable log/checkpoint.
+Every `cont` / `continue autonomously` means: **fresh repo + coordination scan first** → reconcile live heads/evidence → rebuild maximum useful vertical batch → execute highest-value safe work → verify → fresh post-scan → replenish → durable log/checkpoint.
+
+Fresh repository evidence always outranks this file because other Overseers change state continuously.
 
 ## Priority order
 1. AgentOS
@@ -21,98 +23,118 @@ No merge, approval, ready transition, rebase, deployment, credentials, purchases
 
 ---
 
-# FRESH-SCAN TRUTH
+# CURRENT FRESH-SCAN TRUTH
 
-## AgentOS runtime/claim gate
-- `main` observed at `6e94e00fc5d81f9de9fc03ff6efc929a2a7ddcc1`.
+## AgentOS Level 2
 - Level 2 remains immediate P0; Level 5 strategic end-state.
-- PR #104 remains OPEN/DRAFT/UNMERGED and has moved since prior Marketing batch; current open-PR listing observed head `a4d1a1baa104d76ae7667d5e079df4ffe87688a0`.
-- PR #104 still records the continuous mutation-ownership blocker, authenticated admission seam, current-head physical Windows acceptance gap, and no exact-head Green→PRS completion chain.
-- Founding Beta remains HOLD. No broad Level 2 marketing claim is promoted.
+- PR #104 remains **OPEN / DRAFT / UNMERGED**.
+- Exact current head observed: `9f53df16ae37ee6a86e66d2a808ca7f62f203d76`.
+- New exact-head tests improve correlation/admission evidence: successful admission preserves delivery/request/task/mission/wake/authority-evidence identity; untrusted issuer and out-of-policy capability fail before durable artifacts.
+- Exact-head AgentOS Tests #1014 / `34816222109` = **FAILURE**.
+- Ubuntu / Node22 = SUCCESS.
+- Windows / Node26 = FAILURE in `eight real scheduler processes cannot execute a delivery twice`; one child hit `EPERM` while creating the shared state lock directory.
+- This does not prove a duplicate side effect, but it is current-head Windows reliability failure evidence and blocks claim promotion.
+- Continuous mutation ownership, bindable canonical authenticated transport/grant resolution, current-head physical Windows acceptance, independent Green and subsequent PRS remain unresolved.
+- **Founding Beta remains HOLD.**
 
-## New AgentOS Frontend Overseer lane
-- Frontend Overseer has independently consumed `Overseer#49`, acknowledged Level 2 P0 / Level 5 end-state and is ACTIVE.
-- Frontend PR #110 is OPEN/DRAFT, documentation/product-contract only, reviewed head `47ed12dc8b0ad210bb37e752c2a4a48adc12600b`.
-- It establishes the frontend vertical batch and trust-state contract without claiming the full frontend exists.
-- Frontend PR #111 is OPEN/DRAFT on the coherent Basic Chat Windows-repair lineage and converts primary copy from engineering jargon to ordinary-user language while preserving truthful Stop semantics and technical disclosure.
-- Marketing independently confirmed a review-found malformed `VERIFIED` assertion in PR #111, repaired it on the same branch at `08267446471bda9c0d0c422975762994f2ae3ba2`, replied to the review with exact evidence, and observed exact-head AgentOS Tests #992 / `34813963718` complete SUCCESS.
-- This CI PASS is presentation/test evidence only; it does not promote runtime capability or authorise merge.
+## AgentOS Frontend Overseer
+Frontend is now a separate specialist lane. Marketing supplies truth/claim/objection requirements; Frontend owns detailed user interaction implementation.
 
-## Marketing ↔ Frontend ownership boundary
-Marketing owns promise, positioning, objections, claim discipline and acquisition truth. Frontend Overseer owns interaction design and user-facing implementation. Marketing must stop duplicating detailed frontend screen specifications now that the specialist lane exists; instead it supplies evidence-backed language/objection/acceptance requirements and consumes Frontend evidence before acquisition claims.
+### PR #110
+- OPEN / DRAFT / UNMERGED.
+- Exact head observed: `b43bdf1ab8c148af0f1e4bbed3b662b89013ad7b`.
+- AgentOS Tests #1010 = SUCCESS; Project Overseer Wake #362 = SUCCESS.
+- Documentation/product-contract evidence only; complete frontend is not claimed.
+
+### PR #111
+- OPEN / DRAFT / UNMERGED.
+- Exact head observed: `a3b5f3f92936f5dfa2dc0da1dbbac5800cc20eaa`.
+- Advanced from plain-language copy into a bounded `What happened` evidence summary, explicit completion-vs-assurance distinction and fail-closed missing-field behavior.
+- Does not synthesize generic VERIFIED, Henry/PRS PASS or confirmed termination.
+- Refuses to invent a full Evidence Timeline or synthetic Jack permission card where canonical data is absent.
+- AgentOS Tests #1012 = FAILURE overall. Windows Basic Chat lifecycle succeeded; ordinary Basic Chat UI assertions passed. The failing Ubuntu test is inherited SIGINT lifecycle behavior (`SIGINT` observed rather than `null`).
+- Marketing state: **IMPLEMENTATION-ADVANCED / CI-AMBER / NOT SHIPPED**.
+
+## Competitive trust/control — Batch 2
+Current primary-source review reinforces:
+- Raycast exposes Ask/Auto/Always Allow tool permissions, approval cards, exact shell-command reveal, global allow-list management and enterprise provider/extension controls.
+- Manus My Computer authorizes local folders, runs commands automatically within authorized scope, still asks for sensitive commands, and can scope risky permission to current task/path.
+
+Consequence: local computer access + approval UX is table stakes. AgentOS differentiation remains the integrated authority → execution → durable evidence → recovery/replay → Green → PRS → understandable result loop.
 
 ## GlobalShopCo + eBay
-- Latest fresh Issue #17 scan produced no evidence that any SKU crossed the full permission + fulfilment + economics + purchase-path + publication gate.
+- Fresh Issue #17 scan found no newer exact-SKU closure beyond current Batch 006 evidence.
 - Current marketing truth remains **0 eBay-ready SKUs**.
-- Marketplace Connect installed/account connected remains distinct from production-safe connector assurance and SKU eligibility.
-- Existing Home Organisation and clear-bin source hunts remain HOLD/reject as previously classified; no paid acquisition or listing publication is unlocked.
+- Marketplace Connect connected ≠ verified sync ≠ SKU eligible ≠ publication authority.
+- No paid acquisition or listing publication unlocked.
 
 ---
 
 # EXECUTED THIS CYCLE
 
-## M-A012 — Trust objections / response matrix
-**Priority:** P1  
-**State:** COMPLETE as Marketing contract / frontend implementation not claimed  
-**Artifact:** `reports/2026-09-14-agentos-trust-objection-and-frontend-handoff-matrix.md`  
-**Commit:** `98a6f532e0aabe019b72bd30cb59b68368cf26a0`  
-**Coverage:** access/scope, evidence of changes, Stop, Pause, crash recovery, secrets, Green/PRS assurance, model error, Local/Cloud/Mixed, cost, blocked work and completion semantics.
-
-## M-A014 — Frontend PR #111 review remediation
-**Priority:** P0 frontend truth quality  
-**State:** VERIFIED exact-head CI PASS for repaired presentation/test slice  
-**Repair commit:** `08267446471bda9c0d0c422975762994f2ae3ba2`  
-**CI:** AgentOS Tests #992 / `34813963718` SUCCESS.  
-**Boundary:** no merge/ready/approval; no runtime claim promotion.
-
----
-
-# AGENTOS — REPLENISHED MARKETING LANE
-
-## M-A007 — Exact-head claim promotion watcher
-**Priority:** P0 WATCH  
-**Trigger:** ownership fence, authenticated admission, physical Windows current-head acceptance, Green, PRS.  
-**Action:** fresh scan every cycle; upgrade only exact evidence-supported claims.
+## M-A017 — Exact-head claim + Frontend delta 2
+**Priority:** P0  
+**State:** COMPLETE / VERIFIED FOR MARKETING CLASSIFICATION  
+**Artifact:** `reports/2026-09-14-agentos-marketing-claim-and-frontend-delta-2.md`  
+**Commit:** `074eae9bb994d00bbcf40a3787eeebe8f86145bd`  
+**Result:** no broad capability promotion; Founding Beta HOLD strengthened by current-head Windows CI failure; Frontend #110 recognized as contract-PASS, #111 as implementation-advanced/CI-AMBER.
 
 ## M-A008 — Competitive trust/control refresh Batch 2
 **Priority:** P1  
-**State:** PENDING  
-**Targets:** Manus; n8n/Zapier; Raycast; Open Interpreter; Cline/Roo; Open WebUI/local shells.  
-**Output:** compare authority, approvals, evidence, recovery, stop/revoke, replay/idempotency, local/cloud, secrets, connector trust, onboarding and price.
+**State:** COMPLETE FOR RAYCAST + MANUS SUBSET / PARTIAL FOR REMAINING TARGETS  
+**Artifact:** `reports/2026-09-14-agentos-competitive-trust-control-refresh-batch-2.md`  
+**Commit:** `d6c99bf81d677115db6caca4c001c6030f4aba99`  
+**Result:** approval/local-execution patterns further demoted as standalone differentiation; n8n/Zapier, Cline/Roo, Open Interpreter/Open WebUI remain explicit next-research UNKNOWNs rather than filled from memory.
 
-## M-A011 — Evidence Timeline
-**Priority:** P1  
-**State:** TRANSFERRED TO FRONTEND OVERSEER for interaction/screen implementation.  
-**Marketing responsibility:** evidence hierarchy, comprehension requirements and claims; consume Frontend implementation evidence rather than creating a competing screen spec.
+---
+
+# REPLENISHED AGENTOS MARKETING LANE
+
+## M-A007 — Exact-head claim promotion watcher
+**Priority:** P0 WATCH  
+**State:** ACTIVE  
+**Trigger:** any PR #104 head/CI/ownership/auth admission/physical Windows/Green/PRS change.  
+**Action:** fresh exact-head scan and claim delta before any public wording change.
 
 ## M-A015 — Frontend claim-comprehension QA
-**Priority:** P1  
-**State:** PENDING  
-**Action:** review Frontend Overseer PRs for claim truth, novice comprehension and Marketing contract alignment. Focus on permission, Stop/Revoke, completion, Green, Henry/PRS, recovery, Local/Cloud/Mixed and cost language.
+**Priority:** P0/P1  
+**State:** ACTIVE  
+**Action:** consume Frontend #110/#111/new descendants; audit permission, Stop/Revoke, completion, Green, Henry/PRS, recovery, Local/Cloud/Mixed and cost language against canonical evidence. Do not duplicate screen ownership.
 
 ## M-A016 — Founding Beta frontend readiness mapping
 **Priority:** P1  
-**State:** HOLD / PREPARE WHEN FRONTEND ADVANCES  
-**Goal:** map Wave 0 missions to exact visible UI evidence. Beta remains HOLD until technical entry gates clear.
+**State:** PENDING / ACTIVATION HOLD  
+**Goal:** map Wave 0 mission tests to exact visible states once Frontend lineage stabilizes; satisfaction cannot override technical HOLD failures.
+
+## M-A018 — Competitive trust/control Batch 3
+**Priority:** P1  
+**State:** PENDING  
+**Targets:** n8n, Zapier Agents, Cline, Roo Code, Open Interpreter, Open WebUI/local shells.  
+**Rule:** primary current evidence; mark UNKNOWN rather than infer.
+
+## M-A019 — Claim-to-Frontend acceptance checklist
+**Priority:** P1  
+**State:** PENDING  
+**Goal:** concise contract Frontend can test against: no generic VERIFIED, no instant-Stop promise, no Henry/PRS synthesis, fail-closed stale/unknown data, scope/authority truth, completion distinct from assurance.
 
 ## M-A013 — Content360 AgentOS refresh
 **Priority:** P1  
 **State:** HOLD  
-**Trigger:** claim upgrade or explicit owner authority for pre-beta educational content.
+**Trigger:** evidence-supported claim upgrade or explicit owner authorization for pre-beta educational content.
 
 ---
 
-# GLOBALSHOPCO + EBAY — REPLENISHED COMMERCIAL LANE
+# GLOBALSHOPCO + EBAY LANE
 
 ## M-B007 — Continuous exact-SKU pruning
 **Priority:** P0  
 **State:** CONTINUOUS  
 Consume every new Issue #17 closure; classify MARKETING-SHELL-ELIGIBLE / HOLD / REJECT-FIRST-LAUNCH / ACTIVATION-ELIGIBLE.
 
-## M-B008 — Active pilot marketing mirror
+## M-B008 — Active 8-SKU pilot marketing mirror
 **Priority:** P0  
-**State:** PENDING  
-Pointer-only matrix: SKU, canonical evidence, permission, economics, marketing state, allowed/locked copy, freshness, next evidence. Never duplicate supplier/economic source of truth.
+**State:** NEXT SAFE COMMERCIAL TASK  
+Pointer-only matrix: SKU, canonical evidence pointer, permission state, economics state, marketing state, allowed copy, locked copy, freshness, next evidence required. Do not duplicate supplier/economics authority.
 
 ## M-B009 — First-qualified-SKU rapid-release kit
 **Priority:** P1  
@@ -121,16 +143,15 @@ Pointer-only matrix: SKU, canonical evidence, permission, economics, marketing s
 ## M-B010 — Organic Home Organisation content
 **Priority:** P1  
 **State:** PENDING  
-3–5 non-product-specific trust/editorial assets; no stock/price/delivery/shop-now claims.
+3–5 non-product-specific editorial/trust assets; no stock/price/delivery/shop-now claims.
 
 ## M-B011 — Marketplace connector wording monitor
 **Priority:** P1 WATCH  
-No `connected`→`verified sync` inference.
+No `connected` → `verified sync` inference.
 
 ---
 
 # GLOBALSHOPCO HEADLESS
-
 ## M-C002 — SEO/AEO vertical-page template
 P1 / PENDING. Shopify remains canonical product/price/stock authority.
 
@@ -140,27 +161,24 @@ P1 / PENDING. Fail safely when Shopify truth is unavailable.
 ---
 
 # AFFILIATE WEBSITES
-
 ## M-D001–003 — AU / UK / US editorial-first batches
 P1 after higher lanes / PENDING.
 
 ## M-D004 — programme relationship proof gate
-P1 / PENDING. Distinguish publisher affiliate from consumer referral and recheck terms before publication.
+P1 / PENDING. Distinguish publisher affiliate from consumer referral; recheck terms at publication time.
 
 ---
 
 # GHOSTKITCHEN / FRANCHISE
-
 ## M-E001 — concept-validation message kit
 P2 / PENDING.
 
 ## M-E002 — franchise evidence ladder
-P2 / PENDING. No earnings/payback claims without real evidence.
+P2 / PENDING. No earnings/payback claims without evidence.
 
 ---
 
 # PORTFOLIO LEARNING
-
 ## M-F001 — Marketing claim-evidence pointer index
 P1 / PENDING.
 
@@ -170,17 +188,18 @@ P2 / PENDING.
 ---
 
 # NEXT AUTONOMOUS ORDER
-1. Fresh AgentOS runtime + Frontend Overseer scan.
-2. If a technical gate moved, reconcile claim ladder immediately.
-3. Review new Frontend PR evidence against the trust-objection contract; do not duplicate frontend ownership.
-4. Execute competitive Batch 2 if AgentOS remains technically blocked.
-5. Fresh GlobalShopCo #17 scan; prune any new exact-SKU evidence and build M-B008.
-6. If still 0 eligible SKUs, execute organic Home Organisation trust/editorial batch.
-7. Move to Headless, Affiliate, GhostKitchen only after higher independent safe work is exhausted.
-8. Post-scan, replenish this file and update canonical Marketing log + #49 checkpoint.
+At next `cont`, mandatory fresh scans occur first.
+
+1. Recheck PR #104 exact head + exact-head CI/Green/PRS/physical Windows.
+2. Recheck Frontend #110/#111 and new descendants; audit only Marketing truth boundary.
+3. If no claim promotion gate clears, execute M-A019 and/or M-A018 Batch 3.
+4. Fresh GlobalShopCo #17 scan and execute M-B008 from current canonical SKU evidence.
+5. If still 0 eligible SKUs, execute M-B010 organic Home Organisation content rather than idle.
+6. Then Headless and Affiliate editorial-safe work.
+7. Post-scan again; replenish this file; append Marketing log + #49 checkpoint.
 
 ## Protected actions
-No public Founding Beta, no invitations sent, no paid AgentOS campaign, no eBay listing/product activation, no supplier contact, no connector mutation, no monetised affiliate activation without evidence, no franchise offer, no merge/deploy/credentials/production autonomy.
+No public Founding Beta, invitations, paid AgentOS campaign, eBay listing/product activation, supplier contact, connector mutation, monetised affiliate activation without proof, franchise offer, merge/deploy/credentials/production autonomy.
 
 ## Core rule
-Fresh repository truth outranks the batch. Other Overseers are expected to change data continuously. UNKNOWN never becomes PASS through optimistic copy.
+**Fresh repository truth outranks the batch. UNKNOWN never becomes PASS through optimistic copy.**
