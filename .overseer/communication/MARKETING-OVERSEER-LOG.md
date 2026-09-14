@@ -38,6 +38,8 @@ No merge/deploy/approval/ready/rebase/credentials/purchase/supplier contact/list
 - beta event acceptance matrix @ `206337090d5577be94284732fe345990c08a22e6`
 - Frontend evidence projection claim delta 2 @ `4cff138f5cc2129abcbfce53911001f31fdb04e1`
 - capability trust acceptance ladder @ `74c9ee590c4d69f34bb561e748be379564bb243d`
+- Basic Chat Evidence Timeline gap-to-MVP @ `ecb678c4d87bfae2fe3e254eb74fba009c942f3e`
+- Jack permission-card canonical field gap @ `089b2e66aacd060d25869931ad2155e5d3630b8f`
 
 ## AgentOS competitive
 - trust/control batches 1–3C @ `abecdf2738d1a343b8234771274a15fbd204dc90`, `d6c99bf81d677115db6caca4c001c6030f4aba99`, `0525c7e6355853aa74c90cd92bb12876e0efbf8d`, `1f2e3bd4c743ce7d49294784ccd24adfcd214b88`, `43a54536f809889e1a1b1e622742eefe7c466931`
@@ -49,11 +51,13 @@ No merge/deploy/approval/ready/rebase/credentials/purchase/supplier contact/list
 - Home Organisation organic/Content360 @ `3785e13cf4a456fa4f028b456c0f8982c43dd498`, `3df9ad6a4edd0765047843cb23ff432af5694d21`
 - permission-first supplier screen @ `12b14b162d07e22f5d52158747e73d5690d13bff`
 - Dropshipzone compact category screen @ `0e2562f99c531f1de787302814c2772070954e05`
+- contradiction-aware Marketing gate @ `f3f41630a2bc7ea711c86597a91e5592ea2b17a5`
 - Headless readiness/stale trust/SEO-AEO contracts @ `02192ee7fbf29a2d9551e23cd353b9a0357d7c06`, `4129c55baf00037854e30533209a677059aacc1d`, `b564f870d74aa11b09274e2f79c3c831a23dfef1`
 
 ## Affiliate / other
 - Affiliate editorial acquisition gate @ `be66a1bea89965908ac6a43e715adafbcf0c4909`
 - Affiliate relationship/freshness gate @ `f104847603cf73558563fc34b5ab0ee4dc5073a2`
+- AU proof-gated shortlist @ `f077101bd77cb3ef1dd1183e7ee79350c4bebe81`
 - GhostKitchen prelaunch Marketing gate @ `c669521390ee329226b1c04008960bd8fbc09953`
 - Current vertical batch: `.overseer/batches/MARKETING-VERTICAL-BATCH.md`
 
@@ -61,46 +65,49 @@ Standing positioning: **AgentOS = governed AI execution / AI control plane**. Do
 
 ---
 
-# 2026-09-14 23:16+ AEST — FRONTEND CLAIM HARDENING / CAPABILITY TRUST / COMMERCE FAIL-CLOSED / AFFILIATE PROOF CYCLE
+# 2026-09-14 23:54+ AEST — EVIDENCE TIMELINE / JACK PERMISSIONS / COMMERCE CONTRADICTION / AU AFFILIATE CYCLE
 
 ## Fresh evidence
 ### AgentOS
 - PR #104 remains OPEN/DRAFT/UNMERGED at `83a58b8bd230550b5781a0fee700cca250819a75`.
 - Exact-head push Tests `34821384346` remain SUCCESS on Ubuntu+Windows with audit.
-- PRS stale-owner false-success remains controlling; authenticated admission, current-head physical Windows Level 2, Green→PRS remain unproven.
+- PRS stale-owner false-success remains controlling; authenticated admission, physical Windows current-head acceptance and Green→PRS remain unproven.
 - Founding Beta remains HOLD.
 
-### Frontend
-- PR #111 advanced to exact `93a7244e47c357d589ba08410085fddca9a8a11b`.
-- Exact-head Tests #1131 / `34848042741` = SUCCESS.
-- Canonical bounded evidence projection is now wired read-only into Basic Chat snapshot.
-- Current UI/test contract explicitly says physical Windows worker readiness is `not established` and rejects ready/verified/passed wording.
-- `Passed for this job` is bounded to matching COMPLETED + Green pass evidence; Henry/PRS remains separate/not shown.
-- Stop remains request semantics; no durable Revoke or synthesized recovery.
+### Frontend — material post-scan movement
+- PR #111 advanced to exact `7205b6b4e91802315f78bca1431aece0da0a5181`, OPEN/DRAFT/UNMERGED.
+- Exact-head Tests #1157 / `34852151277` = FAILURE overall.
+- Windows Basic Chat lifecycle = SUCCESS.
+- Ubuntu/general test = FAILURE: 329 pass / 1 fail / 1 skip.
+- New identity hardening requires canonical `dispatch.task` identity. The sole failing integration fixture expected evidence projection without that canonical task and therefore now observes the fail-closed result (`evidenceAvailable=false`, null mission/wake/completion/Green) instead of the stale expected projection.
+- This is not marketed as current-head CI PASS. Marketing classification is **IMPLEMENTATION-ADVANCED / IDENTITY-HARDENED / WINDOWS LIFECYCLE PASS / EXACT-HEAD CI RED ON STALE INTEGRATION EXPECTATION / NOT SHIPPED**.
 
 ### GlobalShopCo
-- Issue #17 latest durable evidence keeps 0 eBay-ready SKUs.
-- Synthetic `shopify_ebay` assurance progressed through explicit zero-network/non-publication and contradictory-evidence-precedence guards. This improves downstream fail-closed assurance only, not SKU eligibility.
-- Recent source research continues to reject weak/contradictory candidates.
-- Dropshipzone public categories confirm a plausible Home Organisation research pool, but public pages do not expose enough reliable exact SKU/weight/account-cost detail to build an honest 5–10 candidate matrix.
+- 0 eBay-ready SKUs remains controlling truth.
+- Batch 009 adds OXO organiser evidence: `48685` AMBER/P1 authorised-wholesale target; `48703` AMBER secondary; `48695` RED/HOLD. Major-retailer discounting compresses economics; none enters the capped pilot.
+- Synthetic contradiction precedence remains a useful fail-closed assurance rule, not SKU readiness.
+
+### AU Affiliate
+- First-party current evidence confirms Octopus Group and Pureprofile user rewards + member-referral programmes.
+- Publisher-affiliate rights were not established from the reviewed evidence, so publisher monetisation remains HOLD.
 
 ## Work completed
-1. `reports/2026-09-14-agentos-frontend-evidence-projection-claim-delta-2.md` @ `4cff138f5cc2129abcbfce53911001f31fdb04e1`.
-2. `reports/2026-09-14-agentos-capability-trust-product-acceptance-ladder.md` @ `74c9ee590c4d69f34bb561e748be379564bb243d`.
-3. `reports/2026-09-14-globalshopco-dropshipzone-compact-home-organisation-screen.md` @ `0e2562f99c531f1de787302814c2772070954e05`.
-4. `reports/2026-09-14-affiliate-programme-relationship-freshness-proof-gate.md` @ `f104847603cf73558563fc34b5ab0ee4dc5073a2`.
-5. Marketing vertical batch replenished @ `a2d3a85c584d0288085007dfb9152b0f82f98f20`.
+1. `reports/2026-09-14-agentos-basic-chat-evidence-timeline-gap-to-mvp.md` @ `ecb678c4d87bfae2fe3e254eb74fba009c942f3e`.
+2. `reports/2026-09-14-agentos-jack-permission-card-canonical-field-gap.md` @ `089b2e66aacd060d25869931ad2155e5d3630b8f`.
+3. `reports/2026-09-14-globalshopco-contradiction-aware-marketing-gate.md` @ `f3f41630a2bc7ea711c86597a91e5592ea2b17a5`.
+4. `reports/2026-09-14-au-affiliate-proof-gated-shortlist.md` @ `f077101bd77cb3ef1dd1183e7ee79350c4bebe81`.
+5. Marketing vertical batch replenished @ `d48e38386ab93d4d4e5ed8d6026d06d386abb56d`.
 
 ## Claims / decisions
-- No AgentOS Level 2 or Beta claim promoted.
-- Frontend claim discipline strengthened: local test path is explicitly not physical Windows readiness.
-- Bounded evidence projection is now UI-integrated but still not a generic Evidence Timeline or independent PRS proof.
-- Capability verification/permission UX remains a product direction until exact implementation evidence exists.
-- GlobalShopCo remains 0 eBay-ready SKUs; no public data gap was papered over with guessed candidate rows.
-- Affiliate country work must now distinguish publisher affiliate, consumer referral, user-reward and dual relationships, with volatile terms freshness-gated.
+- No AgentOS Level 2 or Founding Beta promotion.
+- Evidence Timeline MVP can use only canonical task/mission/wake/completion/Green stages; PRS/recovery/revoke/cost/physical readiness remain explicit gaps.
+- Jack card needs canonical expiry, revoke effect/receipt, in-flight behavior, reversibility, secret/data/egress, cost and next approval fields before complete permission UX can be claimed.
+- Frontend predecessor CI PASS is stale; exact current head is RED even though new identity-hardening tests mostly pass.
+- GlobalShopCo contradiction gate now prevents favourable evidence from overriding contradictory identity/permission/inventory data.
+- Octopus Group/Pureprofile are editorially useful AU reward/referral candidates, not yet verified publisher-affiliate monetisation programmes.
 
 ## Next order
-Fresh scan first. Then M-A027 Evidence Timeline gap-to-MVP, M-A028 Jack permission-card canonical field gap, M-B015c authenticated/read-only Dropshipzone exact-SKU screen if evidence is available otherwise M-B017 contradiction-aware Marketing gate mirror, then AU Affiliate proof-gated shortlist.
+Fresh scan first. Then M-A029 reconcile the #111 stale integration expectation, M-A030 Evidence Timeline screen acceptance, M-A031 Jack permission-card acceptance, M-B018 OXO threshold screen, then M-D001b AU shortlist expansion if higher lanes stay blocked.
 
 ## Hard status
 **NO PUBLIC BETA / NO INVITATIONS / NO TELEMETRY ACTIVATION / NO PAID CAMPAIGN / NO EBAY LISTING / NO SHOPIFY PRODUCT ACTIVATION / NO SUPPLIER CONTACT / NO ACCOUNT APPLICATION / NO PURCHASE / NO CONNECTOR MUTATION / NO DEPLOYMENT / NO OVERALL GREEN.**
