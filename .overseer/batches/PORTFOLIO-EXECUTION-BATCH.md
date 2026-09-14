@@ -40,14 +40,14 @@ Before acting on an item, refresh the relevant repository branch/head, recent co
 ### A-003 — Authority/admission continuation
 - status: ACTIVE
 - priority: P1 while A-001 is technically blocked
-- evidence: bounded exact-head inspection recorded at Overseer #49 / AgentOS evidence comment `5657591418`; existing admission already fails closed on actor/grant provenance and replay, but authenticated transport identity plus canonical grant evidence are not wired to the producer/pickup seam.
+- evidence: bounded producer/pickup seam inspection remains current; existing admission fails closed on actor/grant provenance and replay, but authenticated transport identity plus canonical grant evidence are not wired to the producer/pickup seam.
 - action: bind trusted transport actor context and canonical grant evidence to existing authority-admission/pickup lineage; no self-granting request fields.
 - acceptance: fail-closed tests, no duplicate authority layer, exact delivery/request/task/mission/wake correlation.
 
 ### A-004 — Authority-source binding regression set
 - status: PENDING
 - dependency: A-003 implementation seam identified; does not bypass A-001.
-- action: add the smallest homogeneous fail-closed tests for missing authenticated actor, actor/grant mismatch, missing canonical grant evidence, and correlation preservation through pickup.
+- action: missing authenticated actor, actor/grant mismatch, missing canonical grant evidence, and correlation preservation through pickup.
 - batch_rule: test/evidence closure only; no alternate authority producer or registry.
 
 ---
@@ -55,25 +55,24 @@ Before acting on an item, refresh the relevant repository branch/head, recent co
 # LANE B — COMMERCE PRIORITY (:15)
 
 ### B-001 — GlobalShopCo Home Organisation economics closure
-- status: PENDING
+- status: PENDING / HOLD-PRESERVING
 - priority: P0-commerce
-- fresh issue state: GlobalShopCo #9 remains open and explicitly requires Home Organisation completion before category advance.
-- current verified example: United Living / Boxsweden exact SKU `15510`, EAN `9340957115510`; supplier identity/catalogue presence and policy-level delivery/returns are evidenced.
+- target: GlobalShopCo #9/#18.
+- current verified example: United Living / Boxsweden SKU `15510`, EAN `9340957115510`; supplier identity/catalogue presence and policy-level delivery/returns evidenced.
 - still UNKNOWN/HOLD: wholesale cost, candidate-level outbound freight, dropship/blind-shipping permission, sellable stock assurance, positive free-delivery contribution.
 - action: continue independent non-duplicate candidate evidence closure; missing freight/wholesale cannot be inferred.
 - batch_rule: 2–5 candidates only after one complete gate becomes VERIFIED GREEN.
 
 ### B-002 — GlobalShopCo-Headless M3 checkout slice
 - status: VERIFIED
-- exact verified head: `11214e0b4a119cf237c1d3ffa10ca1df1f375d4b`
-- CI: M3 checkout validation `34792401552` SUCCESS.
-- verified property: deterministic cart/checkout handoff plus configured Shopify checkout-host enforcement.
-- adjacent batch status: PENDING
-  1. reject valid-looking suffix/wrong registrable checkout host;
-  2. reject protocol downgrade/non-HTTPS checkout destination;
-  3. reject missing checkoutUrl even with cart lines;
-  4. preserve unavailable-variant fail-closed behavior with no redirect.
-- boundary: non-production/test-safe; Shopify remains source of truth; actual dev-store/browser controlled-product -> Shopify-hosted-checkout proof remains UNKNOWN.
+- fresh exact head: `4053441d7959801a735882c14abc7d0fad2579de`
+- CI: M3 checkout validation `34795412636` SUCCESS.
+- consumed in concurrent scheduled pass: suffix-confusable checkout host, HTTP downgrade, missing checkoutUrl, and unavailable-variant output assertions all fail closed; 11 deterministic cases now pass.
+- replenished adjacent batch: PENDING
+  1. reject checkout URL userinfo/credential-host confusion;
+  2. reject configured-host mismatch through explicit unexpected port or malformed host normalization;
+  3. preserve no-checkout/no-purchase rendering for malformed checkout URL syntax.
+- external gate: controlled dev-store product -> Shopify-hosted checkout browser proof remains UNKNOWN and must not be fabricated.
 
 ### B-003 — Shopify -> eBay readiness
 - status: PENDING
@@ -87,14 +86,14 @@ Before acting on an item, refresh the relevant repository branch/head, recent co
 
 ### B-005 — MyPrimeDelivery synthetic WordPress slice
 - status: VERIFIED
-- exact verified head: `3207255476326e96490260ea665b5ceb56d44053`
-- CI: Fixture validation `34795489707` SUCCESS.
-- verified work: reusable fixture render projection; no local checkout; no live commercial fields; stale/unknown/blocked evidence suppresses ranking/outbound action and positive Prime requires CURRENT freshness.
-- adjacent batch status: PENDING
-  1. category-level STALE/UNKNOWN must suppress positive ranking framing;
-  2. missing/invalid ranking position must fail closed before render ordering;
-  3. BLOCKED freshness must suppress verified outbound action;
-  4. explicit fixture disclosure remains present on every synthetic product card.
+- fresh exact head: `b812158d18733e34d2a549a3acc44a05550dd296`
+- CI: Fixture validation `34796288111` SUCCESS.
+- consumed manual batch: category STALE/UNKNOWN/BLOCKED suppresses ranking; invalid/missing/non-positive ranking position fails closed before render ordering; BLOCKED freshness suppresses outbound action; every synthetic card and category now carries explicit fixture disclosure.
+- replenished adjacent batch: PENDING
+  1. duplicate ranking positions must fail closed rather than silently reorder;
+  2. VERIFIED outbound destination with non-VERIFIED evidence status must not render action;
+  3. missing/false fixture-only disclosure must fail closed in the synthetic renderer;
+  4. category evidence-status/freshness contradictions must not create positive ranking framing.
 - boundary: synthetic only; no live Prime/ranking/affiliate claim.
 
 ---
@@ -108,37 +107,37 @@ Before acting on an item, refresh the relevant repository branch/head, recent co
 
 ### C-002 — GhostKitchen economics batch
 - status: VERIFIED
-- exact verified head: `9fb23afd4f9eead58b47c8152e059c13d1bf40c4`
-- CI: Economics validation `34795358739` SUCCESS.
-- verified property: public-reference/hypothesis scenarios never become commercial-pass; UNKNOWN required input remains NOT_TESTABLE.
-- adjacent batch status: PENDING
-  1. representative menu/AOV scenario with every project-specific cost explicitly evidence-classified;
-  2. packaging-cost UNKNOWN case remains NOT_TESTABLE;
-  3. labour-cost UNKNOWN case remains NOT_TESTABLE;
-  4. negative contribution with VERIFIED_PROJECT inputs must never become commercial-pass.
+- fresh exact head: `3328870f11849f268a308576d9d9793121371ef6`
+- CI: Economics validation `34796325179` SUCCESS.
+- consumed manual batch: packaging UNKNOWN and labour UNKNOWN remain NOT_TESTABLE; fully VERIFIED_PROJECT negative contribution remains ineligible for commercial pass; fully verified positive fixture remains eligible only at project-evidence level.
+- replenished adjacent batch: PENDING
+  1. zero-revenue verified scenario must not create a positive pass;
+  2. invalid evidence class must fail closed;
+  3. multiple simultaneous UNKNOWN required inputs must all be reported deterministically;
+  4. decimal/rounding boundary scenarios must remain deterministic and never flip eligibility from rounding alone.
 - boundary: public/hypothesis benchmarks are decision support, not project economics proof.
 
 ### C-003 — Franchise territory/tenancy validation
 - status: VERIFIED
-- exact verified head: `a70d0726145efcdae2ad0ccc6dec8ca4b370ab69`
-- CI: Territory fixture validation `34795399126` SUCCESS.
-- verified property: routing output includes matched active-area IDs, candidate franchises, selected franchise and explicit selection/denial reason; active overlap/unknown franchise/inactive franchise/no-service fail closed.
-- adjacent batch status: PENDING
-  1. add territory/version used to every decision record;
-  2. add deterministic correlation ID for synthetic routing decision;
-  3. add evidence timestamp/source marker for fixture decision context;
-  4. derive synthetic tenancy context without creating production tenancy or migration.
+- fresh exact head: `154cf4d4dfb18a363542f54dee2c42c59fc0c46e`
+- CI: Territory fixture validation `34796386872` SUCCESS.
+- consumed manual batch: decision records now carry matched area versions, deterministic correlation ID, explicit synthetic evidence source/timestamp, and synthetic tenancy context; missing evidence context and invalid area versions fail closed.
+- replenished adjacent batch: PENDING
+  1. duplicate active area IDs must fail closed;
+  2. duplicate postcode token within one area must not create duplicate evidence/correlation ambiguity;
+  3. correlation must change when territory version changes;
+  4. evidence timestamp/source must remain synthetic-only and never imply production tenancy migration.
 
 ### C-004 — GemVerse Level 2 fixture assurance
 - status: VERIFIED
-- exact verified head: `2d008aebd593115b71c72a86aab581dd42da5fdc`
-- CI: Level 2 fixture validation `34795508014` SUCCESS.
-- verified work: deterministic initial->target mutation, idempotent replay, near-miss state rejection, prepared-record mission/project/preimage/target hash binding, and stale prepared replay rejection.
-- adjacent batch status: PENDING
-  1. duplicate complete-target recovery stays idempotent;
-  2. prepared artifact with correct hashes but missing required identity field fails closed;
-  3. recovery decision records original/prepared chosen state deterministically;
-  4. canonical fixture file remains unchanged after all synthetic recovery tests.
+- fresh exact head: `2c5ee83d815c15fc9733bc6f89fada5986e3f70a`
+- CI: Level 2 fixture validation `34796309971` SUCCESS.
+- consumed manual batch: duplicate complete-target recovery is idempotent; prepared records missing mission/project identity fail closed; recovery records deterministic `PROMOTE_PREPARED` versus `ALREADY_COMPLETE`; synthetic recovery leaves canonical fixture unchanged.
+- replenished adjacent batch: PENDING
+  1. metadata-correct but payload-hash-mismatched prepared artifact must fail closed;
+  2. non-canonical prepared target must fail closed before recovery decision;
+  3. competing prepared artifacts with different correlations must not be silently selected;
+  4. repeated recovery decision must remain byte-for-byte deterministic.
 
 ### C-005 — Content360 provider-neutral adapter
 - status: PENDING
@@ -161,14 +160,17 @@ Before acting on an item, refresh the relevant repository branch/head, recent co
 - CI: Validate repository `34793554142` SUCCESS.
 - meaning: legacy evaluator compatibility path delegates to canonical semantics with exact-head validation. This is not AgentOS PR #104 assurance and does not imply overall PRS/AgentOS GREEN.
 
-# :30 RECONCILIATION — 2026-09-14 11:31 Brisbane
-- LANE A: A-001 BLOCKED; A-002 BLOCKED; A-003 ACTIVE after bounded producer/pickup seam inspection; A-004 replenished PENDING. PR #104 exact head `083b7dec...`; run #971 `34791584537` CANCELLED. No exact-head full CI PASS, new Green PASS or PRS PASS.
-- LANE B: B-001 PENDING/HOLD; B-002 VERIFIED with adjacent fixture-safe batch PENDING; B-003 PENDING; B-004 PENDING; B-005 VERIFIED at `3207255...` / CI `34795489707` SUCCESS with adjacent homogeneous batch PENDING. Commercial supplier/freight/free-delivery/marketplace gates remain explicit UNKNOWN/HOLD.
-- LANE C: C-001/C-005/C-006/C-007 PENDING. C-002 VERIFIED `9fb23af...` / `34795358739`; C-003 VERIFIED `a70d072...` / `34795399126`; C-004 VERIFIED `2d008ae...` / `34795508014`; each retains a homogeneous fixture-safe PENDING batch.
-- No item was upgraded from scheduler firing or worker claim alone. No mixed-confidence batch was widened. No overall GREEN.
+# MANUAL RECONCILIATION — 2026-09-14
+- Fresh pre-action scan prevented duplicate Headless work: schedule had already advanced B-002 to `4053441d...` with CI SUCCESS.
+- Manual execution advanced B-005, C-002, C-003 and C-004; all four exact post-action heads have CI SUCCESS after the mandatory second scan.
+- A-001/A-002 remain fail-closed; A-003/A-004 remain safe AgentOS work while the ownership primitive is unresolved.
+- B-001 remains commercial HOLD because freight/wholesale/dropship/stock/free-delivery contribution evidence is incomplete.
+- No scheduler firing or worker claim was treated as completion. No overall GREEN.
 
 # NEXT PASS ORDER
-1. LANE A: A-001 only if a real ownership primitive appears; otherwise continue A-003/A-004 evidence/test closure without bypassing A-001.
-2. LANE B: B-001 first; then B-002/B-005 homogeneous fixture batches while external commerce evidence remains blocked; B-003/B-004 remain fail-closed.
-3. LANE C: C-001 first unresolved venture; then C-002/C-003/C-004 homogeneous adjacent batches; C-005/C-006/C-007 remain useful PENDING work.
-4. Preserve HOLD/BLOCKED/UNKNOWN states and historical evidence; no merge/deploy/credentials/production writes/purchases/supplier contact/live publication/production autonomy.
+1. Fresh-scan all target repositories before action.
+2. LANE A: A-001 only if new ownership-primitive evidence exists; otherwise A-003/A-004 without bypassing A-001.
+3. LANE B: B-001 first; B-002/B-005 adjacent fail-closed batches remain safe while external commerce evidence is blocked.
+4. LANE C: C-001 first unresolved venture; then the replenished C-002/C-003/C-004 homogeneous batches; C-005/C-006/C-007 remain useful PENDING work.
+5. Fresh-scan every touched repo again before replenishment.
+6. Preserve HOLD/BLOCKED/UNKNOWN states; no merge/deploy/credentials/production writes/purchases/supplier contact/live publication/production autonomy.
