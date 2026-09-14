@@ -11,9 +11,9 @@ Fresh-scan before action and reconciliation. States are only `PENDING`, `ACTIVE`
 
 ### A-001 — Continuous ownership fence
 - status: BLOCKED
-- exact evidence: AgentOS PR #104 OPEN/DRAFT/UNMERGED at `083b7decf48038764ec846a988a5cd30d2a4fa56`.
+- exact evidence: AgentOS PR #104 OPEN/DRAFT/UNMERGED at `7df40bf9b1c50312983d75eb91e397a16c2d55b1`.
 - blocker: check-to-publish ownership race remains; no kernel-enforced ownership primitive held continuously through publish/prepared recovery/durable success receipt.
-- current exact-head full CI PASS, independent Green PASS and PRS PASS are not evidenced.
+- exact-head AgentOS Tests #974 / `34801212972` is FAILURE: Ubuntu/Node 22 passed test+audit; Windows/Node 26 failed test suite. Independent Green PASS and PRS PASS are not evidenced.
 - next: only act when a real ownership primitive changes; then adversarial exact-head tests + Ubuntu/Windows CI -> independent Green -> PRS on unchanged head.
 
 ### A-002 — Ownership adversarial regressions
@@ -22,13 +22,15 @@ Fresh-scan before action and reconciliation. States are only `PENDING`, `ACTIVE`
 - next homogeneous set after primitive exists: replacement-after-verification; three-writer successor; stale/replaced identity; crash/replay; duplicate-result/false-success.
 
 ### A-003 — Authority/admission continuation
-- status: ACTIVE
-- evidence: PR #104 metadata still states authenticated transport and canonical grant lookup are not wired; emitted task also lacks fields required by non-PowerShell local-wake path.
-- next: bind existing trusted transport actor context + canonical grant evidence into existing producer/pickup lineage; no self-grant request fields or duplicate authority layer.
+- status: BLOCKED
+- evidence: producer requires externally supplied authenticated actor context and `authoritySource.resolveGrant`; no canonical transport authenticator/grant resolver is presently evidenced as bindable without broadening the authority system.
+- next: wait for/reuse a real canonical authenticated identity + grant source; do not create a duplicate authority layer or self-grant request fields.
 
 ### A-004 — Authority-source binding regressions
-- status: PENDING
-- homogeneous batch: missing authenticated actor; actor/grant mismatch; missing canonical grant evidence; delivery/request/task/mission/wake correlation preservation.
+- status: ACTIVE
+- exact evidence: `7df40bf9b1c50312983d75eb91e397a16c2d55b1` adds narrow tests for missing canonical grant fail-closed/zero durable artifacts and exact delivery/request/task/mission/wake/authority-evidence correlation.
+- CI: AgentOS Tests #974 / `34801212972` FAILURE because Windows/Node 26 test suite failed while Ubuntu/Node 22 passed.
+- next homogeneous set: isolate exact Windows failure; preserve missing authenticated actor, actor/grant mismatch, missing canonical grant evidence and exact correlation regressions. Do not promote until exact-head cross-platform CI passes.
 
 # LANE B — COMMERCE PRIORITY
 
@@ -44,8 +46,11 @@ Fresh-scan before action and reconciliation. States are only `PENDING`, `ACTIVE`
 - replenished PENDING homogeneous work: inspect production plugin host normalization; test trailing-dot/case-normalized exact-host behavior only if ambiguous; add encoded/whitespace host confusion only if parser path permits it; preserve exact-host HTTPS fail-closed/no-purchase behavior.
 
 ### B-003 — Shopify -> eBay readiness
-- status: PENDING
-- next: deterministic candidate mapper/readiness for marketplace permission, fulfilment identity, stock method and landed economics; no publication authority.
+- status: VERIFIED
+- exact evidence: `darrinbaldwindev/shopify_ebay` branch `agent/chatgpt/ebay-mapper-receipts` head `8c6d4fd2e43cfbe7e1cb9470c23574d6c3d125ad`; Fixture validation `34801871352` SUCCESS, 18/18 tests.
+- verified scope: deterministic candidate mapper, denied-input fail-closed behavior, explicit UNKNOWN preservation, audit receipt binding Shopify IDs/SKU/input hash/mapper version/gate result, hard `publication_authority=False`.
+- real SKU publication remains blocked by GlobalShopCo #17 supplier permission/blind-shipping/stock/freight/economics evidence. Existing Marketplace Connect path remains unassured for listing mapping, inventory propagation, order import, tracking propagation, oversell/duplicate protection and exact fee behavior.
+- replenished PENDING homogeneous work: synthetic mapping/inventory/order/tracking/duplicate-protection contract fixtures only; no live publication or credentials.
 
 ### B-004 — Shopify -> Amazon readiness
 - status: PENDING
@@ -54,7 +59,6 @@ Fresh-scan before action and reconciliation. States are only `PENDING`, `ACTIVE`
 ### B-005 — MyPrimeDelivery synthetic WordPress slice
 - status: VERIFIED
 - exact head `a0791c11624d751e36abc2d7d4c5b793b568c760`; Fixture validation `34799420919` SUCCESS.
-- consumed this manual cycle: category identity now requires category_id/ranking_method_id/marketplace; ranking-method record must match category identity; empty products render explicit non-positive `inventory_state: EMPTY`; product marketplace mismatch and ranking evidence source/method disagreement fail closed.
 - replenished PENDING: validate marketplace enum/scope; require ranking-method status/source to remain fixture-safe; require timestamps when product evidence claims CURRENT/VERIFIED; preserve deterministic ranking order under harmless input ordering.
 - synthetic only; no live Prime/ranking/affiliate claim.
 
@@ -66,10 +70,8 @@ Fresh-scan before action and reconciliation. States are only `PENDING`, `ACTIVE`
 - replenished PENDING: publisher timestamp/future evidence validation; country evidence mismatch; blocked audit destination/tracking stripping; deterministic program-identity ordering.
 
 ### C-002 — GhostKitchen economics batch
-- status: VERIFIED after repair
+- status: VERIFIED
 - exact head `ddfb2d872ca116b2cf18d3a98d53670b0c228237`; Economics validation `34799531732` SUCCESS.
-- consumed this manual cycle: negative revenue fails closed; unknown scenario/input/batch keys fail closed while canonical fixture `status` and `source_note` metadata remain allowed; empty batch is explicit/non-commercial; deterministic evaluation survives input-key reordering.
-- repair evidence: predecessor `ee482e8ff60a236d32c8c172de75dab73381d30e` failed sample rendering because canonical fixture metadata was over-rejected; failed job was inspected and the existing metadata contract restored before exact-head SUCCESS.
 - replenished PENDING: validate allowed batch status enum; validate source_note type/emptiness without treating prose as authority; reject unknown keys inside evidence items; add batch evidence summary that cannot upgrade scenario eligibility.
 
 ### C-003 — Franchise territory/tenancy validation
@@ -97,19 +99,17 @@ Fresh-scan before action and reconciliation. States are only `PENDING`, `ACTIVE`
 
 # INDEPENDENT PRS CHECKPOINT
 - status: VERIFIED only for evaluator-parity cleanup at `a646f4033fd1b0c40135cb6f5c1286e9c7610728`, CI `34793554142` SUCCESS.
-- AgentOS PR #104 remains unassured; no overall GREEN.
+- AgentOS PR #104 current head remains unassured; no overall GREEN.
 
-# MANUAL RECONCILIATION — 2026-09-14 OWNER-TRIGGERED CYCLE
-- Fresh repository scan completed before action.
-- Manual execution advanced MyPrimeDelivery and GhostKitchen.
-- MyPrimeDelivery exact head `a0791c1...` / CI `34799420919` SUCCESS.
-- GhostKitchen exact head `ee482e8...` initially failed sample rendering; failure was traced to over-rejection of canonical fixture metadata, repaired, and replacement exact head `ddfb2d8...` / CI `34799531732` is SUCCESS.
-- Fresh pre-replenishment scan confirmed AgentOS PR #104 still `083b7dec...` OPEN/DRAFT/BLOCKED; Affiliate-Websites remains `d901b3e...`; Franchise remains `29fa054...`; GemVerse remains `0033b66...`; Headless remains `9799e6f...`.
-- Concurrent :30 manifest rewrite was detected via 409 and reconciled rather than overwritten.
-- No scheduler firing or worker claim was treated as completion evidence. No overall GREEN.
+# :30 RECONCILIATION — 2026-09-14 13:32 BRISBANE
+- Fresh durable evidence superseded the previous manifest where it differed.
+- LANE A: PR #104 advanced from `083b7dec...` to `7df40bf...`. A-001/A-002 remain BLOCKED. A-003 is BLOCKED on absence of an evidenced canonical authenticated transport/grant source. A-004 is ACTIVE after the bounded authority regression commit, but exact-head CI #974 is RED on Windows while Ubuntu passes; exact failure detail remains to be isolated.
+- LANE B: B-003 advanced materially and is VERIFIED only for its synthetic mapper/receipt gate at `8c6d4fd...`, CI `34801871352` SUCCESS, 18/18. Real eBay readiness remains fail-closed on supplier/freight/economics and live Marketplace Connect assurance. B-001/B-004 remain PENDING; B-002/B-005 retain verified fixture gates plus homogeneous PENDING follow-ons.
+- LANE C: no newer exact repository/CI evidence found in the durable coordination state than the currently recorded verified gates; C-001/C-002/C-003/C-004 retain homogeneous PENDING follow-ons and C-005/C-006/C-007 remain PENDING.
+- No scheduler firing or worker claim was treated as completion evidence. Historical evidence preserved. No overall GREEN.
 
 # NEXT PASS ORDER
-1. LANE A: A-001 only on new ownership-primitive evidence; otherwise A-003/A-004.
-2. LANE B: B-001 evidence closure; B-002 production-code inspection; B-005 new fixture-safe evidence/timestamp batch; B-003/B-004 bounded readiness.
+1. LANE A: isolate Windows failure on exact `7df40bf...`; A-001 only on new ownership-primitive evidence; A-003 only when a real canonical auth/grant source exists; continue bounded A-004 regressions without authority duplication.
+2. LANE B: B-001 exact-SKU evidence closure; B-003 homogeneous synthetic Marketplace Connect contract assurance; B-002 production-code inspection; B-005 fixture-safe evidence/timestamp batch; B-004 bounded readiness.
 3. LANE C: consume homogeneous C-001/C-002/C-003/C-004 batches; then C-005/C-006/C-007 as safe capacity remains.
 4. Re-scan exact heads/issues/CI before promoting any state and preserve all HOLD/BLOCKED/UNKNOWN evidence.
