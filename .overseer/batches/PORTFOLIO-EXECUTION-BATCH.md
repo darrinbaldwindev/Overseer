@@ -26,7 +26,7 @@ Before acting on an item, refresh the relevant repository branch/head, recent co
 - status: BLOCKED
 - priority: P0
 - fresh exact head: `083b7decf48038764ec846a988a5cd30d2a4fa56`
-- evidence: PR #104 remains OPEN/DRAFT/UNMERGED; exact-head AgentOS Tests run `34791584537` is CANCELLED; independent Green remains FAIL on unresolved check-to-publish ownership race.
+- evidence: PR #104 remains OPEN/DRAFT/UNMERGED; exact-head AgentOS Tests run `34791584537` (#971) is CANCELLED; independent Green remains FAIL on unresolved check-to-publish ownership race.
 - blocker: no kernel-enforced ownership boundary held continuously through final verification -> publish/prepared recovery -> success-receipt persistence.
 - next: implement/test smallest ownership-preserving primitive on current lineage; rerun exact-head Windows+Ubuntu CI; Green only on unchanged exact head.
 - batch_rule: single critical-path change until independently green.
@@ -38,21 +38,28 @@ Before acting on an item, refresh the relevant repository branch/head, recent co
 - batch_rule: 2–5 homogeneous cases only after primitive stability.
 
 ### A-003 — Authority/admission continuation
-- status: PENDING
-- priority: P1 when A-001 is externally/technically blocked
+- status: ACTIVE
+- priority: P1 while A-001 is technically blocked
+- evidence: bounded exact-head inspection recorded at Overseer #49 / AgentOS evidence comment `5657591418`; existing admission already fails closed on actor/grant provenance and replay, but authenticated transport identity plus canonical grant evidence are not wired to the producer/pickup seam.
 - action: bind trusted transport actor context and canonical grant evidence to existing authority-admission/pickup lineage; no self-granting request fields.
-- acceptance: fail-closed tests, no duplicate authority layer, exact task/mission/wake correlation.
+- acceptance: fail-closed tests, no duplicate authority layer, exact delivery/request/task/mission/wake correlation.
+
+### A-004 — Authority-source binding regression set
+- status: PENDING
+- dependency: A-003 implementation seam identified; does not bypass A-001.
+- action: add the smallest homogeneous fail-closed tests for missing authenticated actor, actor/grant mismatch, missing canonical grant evidence, and correlation preservation through pickup.
+- batch_rule: test/evidence closure only; no alternate authority producer or registry.
 
 ---
 
 # LANE B — COMMERCE PRIORITY (:15)
 
 ### B-001 — GlobalShopCo Home Organisation economics closure
-- status: PENDING / HOLD-PRESERVING
+- status: PENDING
 - priority: P0-commerce
 - fresh issue state: GlobalShopCo #9 remains open and explicitly requires Home Organisation completion before category advance.
 - current verified example: United Living / Boxsweden exact SKU `15510`, EAN `9340957115510`; supplier identity/catalogue presence and policy-level delivery/returns are evidenced.
-- still UNKNOWN: wholesale cost, candidate-level outbound freight, dropship/blind-shipping permission, sellable stock assurance, positive free-delivery contribution.
+- still UNKNOWN/HOLD: wholesale cost, candidate-level outbound freight, dropship/blind-shipping permission, sellable stock assurance, positive free-delivery contribution.
 - action: continue independent non-duplicate candidate evidence closure; missing freight/wholesale cannot be inferred.
 - batch_rule: 2–5 candidates only after one complete gate becomes VERIFIED GREEN.
 
@@ -61,12 +68,12 @@ Before acting on an item, refresh the relevant repository branch/head, recent co
 - exact verified head: `11214e0b4a119cf237c1d3ffa10ca1df1f375d4b`
 - CI: M3 checkout validation `34792401552` SUCCESS.
 - verified property: deterministic cart/checkout handoff plus configured Shopify checkout-host enforcement.
-- replenished adjacent batch: PENDING
+- adjacent batch status: PENDING
   1. reject valid-looking suffix/wrong registrable checkout host;
   2. reject protocol downgrade/non-HTTPS checkout destination;
   3. reject missing checkoutUrl even with cart lines;
   4. preserve unavailable-variant fail-closed behavior with no redirect.
-- boundary: non-production/test-safe; Shopify remains source of truth.
+- boundary: non-production/test-safe; Shopify remains source of truth; actual dev-store/browser controlled-product -> Shopify-hosted-checkout proof remains UNKNOWN.
 
 ### B-003 — Shopify -> eBay readiness
 - status: PENDING
@@ -82,8 +89,8 @@ Before acting on an item, refresh the relevant repository branch/head, recent co
 - status: VERIFIED
 - exact verified head: `3207255476326e96490260ea665b5ceb56d44053`
 - CI: Fixture validation `34795489707` SUCCESS.
-- verified work: reusable fixture render projection; no local checkout; no live commercial fields; stale VERIFIED evidence now suppresses positive Prime claim, ranking presentation and outbound CTA.
-- replenished adjacent batch: PENDING
+- verified work: reusable fixture render projection; no local checkout; no live commercial fields; stale/unknown/blocked evidence suppresses ranking/outbound action and positive Prime requires CURRENT freshness.
+- adjacent batch status: PENDING
   1. category-level STALE/UNKNOWN must suppress positive ranking framing;
   2. missing/invalid ranking position must fail closed before render ordering;
   3. BLOCKED freshness must suppress verified outbound action;
@@ -103,9 +110,8 @@ Before acting on an item, refresh the relevant repository branch/head, recent co
 - status: VERIFIED
 - exact verified head: `9fb23afd4f9eead58b47c8152e059c13d1bf40c4`
 - CI: Economics validation `34795358739` SUCCESS.
-- reconciliation: first expanded batch head `0bc82e4...` failed because a positional test accidentally selected a newly inserted calculated scenario; corrected tests now bind by scenario ID and exercise all four decision-support scenarios plus the UNKNOWN delivery fail-closed case.
 - verified property: public-reference/hypothesis scenarios never become commercial-pass; UNKNOWN required input remains NOT_TESTABLE.
-- replenished adjacent batch: PENDING
+- adjacent batch status: PENDING
   1. representative menu/AOV scenario with every project-specific cost explicitly evidence-classified;
   2. packaging-cost UNKNOWN case remains NOT_TESTABLE;
   3. labour-cost UNKNOWN case remains NOT_TESTABLE;
@@ -116,9 +122,8 @@ Before acting on an item, refresh the relevant repository branch/head, recent co
 - status: VERIFIED
 - exact verified head: `a70d0726145efcdae2ad0ccc6dec8ca4b370ab69`
 - CI: Territory fixture validation `34795399126` SUCCESS.
-- reconciliation: first audit-test head `0073089...` failed because test expected non-existent case ID `no-service`; corrected to canonical fixture ID `unserviceable`.
 - verified property: routing output includes matched active-area IDs, candidate franchises, selected franchise and explicit selection/denial reason; active overlap/unknown franchise/inactive franchise/no-service fail closed.
-- replenished adjacent batch: PENDING
+- adjacent batch status: PENDING
   1. add territory/version used to every decision record;
   2. add deterministic correlation ID for synthetic routing decision;
   3. add evidence timestamp/source marker for fixture decision context;
@@ -129,7 +134,7 @@ Before acting on an item, refresh the relevant repository branch/head, recent co
 - exact verified head: `2d008aebd593115b71c72a86aab581dd42da5fdc`
 - CI: Level 2 fixture validation `34795508014` SUCCESS.
 - verified work: deterministic initial->target mutation, idempotent replay, near-miss state rejection, prepared-record mission/project/preimage/target hash binding, and stale prepared replay rejection.
-- replenished adjacent batch: PENDING
+- adjacent batch status: PENDING
   1. duplicate complete-target recovery stays idempotent;
   2. prepared artifact with correct hashes but missing required identity field fails closed;
   3. recovery decision records original/prepared chosen state deterministically;
@@ -156,12 +161,14 @@ Before acting on an item, refresh the relevant repository branch/head, recent co
 - CI: Validate repository `34793554142` SUCCESS.
 - meaning: legacy evaluator compatibility path delegates to canonical semantics with exact-head validation. This is not AgentOS PR #104 assurance and does not imply overall PRS/AgentOS GREEN.
 
-# NEXT PASS ORDER
-1. Fresh-scan all target repos before action.
-2. LANE A: A-001 if new ownership primitive evidence exists; otherwise A-003 without bypassing A-001.
-3. LANE B: B-001 first; use B-002/B-005 green adjacent batches while commercial evidence remains blocked.
-4. LANE C: C-001 first among unresolved ventures; C-002/C-003/C-004 green adjacent batches are now eligible for 2–4 homogeneous items each.
-5. Fresh-scan every touched repo again before replenishment.
-6. Preserve explicit HOLD/BLOCKED/UNKNOWN states; do not let them starve other safe work.
+# :30 RECONCILIATION — 2026-09-14 11:31 Brisbane
+- LANE A: A-001 BLOCKED; A-002 BLOCKED; A-003 ACTIVE after bounded producer/pickup seam inspection; A-004 replenished PENDING. PR #104 exact head `083b7dec...`; run #971 `34791584537` CANCELLED. No exact-head full CI PASS, new Green PASS or PRS PASS.
+- LANE B: B-001 PENDING/HOLD; B-002 VERIFIED with adjacent fixture-safe batch PENDING; B-003 PENDING; B-004 PENDING; B-005 VERIFIED at `3207255...` / CI `34795489707` SUCCESS with adjacent homogeneous batch PENDING. Commercial supplier/freight/free-delivery/marketplace gates remain explicit UNKNOWN/HOLD.
+- LANE C: C-001/C-005/C-006/C-007 PENDING. C-002 VERIFIED `9fb23af...` / `34795358739`; C-003 VERIFIED `a70d072...` / `34795399126`; C-004 VERIFIED `2d008ae...` / `34795508014`; each retains a homogeneous fixture-safe PENDING batch.
+- No item was upgraded from scheduler firing or worker claim alone. No mixed-confidence batch was widened. No overall GREEN.
 
-**Reconciled and replenished after manual vertical batch:** 2026-09-14 owner-triggered cycle following pre-action and pre-replenishment fresh scans.
+# NEXT PASS ORDER
+1. LANE A: A-001 only if a real ownership primitive appears; otherwise continue A-003/A-004 evidence/test closure without bypassing A-001.
+2. LANE B: B-001 first; then B-002/B-005 homogeneous fixture batches while external commerce evidence remains blocked; B-003/B-004 remain fail-closed.
+3. LANE C: C-001 first unresolved venture; then C-002/C-003/C-004 homogeneous adjacent batches; C-005/C-006/C-007 remain useful PENDING work.
+4. Preserve HOLD/BLOCKED/UNKNOWN states and historical evidence; no merge/deploy/credentials/production writes/purchases/supplier contact/live publication/production autonomy.
