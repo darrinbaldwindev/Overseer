@@ -4,21 +4,17 @@
 **Repository:** `darrinbaldwindev/Overseer`  
 **Canonical mission:** `darrinbaldwindev/Overseer#49`  
 **Doctrine:** `.overseer/doctrine/VERTICAL-BATCH-EXECUTION.md`  
-**Last fresh scan:** 2026-09-14 15:28 AEST post-execution reconciliation  
-**Current batch status:** ACTIVE / REPLENISHED / EVIDENCE-GATED  
+**Last fresh scan:** 2026-09-14 AEST — current autonomous cycle, pre- and post-execution  
+**Current batch status:** ACTIVE / REPLENISHED / EVIDENCE-GATED
 
 ## Operating rule
-
-Every owner `cont`, `continue`, `continue autonomously`, or `continue autonomously vertically` triggers a **new fresh repository/workstream scan first**. This file is a hypothesis, not authority. Live heads, issues, PRs, CI/runtime evidence, external commercial evidence and explicit owner authority control.
-
-Cycle:
+Every owner `cont`, `continue`, `continue autonomously`, or `continue autonomously vertically` triggers a mandatory fresh repository/workstream scan before this file is trusted.
 
 > fresh scan → reconcile batch → execute maximum safe vertical work → verify → fresh scan again → replenish same file → durable Marketing log/checkpoint
 
-This file is not a scheduler, mission ledger, source of truth, publication authority, Green system or PRS system.
+This file is a bounded Marketing execution manifest only. It is not a scheduler, mission ledger, source of truth, publication authority, Green system or PRS system.
 
 ## Standing priority order
-
 1. AgentOS
 2. GlobalShopCo + Shopify→eBay
 3. GlobalShopCo Headless
@@ -27,149 +23,146 @@ This file is not a scheduler, mission ledger, source of truth, publication autho
 6. Other active portfolio projects where marketing materially advances trust, adoption or revenue
 
 ## Governance
-
-Unless explicitly authorised: no merge, approve, mark-ready, rebase, deploy, credential change, purchase, supplier/customer contact, product/listing publication, paid campaign activation, production write or production autonomy. Marketing does not self-certify technical GREEN.
+Unless explicitly authorised: no merge, approve, mark-ready, rebase, deploy, credential change, purchase, supplier/customer contact, production publication/listing activation, paid campaign activation, production write or production autonomy. Marketing does not self-certify technical GREEN.
 
 ---
 
 # CURRENT FRESH-SCAN TRUTH
 
 ## AgentOS
-
-- Level 2 remains immediate technical P0; Level 5 strategic end-state.
+- Level 2 remains immediate P0; Level 5 strategic end-state.
 - PR #104 remains OPEN / DRAFT / UNMERGED at exact head `71c463a77b31ebeac2bfe00da13c684512daccf7`.
 - Exact-head AgentOS Tests #976 / `34808263482` = SUCCESS.
-- Exact-head CI PASS is regression evidence only; it does not clear the core ownership blocker.
-- Continuous kernel-enforced project-file ownership through publish/prepared recovery/durable success receipt remains unresolved.
+- CI success remains regression evidence only.
+- Continuous kernel-enforced ownership through publish/prepared recovery/durable success receipt remains unresolved.
 - Authenticated transport identity + canonical grant lookup remain unwired into admission.
-- Physical Windows acceptance has not been rerun on the current runtime-changing head.
-- No exact-head independent Green PASS and no subsequent independent PRS PASS.
+- Physical Windows acceptance has not been rerun on current runtime-changing head.
+- No exact-head independent Green PASS and no downstream independent PRS PASS.
 - Founding Beta remains HOLD.
 
-## GlobalShopCo + Shopify→eBay
+## Competitive trust/control
+Fresh current documentation confirms:
+- Cursor exposes approval/guardrail behavior and allows workspace edits while requiring approval for sensitive/configuration actions.
+- OpenHands exposes always/never/risk-based confirmation, security analyzers and sandbox choices; its process mode explicitly lacks isolation.
+- Microsoft Copilot Studio/Agent 365 has materially expanded centralized agent identity, policy, audit, risk and connector governance.
+- Claude Code exposes tool allow/deny controls, permission modes, scoped directories and gateway-based usage/cost/audit control.
 
-- GlobalShopCo Issue #17 remains the eBay control gate.
-- Older “choose/install Omnivore” wording is stale as a description of live setup: Shopify Marketplace Connect is already installed and eBay AU `globalshopco` is connected.
-- Connector presence is not channel readiness or publication authority.
-- `shopify_ebay` bounded synthetic contract evidence is VERIFIED at non-production/no-network scope through exact evidenced checkpoint `b57e0a47bdff4b699d8b6b346fe5e9e1a0bbacc3` with Fixture validation SUCCESS.
-- Real listing/inventory/order/tracking behavior remains NOT VERIFIED / HOLD.
-- Home Organisation SKU `V178-36336` is now REJECT / NOT FIRST-LAUNCH at current public economics: A$37.99 supplier/public delivered path vs A$34.95 exact free-shipping retail offer before fees/losses/margin.
-- Southern Pet GiGwi family remains PERMISSION-REQUIRED / trade-cost gated.
-- Current Eleganter candidates remain NOT ELIGIBLE under known marketplace restrictions.
-- Current result: **0 eBay-ready SKUs**.
+Marketing consequence: approvals, sandboxing, tool policy, local files, terminal access, MCP/tool connectivity, audit logs and cost controls are not strong standalone differentiation. AgentOS should differentiate on the integrated trust loop: explicit authority → bounded execution → durable evidence → recovery/replay discipline → independent Green → independent PRS → understandable result.
+
+## GlobalShopCo + Shopify→eBay
+- Current result remains **0 eBay-ready SKUs**.
+- Marketplace Connect installed/account connected remains distinct from production-safe sync assurance and publication authority.
+- Synthetic no-network adapter/contract proof remains bounded evidence only.
+- `V178-36336` remains REJECT / NOT FIRST-LAUNCH.
+- `V178-36126` further demoted by retail compression.
+- `V178-36023` = P0 HOLD pending authenticated trade/freight/permission evidence.
+- `V178-36045` = HOLD / SECONDARY due freight sensitivity.
+- `CAH-67362` = HOLD / secondary, not admitted to active pilot.
+- `CAH-67361` = REJECT first wave / research hold.
+- Southern Pet GiGwi candidates remain PERMISSION-REQUIRED / trade-cost gated.
+- No current source-hunt result authorises publication or paid acquisition.
 
 ---
 
-# CONSUMED THIS CYCLE
+# CONSUMED / VERIFIED THIS CYCLE
 
-## M-A001 — Exact-head AgentOS claim reconciliation
+## M-A004 — Beta measurement schema + GO/HOLD dashboard
 **Priority:** P0  
-**State:** VERIFIED for marketing classification / technical gate BLOCKED  
-**Result:** no broad Level 2 claim promoted. Safe architecture wording remains governed-execution positioning only.
+**State:** VERIFIED as Marketing/beta operations artifact / ACTIVATION HOLD  
+**Artifact:** `reports/2026-09-14-agentos-founding-beta-scorecard-and-go-hold-dashboard.md`  
+**Commit:** `3e6d3d96657ea2d26b16cef4a330cbce43ae5e58`  
+**Delivered:** pinned-build/session identity, permission comprehension, containment, stop/revoke, recovery/replay, evidence comprehension, severity ladder, second-job signal, wave dashboard and automatic HOLD rules.
 
-## M-A002 — Founding Beta Wave 0 activation pack
+## M-A005 — Founding Beta invitation + screening copy
 **Priority:** P0  
-**State:** VERIFIED / ACTIVATION HOLD  
-**Artifact:** `reports/2026-09-14-agentos-founding-beta-wave0-activation-pack.md` @ `e56f7f0810d8b8add0c1b8e884a796f00764f43a`  
-**Delivered:** 5–8 tester composition, recruitment source hierarchy, screening rubric, mission families, session structure, measurement, failure taxonomy, GO/HOLD gate, stop conditions, expansion gate, segment messaging.  
-**North-star:** `% testers who attempt a second real job without prompting`.
+**State:** VERIFIED as prepared copy / DO NOT SEND  
+**Artifact:** `reports/2026-09-14-agentos-founding-beta-invitation-and-screener.md`  
+**Commit:** `53782e28fe0a6a41021a1307e99329f59ca0d6da`  
+**Delivered:** invitation, short version, screener, selection rubric, 5–8 tester composition, expectation language, facilitator boundaries, mission examples and activation checklist.
 
-## M-A003 — Trust UX marketing/product brief
-**Priority:** P0  
-**State:** VERIFIED as product/marketing brief / IMPLEMENTATION NOT CLAIMED  
-**Artifact:** `reports/2026-09-14-agentos-trust-ux-marketing-product-brief.md` @ `3ba5bd49623e2a3194fac09b253a29ce9e5de976`  
-**Delivered:** Evidence Timeline, Pause/Stop/Revoke, Restricted Mode, permission explanations, Connector Centre, Local/Cloud/Mixed, exact VERIFIED semantics, secret handles, device/connector trust, recovery state, Simple/Essentials/Tech Head hierarchy.
+## M-A006 — Competitive trust/control refresh — Batch 1
+**Priority:** P1  
+**State:** VERIFIED for current researched subset  
+**Artifact:** `reports/2026-09-14-agentos-competitive-trust-control-refresh.md`  
+**Commit:** `abecdf2738d1a343b8234771274a15fbd204dc90`  
+**Covered:** Cursor, OpenHands, Microsoft Copilot Studio/Agent 365, Claude Code.  
+**Result:** governance primitives are increasingly table stakes; strongest AgentOS direction remains integrated authority + evidence + recovery/replay + independent assurance + provider-neutral control.
 
-## M-B001 — GlobalShopCo/eBay marketing readiness delta
-**Priority:** P0 commercial  
-**State:** VERIFIED for marketing classification / LAUNCH BLOCKED  
-**Artifact:** `reports/2026-09-14-globalshopco-ebay-marketing-readiness-delta.md` @ `69068d3ff90381fb877fe5fb2e0bdfa19fbdaa95`  
-**Delivered:** strict separation of connector presence, synthetic contract proof, real connector behavior, per-SKU eligibility and publication authority.  
-**Current output:** PRELAUNCH / 0 EBAY-READY SKUS / PUBLICATION HOLD.
-
-## Durable checkpoint
-- `Overseer#49` comment `5659434621`.
-- Canonical Marketing log updated at commit `0dcab5b1ca1ce170f0ba8990c7dd1c12b918e5ca`.
+## M-B002/M-B003/M-B004/M-B005/M-B006 — GlobalShopCo/eBay prelaunch marketing batch
+**Priority:** P0/P1 commercial  
+**State:** VERIFIED as prelaunch preparation / ACTIVATION BLOCKED  
+**Artifact:** `reports/2026-09-14-globalshopco-ebay-marketing-batch-2.md`  
+**Commit:** `25c1fa2d12f0fe1b2284379f2e9adcce5cbadc21`  
+**Delivered:** latest SKU pruning, Southern Pet permission-required shell rules, 24-field fail-closed listing/product contract, `CONNECTED ≠ VERIFIED SYNC ≠ SKU ELIGIBLE ≠ PUBLISHED` boundary, organic prelaunch plan and first-qualified-SKU activation sequence.
 
 ---
 
 # REPLENISHED LANE M-A — AGENTOS
 
-## M-A004 — Beta measurement schema + GO/HOLD dashboard
-**Priority:** P0  
-**State:** PENDING  
-**Goal:** convert Wave 0 pack into a single operator-ready scorecard.  
-**Fields:** pinned build/head, tester ID alias, real job, authority scope, expected result, permission comprehension, containment, denial behavior, stop/revoke, evidence comprehension, recovery/restart, duplicate avoidance, support interventions, trust before/after, second-job attempt, second-job success, incident severity, go/hold disposition.  
-**Verification:** schema must not permit user satisfaction to overwrite technical safety failures.
-
-## M-A005 — Founding Beta invitation + screening copy
-**Priority:** P0  
-**State:** PENDING / DO NOT SEND  
-**Goal:** prepare exact invitation, screener and expectation language for Wave 0.  
-**Rule:** no current capability guarantees; clearly communicate controlled founding beta, real jobs, explicit boundaries, possible fail-closed stops and feedback expectations.  
-**Activation:** only after fresh GO-gate scan.
-
-## M-A006 — Competitive trust/control refresh
-**Priority:** P1  
-**State:** PENDING  
-**Targets:** OpenHands, Goose, Open Interpreter, Cline/Roo, Claude Code, Cursor, Raycast, Manus, Copilot Studio, Open WebUI Computer, n8n/Zapier, major local-model shells.  
-**Compare:** authority, approval UX, evidence, stop/revoke, recovery, replay/idempotency, local/cloud boundary, secrets, connector trust, capability ecosystem, onboarding, pricing.  
-**Deliverable:** current dated comparison and implication matrix: COPY / ADAPT / DIFFERENTIATE / IGNORE.  
-**Rule:** current web/repo evidence only.
-
 ## M-A007 — Claim promotion watcher
-**Priority:** P1  
+**Priority:** P0 watch  
 **State:** BLOCKED / WATCH  
-**Trigger:** any movement on ownership fence, authenticated admission, physical Windows current-head acceptance, Green, PRS.  
-**Action after trigger:** fresh scan exact build and promote only exact supported claims.
+**Trigger:** movement on ownership fence, authenticated admission, current-head physical Windows acceptance, Green or PRS.  
+**Action:** mandatory fresh exact-head scan; promote only exact evidence-supported claims.
 
-## M-A008 — AgentOS Content360 packet refresh
+## M-A008 — Competitive trust/control refresh — Batch 2
+**Priority:** P1  
+**State:** PENDING  
+**Targets:** Manus, n8n/Zapier agent approvals, Raycast, Open Interpreter, Cline/Roo, Open WebUI Computer/local-model shells.  
+**Goal:** fill the remaining high-value rows without assumption; compare authority, approvals, evidence, recovery, stop/revoke, replay/idempotency, local/cloud, secrets, connector trust, onboarding and price.  
+**Output:** append or companion report with COPY / ADAPT / DIFFERENTIATE / IGNORE implications.
+
+## M-A009 — Evidence Timeline message architecture
+**Priority:** P1  
+**State:** PENDING  
+**Goal:** convert the trust UX brief into exact user-readable event/message taxonomy: intended action, approval, execution, result, verification, Green, PRS, recovery, revoked/blocked, unknown.  
+**Rule:** wording must never imply VERIFIED before verification state exists.
+
+## M-A010 — Pause / Stop / Revoke claim contract
+**Priority:** P1  
+**State:** PENDING  
+**Goal:** define marketing/product language for requested vs acknowledged vs effective stop/revoke and residual in-flight state.  
+**Reason:** prevent UI wording from making stronger guarantees than runtime evidence.
+
+## M-A011 — AgentOS Content360 packet refresh
 **Priority:** P1  
 **State:** HOLD  
-**Trigger:** M-A007 allows new evidence-approved wording.  
-**Rule:** Content360 optimises; it does not invent claim strength.
+**Trigger:** M-A007 produces a claim upgrade or owner authorises evidence-safe pre-beta educational content.  
+**Rule:** Content360 optimises; it never increases claim strength.
 
 ---
 
 # REPLENISHED LANE M-B — GLOBALSHOPCO + EBAY
 
-## M-B002 — Exact-SKU launch-slice pruning
+## M-B007 — Continuous exact-SKU marketing pruning
 **Priority:** P0 commercial  
 **State:** PENDING / CONTINUOUS  
-**Goal:** consume each new GlobalShopCo exact-SKU closure and immediately classify PASS/HOLD/REJECT for Marketing.  
-**Current locked rejection:** `V178-36336` NOT FIRST-LAUNCH unless materially lower authorised acquisition evidence appears.  
-**Rule:** do not keep weak candidates alive for assortment optics.
+**Action:** consume every new GlobalShopCo #17 exact-SKU closure after fresh scan; classify `MARKETING-SHELL-ELIGIBLE`, HOLD, REJECT-FIRST-LAUNCH or ACTIVATION-ELIGIBLE.  
+**Rule:** no weak candidate survives for assortment optics.
 
-## M-B003 — Southern Pet permission-required copy shell
+## M-B008 — Active 8-SKU pilot marketing matrix mirror
 **Priority:** P0 commercial  
-**State:** PENDING / NO ACTIVATION  
-**Goal:** prepare product-information shells for the 5 GiGwi candidates without price/delivery/availability or marketplace claims.  
-**Fields allowed:** verified factual product attributes, dimensions/materials/use cases where evidenced.  
-**Locked blanks:** sell price, free delivery, stock promise, eBay availability, supplier approval, delivery promise until evidence clears.
+**State:** PENDING  
+**Goal:** build a marketing-only pointer matrix to canonical project evidence for the active capped pilot; do not duplicate economics as source of truth.  
+**Fields:** SKU, source evidence pointer, permission state, economics state, marketing state, allowed copy fields, locked fields, freshness, next evidence required.
 
-## M-B004 — First-launch listing/product-page schema
+## M-B009 — First qualified SKU rapid-release kit
+**Priority:** P1  
+**State:** HOLD / READY TO EXECUTE ON FIRST PASS  
+**Trigger:** first SKU clears permission + fulfilment + economics + purchase-path + publication authority.  
+**Then produce:** eBay title/description/item specifics shell, owned-site product copy, SEO/AEO, social/email variants and Content360 packet from verified fields only.
+
+## M-B010 — Organic Home Organisation content batch 1
 **Priority:** P1  
 **State:** PENDING  
-**Required fields:** Shopify product/variant ID, exact supplier, SKU/GTIN, marketplace permission, stock/ownership model, blind shipping/seller identity, stock-control method, dispatch origin, handling, tracking, exclusions, trade cost/GST, freight by zones, eBay/integration/payment costs, returns/loss allowance, proposed price, free-delivery contribution, returns, warranty, compliance, evidence freshness, UNKNOWNs, publication authority.  
-**Fail closed:** any material legal/availability/delivery/economics UNKNOWN blocks final marketing production.
+**Scope:** 3–5 non-product-specific editorial assets around small-space organisation, measurement, pantry/drawer/fridge organisation and “how we qualify products” trust content.  
+**Rule:** no live-stock, price, delivery or “shop now” claims.
 
-## M-B005 — Prelaunch organic acquisition plan
+## M-B011 — Marketplace connector assurance wording monitor
 **Priority:** P1  
-**State:** PENDING  
-**Channels:** SEO/AEO category pages, non-product-specific buyer guides, organic social, email/waitlist capture, marketplace keyword research, Google free-listing readiness where later permitted.  
-**Rule:** no paid acquisition until a coherent vertical has qualified products + verified purchase path.
-
-## M-B006 — Connector assurance messaging boundary
-**Priority:** P1  
-**State:** PENDING  
-**Goal:** create internal one-page rule preventing “connected” from becoming “reliable/live/ready”.  
-**Marketing states:** CONNECTED ≠ VERIFIED SYNC ≠ SKU ELIGIBLE ≠ PUBLISHED.
-
-## M-B007 — Content360 commerce packet
-**Priority:** P1  
-**State:** HOLD  
-**Trigger:** first evidence-complete SKU.  
-**Then:** produce title/features/SEO/social/email variants from locked verified fields only.
+**State:** WATCH  
+**Trigger:** real Marketplace Connect listing/inventory/order/tracking evidence changes.  
+**Rule:** connected state never self-promotes to reliable/live/ready.
 
 ---
 
@@ -182,31 +175,34 @@ Unless explicitly authorised: no merge, approve, mark-ready, rebase, deploy, cre
 ## M-C002 — SEO/AEO vertical-page template
 **Priority:** P1  
 **State:** PENDING  
-**Rule:** Shopify remains canonical price/stock/product truth; WordPress presentation must fail safely on stale/missing data.
+**Rule:** Shopify remains canonical price/stock/product truth; WordPress presentation fails safely on stale/missing data.
 
 ## M-C003 — Trust/stale-state UX copy
 **Priority:** P1  
 **State:** PENDING  
-**Scope:** unavailable, price changed, delivery unknown, checkout handoff, returns/warranty source, last-verification indicators where appropriate.
+**Scope:** unavailable, price changed, delivery unknown, checkout handoff, returns/warranty source and last-verification indicators where appropriate.
 
 ---
 
 # LANE M-D — AFFILIATE WEBSITES
 
-## M-D001 — Editorial-first country acquisition batches
+## M-D001 — Editorial-first AU batch
+**Priority:** P1 after AgentOS/commerce independent safe work  
+**State:** PENDING  
+**Goal:** useful acquisition content that works without monetised CTA activation.
+
+## M-D002 — UK editorial-first batch
+**Priority:** P1  
+**State:** PENDING
+
+## M-D003 — US editorial-first batch
+**Priority:** P1  
+**State:** PENDING
+
+## M-D004 — Programme relationship proof gate refresh
 **Priority:** P1  
 **State:** PENDING  
-**Countries:** AU / UK / US.  
-**Goal:** useful content independent of monetised CTA activation.
-
-## M-D002 — Programme relationship proof gate
-**Priority:** P1  
-**State:** PENDING  
-**Rule:** publisher affiliate, consumer referral, rewards programme and editorial mention must remain distinct.
-
-## M-D003 — Content360 country routing packets
-**Priority:** P2  
-**State:** PENDING behind publication-time programme fact recheck.
+**Rule:** publisher affiliate, consumer referral, rewards programme and editorial mention remain distinct; recheck at publication.
 
 ---
 
@@ -220,17 +216,16 @@ Unless explicitly authorised: no merge, approve, mark-ready, rebase, deploy, cre
 
 ## M-E002 — Future franchise evidence ladder
 **Priority:** P2  
-**State:** PENDING  
-**Requires:** real recipe/portion costs, packaging/delivery tests, kitchen pilot, demand evidence, actual operating economics, legal/franchise review, approved fees/terms.
+**State:** PENDING.
 
 ---
 
 # LANE M-F — PORTFOLIO LEARNING
 
-## M-F001 — Marketing claim-evidence index
+## M-F001 — Marketing claim-evidence pointer index
 **Priority:** P1  
 **State:** PENDING  
-**Goal:** pointer/index only; never duplicate canonical technical/commercial truth.
+**Goal:** pointers only to canonical technical/commercial truth; never duplicate source-of-truth state.
 
 ## M-F002 — Content360 learning loop
 **Priority:** P2  
@@ -240,21 +235,16 @@ Unless explicitly authorised: no merge, approve, mark-ready, rebase, deploy, cre
 ---
 
 # NEXT AUTONOMOUS EXECUTION ORDER
-
-At the next `cont`, after the mandatory fresh scan:
-
-1. If AgentOS technical proof moved, reconcile claims/beta gate first.
-2. If not, execute M-A004 beta scorecard and M-A005 invitation/screener pack.
-3. Execute M-A006 competitive trust/control refresh using current dated evidence.
-4. Consume newest GlobalShopCo exact-SKU/eBay evidence; execute M-B002 and M-B003/M-B004 where eligible.
-5. Execute M-B005 organic prelaunch plan if real product activation is still blocked.
-6. Continue to Headless/Affiliate/GhostKitchen only after higher-priority independent safe work is consumed or blocked.
-7. Fresh-scan again, replenish this exact file, update canonical Marketing log and #49 where portfolio-significant.
+At next `cont`, after mandatory fresh scan:
+1. AgentOS exact-head/Green/PRS claim gate first if technical evidence moved.
+2. If still blocked, execute M-A008 competitive Batch 2 and M-A009/M-A010 trust-language contracts.
+3. Consume latest GlobalShopCo #17 changes; execute M-B007 and M-B008.
+4. If no SKU activates, execute M-B010 organic Home Organisation batch rather than idle.
+5. Then move vertically to Headless M-C002/M-C003, followed by Affiliate M-D001–M-D004 if higher lanes remain blocked.
+6. Fresh scan again; replenish this exact file; update canonical Marketing log and #49 for portfolio-significant changes.
 
 # PROTECTED ACTIONS STILL UNAUTHORISED
-
 Public beta recruitment, paid AgentOS campaigns, eBay listing publication, Shopify product activation, Marketplace Connect setting mutation, supplier contact/permission request, purchases, paid GlobalShopCo acquisition, monetised affiliate activation without approval evidence, franchise offer publication, merge/deploy/credentials/production autonomy.
 
 # CORE PRINCIPLE
-
 Every `cont` must materially advance the portfolio while preserving evidence. Fresh repository truth outranks this batch. A blocked top item does not starve independent safe work, but UNKNOWN never becomes PASS through optimism.
