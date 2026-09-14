@@ -17,11 +17,13 @@ The canonical engine is the common procedure. Project profiles customize only th
 3. Fresh-scan the project before trusting old chat/batch state.
 4. Locate the established local batch path. Prefer `.overseer/batches/VERTICAL-EXECUTION-BATCH.md`; preserve a documented established alternate path until deliberately migrated.
 5. Reconcile the local batch from fresh evidence.
-6. Execute the fullest safe coherent work permitted by the engine/profile.
-7. Verify exact changed state.
-8. Fresh-scan again.
-9. Replenish the same local batch.
-10. Log material progress in the project's durable control record and surface portfolio-significant state to Overseer #49.
+6. Show the owner a compact **Current Batch** in the chat window: ACTIVE NOW, NEXT, BLOCKED/HOLD/UNKNOWN, VERIFIED SINCE LAST CYCLE, and BATCH SOURCE.
+7. Execute the fullest safe coherent work permitted by the engine/profile.
+8. Verify exact changed state.
+9. Fresh-scan again.
+10. Replenish the same local batch.
+11. Show the compact **Updated Batch** in the chat window: what moved, what remains blocked, and what is queued next.
+12. Log material progress in the project's durable control record and surface portfolio-significant state to Overseer #49.
 
 Owner messages `cont`, `continue`, `continue autonomously`, and `continue autonomously vertically` trigger that complete cycle automatically.
 
@@ -34,6 +36,8 @@ Project Overseers must not rely on chat memory for the standard. They discover i
 - :30 reconciliation reads the shared manifest and #49, where project-significant batch changes are logged;
 - :40 Jess/Michael assurance reads the exact evidence lineage produced by the execution lanes rather than trusting execution claims.
 
+When an Overseer-role chat is active, it must project the current durable batch into the owner-facing response. This projection is for visibility only and never becomes a competing source of truth. Ordinary unrelated chats in the same ChatGPT Project do not inherit this behavior simply because they are open.
+
 If the canonical engine/profile changes, the next fresh cycle must re-read it before executing. A copied older project script does not override the central engine.
 
 ## Governance
@@ -42,4 +46,4 @@ Do not create duplicate schedulers, queues, authority systems, registries, missi
 **NO MODEL DECIDES ITS OWN AUTHORITY.**
 
 ## Owner one-line alignment instruction
-> Read the canonical Portfolio Batch Engine and your matching Project Batch Profile from `darrinbaldwindev/Overseer`, fresh-scan this project, reconcile and execute the local vertical batch, verify, fresh-scan again, replenish, and durably log the checkpoint. My `cont` / `continue autonomously` messages trigger that full cycle.
+> Read the canonical Portfolio Batch Engine and your matching Project Batch Profile from `darrinbaldwindev/Overseer`, fresh-scan this project, reconcile and show me the Current Batch, execute the local vertical batch, verify, fresh-scan again, replenish, show me the Updated Batch, and durably log the checkpoint. My `cont` / `continue autonomously` messages trigger that full cycle.
