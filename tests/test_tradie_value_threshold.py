@@ -59,7 +59,7 @@ class TradieValueThresholdTests(unittest.TestCase):
             })
 
     def test_unknown_fields_fail_closed_instead_of_expanding_authority(self):
-        with self.assertRaisesRegex(ValueError, "unsupported fields:publish_now"):
+        with self.assertRaisesRegex(ValueError, "unsupported fields: publish_now"):
             calculate_value_threshold({
                 "payments_per_week": 30,
                 "manual_closure_rate": 0.4,
