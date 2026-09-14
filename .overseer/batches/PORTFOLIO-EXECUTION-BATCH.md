@@ -41,7 +41,7 @@ Fresh-scan before action and reconciliation. States are only `PENDING`, `ACTIVE`
 - status: VERIFIED
 - exact head `9799e6fe5a9c72e42e1554949697a64acce14bd4`; M3 checkout CI `34798624627` SUCCESS.
 - external dev-store/browser proof remains UNKNOWN.
-- replenished PENDING homogeneous work: inspect production plugin host normalization; test trailing-dot/case-normalized exact-host behavior only if ambiguous; preserve exact-host HTTPS fail-closed/no-purchase behavior.
+- replenished PENDING homogeneous work: inspect production plugin host normalization; test trailing-dot/case-normalized exact-host behavior only if ambiguous; add encoded/whitespace host confusion only if parser path permits it; preserve exact-host HTTPS fail-closed/no-purchase behavior.
 
 ### B-003 — Shopify -> eBay readiness
 - status: PENDING
@@ -53,8 +53,9 @@ Fresh-scan before action and reconciliation. States are only `PENDING`, `ACTIVE`
 
 ### B-005 — MyPrimeDelivery synthetic WordPress slice
 - status: VERIFIED
-- exact head `528b5aabb778e490e603abf6463e6eff658c4e53`; Fixture validation `34798642173` SUCCESS.
-- replenished PENDING homogeneous work: fail closed missing category/ranking IDs; explicit non-positive empty batch; marketplace mismatch suppression; ranking source/method identity disagreement denial.
+- exact head `a0791c11624d751e36abc2d7d4c5b793b568c760`; Fixture validation `34799420919` SUCCESS.
+- consumed this manual cycle: category identity now requires category_id/ranking_method_id/marketplace; ranking-method record must match category identity; empty products render explicit non-positive `inventory_state: EMPTY`; product marketplace mismatch and ranking evidence source/method disagreement fail closed.
+- replenished PENDING: validate marketplace enum/scope; require ranking-method status/source to remain fixture-safe; require timestamps when product evidence claims CURRENT/VERIFIED; preserve deterministic ranking order under harmless input ordering.
 - synthetic only; no live Prime/ranking/affiliate claim.
 
 # LANE C — PRODUCT / CONTENT / VENTURES
@@ -65,9 +66,11 @@ Fresh-scan before action and reconciliation. States are only `PENDING`, `ACTIVE`
 - replenished PENDING: publisher timestamp/future evidence validation; country evidence mismatch; blocked audit destination/tracking stripping; deterministic program-identity ordering.
 
 ### C-002 — GhostKitchen economics batch
-- status: VERIFIED
-- exact head `10a519c59ad63e2c71b0c0d96e9c4a09da8c9c93`; Economics validation `34798678519` SUCCESS.
-- replenished PENDING: explicit negative-net-revenue policy; reject ambiguous unknown input keys; explicit non-commercial empty batch; deterministic evaluation independent of object key order.
+- status: VERIFIED after repair
+- exact head `ddfb2d872ca116b2cf18d3a98d53670b0c228237`; Economics validation `34799531732` SUCCESS.
+- consumed this manual cycle: negative revenue fails closed; unknown scenario/input/batch keys fail closed while canonical fixture `status` and `source_note` metadata remain allowed; empty batch is explicit/non-commercial; deterministic evaluation survives input-key reordering.
+- repair evidence: predecessor `ee482e8ff60a236d32c8c172de75dab73381d30e` failed sample rendering because canonical fixture metadata was over-rejected; failed job was inspected and the existing metadata contract restored before exact-head SUCCESS.
+- replenished PENDING: validate allowed batch status enum; validate source_note type/emptiness without treating prose as authority; reject unknown keys inside evidence items; add batch evidence summary that cannot upgrade scenario eligibility.
 
 ### C-003 — Franchise territory/tenancy validation
 - status: VERIFIED
@@ -96,16 +99,17 @@ Fresh-scan before action and reconciliation. States are only `PENDING`, `ACTIVE`
 - status: VERIFIED only for evaluator-parity cleanup at `a646f4033fd1b0c40135cb6f5c1286e9c7610728`, CI `34793554142` SUCCESS.
 - AgentOS PR #104 remains unassured; no overall GREEN.
 
-# :30 RECONCILIATION — 2026-09-14 12:32 BRISBANE
-- Fresh canonical #49 and manifest re-read performed. No scheduler/worker claim promoted to VERIFIED.
-- AgentOS PR #104 independently refreshed: still OPEN/DRAFT/UNMERGED at `083b7decf48038764ec846a988a5cd30d2a4fa56`; ownership and authority-admission blockers therefore remain controlling.
-- Since the prior :30 checkpoint, durable execution evidence in the manifest records successful exact-head progression for Headless, MyPrimeDelivery, Affiliate-Websites, GhostKitchen, Franchise and GemVerse; those gates remain narrowly VERIFIED and each retains a homogeneous adjacent PENDING batch.
-- GlobalShopCo exact-SKU economics, eBay and Amazon readiness remain PENDING/HOLD rather than inferred complete; external commercial evidence must not starve Headless/MyPrimeDelivery safe fixture work.
-- Content360, Commercial Frontend and Marketing remain useful PENDING within existing LANE C scope.
-- No overall GREEN.
+# MANUAL RECONCILIATION — 2026-09-14 OWNER-TRIGGERED CYCLE
+- Fresh repository scan completed before action.
+- Manual execution advanced MyPrimeDelivery and GhostKitchen.
+- MyPrimeDelivery exact head `a0791c1...` / CI `34799420919` SUCCESS.
+- GhostKitchen exact head `ee482e8...` initially failed sample rendering; failure was traced to over-rejection of canonical fixture metadata, repaired, and replacement exact head `ddfb2d8...` / CI `34799531732` is SUCCESS.
+- Fresh pre-replenishment scan confirmed AgentOS PR #104 still `083b7dec...` OPEN/DRAFT/BLOCKED; Affiliate-Websites remains `d901b3e...`; Franchise remains `29fa054...`; GemVerse remains `0033b66...`; Headless remains `9799e6f...`.
+- Concurrent :30 manifest rewrite was detected via 409 and reconciled rather than overwritten.
+- No scheduler firing or worker claim was treated as completion evidence. No overall GREEN.
 
 # NEXT PASS ORDER
 1. LANE A: A-001 only on new ownership-primitive evidence; otherwise A-003/A-004.
-2. LANE B: B-001 evidence closure; B-002 production-code inspection; B-005 homogeneous fixture batch; B-003/B-004 bounded readiness.
+2. LANE B: B-001 evidence closure; B-002 production-code inspection; B-005 new fixture-safe evidence/timestamp batch; B-003/B-004 bounded readiness.
 3. LANE C: consume homogeneous C-001/C-002/C-003/C-004 batches; then C-005/C-006/C-007 as safe capacity remains.
 4. Re-scan exact heads/issues/CI before promoting any state and preserve all HOLD/BLOCKED/UNKNOWN evidence.
