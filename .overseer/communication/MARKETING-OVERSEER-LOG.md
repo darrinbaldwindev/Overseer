@@ -265,10 +265,13 @@
 - `reports/2026-09-13-agentos-ai-layer-north-star-and-pc-control-boundary.md`
 - `reports/2026-09-13-agentos-marketing-claim-and-beta-message-gate.md`
 - `reports/2026-09-14-agentos-marketing-level2-claim-delta.md`
+- `reports/2026-09-14-agentos-founding-beta-wave0-activation-pack.md`
+- `reports/2026-09-14-agentos-trust-ux-marketing-product-brief.md`
 
 ### GlobalShopCo / Shopify→eBay / Headless
 - `reports/2026-09-13-globalshopco-ebay-marketing-launch-gate.md`
 - `reports/2026-09-13-globalshopco-headless-marketing-readiness.md`
+- `reports/2026-09-14-globalshopco-ebay-marketing-readiness-delta.md`
 
 ### Affiliate Websites
 - `reports/2026-09-13-affiliate-websites-editorial-acquisition-gate.md`
@@ -329,3 +332,51 @@
 **Publication / production status:** PREPARED / NOT PUBLICLY ACTIVATED / NO PAID CAMPAIGN / NO OVERALL GREEN.
 
 **Next highest-value marketing action:** Keep AgentOS acquisition work focused on evidence-safe problem/promise messaging while technical proof advances; if no new AgentOS gate clears, continue with GlobalShopCo/eBay evidence-gated launch preparation using the latest connector/SKU eligibility state.
+
+---
+
+## 2026-09-14 15:28 AEST — Marketing Overseer / Fresh-scan vertical execution batch
+
+**Project/lane:** Portfolio Marketing Overseer — AgentOS P0 plus GlobalShopCo/eBay commercial lane.
+
+**Mission:** Apply the mandatory vertical-batch doctrine to Marketing: fresh-scan live repo/control evidence, create a durable maximum-use batch, execute the highest-value safe work, post-scan again, and leave replenished next actions.
+
+**Evidence reviewed:**
+- `Overseer#49`, including current Lane A and Lane B comments.
+- AgentOS PR #104 exact head `71c463a77b31ebeac2bfe00da13c684512daccf7`, still OPEN / DRAFT / UNMERGED.
+- Exact-head AgentOS Tests run #976 / `34808263482` = SUCCESS.
+- Persistent Level 2 blockers: continuous ownership fence, canonical authenticated admission, current-head physical Windows acceptance, independent Green then PRS.
+- GlobalShopCo #17 current evidence superseding older connector-selection wording: Marketplace Connect installed and eBay AU `globalshopco` connected, but no publication authority.
+- `shopify_ebay` bounded synthetic contract evidence through `b57e0a47bdff4b699d8b6b346fe5e9e1a0bbacc3` with Fixture validation SUCCESS.
+- Fresh Commerce Lane B exact-SKU evidence rejecting `V178-36336` as NOT FIRST-LAUNCH at current public economics.
+
+**Work completed:**
+- Created `.overseer/batches/MARKETING-VERTICAL-BATCH.md` as the durable Marketing vertical manifest.
+- Prepared `reports/2026-09-14-agentos-founding-beta-wave0-activation-pack.md` with 5–8 tester Wave 0 composition, mission families, measurement, HOLD/GO gate, stop conditions and second-real-job north-star signal.
+- Prepared `reports/2026-09-14-agentos-trust-ux-marketing-product-brief.md` covering Evidence Timeline, Pause/Stop/Revoke, Restricted Mode, permissions, Connector Centre, Local/Cloud/Mixed, VERIFIED semantics, secrets/device trust and recovery-state UX.
+- Prepared `reports/2026-09-14-globalshopco-ebay-marketing-readiness-delta.md`, explicitly separating connector presence, synthetic contract proof, real connector behavior, SKU eligibility and publication authority.
+- Added durable portfolio checkpoint to `Overseer#49` comment `5659434621`.
+
+**Artifacts / commits:**
+- `.overseer/batches/MARKETING-VERTICAL-BATCH.md` @ `0b520219a87119f8ab70d72e2f7e079ed731702c`.
+- `reports/2026-09-14-agentos-founding-beta-wave0-activation-pack.md` @ `e56f7f0810d8b8add0c1b8e884a796f00764f43a`.
+- `reports/2026-09-14-agentos-trust-ux-marketing-product-brief.md` @ `3ba5bd49623e2a3194fac09b253a29ce9e5de976`.
+- `reports/2026-09-14-globalshopco-ebay-marketing-readiness-delta.md` @ `69068d3ff90381fb877fe5fb2e0bdfa19fbdaa95`.
+
+**Claims promoted/demoted:**
+- No broad AgentOS Level 2 claim promoted; exact-head CI PASS does not clear the ownership/admission/physical-Windows/Green/PRS gates.
+- AgentOS Wave 0 is **PREPARED / ACTIVATION HOLD**, not open recruitment.
+- Trust UX items are **PRODUCT DIRECTION**, not implementation claims.
+- GlobalShopCo/eBay remains **PRELAUNCH / 0 EBAY-READY SKUS / PUBLICATION HOLD**.
+- Marketplace Connect installed/account connected = verified; production-safe connector behavior = not verified.
+- `V178-36336` is demoted to **REJECT / NOT FIRST-LAUNCH** at current public economics.
+
+**Competitive findings:** No new competitor research was completed in this cycle; competitive trust/control refresh is replenished as the next AgentOS P1 research task.
+
+**Product gaps:** AgentOS still requires reliable ownership/recovery/admission/current-head physical-Windows/assurance proof; GlobalShopCo still requires evidence-complete positive-economics SKU(s) and real connector acceptance.
+
+**Blockers / UNKNOWNs:** Founding Beta remains HOLD. GlobalShopCo has 0 eBay-ready SKUs. Southern Pet remains permission-required/trade-cost gated. Real Marketplace Connect behavior remains unverified.
+
+**Publication / production status:** NO PUBLIC BETA / NO PAID CAMPAIGN / NO EBAY LISTING PUBLICATION / NO SUPPLIER CONTACT / NO CONNECTOR MUTATION / NO OVERALL GREEN.
+
+**Next highest-value marketing actions:** beta measurement schema + GO/HOLD dashboard; competitive trust/control refresh; consume next GlobalShopCo exact-SKU closure and prune weak candidates; prepare first-launch product/listing schema + organic prelaunch plan; refresh Content360 packets only after claim/SKU evidence clears.
