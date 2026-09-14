@@ -13,7 +13,8 @@ Fresh-scan before action and reconciliation. States are only `PENDING`, `ACTIVE`
 - status: BLOCKED
 - exact evidence: AgentOS PR #104 OPEN/DRAFT/UNMERGED at `7df40bf9b1c50312983d75eb91e397a16c2d55b1`.
 - blocker: check-to-publish ownership race remains; no kernel-enforced ownership primitive held continuously through publish/prepared recovery/durable success receipt.
-- exact-head AgentOS Tests #974 / `34801212972` is FAILURE: Ubuntu/Node 22 passed test+audit; Windows/Node 26 failed test suite. Independent Green PASS and PRS PASS are not evidenced.
+- exact-head AgentOS Tests #974 / `34801212972` now concludes SUCCESS after Windows/Node 26 retry attempt 2 job `103853915603` passed test suite + npm audit; Ubuntu/Node 22 also passed. Initial Windows failure remains unexplained/transient and does not resolve the ownership blocker.
+- independent Green PASS and PRS PASS are not evidenced.
 - next: only act when a real ownership primitive changes; then adversarial exact-head tests + Ubuntu/Windows CI -> independent Green -> PRS on unchanged head.
 
 ### A-002 — Ownership adversarial regressions
@@ -27,10 +28,10 @@ Fresh-scan before action and reconciliation. States are only `PENDING`, `ACTIVE`
 - next: wait for/reuse a real canonical authenticated identity + grant source; do not create a duplicate authority layer or self-grant request fields.
 
 ### A-004 — Authority-source binding regressions
-- status: ACTIVE
-- exact evidence: `7df40bf9b1c50312983d75eb91e397a16c2d55b1` adds narrow tests for missing canonical grant fail-closed/zero durable artifacts and exact delivery/request/task/mission/wake/authority-evidence correlation.
-- CI: AgentOS Tests #974 / `34801212972` FAILURE because Windows/Node 26 test suite failed while Ubuntu/Node 22 passed.
-- next homogeneous set: isolate exact Windows failure; preserve missing authenticated actor, actor/grant mismatch, missing canonical grant evidence and exact correlation regressions. Do not promote until exact-head cross-platform CI passes.
+- status: VERIFIED
+- exact evidence: `7df40bf9b1c50312983d75eb91e397a16c2d55b1` includes narrow tests for missing canonical grant fail-closed/zero durable artifacts and exact delivery/request/task/mission/wake/authority-evidence correlation.
+- CI: AgentOS Tests #974 / `34801212972` SUCCESS after Windows retry attempt 2 job `103853915603`; Ubuntu/Node 22 and Windows/Node 26 test+audit both pass on unchanged exact head.
+- replenished PENDING homogeneous work: preserve missing authenticated actor, actor/grant mismatch, missing canonical grant evidence, stale/replayed grant evidence and exact correlation regressions; do not invent a transport/grant authority source.
 
 # LANE B — COMMERCE PRIORITY
 
@@ -47,10 +48,10 @@ Fresh-scan before action and reconciliation. States are only `PENDING`, `ACTIVE`
 
 ### B-003 — Shopify -> eBay readiness
 - status: VERIFIED
-- exact evidence: `darrinbaldwindev/shopify_ebay` branch `agent/chatgpt/ebay-mapper-receipts` head `8c6d4fd2e43cfbe7e1cb9470c23574d6c3d125ad`; Fixture validation `34801871352` SUCCESS, 18/18 tests.
-- verified scope: deterministic candidate mapper, denied-input fail-closed behavior, explicit UNKNOWN preservation, audit receipt binding Shopify IDs/SKU/input hash/mapper version/gate result, hard `publication_authority=False`.
-- real SKU publication remains blocked by GlobalShopCo #17 supplier permission/blind-shipping/stock/freight/economics evidence. Existing Marketplace Connect path remains unassured for listing mapping, inventory propagation, order import, tracking propagation, oversell/duplicate protection and exact fee behavior.
-- replenished PENDING homogeneous work: synthetic mapping/inventory/order/tracking/duplicate-protection contract fixtures only; no live publication or credentials.
+- exact evidence: `darrinbaldwindev/shopify_ebay` branch `agent/chatgpt/ebay-mapper-receipts` head `b57e0a47bdff4b699d8b6b346fe5e9e1a0bbacc3`; Fixture validation `34805527804` / check `103856555020` SUCCESS.
+- verified scope now includes deterministic candidate mapper/receipts plus synthetic Shopify-canonical inventory-change receipt, eBay-order->Shopify handoff candidate preserving Shopify order authority, tracking candidate requiring exact Shopify/eBay order correlation, and duplicate-event/idempotency denial. Tests preserve `publication_authority=False` and `network_io=False`.
+- Marketplace Connect is already installed and eBay AU `globalshopco` connected; real connector behavior remains unassured. Real SKU publication remains blocked by GlobalShopCo #17 supplier permission/blind-shipping/stock/freight/economics evidence.
+- replenished PENDING homogeneous work: synthetic stale inventory event, out-of-order tracking event, duplicate order import and correlation-mismatch fixtures only; no live connector/network calls, credentials or publication.
 
 ### B-004 — Shopify -> Amazon readiness
 - status: PENDING
@@ -81,8 +82,10 @@ Fresh-scan before action and reconciliation. States are only `PENDING`, `ACTIVE`
 
 ### C-004 — GemVerse Level 2 fixture assurance
 - status: VERIFIED
-- exact head `0033b66de8e138c199207e33c505db6d8df5345b`; Level 2 fixture CI `34799040874` SUCCESS.
-- replenished PENDING: bind recovery evidence to exact current-state hash; reject action/state replay mismatch; deterministic competing-candidate denial without payload leak; strict recovery-result schema.
+- default branch remains `0033b66de8e138c199207e33c505db6d8df5345b`; homogeneous recovery batch is in child issue #9 / OPEN DRAFT UNMERGED PR #10 exact head `b1f09c3a9300a24782f5f3e4ab01619a64477319`.
+- exact-head Level 2 fixture validation `34803885504` SUCCESS.
+- verified additions: recovery evidence binds exact current-state SHA-256; action/current-state replay mismatch fails closed; competing-candidate denial deterministic without payload leak; strict recovery result/evidence schemas reject missing/extra fields.
+- replenished PENDING homogeneous work: bind recovery decision to exact action/result correlation; reject stale recovery evidence timestamps/versions where schema supports it; duplicate recovery-result idempotency; deterministic malformed-evidence denial. Canonical AgentOS execution remains outside this fixture result.
 
 ### C-005 — Content360 provider-neutral adapter
 - status: PENDING
@@ -99,17 +102,17 @@ Fresh-scan before action and reconciliation. States are only `PENDING`, `ACTIVE`
 
 # INDEPENDENT PRS CHECKPOINT
 - status: VERIFIED only for evaluator-parity cleanup at `a646f4033fd1b0c40135cb6f5c1286e9c7610728`, CI `34793554142` SUCCESS.
-- AgentOS PR #104 current head remains unassured; no overall GREEN.
+- AgentOS PR #104 current head remains unassured by Green/PRS for the continuous ownership blocker; no overall GREEN.
 
-# :30 RECONCILIATION — 2026-09-14 13:32 BRISBANE
+# :30 RECONCILIATION — 2026-09-14 14:30 BRISBANE
 - Fresh durable evidence superseded the previous manifest where it differed.
-- LANE A: PR #104 advanced from `083b7dec...` to `7df40bf...`. A-001/A-002 remain BLOCKED. A-003 is BLOCKED on absence of an evidenced canonical authenticated transport/grant source. A-004 is ACTIVE after the bounded authority regression commit, but exact-head CI #974 is RED on Windows while Ubuntu passes; exact failure detail remains to be isolated.
-- LANE B: B-003 advanced materially and is VERIFIED only for its synthetic mapper/receipt gate at `8c6d4fd...`, CI `34801871352` SUCCESS, 18/18. Real eBay readiness remains fail-closed on supplier/freight/economics and live Marketplace Connect assurance. B-001/B-004 remain PENDING; B-002/B-005 retain verified fixture gates plus homogeneous PENDING follow-ons.
-- LANE C: no newer exact repository/CI evidence found in the durable coordination state than the currently recorded verified gates; C-001/C-002/C-003/C-004 retain homogeneous PENDING follow-ons and C-005/C-006/C-007 remain PENDING.
+- LANE A: PR #104 remains exact `7df40bf...`. A-001/A-002 remain BLOCKED on continuous ownership; A-003 remains BLOCKED on absence of an evidenced canonical authenticated transport/grant source. A-004 advances ACTIVE -> VERIFIED for its narrow authority regression scope because exact-head Tests #974 now concludes SUCCESS after unchanged-head Windows retry; the original Windows failure remains unexplained. Homogeneous authority regressions are replenished PENDING without authority duplication.
+- LANE B: B-003 advances to exact `b57e0a47...`, Fixture validation `34805527804` SUCCESS, adding synthetic inventory/order/tracking/idempotency contract assurance while preserving Shopify authority and zero network/publication authority. Real Marketplace Connect behavior and SKU commercial eligibility remain blocked/UNKNOWN. B-001/B-004 remain PENDING; B-002/B-005 retain verified gates plus homogeneous PENDING follow-ons.
+- LANE C: C-004 materially advances in GemVerse draft PR #10 exact `b1f09c3a...`, CI `34803885504` SUCCESS for four homogeneous recovery-assurance additions; default branch remains unchanged. Other C items retain prior narrow states and useful PENDING work.
 - No scheduler firing or worker claim was treated as completion evidence. Historical evidence preserved. No overall GREEN.
 
 # NEXT PASS ORDER
-1. LANE A: isolate Windows failure on exact `7df40bf...`; A-001 only on new ownership-primitive evidence; A-003 only when a real canonical auth/grant source exists; continue bounded A-004 regressions without authority duplication.
-2. LANE B: B-001 exact-SKU evidence closure; B-003 homogeneous synthetic Marketplace Connect contract assurance; B-002 production-code inspection; B-005 fixture-safe evidence/timestamp batch; B-004 bounded readiness.
+1. LANE A: A-001 only on new ownership-primitive evidence; A-003 only when a real canonical auth/grant source exists; consume homogeneous A-004 authority regressions while preserving fail-closed semantics and exact correlation.
+2. LANE B: B-001 exact-SKU evidence closure; B-003 homogeneous synthetic stale/out-of-order/duplicate/correlation contract assurance; B-002 production-code inspection; B-005 fixture-safe evidence/timestamp batch; B-004 bounded readiness.
 3. LANE C: consume homogeneous C-001/C-002/C-003/C-004 batches; then C-005/C-006/C-007 as safe capacity remains.
 4. Re-scan exact heads/issues/CI before promoting any state and preserve all HOLD/BLOCKED/UNKNOWN evidence.
