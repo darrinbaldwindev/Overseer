@@ -5,7 +5,6 @@
 **Purpose:** maximize useful bounded Commercial Frontend work without creating another scheduler, authority source, mission ledger, registry, governance system, assurance system, runtime or source of truth.
 
 ## Standing manual rule
-
 In this workstream, `cont` / `continue autonomously` means:
 1. fresh-scan current Overseer/parent/current issues and material AgentOS evidence;
 2. reconcile this batch against live evidence;
@@ -28,9 +27,9 @@ States: `PENDING`, `ACTIVE`, `VERIFIED`, `BLOCKED`, `STALE`, `SPLIT_REQUIRED`.
 
 ### CF-A001 — Parent-state reconciliation
 - status: VERIFIED / CONTINUOUS
-- Batch 006 fresh scan confirms AgentOS PR #104 exact head `83a58b8bd230550b5781a0fee700cca250819a75`, OPEN/DRAFT/UNMERGED.
+- Batch 007 fresh scan confirms AgentOS PR #104 exact head `83a58b8bd230550b5781a0fee700cca250819a75`, OPEN/DRAFT/UNMERGED.
 - exact-head push run `34821384346` remains SUCCESS on Ubuntu/Node22 and Windows/Node26 full tests + npm audits.
-- narrow CI blocker is cleared only.
+- parent portfolio batch `3f0a9c1a658b684f296f6c0b4b6c69f310e92931` confirms the same gate state and additionally records bounded local-wake exact-correlation repair at `a69562dfe19696b79474c1a3f01a10d67b8d8e90` with AgentOS Tests `34849679000` SUCCESS and Project Overseer Wake `34849679095` SUCCESS; this does not close ownership or authority gates.
 - continuous kernel-enforced project-file ownership remains AMBER/BLOCKED; authenticated transport + canonical grant lookup remain unwired; current-head physical Windows acceptance, independent Green and PRS remain unresolved.
 - production Commercial Frontend remains HOLD.
 
@@ -40,7 +39,8 @@ States: `PENDING`, `ACTIVE`, `VERIFIED`, `BLOCKED`, `STALE`, `SPLIT_REQUIRED`.
 - AgentOS Frontend Overseer owns AgentOS detailed screen/interaction implementation.
 - architecture remains `vertical cockpit -> shared commercial layer -> AgentOS governance/execution/verification -> customer systems of record`.
 - no CRM replacement, generic workflow builder, scheduler, authority service, Green/PRS system or system-of-record replacement created.
-- concurrent Marketing truth delta `4cff138f5cc2129abcbfce53911001f31fdb04e1` is reconciled: physical Windows readiness must remain explicitly `not established`; technical CI must not be presented as operational readiness.
+- Marketing/Frontend evidence still requires physical Windows readiness to remain explicitly `not established`; technical CI must not be presented as operational readiness.
+- parent portfolio batch confirms draft PR #50 already owns Tradie value-threshold calculator implementation; this batch therefore keeps comparison scoring as evidence semantics only and does not duplicate PR #50.
 
 ---
 
@@ -76,20 +76,27 @@ States: `PENDING`, `ACTIVE`, `VERIFIED`, `BLOCKED`, `STALE`, `SPLIT_REQUIRED`.
 ### CF-B007 — Tradie value-threshold model
 - status: VERIFIED AS INTERPRETATION MODEL / DIRECT DEMAND UNKNOWN
 - artifact: `reports/2026-09-14-commercial-frontend-tradie-value-threshold-model.md`.
+- draft PR #50 owns bounded calculator implementation; Commercial Frontend must not duplicate it.
 - missing critical participant inputs propagate `UNKNOWN`; no universal ROI/WTP threshold invented.
 
 ### CF-B008 — second Tradie fallback wedge
 - status: VERIFIED AS DISCOVERY MODEL / DIRECT DEMAND UNKNOWN
 - artifact: `reports/2026-09-14-commercial-frontend-tradie-fallback-wedge.md`.
 - candidate: `completed job -> invoice awaiting approval/accounting-sync exception -> context assembly -> human decision -> bounded future correction -> reread verification`.
-- current ServiceM8 documentation supports the recurring operational boundary: completed jobs enter Awaiting Approval, someone approves before accounting sync, processing errors require resolution, and invoicing permissions govern approval.
-- production writes remain out of scope; frequency, minutes/case, consequences and WTP remain UNKNOWN.
+- frequency, minutes/case, consequences and WTP remain UNKNOWN.
 
 ### CF-B009 — Tradie wedge comparison scorecard
+- status: VERIFIED AS DIRECT-EVIDENCE INTERPRETATION CONTRACT / NO WINNER
+- artifact: `reports/2026-09-14-commercial-frontend-tradie-wedge-comparison-scorecard.md`.
+- compares post-payment closure vs approval/accounting-sync exception using only direct participant/observed-workflow evidence.
+- required dimensions: frequency, intervention rate, minutes/case, consequence, systems crossed, approval clarity, measurable outcome, trial intent and stated WTP.
+- public docs/synthetic fixtures cannot select a winner.
+- current winner: `NONE — DIRECT EVIDENCE REQUIRED`.
+
+### CF-B010 — direct Tradie evidence normalization packet
 - status: PENDING
-- define a direct-evidence-only comparison between primary post-payment closure and fallback approval/sync-exception wedge.
-- compare frequency, minutes/case, consequence severity, systems crossed, approval clarity, measurable outcome, trial intent and stated WTP.
-- acceptance: no synthetic weighting may select a winner before direct participant evidence exists.
+- align the existing participant capture pack with CF-B009 so one real participant can provide comparable T1/T2 evidence without duplicate interviews.
+- acceptance: one shared direct-evidence form; per-wedge fields remain independently UNKNOWN when not observed; no outreach executed by this workstream.
 
 ---
 
@@ -142,26 +149,36 @@ States: `PENDING`, `ACTIVE`, `VERIFIED`, `BLOCKED`, `STALE`, `SPLIT_REQUIRED`.
 ### CF-C012 — Shopify-facing supplier abstraction contract
 - status: VERIFIED AS PRODUCT CONTRACT / IMPLEMENTATION DEFERRED
 - artifact: `reports/2026-09-14-commercial-frontend-shopify-supplier-evidence-abstraction.md`.
-- evidence classes explicitly distinguish `DIRECT_SUPPLIER_EVIDENCE`, `SYNCHRONIZED_SUPPLIER_EVIDENCE`, `SHOPIFY_NATIVE_EVIDENCE`, `INFERRED_MAPPING`, `UNKNOWN`.
-- Shopify synchronized stock/order/tracking can be presented as Shopify state; it must not masquerade as direct supplier truth.
-- provider/Shopify identity, provenance, source/observed time, hashes, freshness and confidence remain separate.
-- conflict between supplier-direct and Shopify-synchronized evidence fails closed.
+- evidence classes distinguish direct supplier, synchronized supplier, Shopify-native, inferred mapping and UNKNOWN.
 
 ### CF-C013 — Ecommerce exception value-threshold model
 - status: VERIFIED AS INTERPRETATION MODEL / DIRECT DEMAND UNKNOWN
 - artifact: `reports/2026-09-14-commercial-frontend-ecommerce-value-threshold-model.md`.
-- deterministic model uses `orders/week × exception rate × minutes/case × loaded admin cost`, with optional observed rework/customer-contact/refund consequence fields.
 - absent consequence fields remain `UNKNOWN / NOT INCLUDED`; no churn/LTV/refund/WTP assumptions invented.
 
 ### CF-C014 — supplier evidence abstraction fixture matrix
-- status: PENDING
-- derive deterministic non-production fixtures covering direct supplier vs Shopify-synchronized vs Shopify-native evidence, provenance loss, identity mismatch, direct-vs-synced conflict, stale synchronized state and changed-after-approval.
-- reuse existing EC/SE truth states; do not create runtime.
+- status: VERIFIED AS NON-PRODUCTION FIXTURE CONTRACT / IMPLEMENTATION DEFERRED
+- artifact: `reports/2026-09-14-commercial-frontend-supplier-evidence-fixture-matrix.md`.
+- SF-001..SF-016 cover direct-vs-synchronized supplier evidence, provenance loss, identity ambiguity, direct-vs-synced conflict, stale synchronized state, replay, changed-after-approval, scope mismatch and same-version contradiction.
+- Shopify synchronized evidence never becomes direct supplier truth; local arrival time never becomes hidden ordering authority.
+- zero external mutation authorized.
 
 ### CF-C015 — Ecommerce direct-validation comparison packet
+- status: VERIFIED AS PARTICIPANT CAPTURE CONTRACT / DIRECT DEMAND UNKNOWN
+- artifact: `reports/2026-09-14-commercial-frontend-ecommerce-direct-validation-packet.md`.
+- captures affected orders, exception types, systems touched, time/case, handoffs, customer-promise/refund/rework consequences, approval boundary, acceptable automation, measurable outcome, trial intent and stated WTP.
+- value calculations run only on directly supplied complete inputs; otherwise `UNKNOWN / NOT TESTABLE`.
+- prototype threshold remains >=3 materially similar direct participants/observations.
+
+### CF-C016 — Ecommerce wedge comparison scorecard
 - status: PENDING
-- turn CF-C013 into participant-facing evidence capture for supplier/fulfilment exceptions: affected orders/week, exception types, systems touched, time/case, customer-promise/refund/rework consequence, approvals, trial intent and stated WTP.
-- real evidence only; public docs/portfolio fixtures do not count.
+- define direct-evidence-only comparison across the top observed Ecommerce exception types after participant data exists.
+- acceptance: no synthetic fixture frequency can choose a commercial wedge; compare repeated frequency, burden, consequence, integration complexity, approval clarity, measurable outcome, trial intent and WTP.
+
+### CF-C017 — supplier evidence fixture-to-harness mapping
+- status: PENDING
+- map SF-001..SF-016 into the existing Ecommerce synthetic harness structure without adding runtime/state authority.
+- acceptance: reuse existing truth outcomes and evidence envelopes; no live provider/Shopify connector.
 
 ---
 
@@ -170,8 +187,9 @@ States: `PENDING`, `ACTIVE`, `VERIFIED`, `BLOCKED`, `STALE`, `SPLIT_REQUIRED`.
 ### CF-D001 — AgentOS dependency
 - status: BLOCKED / MONITOR WITH CI PASS
 - PR #104 exact `83a58b8bd230550b5781a0fee700cca250819a75` remains OPEN/DRAFT/UNMERGED with cross-platform tests/audits PASS.
+- local-wake exact-correlation repair `a69562dfe19696b79474c1a3f01a10d67b8d8e90` has successful tests/wake workflows but does not close ownership, authority, physical Windows, Green or PRS gates.
 - production dependency remains blocked by continuous ownership defect, missing canonical authenticated admission binding, current-head physical Windows acceptance, Green and PRS.
-- Marketing/Frontend exact-head evidence also requires physical Windows readiness to remain `not established`.
+- physical Windows readiness remains `not established`.
 
 ### CF-D002 — read-only prototype threshold
 - status: BLOCKED ON DIRECT EVIDENCE
@@ -188,30 +206,30 @@ States: `PENDING`, `ACTIVE`, `VERIFIED`, `BLOCKED`, `STALE`, `SPLIT_REQUIRED`.
 
 ---
 
-# COMPLETED EXECUTION PASS — VERTICAL BATCH 006 — 2026-09-14
+# COMPLETED EXECUTION PASS — VERTICAL BATCH 007 — 2026-09-14
 
 Consumed:
-1. fresh Commercial Frontend + AgentOS PR #104 + recent Overseer/Marketing scan;
-2. reconciled Marketing frontend evidence projection commit `4cff138f5c...` and preserved `physical Windows readiness: not established`;
-3. CF-C012 Shopify-facing supplier evidence abstraction;
-4. CF-C013 Ecommerce exception value-threshold model;
-5. CF-B008 second Tradie fallback wedge;
-6. post-action recent-commit scan; no concurrent Commercial Frontend work superseded these artifacts;
-7. direct-evidence gate rechecked and remains unmet;
+1. fresh Commercial Frontend batch + AgentOS PR #104 scan;
+2. reconciled parent portfolio deep batch commit `3f0a9c1a658b684f296f6c0b4b6c69f310e92931`, including local-wake exact-correlation evidence and PR #50 ownership of Tradie calculator implementation;
+3. CF-C014 supplier evidence abstraction fixture matrix SF-001..SF-016;
+4. CF-B009 direct-evidence-only Tradie wedge comparison scorecard;
+5. CF-C015 Ecommerce direct-validation packet tied to the value-threshold model;
+6. post-action commit scan found no concurrent Commercial Frontend work superseding these artifacts;
+7. AgentOS/direct-evidence/Green/PRS/physical-Windows gates rechecked and not promoted;
 8. same vertical batch replenished.
 
 Durable commits:
-- `57224c190d63b7dec0144b29af5bce9581cecdf1` — Shopify supplier evidence abstraction.
-- `6acc27888317ceb9e5ff22a893e981e55936d1c1` — Ecommerce value-threshold model.
-- `316186d8810e8289720e58fb76a4d58d878ab4ea` — second Tradie fallback wedge.
+- `0165e4082627e5d9d00f2e564046d894190fb8da` — supplier evidence fixture matrix.
+- `e669e0ac18846de774f9bf4ab8a5ef3429abb627` — Tradie wedge comparison scorecard.
+- `b543e2e2739569366f42ca049fadd26d50466bc4` — Ecommerce direct-validation packet.
 
 No production frontend, live connector, customer-system mutation, credentials, purchase, supplier/customer contact, deployment, merge/approve/ready/rebase, Green or PRS promotion occurred.
 
 # NEXT `cont` ORDER
 
 1. Fresh scan first.
-2. CF-C014 — supplier evidence abstraction fixture matrix using existing EC/SE truth states.
-3. CF-B009 — direct-evidence-only Tradie wedge comparison scorecard.
-4. CF-C015 — Ecommerce direct-validation comparison packet tied to the value model.
-5. Re-check AgentOS PR #104 exact head, physical Windows/Green/PRS/authority gates and concurrent Frontend/Marketing truth contracts.
+2. CF-C017 — map SF-001..SF-016 into the existing Ecommerce synthetic harness without creating runtime/state authority.
+3. CF-B010 — normalize one shared real-participant Tradie capture form for T1/T2 comparison without outreach.
+4. CF-C016 — define direct-evidence Ecommerce wedge comparison scorecard; keep winner UNKNOWN until real participant evidence exists.
+5. Re-check PR #50 status so interpretation work does not duplicate implementation; re-check AgentOS PR #104, physical Windows, authority, Green/PRS and Frontend/Marketing truth contracts.
 6. Fresh re-scan, durable Issue #21 update, replenish this same batch.
