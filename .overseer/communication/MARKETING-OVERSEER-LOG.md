@@ -35,12 +35,14 @@ No merge/deploy/approval/ready/rebase/credentials/purchase/supplier contact/list
 - `reports/2026-09-14-agentos-marketing-claim-and-frontend-delta-2.md` @ `24cc33f7e730dd1e74be35457fe202bcc488c48f`.
 - `reports/2026-09-14-agentos-founding-beta-trust-task-traceability-matrix.md` @ `2e3c5b13566e4c423db643b3812fa395a8159ca7`.
 - `reports/2026-09-14-agentos-founding-beta-measurement-instrumentation-contract.md` @ `2669f0550c02dcfd495563c49413f1f0b8422b1c`.
+- `reports/2026-09-14-agentos-beta-measurement-to-telemetry-mapping.md` @ `573a76f27b2a1cd8e13f2cea483c05547df4f398`.
 
 ## AgentOS competitive
 - Batch 1 @ `abecdf2738d1a343b8234771274a15fbd204dc90`.
 - Batch 2 @ `d6c99bf81d677115db6caca4c001c6030f4aba99`.
 - Batch 3 @ `0525c7e6355853aa74c90cd92bb12876e0efbf8d`.
-- Batch 3B: `reports/2026-09-14-agentos-competitive-trust-control-refresh-batch-3b.md` @ `1f2e3bd4c743ce7d49294784ccd24adfcd214b88`.
+- Batch 3B @ `1f2e3bd4c743ce7d49294784ccd24adfcd214b88`.
+- Roo Batch 3C: `reports/2026-09-14-agentos-competitive-trust-control-refresh-batch-3c-roo.md` @ `43a54536f809889e1a1b1e622742eefe7c466931`.
 
 ## GlobalShopCo / eBay / Headless
 - eBay launch gate @ `670e76883c1a47b698195b28ae7017b68bb36798`.
@@ -52,6 +54,7 @@ No merge/deploy/approval/ready/rebase/credentials/purchase/supplier contact/list
 - Home Organisation organic editorial batch @ `3785e13cf4a456fa4f028b456c0f8982c43dd498`.
 - Home Organisation Content360/WordPress packet @ `3df9ad6a4edd0765047843cb23ff432af5694d21`.
 - GlobalShopCo Headless Marketing readiness @ `02192ee7fbf29a2d9551e23cd353b9a0357d7c06`.
+- Headless stale/error/trust copy: `reports/2026-09-14-globalshopco-headless-stale-error-trust-copy.md` @ `4129c55baf00037854e30533209a677059aacc1d`.
 
 ## Other lanes
 - Affiliate editorial acquisition gate @ `be66a1bea89965908ac6a43e715adafbcf0c4909`.
@@ -59,95 +62,97 @@ No merge/deploy/approval/ready/rebase/credentials/purchase/supplier contact/list
 - Fresh-chat Marketing handoff @ `f29532634b35acf7314260a2dd16246e6d3a3e06`.
 - Current vertical batch: `.overseer/batches/MARKETING-VERTICAL-BATCH.md`.
 
-Standing positioning: **AgentOS = governed AI execution / AI control plane**. Do not differentiate primarily on generic chat, MCP, local models, terminal/computer control, scheduling, approval prompts or RBAC alone. Stronger intended differentiation is integrated authority + evidence + recovery/replay + Green + PRS + provider-neutral lifecycle.
+Standing positioning: **AgentOS = governed AI execution / AI control plane**. Do not differentiate primarily on generic chat, MCP, local models, terminal/computer control, scheduling, approval prompts, checkpoints or RBAC alone. Stronger intended differentiation is integrated authority + evidence + recovery/replay + Green + PRS + provider-neutral lifecycle.
 
 ---
 
 # 2026-09-14 17:52 AEST — AgentOS / Frontend / commerce cycle
-Fresh scan reconciled PR #104 `9f53df16...`, Frontend movement and current commerce evidence. Produced claim/frontend delta, competitive Batch 2, frontend claim checklist and eBay pilot pointer. Founding Beta HOLD; 0 eBay-ready SKUs; no production/publication/spend.
+Fresh scan reconciled PR #104 `9f53df16...`, Frontend movement and commerce evidence. Produced claim/frontend delta, competitive Batch 2, frontend claim checklist and eBay pilot pointer. Founding Beta HOLD; 0 eBay-ready SKUs.
 
 # 2026-09-14 18:09+ AEST — Maximum fresh-scan vertical cycle
-Fresh scan reconciled PR #104 documentation head `83a58b8...`, predecessor CI rerun success but unresolved ownership/auth/assurance, Frontend #111 predecessor exact-head CI PASS, Southern Pet/eBay plan economics. Produced Beta trust-task traceability, Southern Pet plan-aware break-even gate, Home Organisation organic content and competitive Batch 3. No Level 2 promotion; Founding Beta HOLD; 0 eBay-ready SKUs.
+Reconciled PR #104 documentation head, Frontend predecessor CI PASS and Southern Pet/eBay economics. Produced Beta trust-task traceability, Southern Pet plan-aware break-even gate, Home Organisation organic content and competitive Batch 3. No Level 2 promotion.
+
+# 2026-09-14 18:42+ AEST — Beta measurement / Frontend reconciliation / commerce decision cycle
+Reconciled Frontend #111 to `5dc1551e...` and exact-head overall CI RED on inherited Ubuntu SIGINT while frontend-specific + Windows lifecycle passed. Produced measurement contract, n8n/Cline competitive pass, Southern Pet owner-decision packet and Content360/WordPress Home Organisation packet. Founding Beta HOLD; 0 eBay-ready SKUs.
 
 ---
 
-# 2026-09-14 18:42+ AEST — FRESH-SCAN / BETA MEASUREMENT / FRONTEND RECONCILIATION / COMMERCE DECISION CYCLE
+# 2026-09-14 19:04+ AEST — TELEMETRY MAPPING / ROO / HEADLESS TRUST CYCLE
 
 ## Mission
-Mandatory fresh scans of AgentOS, Frontend, Overseer coordination and GlobalShopCo; execute highest-value safe Marketing work; post-scan exact heads again; replenish batch and durable coordination.
+Mandatory fresh scan of AgentOS #104, Frontend #111, live coordination and commerce state; execute the next safe vertical Marketing work; post-scan and replenish.
 
 ## Exact evidence reviewed
 ### AgentOS Level 2
-- PR #104 remains OPEN / DRAFT / UNMERGED at `83a58b8bd230550b5781a0fee700cca250819a75`.
-- Current head is documentation-only and does not repair continuous ownership/auth admission.
-- Exact-head Tests #1037 / `34821388860` is CANCELLED; predecessor CI evidence does not clear known semantic blockers.
-- Independent PRS current-lineage checkpoint continues to withhold mutation promotion because stale-owner success remains reproducible/controlling.
-- Physical Windows Level 2, canonical authenticated production admission, Green→PRS remain unproven.
-- **Founding Beta remains HOLD.**
+- PR #104 exact `83a58b8bd230550b5781a0fee700cca250819a75`, OPEN/DRAFT/UNMERGED.
+- PR body now records exact-head push Tests `34821384346` **SUCCESS** on Ubuntu/Node22 and Windows/Node26, including audit.
+- Current head changes only the AgentOS vertical-batch document; runtime semantics remain predecessor-lineage semantics.
+- Independent PRS still controls promotion: stale-owner false-success remains reproduced/retained, so continuous ownership through publish/recovery/success receipt/release is unresolved.
+- Authenticated transport + canonical grant source, current-head physical Windows acceptance, Green and PRS promotion remain unproven.
+- **Founding Beta remains HOLD. CI success does not clear known semantic safety gates.**
 
-### Frontend — material post-scan change
-- PR #111 advanced during this Marketing cycle to exact `5dc1551ea0dcbdb3f1c155b04b719215d69a19ef`; OPEN / DRAFT / UNMERGED.
-- AgentOS Tests #1071 / `34824296320` = FAILURE.
-- Windows Basic Chat lifecycle `103912725848` = SUCCESS.
-- Ubuntu/main test `103912726101` = FAILURE in inherited Basic Chat SIGINT lifecycle assertion: expected `signalCode === null`, observed `SIGINT`.
-- Frontend-specific static/presentation tests passed, including ordinary-user UI, focus/touch, live regions, busy state, narrow layout, reduced motion, canonical control state and truthful Stop semantics.
-- Current Marketing classification: **IMPLEMENTATION-ADVANCED / UI-SPECIFIC PASS / WINDOWS LIFECYCLE PASS / EXACT-HEAD CI RED ON INHERITED UBUNTU SIGINT / DRAFT-UNMERGED / NOT SHIPPED**.
-- Earlier predecessor `72693c68...` CI PASS is stale and no longer the current-head classification.
+### Frontend
+- PR #111 exact `5dc1551ea0dcbdb3f1c155b04b719215d69a19ef`, OPEN/DRAFT/UNMERGED.
+- Exact-head #1071 remains overall FAILURE; Windows Basic Chat lifecycle + frontend-specific presentation/accessibility/control tests pass.
+- Sole Ubuntu failing class remains inherited signal assertion (`SIGINT` vs expected null).
+- No shipped/frontend-wide PASS claim.
 
-### GlobalShopCo/eBay
+### Telemetry
+- Existing `src/telemetry/consent.mjs` uses `none` / `performance` / `improvement` consent levels, OFF by default.
+- Existing sanitiser emits a fixed performance-oriented schema and current tests prove arbitrary prompt/conversation fields are excluded.
+- This is the base to extend, not replace.
+
+### Competitive
+- Current Roo Code docs/repo evidence closes the previously explicit UNKNOWN: custom modes/tool permissions, checkpoints/revert and manual-vs-auto approval are established patterns.
+- Permissions/checkpoints/approval modes are baseline-class features, not a safe uniqueness claim for AgentOS.
+
+### Commerce
 - 0 eBay-ready SKUs remains controlling truth.
-- Southern Pet five remain PERMISSION-REQUIRED/HOLD; written marketplace permission and authenticated trade cost remain unresolved.
-- Exact GlobalShopCo eBay account plan/category fee remains UNKNOWN.
-- No supplier contact or production action occurred.
+- Southern Pet permission/trade costs remain gated; owner-decision packet remains unexercised.
+- Actual GlobalShopCo eBay account plan/category fee remains UNKNOWN from this lane; no substitute inference made.
 
 ## Work completed
 
-### M-A021 — Beta measurement instrumentation contract
-`reports/2026-09-14-agentos-founding-beta-measurement-instrumentation-contract.md` @ `2669f0550c02dcfd495563c49413f1f0b8422b1c`.
+### M-A022 — beta measurement → telemetry mapping
+`reports/2026-09-14-agentos-beta-measurement-to-telemetry-mapping.md` @ `573a76f27b2a1cd8e13f2cea483c05547df4f398`.
 
-Prepared opt-in/content-blind measurement contract. Excludes raw prompts, conversations, files, secrets, clipboard and unrestricted command output. North-star early signal remains voluntary second-real-job attempt. Telemetry remains NOT ACTIVATED.
+Mapped beta measures onto existing consent/sanitisation primitives, identified measures that require canonical mission/control/recovery sources, and locked out a parallel analytics source of truth. No telemetry activation.
 
-### M-A018b — Competitive trust/control Batch 3B
-`reports/2026-09-14-agentos-competitive-trust-control-refresh-batch-3b.md` @ `1f2e3bd4c743ce7d49294784ccd24adfcd214b88`.
+### M-A018c — Roo completion
+`reports/2026-09-14-agentos-competitive-trust-control-refresh-batch-3c-roo.md` @ `43a54536f809889e1a1b1e622742eefe7c466931`.
 
-Current n8n/Cline evidence further demotes HITL approvals, role/permission controls, granular tool approval, checkpoints and rollback as standalone differentiators. Roo remains explicit TO VERIFY rather than assumed.
+Roo closes the remaining current Batch-3 Marketing trust/control gap. Tool permissions, modes, checkpoints and approval posture are treated as table stakes.
 
-### M-B013 — Southern Pet owner-decision packet
-`reports/2026-09-14-globalshopco-southern-pet-owner-decision-packet.md` @ `729d7fb1aad0430fadf4e134d7c45ca675bf93c5`.
+### M-C003 — Headless stale/error/trust copy
+`reports/2026-09-14-globalshopco-headless-stale-error-trust-copy.md` @ `4129c55baf00037854e30533209a677059aacc1d`.
 
-Prepared future owner choices without contacting supplier: request bounded evidence only; defer Southern Pet; or consider small pre-purchased stock only after permission/economics pass and separate purchase authority. Marketing recommendation remains NO CONTACT unless explicitly authorised.
-
-### M-B010b — Content360 / WordPress Home Organisation packet
-`reports/2026-09-14-globalshopco-home-organisation-content360-wordpress-packet.md` @ `3df9ad6a4edd0765047843cb23ff432af5694d21`.
-
-Prepared pillar/cluster SEO/AEO structure, FAQs, internal linking, schema boundaries and Content360 truth locks. No Product/Offer schema, Shop Now, stock/price/free-delivery product claim or publication activation.
+Prepared fail-closed customer-facing states for stale/missing price, stock, delivery, returns and checkout evidence while preserving Shopify as canonical commerce authority. No deployment/publication.
 
 ### Batch replenishment
-`.overseer/batches/MARKETING-VERTICAL-BATCH.md` @ `f2197ba2b1743e1cbd1dba8974f1bc1d3a6295f9`.
+`.overseer/batches/MARKETING-VERTICAL-BATCH.md` @ `7c518b68f59174028926482be3579f6fe9c58d4f`.
 
-## Claims / commercial changes
-- No AgentOS Level 2 claim promoted.
-- Frontend current-head classification demoted from stale predecessor CI PASS to exact-head CI RED, while preserving UI-specific and Windows-lifecycle PASS evidence.
-- Founding Beta remains HOLD.
-- Approval/RBAC/checkpoint features further demoted as unique differentiation.
-- GlobalShopCo remains 0 eBay-ready SKUs; no named-product availability/profitability/free-delivery viability claim.
-- Southern Pet moved from open-ended research to a clean owner-decision boundary; no external action taken.
+## Claims promoted/demoted
+- PR #104 CI state promoted from ambiguous/cancelled-only interpretation to exact-head push CI PASS; **Level 2 capability itself not promoted**.
+- Project-file mutation remains AMBER/BLOCKED because PRS semantic defect evidence outranks CI regression success.
+- Frontend remains current-head overall CI RED despite UI-specific PASS.
+- Permissions/checkpoints/modes further demoted as standalone AgentOS differentiation.
+- GlobalShopCo stays 0 eBay-ready; no price/stock/free-delivery/Shop Now promotion.
 
 ## Blockers / UNKNOWNs
-- AgentOS: continuous mutation ownership, canonical auth/grant admission, current-head physical Windows Level 2, Green then PRS.
-- Frontend: current inherited Ubuntu SIGINT lifecycle red; physical browser/narrow-layout acceptance remains separate.
-- GlobalShopCo: marketplace permission, authenticated trade cost, exact account/cubic freight, actual eBay plan/category fee, production-safe fulfilment/sync.
-- Roo current trust/control evidence remains TO VERIFY.
+- AgentOS ownership fence, canonical auth/grant chain, physical Windows current-head acceptance, Green→PRS.
+- Frontend inherited Ubuntu SIGINT lifecycle red.
+- Beta event schemas needing recovery/replay/control canonical fields and privacy retention/deletion approval.
+- GlobalShopCo actual eBay account fee state + supplier permissions/trade economics.
 
-## Publication / production status
-**NO PUBLIC BETA / NO INVITATIONS / NO TELEMETRY ACTIVATION / NO PAID AGENTOS CAMPAIGN / NO EBAY LISTING / NO SHOPIFY PRODUCT ACTIVATION / NO SUPPLIER CONTACT / NO PURCHASE / NO CONNECTOR MUTATION / NO PAID GLOBALSHOPCO ACQUISITION / NO OVERALL GREEN.**
+## Publication / production
+**NO PUBLIC BETA / NO INVITATIONS / NO TELEMETRY ACTIVATION / NO PAID AGENTOS CAMPAIGN / NO EBAY LISTING / NO SHOPIFY PRODUCT ACTIVATION / NO SUPPLIER CONTACT / NO PURCHASE / NO CONNECTOR MUTATION / NO HEADLESS DEPLOYMENT / NO OVERALL GREEN.**
 
 ## Next highest-value actions
-1. mandatory fresh scan first;
-2. reconcile #104 and #111 exact heads/CI/PRS/Green;
-3. M-A022 map beta measurement semantics to existing telemetry/privacy primitives without duplicate authority;
-4. M-A018c retrieve Roo current primary evidence and compare capability/MCP supply-chain trust;
-5. M-B014 actual eBay account plan/category fee from read-only evidence if available; otherwise M-B015 permission-first alternate supplier screening;
-6. then Headless SEO/AEO/trust and Affiliate editorial-safe lanes.
+1. mandatory fresh scan;
+2. M-A023 beta event-schema acceptance matrix;
+3. M-A024 capability/MCP supply-chain trust comparison;
+4. M-B014 if authoritative read-only eBay account evidence appears, otherwise M-B015 alternative supplier permission-first screening;
+5. M-C002 Headless SEO/AEO vertical-page contract;
+6. then Affiliate editorial/proof work if higher lanes remain blocked.
 
 **Operating rule:** fresh evidence outranks this log; UNKNOWN never becomes PASS through optimistic copy.
