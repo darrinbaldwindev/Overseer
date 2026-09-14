@@ -70,6 +70,36 @@ Standing positioning: **AgentOS = governed AI execution / AI control plane**. Do
 
 ---
 
+# 2026-09-15 00:48 AEST — AGENT IDENTITY / PERSONA PRODUCT DECISION
+
+## Owner direction
+AgentOS now has 17 agents. The user always interacts through the **Overseer**; specialist agents operate behind that single conversational relationship.
+
+Agent identity is to be separated from presentation/persona:
+- each specialist has a stable numbered system identity, e.g. `Agent 1` … `Agent 17`;
+- each agent has a defined role/capability contract;
+- the agent's user-facing name is interchangeable/customisable;
+- appearance/avatar is interchangeable/customisable;
+- voice/personality may be interchangeable/customisable where implemented;
+- changing presentation must never change authority, role, evidence identity, permissions, governance or assurance semantics.
+
+Recommended technical naming pattern is a stable identity plus role descriptor, e.g. `agent_01.planner`, `agent_02.executor`, `agent_03.guardian`, `agent_04.assurer`. Exact runtime IDs remain an implementation decision for the owning AgentOS workstream; Marketing must not fabricate implementation state.
+
+Default characters such as Willow, Isla, Jack and Henry are therefore **default personas/brand characters, not canonical machine identities**. A user or organisation may rename/restyle them while the underlying role remains unchanged.
+
+Core principle:
+> **Identity is stable. Role is controlled. Persona is replaceable.**
+
+Marketing principle:
+> **Roles are fixed. Names, faces and voices can be yours to choose.**
+
+Governance constraint:
+The user continues to go through the Overseer. Renaming/restyling a specialist must not create a direct-agent authority path, bypass the Overseer, Jack/authority controls, Green, PRS/Henry, or any canonical runtime source of truth.
+
+Status: **OWNER-APPROVED PRODUCT DIRECTION / IMPLEMENTATION NOT CLAIMED UNTIL REPO EVIDENCE EXISTS.**
+
+---
+
 # 2026-09-15 00:05+ AEST — FRONTEND READINESS / EVIDENCE ACCEPTANCE / OXO ECONOMICS / AU AFFILIATE CYCLE
 
 ## Mission
