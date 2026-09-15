@@ -15,8 +15,8 @@ States: `PENDING -> CLAIMED -> ACTIVE -> VERIFYING -> VERIFIED`; holding/termina
 - `SCHED-45-VENTURES` — Lane-C/Ventures only where latest owner instruction permits and no exact task is already claimed.
 - `WORK-PORTFOLIO` / `PROJECT-CHAT:<name>` — owner/manual execution.
 
-## Reconciliation checkpoint — 2026-09-16 01:30 Brisbane
-Changed evidence only: AgentOS PR #112 advanced from ledger predecessor `a7736d3747008f25f57290adbe37271447519303` to exact `832847fc613c1673379f065e49e093cdcc62d239`. PR remains OPEN/DRAFT/UNMERGED. Exact-head checks are completed SUCCESS (`wake` job `104372184304`; `test` jobs `104372184211`, `104372170032`). Therefore A-AG-08 remains ACTIVE with current exact-head functional CI evidence only; predecessor verification is invalidated except where successor evidence explicitly covers it, and no Green/security/authority/PRS promotion is claimed. AgentOS #104 remains BLOCKED_STABLE on SG-08 and SG-01/02; PRS must not recertify unchanged #104. Other durable rows remain unchanged and ready fall-through is preserved.
+## Reconciliation checkpoint — 2026-09-16 03:30 Brisbane
+Changed durable evidence only. SCHED-40 independently re-fetched AgentOS #104 `4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091`, AgentOS #112 `832847fc613c1673379f065e49e093cdcc62d239`, and PRS #24 `3039c886bdcff911f7c6dcc3e086368058e57fb6`; all are unchanged, so assurance was correctly not rerun. Jess remains BLOCKED_STABLE_SG08, Michael BLOCKED_STABLE_CONTROLLING_GATES, and completion-grade PRS NOT_ELIGIBLE. A new implementation-ready A-PRS-04/A-AG-06 adversarial fixture is queued: prepared-recovery envelope splice after authority/ownership generation rotation, with whole-envelope provenance binding and zero false-success/second-mutation/stale-owner-release/correlation inheritance/receipt synthesis. Commercial Frontend durable evidence now classifies a generic reconciliation-exception cockpit as INCUMBENT-OVERLAP against Xero/JAX; C-CF-01 remains PENDING/EVIDENCE_GATED and is narrowed to residual cross-system ServiceM8↔Xero exceptions with exact frequency/minutes/consequence/approval/WTP evidence. No code task is claimed from that research result.
 
 ## Current ledger
 
@@ -27,13 +27,13 @@ Changed evidence only: AgentOS PR #112 advanced from ledger predecessor `a7736d3
 | A-AG-03 | AgentOS | P0 | PENDING | SCHED-00-AGENTOS | changed A-AG-01 candidate | 2–5 ownership/crash/replay/result-write/correlation negatives; exact-head Ubuntu+Windows CI; no new persistence/control plane. |
 | A-AG-04 | AgentOS | P0 | BLOCKED_STABLE | SCHED-00-AGENTOS | repaired #104 + admission + Jess/Michael + PRS + owner physical authority | Physical Windows install/scheduler acceptance is owner-gated; no simulated evidence. |
 | A-AG-05 | AgentOS | P0 | ACTIVE | SCHED-00-AGENTOS | existing #104 authority-receipt lineage | Preserve exact source-backed authority evidence/correlation; do not duplicate A-AG-01/02. |
-| A-AG-06 | AgentOS | P0 | PENDING | SCHED-00-AGENTOS | after A-AG-01 repair | Recovery-state/authority-generation cross-bind; stale/mismatched generations fail closed; exact-head Ubuntu+Windows CI. |
+| A-AG-06 | AgentOS | P0 | PENDING | SCHED-00-AGENTOS | after A-AG-01 repair; assurance handoff `Overseer#49 comment 5684213512` | Recovery-state/authority-generation cross-bind; stale/mismatched or cross-spliced generations fail closed; no second mutation/false success/stale-owner release/correlation inheritance/receipt synthesis; exact-head Ubuntu+Windows CI. |
 | A-AG-07 | AgentOS | P0 | PENDING | SCHED-00-AGENTOS | after A-AG-01 repair | Authority revocation at durable-success linearization; false success denied. |
 | A-AG-08 | AgentOS | P0 | ACTIVE | SCHED-00-AGENTOS | `AgentOS#112@832847fc613c1673379f065e49e093cdcc62d239`; exact-head checks SUCCESS | Runtime-shell eligibility/capability-contract consolidation. Next: inventory only genuinely uncovered evaluator/alias entry points; implement 2–5 homogeneous denial/normalization cases if gaps remain; rerun exact-head CI; keep #104 hot path untouched. |
 | A-PRS-01 | PRS | P0 | VERIFIED | SCHED-40-ASSURANCE | historical `PRS#17@49fe1f8bca3ddae271d85e0f4767173060267222` | Historical false-GREEN baseline only. |
 | A-PRS-02 | PRS | P0 | BLOCKED_STABLE | SCHED-40-ASSURANCE | unchanged `AgentOS#104@4c8bcc3...` | Reopen only on changed AgentOS mutation candidate. |
 | A-PRS-03 | PRS | P0 | BLOCKED_STABLE | SCHED-40-ASSURANCE | `PRS#24@3039c886bdcff911f7c6dcc3e086368058e57fb6` + future repaired AgentOS head | Completion-grade PRS requires identical-head Jess functional PASS + Michael security PASS + owner/runtime gates. |
-| A-PRS-04 | PRS | P0 | PENDING | SCHED-40-ASSURANCE | `PRS#24@3039c886...`; #49 handoff `5677299519` | Evidence-bundle substitution/mix-and-match + whole-bundle replay negatives; fixtures only. |
+| A-PRS-04 | PRS | P0 | PENDING | SCHED-40-ASSURANCE | `PRS#24@3039c886...`; #49 handoffs `5677299519`, `5684213512` | Evidence-bundle substitution/mix-and-match plus prepared-recovery envelope splice across C/G/O/pre-postimage generations; whole-bundle replay/post-export replacement and mixed-envelope recovery must fail closed; fixtures only. |
 | B-GSC-01 | GlobalShopCo | P1 | ACTIVE | SCHED-15-COMMERCE | `#29@15fa99eb4c4b1f96127f6f51c412cbffc94e45e2`; `#30@80c82475b98663d677885e8b4d222ae2cedb8555` | Authenticated trade evidence only; missing material field => HOLD/UNKNOWN. |
 | B-GSC-02 | GlobalShopCo | P1 | PENDING | SCHED-15-COMMERCE | evidence-complete B-GSC-01 row | Delivered-margin calculation only after evidence completeness. |
 | B-GSC-03 | GlobalShopCo | P1 | BLOCKED_STABLE | SCHED-15-COMMERCE | current truth `0 eBay-ready SKUs` | Reopen only on exact evidence-complete variant. |
@@ -54,19 +54,19 @@ Changed evidence only: AgentOS PR #112 advanced from ledger predecessor `a7736d3
 | B-MPD-05 | MyPrimeDelivery | P1 | PENDING | SCHED-15-COMMERCE | existing validator lineage | 2–5 freshness/identity/outbound contradiction fixtures. |
 | C-AFF-01 | Affiliate-Websites Master/AU/UK/US | P1 | ACTIVE | PROJECT-CHAT:Affiliate-Websites / WORK-PORTFOLIO | current Master/AU/UK/US seams | Preserve country compliance/disclosure/UNKNOWN CTA HOLD; do not compete while ACTIVE. |
 | C-GK-01 | GhostKitchen | P1 | BLOCKED_STABLE | SCHED-45-VENTURES | `GhostKitchen#32@766f69b92fe3ea5a98aca0cd611727cdf61c879d`; handoff `GhostKitchen#31 comment 5677347199` | Reopen only on real workflow/evidence-path repair or materially changed lineage. |
-| C-FR-01 | Franchise | P1 | PENDING | PROJECT-CHAT:Franchise / WORK-PORTFOLIO | GhostKitchen template evidence | Gate-3 reusable franchise acceptance; synthetic/non-production. |
-| C-GEM-01 | GemVerse | P2 | PENDING | PROJECT-CHAT:GemVerse / WORK-PORTFOLIO | current canon/recovery lineage | Exact recovery identity; competing/ambiguous state fails closed. |
+| C-FR-01 | Franchise | P1 | PENDING | PROJECT-CHAT:Franchise / WORK-PORTFOLIO | GhostKitchen template evidence | Gate-3 reusable franchise acceptance; synthetic/non-production; do not compete with overlapping live lineage without release/handoff. |
+| C-GEM-01 | GemVerse | P2 | PENDING | PROJECT-CHAT:GemVerse / WORK-PORTFOLIO | current canon/recovery lineage | Exact recovery identity; competing/ambiguous state fails closed; do not duplicate overlapping recovery lineage. |
 | C-C360-01 | content360 | P1 | ACTIVE | PROJECT-CHAT:Content360 / WORK-PORTFOLIO | current PR lineage + Marketing provenance | Do not compete while ACTIVE; no live PUBLISH/SCHEDULE/network authority. |
-| C-CF-01 | Commercial Frontend | P2 | PENDING | PROJECT-CHAT:Commercial Frontend / WORK-PORTFOLIO | Overseer commercial-frontend evidence | Evidence packets/bounded correction only; demand/WTP remain hypotheses. |
+| C-CF-01 | Commercial Frontend | P2 | PENDING | PROJECT-CHAT:Commercial Frontend / WORK-PORTFOLIO | Overseer #21 comments `5683274301`, `5684308943`; generic cockpit incumbent-overlap | Evidence-gated only: prove a residual ServiceM8↔Xero cross-system exception not already covered by Xero/JAX, plus frequency, minutes/case, consequence, approval owner, WTP and exact scopes. Otherwise HOLD/BLOCKED_STABLE after unchanged cycle; no customer contact. |
 | C-MKT-01 | Marketing | P2 | ACTIVE | PROJECT-CHAT:Marketing / WORK-PORTFOLIO | canonical capability/pricing evidence | Do not compete while ACTIVE; draft/research only. |
 | C-CAR-01 | Car Rental | P2 | BLOCKED_STABLE | PROJECT-CHAT:Car Rental / WORK-PORTFOLIO | no canonical repo visible | Research-only; no substitute repo/purchase/contact/finance/listing. |
 | OVR-01 | Overseer | P0 | ACTIVE | SCHED-30-REPLENISH | this ledger + project batches + #49 | Fresh-fetch before shared writes; coordination only. |
 
 ## Ready ordering
 1. AgentOS: #104 blockers stay stable; execute independent #112 A-AG-08 and replay/correlation gaps without competing with exact active mutation work.
-2. PRS: do not recertify unchanged #104; A-PRS-04 is independent fixture work.
+2. PRS: do not recertify unchanged #104; A-PRS-04 now includes the prepared-recovery envelope-splice fixture and remains independent executable assurance work.
 3. Commerce: Headless B-HDL-03 then B-HDL-04; eBay B-EBAY-04; MyPrime B-MPD-01/B-MPD-05; GSC only authenticated evidence routes.
-4. Lane-C/manual state remains coordinated but is not consumed by this replenisher merely because visible.
+4. Lane-C/manual state remains coordinated but is not consumed by this replenisher merely because visible; Commercial Frontend generic cockpit is incumbent-overlap and must stay evidence-gated.
 
 ## Security / authority
 Security is cross-cutting. S0/S1 read-only/synthetic work; S2 non-production branch/tests/docs requires scoped grant and Green where promotion applies. Production/publication/contact/spend/credentials/security-policy/physical-host actions remain owner-only. Functional success never upgrades security, Green or PRS status.
