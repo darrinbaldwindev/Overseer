@@ -72,6 +72,8 @@ class Transaction:
     def verify(self, evidence: str) -> None:
         if self.state != State.EVIDENCED:
             raise ValueError("verification requires EVIDENCED state")
+        if not isinstance(evidence, str) or not evidence.strip():
+            raise ValueError("verification requires non-empty independent evidence")
         self.verification_evidence.append(evidence)
         self.transition(State.VERIFIED, evidence=evidence)
 
