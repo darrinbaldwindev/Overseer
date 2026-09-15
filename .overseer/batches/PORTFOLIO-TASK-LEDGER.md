@@ -22,10 +22,10 @@ Rules: CLAIMED requires an owner and exact task identity; ACTIVE requires substa
 - `SCHED-45-VENTURES` — owner-re-enabled Lane C / Ventures executor; claims only exact Lane-C tasks not already ACTIVE/VERIFYING elsewhere.
 - `WORK-PORTFOLIO` — owner-started Work.
 - `PROJECT-CHAT:<name>` — project-specific manual executor.
-- Lane-C and other non-core projects are owner-manual unless the owner explicitly re-enables scheduled execution. Their durable state is retained here for coordination only.
+- Lane-C and other non-core projects retain durable coordination state here. Their execution ownership is governed by the latest owner instruction and exact claims; this ledger never grants authority.
 
-## Reconciliation checkpoint — 2026-09-15 18:45 Brisbane
-Lane C coordination changed: owner re-enabled Ventures scheduled execution in the current instruction. `SCHED-45-VENTURES` first-claimed `C-GK-01` only; it did not claim Affiliate/Content360/Marketing tasks already ACTIVE elsewhere. GhostKitchen PR #32 exact pre-action `eab5b290c93e111a0275308bee39945d9076c956` again had zero exact-head Actions runs. After a documentation-only batch reconciliation, PR #32 exact head is `766f69b92fe3ea5a98aca0cd611727cdf61c879d`, also with zero exact-head runs. Repeated unchanged CI absence is now BLOCKED_STABLE; no further no-op synchronization commits should be used to provoke CI.
+## Reconciliation checkpoint — 2026-09-15 19:32 Brisbane
+Changed evidence only: GlobalShopCo-Headless PR #1 advanced from `c3f4939f1b7de8ef6e7fe6547400343dbb076348` to exact `708d32207e1e01bcbf8f9052698ffb29e98a8270`. Commit `708d322...` adds canonical checkout projection denials for HTTP downgrade, localhost/local-order target, hostname-suffix confusion, userinfo confusion and non-TLS port, while asserting zero network calls on denied inputs and retaining explicit TLS/443 acceptance. Exact-head `M3 checkout validation` run `34951837218` completed SUCCESS. Therefore the bounded non-production checkout-projection slice is VERIFIED on this exact successor lineage. Product identity/availability contradictions remain independently PENDING; real dev-store/browser acceptance remains BLOCKED_STABLE. AgentOS #104/#112 and PRS #24 exact heads are unchanged; no unchanged-head assurance was repeated. Lane-C/manual durable state is preserved unchanged.
 
 ## Current ledger
 
@@ -42,14 +42,14 @@ Lane C coordination changed: owner re-enabled Ventures scheduled execution in th
 | A-PRS-01 | PRS | P0 | VERIFIED | SCHED-40-ASSURANCE | historical `PRS#17@49fe1f8bca3ddae271d85e0f4767173060267222` | Historical false-GREEN baseline only. |
 | A-PRS-02 | PRS | P0 | BLOCKED_STABLE | SCHED-40-ASSURANCE | unchanged `AgentOS#104@4c8bcc3...` | Reopen on changed AgentOS candidate. |
 | A-PRS-03 | PRS | P0 | BLOCKED_STABLE | SCHED-40-ASSURANCE | `PRS#24@3039c886bdcff911f7c6dcc3e086368058e57fb6` + future repaired AgentOS head | Completion-grade PRS requires identical-head assurance. |
-| A-PRS-04 | PRS | P0 | PENDING | SCHED-40-ASSURANCE | `PRS#24@3039c886...` | Independent fixture work only; no physical execution. |
+| A-PRS-04 | PRS | P0 | PENDING | SCHED-40-ASSURANCE | `PRS#24@3039c886...`; #49 handoff `5677299519` | Implement evidence-bundle mix-and-match/substitution and whole-bundle replay negatives; fixtures only, no physical execution. |
 | B-GSC-01 | GlobalShopCo | P1 | ACTIVE | SCHED-15-COMMERCE | `#29@15fa99eb4c4b1f96127f6f51c412cbffc94e45e2`; `#30@80c82475b98663d677885e8b4d222ae2cedb8555` | Authenticated trade evidence only; missing material field => HOLD/UNKNOWN. |
 | B-GSC-02 | GlobalShopCo | P1 | PENDING | SCHED-15-COMMERCE | evidence-complete B-GSC-01 row | Delivered-margin calculation only after evidence completeness. |
 | B-GSC-03 | GlobalShopCo | P1 | BLOCKED_STABLE | SCHED-15-COMMERCE | current truth `0 eBay-ready SKUs` | Reopen only on exact evidence-complete variant. |
 | B-GSC-04 | GlobalShopCo | P1 | PENDING | SCHED-15-COMMERCE | authenticated source routes only | Compact/light AU-stock evidence batch. |
-| B-HDL-01 | GlobalShopCo-Headless | P1 | VERIFIED | SCHED-15-COMMERCE | `#1@c3f4939f1b7de8ef6e7fe6547400343dbb076348` | Bounded non-production only. |
-| B-HDL-02 | GlobalShopCo-Headless | P1 | PENDING | SCHED-15-COMMERCE | same #1 lineage | Canonical-checkout/local-order/alternate-host denial cases. |
-| B-HDL-03 | GlobalShopCo-Headless | P1 | PENDING | SCHED-15-COMMERCE | same #1 lineage | Variant mismatch/stale availability/duplicate-cart contradictions. |
+| B-HDL-01 | GlobalShopCo-Headless | P1 | VERIFIED | SCHED-15-COMMERCE | `#1@708d32207e1e01bcbf8f9052698ffb29e98a8270`; run `34951837218` SUCCESS | Configured Shopify authority + malformed-authority predecessor tests remain passing on exact successor; bounded non-production only. |
+| B-HDL-02 | GlobalShopCo-Headless | P1 | VERIFIED | SCHED-15-COMMERCE | `#1@708d32207e1e01bcbf8f9052698ffb29e98a8270`; run `34951837218` SUCCESS | Canonical checkout projection denials verified: downgrade/local-order/suffix/userinfo/non-TLS port fail closed with zero network calls. |
+| B-HDL-03 | GlobalShopCo-Headless | P1 | PENDING | SCHED-15-COMMERCE | `#1@708d32207e1e01bcbf8f9052698ffb29e98a8270` | Variant mismatch/stale availability/duplicate-cart contradictions; keep homogeneous and non-production. |
 | B-HDL-04 | GlobalShopCo-Headless | P1 | BLOCKED_STABLE | SCHED-15-COMMERCE | owner-authorized dev-store/browser environment | Real browser acceptance owner-gated. |
 | B-EBAY-01 | shopify_ebay | P1 | BLOCKED_STABLE | SCHED-15-COMMERCE | main `c68883f24fb3711fce567a35b1a80db74933b82a` | No evidenced canonical upstream replay persistence owner. |
 | B-EBAY-02 | shopify_ebay | P1 | BLOCKED_STABLE | SCHED-15-COMMERCE | B-EBAY-01 | Restart replay durability waits for canonical upstream owner. |
@@ -71,8 +71,9 @@ Lane C coordination changed: owner re-enabled Ventures scheduled execution in th
 | OVR-01 | Overseer | P0 | ACTIVE | SCHED-30-REPLENISH | this ledger + project batches + #49 | Fresh-fetch before every shared write; coordination only. |
 
 ## Ready queue ordering
-1. AgentOS/PRS/Commerce remain with their owning schedules.
-2. Lane C: skip exact tasks already ACTIVE/VERIFYING elsewhere. C-GK-01 is BLOCKED_STABLE. Eligible next independent claims are C-FR-01, C-GEM-01 or C-CF-01 after fresh project scan and exact-lineage reconciliation; Car Rental stays research-only/BLOCKED_STABLE.
+1. AgentOS/PRS/Commerce remain with their owning schedules; skip exact tasks already ACTIVE/VERIFYING elsewhere.
+2. Headless B-HDL-02 is closed VERIFIED at `708d322...`; next independent Headless work is B-HDL-03 product identity/availability contradictions. Do not reopen dev-store/browser acceptance without owner environment evidence.
+3. Lane C: C-GK-01 remains BLOCKED_STABLE. Eligible independent claims remain C-FR-01, C-GEM-01 or C-CF-01 only after fresh project scan and exact-lineage reconciliation; do not compete with ACTIVE Affiliate/Content360/Marketing work.
 
 ## Security / authority boundary
 Security is cross-cutting. Risk is S0/S1 for read-only/synthetic work and S2 for non-production branch/test/docs mutations; unknown classification fails closed upward. Production/publication/contact/spend/credentials/security-policy/physical-host actions remain owner-only. Functional success never upgrades security, Green or PRS status.
