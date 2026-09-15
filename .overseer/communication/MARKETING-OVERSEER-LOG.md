@@ -1,105 +1,95 @@
 # MARKETING OVERSEER — CANONICAL LOG
 
 **Canonical mission:** `darrinbaldwindev/Overseer#49`  
-**Purpose:** durable evidence-backed Marketing handoff. Detailed history remains in reports, batch commits and git history.  
+**Purpose:** durable evidence-backed Marketing handoff.  
 **Rule:** evidence controls claims; Marketing never self-certifies overall AgentOS GREEN.
 
-## Standing priorities
-1. AgentOS
-2. GlobalShopCo + Shopify→eBay
-3. GlobalShopCo Headless
-4. Affiliate Websites
-5. GhostKitchen / Franchise
-6. other useful portfolio lanes
-
 ## Governance
-No merge/deploy/approval/ready/rebase/credentials/purchase/supplier contact/listing publication/paid campaign/production write/telemetry activation/production autonomy without explicit authority. No duplicate control plane. Content360 is downstream optimization, never product-fact authority.
+No merge/deploy/approval/ready/rebase/credentials/purchase/supplier contact/listing publication/paid campaign/production write/telemetry activation/production autonomy without explicit authority. Content360 remains downstream of product truth.
 
-## Claim vocabulary
-**PROVEN / BETA-PROVEN / NEARLY PROVEN / PRODUCT DIRECTION / NOT YET SUPPORTABLE**.
-
----
-
-# CURRENT DURABLE INDEX
-
-## AgentOS / Marketing
-- Evidence Timeline acceptance @ `6a53bf129817432a9634cff1745524d5e89fd3db`
-- Jack permission acceptance @ `474fcb025891ea38f2ed5db95e32f7464672617a`
-- readiness projection acceptance @ `31ae5313c9801b05ee7b69affb5b65ccf9cfd70b`
-- authority-source follow-up @ `1488dafdeeaf34df382e64c88ab447844482c7df`
-- Content360 demographic campaign OS @ `8782bb10f114767df6d52d0aa0f851d25ab02776`
-- 17-agent identity/persona acceptance @ `1076f6d89257b89fe0bf77832e1532fff43b4f1b`
-- voice claim gate @ `abdcc921b623d13d0c19b87c2e6beb04921dcba1`
-- 17-agent/Overseer campaign vocabulary @ `527f93fc409113ebd96fc475941da5b88db0295d`
-- single Overseer front-door gate @ `1bf7643aab282ea1bcdfcf67f2d360ada724393b`
-- Content360 pre-Beta education matrix @ `8014b90d826517f2b203d8a18b57df9f2e5fcc11`
-
-## GlobalShopCo / eBay
-- contradiction-aware gate @ `f3f41630a2bc7ea711c86597a91e5592ea2b17a5`
-- OXO threshold screen @ `181e4507642740422e79b6a5e60377468991cb8f`
-- CARLA current-leader re-screen @ `328d353e3ec43ea013ee67c37e24f18b17d01567`
-
-## Affiliate
-- relationship/freshness gate @ `f104847603cf73558563fc34b5ab0ee4dc5073a2`
-- AU proof-gated shortlist @ `f077101bd77cb3ef1dd1183e7ee79350c4bebe81`
-- AU expansion @ `2d654dee4e55f82f17351559f589f4889024a112`
+## Durable Marketing index — recent
+- Evidence Timeline acceptance `6a53bf129817432a9634cff1745524d5e89fd3db`
+- Jack permission acceptance `474fcb025891ea38f2ed5db95e32f7464672617a`
+- readiness projection acceptance `31ae5313c9801b05ee7b69affb5b65ccf9cfd70b`
+- Content360 demographic OS `8782bb10f114767df6d52d0aa0f851d25ab02776`
+- 17-agent/Overseer vocabulary `527f93fc409113ebd96fc475941da5b88db0295d`
+- single Overseer front-door gate `1bf7643aab282ea1bcdfcf67f2d360ada724393b`
+- pre-Beta Content360 matrix `8014b90d826517f2b203d8a18b57df9f2e5fcc11`
+- Frontend dependency-freshness gate `bddf32b2bd1b17cbc870b92f7a06ee4b268ecd27`
+- Content360 bounded claim delta `6084deb8669529dd510af4d918a4d2b138e83a3f`
+- GlobalShopCo capped-pilot freshness reconciliation `d49283079dc24910d80fd9a04a546942253818b1`
 
 ---
 
-# 2026-09-15 10:46+ AEST — AUTONOMOUS MARKETING CYCLE
+# 2026-09-15 11:00+ AEST — AUTONOMOUS MARKETING CYCLE
 
-## Mandatory pre-scan findings
-### AgentOS #104
-Live exact head moved materially from the prior Marketing checkpoint to `4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091`, OPEN/DRAFT/UNMERGED. Exact-head AgentOS Tests `34906732495` completed SUCCESS on Ubuntu/Node22 and Windows/Node26.
+## AgentOS #104
+Fresh pre/post scan: exact `4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091`, OPEN/DRAFT/UNMERGED; Tests `34906732495` SUCCESS. No implementation repair appeared during this Marketing cycle.
 
-Crucial reconciliation: this head is not the SG-08 repair. Canonical #49 evidence states its material delta is a **test-only expansion of false-success repair fixtures**. Independent Jess + Michael assurance on the identical head is controlling:
-- SG-08 FAIL/BLOCKED;
-- durable `MUTATED_VERIFIED` success can persist before final ownership-loss detection;
-- A-AG-01 remains BLOCKED;
-- A-AG-04 is a repair-driving fixture pack, not PASS;
-- SG-18 Green cannot PASS while the defect reproduces;
-- SG-19 completion-grade PRS is ineligible until identical-head Green after real repair;
-- SG-01/02 authenticated actor/canonical grant remain blocked;
-- physical Windows remains owner-gated.
+Controlling state remains:
+- current head is SG-08 diagnostic/test expansion, not repair;
+- SG-08 false-success reproducible/BLOCKED;
+- SG-01/02 authenticated actor/canonical grant binding BLOCKED;
+- Green cannot promote while defect reproduces;
+- completion PRS waits for identical-head Green after repair;
+- physical Windows remains separate/owner-gated;
+- Founding Beta HOLD.
 
-Marketing correction: earlier language that the stale-owner false-success condition `appears technically addressed` is superseded. **Current exact-head evidence proves the false-success condition remains reproducible.** CI success proves the diagnostic fixture executes; it does not prove safety.
+M-A042 therefore performed as a watcher and made **no claim promotion**.
 
-**Founding Beta remains HOLD.**
+## Frontend #111 — meaningful movement
+Fresh exact head advanced to `3efea32bec11725b5b1d221190f0424fc5eb57dc`, OPEN/DRAFT/UNMERGED. Exact-head Tests `34914794812` = SUCCESS.
 
-### Frontend #111
-Live exact head moved to `352c83fdbcff65dd9dc592fb3b8d65d4aa130969`, OPEN/DRAFT/UNMERGED. Exact-head AgentOS Tests `34863648579` = SUCCESS.
+Cycle 011 adds useful fail-closed readiness correlation:
+- optional expected host ID;
+- host mismatch becomes blocked/conflicting;
+- stale positive idle/working state cannot present as current;
+- exact expected/evidence physical-acceptance heads must be canonical 40-character lowercase Git SHAs;
+- malformed/missing/stale/mismatched head evidence cannot produce physical PASS;
+- mutation readiness remains `unknown / NO_CANONICAL_MUTATION_READINESS_SOURCE`.
 
-The PR body contains stale internal references to implementation head `429b6d5...` and observed #104 `bbfee522...`; Marketing therefore treats dependency/head prose as stale unless refreshed by live evidence. Product truth remains fail-closed: Basic Chat, host lifecycle, Windows capability, physical acceptance and mutation readiness are distinct; Green ≠ PRS; Stop requested ≠ stopped; no durable Revoke claim.
+The PR now refreshes #104 dependency truth to exact `4c8bcc3...` and explicitly records the SG-08 false-success blocker. The adapter remains intentionally not live-wired across separate draft lineages, avoiding synthetic cross-lineage truth.
 
-### Content360
-Canonical portfolio evidence reports Content360 #4 exact `d9782da613d407156d5e2a196d5d16f67bfc6fb2`, exact-head test `34906007364` SUCCESS. Classification is **VERIFIED_BOUNDED mock/non-production request-integrity only**. Official API/auth/live READ/OPTIMISE remains unproven; PUBLISH/SCHEDULE/network/account mutation remains blocked/owner-gated.
+Marketing classification: **IMPLEMENTATION-ADVANCED / EXACT-HEAD CI PASS / FRESHNESS+HEAD-CORRELATION HARDENED / DRAFT-UNMERGED / NOT SHIPPED.**
 
-### GlobalShopCo
-Canonical #49 and #17 evidence keep **0 eBay-ready SKUs** controlling. Research PRs #29/#30 remain research-only and no new authenticated supplier/app evidence has unlocked the OXO/CARLA gates.
+M-A043 completed a durable dependency-freshness gate: positive claims require exact evidence identity + valid freshness + valid correlation + bounded scope. Screenshots/demos from predecessor heads are not current proof without revalidation.
 
-## Work executed
-1. M-A038 — 17-agent/Overseer campaign vocabulary @ `527f93fc409113ebd96fc475941da5b88db0295d`.
-2. M-A039 — single Overseer front-door Marketing gate @ `1bf7643aab282ea1bcdfcf67f2d360ada724393b`.
-3. M-A040 — Content360 pre-Beta education matrix @ `8014b90d826517f2b203d8a18b57df9f2e5fcc11` — PREPARED / DO NOT PUBLISH.
-4. M-B020 — CARLA current-leader re-screen @ `328d353e3ec43ea013ee67c37e24f18b17d01567` — BOTH HOLD.
-5. Marketing vertical batch replenished with exact-head SG-08 correction and next tasks.
+## Content360
+No new live-service proof. Current exact `d9782da...` / test `34906007364` remains **PROVEN_BOUNDED for mock/non-production request-integrity only**.
 
-## Marketing decisions
-- `17 agents` remains owner-approved product direction, not a claim of 17 shipped autonomous employees.
-- User-facing relationship remains the Overseer; persona cannot become an authority identity.
-- Pre-Beta education may be prepared but not published/activated under this cycle.
-- `V178-36335` is the better physical CARLA eBay research row than `V178-36336`, but neither is eligible.
-- A green CI run must never be translated into a safety/readiness claim when independent exact-head assurance reproduces false success.
+M-A044 completed the promotion ladder and claim boundary. Official API/auth/live READ/OPTIMISE, live PUBLISH/SCHEDULE, production network/account mutation and end-to-end autonomous Content360 remain unproven/gated.
+
+## GlobalShopCo/eBay
+Fresh canonical commerce checkpoint still has research PRs #29/#30 only and no new authenticated supplier/app evidence. **0 eBay-ready SKUs** remains controlling.
+
+M-B021 completed capped-pilot freshness reconciliation. The pilot is evidence-capped, not count-capped. OXO and CARLA rows remain HOLD/research-only. Zero qualifying rows means pilot size zero; no gate is weakened to fill a target count.
+
+## New commercial/product-model issue detected
+Frontend #111 now reports current `main` product model as:
+- Free $0/year;
+- Standard $49/year;
+- Advanced/Pro $99/year;
+- separate AI Plus $22/month;
+- Commercial/Business TBD.
+
+This materially conflicts with older Marketing assumptions centred on Free → $29 → $99. Marketing will not publish either pricing model until reconciled against current canonical owner/product evidence. M-A045 added P1 NEXT SAFE.
+
+## Completed
+1. M-A042 — watcher, no #104 repair movement/no promotion.
+2. M-A043 — `bddf32b2bd1b17cbc870b92f7a06ee4b268ecd27`.
+3. M-A044 — `6084deb8669529dd510af4d918a4d2b138e83a3f`.
+4. M-B021 — `d49283079dc24910d80fd9a04a546942253818b1`.
+5. Batch replenished at `c921154982b6b8eb4c538ecbba983ad5d289ca7f`.
 
 ## Next priorities
-- M-A042 SG-08 repair claim-delta watcher.
-- M-A043 Frontend dependency freshness gate.
-- M-A044 Content360 bounded-integration claim delta.
-- M-B021 capped eBay pilot contradiction/freshness reconciliation.
+- M-A045 current pricing/product-model reconciliation.
+- M-A046 freshness-aware demo/screenshot acceptance.
+- M-A047 single-front-door implementation watcher.
+- M-B022 minimum evidence bundle for first eBay SKU.
 - M-D001c AU true publisher-commercial proof hunt.
 - M-F001 portfolio claim-evidence pointer index if higher lanes block.
 
 ## Hard status
-**NO PUBLIC BETA / NO INVITATIONS / NO TELEMETRY ACTIVATION / NO PAID CAMPAIGN / NO EBAY LISTING / NO SHOPIFY PRODUCT ACTIVATION / NO SUPPLIER CONTACT / NO ACCOUNT APPLICATION / NO PURCHASE / NO DEPLOYMENT / NO OVERALL GREEN.**
+**NO PUBLIC BETA / NO INVITATIONS / NO TELEMETRY ACTIVATION / NO PAID CAMPAIGN / NO EBAY LISTING / NO PRODUCT ACTIVATION / NO SUPPLIER CONTACT / NO ACCOUNT APPLICATION / NO PURCHASE / NO DEPLOYMENT / NO OVERALL GREEN.**
 
-**Operating rule:** fresh exact-head independent evidence outranks prior Marketing interpretation, PR prose and green CI.
+**Operating rule:** freshness is part of truth.
