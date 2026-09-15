@@ -1,11 +1,11 @@
 # MARKETING OVERSEER — VERTICAL EXECUTION BATCH
 
 **Canonical mission:** `darrinbaldwindev/Overseer#49`  
-**Fresh scan + mandatory post-scan:** 2026-09-15 AEST  
+**Fresh scan + mandatory post-scan:** 2026-09-15 10:46+ AEST  
 **Status:** ACTIVE / EXECUTED / REPLENISHED / EVIDENCE-GATED
 
 ## Mandatory cycle
-Every `cont` / `continue autonomously` means: fresh repo + coordination scan → reconcile live evidence → rebuild maximum useful vertical batch → execute safe highest-value tasks → verify → fresh post-scan → replenish → durable log/checkpoint.
+Every `cont` / `continue autonomously` means: fresh repo + coordination scan → reconcile live evidence → rebuild maximum useful vertical batch → execute safe highest-value tasks → verify → mandatory post-scan → replenish → durable log/checkpoint.
 
 ## Priority
 1. AgentOS
@@ -23,86 +23,81 @@ No merge, approval, mark-ready, rebase, deployment, credentials, purchase, suppl
 # LIVE TRUTH AFTER POST-SCAN
 
 ## AgentOS Level 2 — PR #104
-- OPEN / DRAFT / UNMERGED at exact `bbfee5221652c9bf0551ce5b31eb0b1cf6e78af1`.
-- Exact-head workflow `34857161932` = SUCCESS.
-- Current lineage materially strengthens source-backed authority admission and project-file ownership/replacement-lock behavior.
-- Windows-specific race and abrupt-holder-exit locking tests pass on the Windows lane.
-- Prior stale-owner false-success condition appears technically addressed by new regression coverage, but Marketing does **not** close the independent PRS finding until exact-head independent assurance revalidates it.
-- Real current-head physical Windows Level 2 acceptance remains unproven.
-- Independent Green exact eligible head → independent PRS remains unproven.
+- OPEN / DRAFT / UNMERGED at exact `4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091`.
+- Exact-head AgentOS Tests `34906732495` = SUCCESS on Ubuntu/Node22 and Windows/Node26, including npm audit.
+- This exact head is **test-only SG-08 diagnostic expansion**, not the ownership repair.
+- Independent Jess + Michael assurance on the identical head is controlling: **SG-08 FAIL/BLOCKED** because durable success can still persist before final ownership-loss detection.
+- A-AG-01 remains BLOCKED. A-AG-04 is a repair-driving fixture pack, not PASS. A-AG-05 replay/freshness remainder remains split.
+- SG-01/02 remain BLOCKED because authenticated transport and canonical grant lookup are not wired.
+- SG-18 Green cannot PASS while the defect reproduces; SG-19 completion PRS is ineligible until identical-head Green PASS after repair.
+- Physical Windows remains owner-gated.
 - **Founding Beta remains HOLD.**
 
 ## AgentOS Frontend — PR #111
-- OPEN / DRAFT / UNMERGED at exact `429b6d5bc14b2790f1a9bace09b76e699cb88b8c`.
-- Exact-head workflow `34859721665` = SUCCESS across general + Windows Basic Chat lifecycle jobs.
-- Prior Ubuntu SIGINT lifecycle regression is cleared on this exact head.
-- Canonical evidence integration and readiness projection remain fail-closed and PASS their tests.
-- Basic Chat availability, Windows host capability, physical Windows acceptance and project-file mutation readiness remain separate states.
-- Generic Evidence Timeline, durable Revoke, Henry/PRS result, mutation readiness, physical acceptance and shipment are not implied by CI success.
-- Classification: **IMPLEMENTATION-ADVANCED / EXACT-HEAD CROSS-PLATFORM CI PASS / EVIDENCE+READINESS PROJECTIONS VERIFIED / DRAFT-UNMERGED / NOT SHIPPED**.
+- OPEN / DRAFT / UNMERGED at exact `352c83fdbcff65dd9dc592fb3b8d65d4aa130969`.
+- Exact-head AgentOS Tests `34863648579` = SUCCESS.
+- The PR body is stale about its own implementation-head text (`429b6d5...`) and about observed #104 dependency (`bbfee522...`); Marketing uses live head evidence, not stale body prose.
+- Current product boundaries remain: evidence/readiness fail closed; Basic Chat/host lifecycle/Windows capability/physical acceptance/mutation readiness remain separate; Green ≠ PRS; Stop requested ≠ confirmed termination; no durable Revoke claim.
+- Classification: **IMPLEMENTATION-ADVANCED / EXACT-HEAD CI PASS / DRAFT-UNMERGED / NOT SHIPPED**.
+
+## Content360
+- Canonical portfolio checkpoint reports Content360 #4 exact `d9782da613d407156d5e2a196d5d16f67bfc6fb2`, exact-head test `34906007364` SUCCESS.
+- Classification remains **VERIFIED_BOUNDED mock/non-production request-integrity only**.
+- Official API/auth/live READ/OPTIMISE remains unproven. PUBLISH/SCHEDULE/network/account mutation remains BLOCKED/owner-gated.
 
 ## GlobalShopCo + eBay
-- **0 eBay-ready SKUs / PILOT NOT READY / PUBLICATION HOLD** remains controlling commerce truth.
-- OXO: `48685` AMBER/P1; `48703` secondary AMBER/HOLD; `48695` RED/HOLD.
-- Combined stock+freight screen ceilings remain A$29.54 / A$28.31 / A$23.38 respectively.
-- Authenticated buy cost, real freight/cubic, marketplace permission, ownership/fulfilment, seller identity and actual eBay fees remain UNKNOWN.
-- Fork-lane security progress does not alter SKU eligibility; live/faithful sync evidence remains separate.
-
-## Affiliate AU
-- Octopus Group, Pureprofile and Toluna: user reward + member referral evidence; publisher-commercial relationship remains UNKNOWN/HOLD.
-- LifePoints: reward evidence but current referral absent; comparison-only.
+- **0 eBay-ready SKUs / PILOT NOT READY / PUBLICATION HOLD** remains controlling.
+- Current research-only PRs #29/#30 remain evidence lanes; #30 explicitly reported no new authenticated supplier/app evidence.
+- OXO `48685` remains P1 authorised-wholesale target only; no authenticated buy cost/freight unlock appeared.
+- CARLA re-screen: `V178-36335` remains the better physical eBay research row (~0.92 kg evidence) but HOLD; `V178-36336` remains owned-site commercial interest but weak first-wave eBay fit because ~4.51 kg and exact eBay identity/economics remain unresolved.
 
 ---
 
 # EXECUTED THIS CYCLE
 
-## M-A032 — readiness-projection claim/screen acceptance
-**COMPLETE** — `reports/2026-09-15-agentos-readiness-projection-claim-screen-acceptance.md` @ `31ae5313c9801b05ee7b69affb5b65ccf9cfd70b`.
-Four readiness states cannot be collapsed into a generic `Ready`; missing/stale/mismatched/contradictory evidence fails closed.
+## M-A038 — 17-agent / Overseer campaign vocabulary
+**COMPLETE** — `reports/2026-09-15-agentos-17-agent-overseer-campaign-vocabulary.md` @ `527f93fc409113ebd96fc475941da5b88db0295d`.
+Approved wording distinguishes owner-approved 17-role product direction from shipped implementation. Prohibits `17 autonomous employees`, all-17-every-request and persona-as-authority claims.
 
-## M-A034 — Jack authority-source discovery follow-up
-**COMPLETE** — `reports/2026-09-15-agentos-authority-source-discovery-follow-up.md` @ `1488dafdeeaf34df382e64c88ab447844482c7df`.
-Source-backed bounded admission is now evidenced in tested paths. Grant lifetime, durable revoke+receipt, in-flight revoke behavior, reversibility, user-facing secret/egress/external-action consequences and next approval boundary remain incomplete.
+## M-A039 — single Overseer front-door Marketing gate
+**COMPLETE** — `reports/2026-09-15-agentos-single-overseer-front-door-marketing-gate.md` @ `1bf7643aab282ea1bcdfcf67f2d360ada724393b`.
+Campaign/Frontend handoff requires Overseer as primary relationship; specialist persona cannot become a security principal or bypass canonical authority/evidence/Green/PRS.
 
-## M-A035 — Content360 demographic campaign operating system
-**COMPLETE / PREPARED / NOT ACTIVATED** — `reports/2026-09-15-agentos-content360-demographic-campaign-operating-system.md` @ `8782bb10f114767df6d52d0aa0f851d25ab02776`.
-Encodes segmentation as life context × age/life stage × expertise × problem × trust concern × desired outcome × platform × funnel stage. Age is explicitly independent of expertise. Content360 remains downstream of approved evidence/claims.
+## M-A040 — Content360 pre-Beta education matrix
+**COMPLETE / PREPARED / DO NOT PUBLISH** — `reports/2026-09-15-agentos-content360-prebeta-education-matrix.md` @ `8014b90d826517f2b203d8a18b57df9f2e5fcc11`.
+Prepared education families for households, professionals, developers, privacy/cost-conscious users and small businesses. No Beta CTA, paid activation, testimonials, security/savings guarantees or shipment claims.
 
-## M-A036 — 17-agent identity/persona Marketing acceptance
-**COMPLETE / PRODUCT DIRECTION** — `reports/2026-09-15-agentos-agent-identity-persona-marketing-acceptance.md` @ `1076f6d89257b89fe0bf77832e1532fff43b4f1b`.
-Stable system identity + controlled role + replaceable persona; user always goes through Overseer. No implementation claim yet.
-
-## M-A037 — voice conversation claim gate
-**COMPLETE / PRODUCT DIRECTION / NOT SHIPPED** — `reports/2026-09-15-agentos-voice-conversation-claim-gate.md` @ `abdcc921b623d13d0c19b87c2e6beb04921dcba1`.
-Voice must remain an Overseer modality and preserve the same authority/evidence lifecycle. No current availability claim.
+## M-B020 — CARLA current-leader re-screen
+**COMPLETE / BOTH HOLD** — `reports/2026-09-15-globalshopco-carla-current-leader-rescreen.md` @ `328d353e3ec43ea013ee67c37e24f18b17d01567`.
+`V178-36335` remains conditional research priority; `V178-36336` is primarily owned-site interest. Neither is eBay-ready.
 
 ---
 
 # REPLENISHED AGENTOS LANE
 
 ## M-A007 — exact-head claim watcher
-P0 ACTIVE. Recheck #104 exact head/CI/ownership/auth/physical Windows/Green/PRS every cycle.
+P0 ACTIVE. Recheck #104 head/CI and independent exact-head Jess/Green/Michael/PRS evidence every cycle.
 
-## M-A015 — Frontend claim-comprehension QA
-P0 ACTIVE. Recheck #111 exact descendant/CI and preserve readiness/evidence separation, Green≠PRS and Stop requested≠stopped.
+## M-A015 — Frontend claim QA
+P0 ACTIVE. Recheck #111 exact descendant/CI and dependency freshness. Treat stale PR body head references as stale evidence.
 
 ## M-A016 — Founding Beta readiness
-P0/P1 HOLD. Do not activate until independent assurance + physical Windows + Green→PRS Level 2 gates clear.
+P0 HOLD. SG-08 repair + exact-head Green + PRS + physical Windows and other Level-2 gates still control activation.
 
 ## M-A033 — Evidence Timeline implementation acceptance follow-up
-P1 ACTIVE WATCH. Current #111 CI is green, but the UI remains a bounded `What happened` evidence summary until M-A030 accepted rows are implemented and evidenced.
-
-## M-A038 — 17-agent/Overseer campaign vocabulary
-P1 NEXT SAFE. Build approved PROVEN vs PRODUCT-DIRECTION wording for coordinated-team campaigns. Prohibit `17 autonomous employees`, direct specialist front-door claims and implication all 17 work every request.
-
-## M-A039 — user-through-Overseer product-marketing gate
-P1 NEXT SAFE. Encode single-front-door requirement across Marketing/Content360/Frontend handoff so conversational persona never becomes authority identity.
-
-## M-A040 — Content360 pre-beta education pack
-P1 NEXT SAFE. Prepare, do not publish/activate, demographic educational asset matrix using only current evidence-safe claims.
+P1 ACTIVE WATCH. Do not promote beyond bounded `What happened` until M-A030 accepted rows are implemented/evidenced on exact current head.
 
 ## M-A041 — voice implementation evidence watcher
-P2 WATCH. Promote voice only when STT/TTS, identity/session, mic privacy, interruption, consent/authority, replay, accessibility and E2E governance evidence exist.
+P2 WATCH. Voice remains PRODUCT DIRECTION / NOT SHIPPED.
+
+## M-A042 — SG-08 repair claim-delta watcher
+P0/P1 NEXT SAFE. When #104 moves, compare exact implementation delta against the three deterministic false-success fixtures. Marketing promotion requires independent exact-head assurance, not CI alone.
+
+## M-A043 — Frontend dependency freshness gate
+P1 NEXT SAFE. Formalise that user-facing readiness/authority summaries cannot cite stale #104/#112 heads or stale assurance state.
+
+## M-A044 — Content360 bounded-integration claim delta
+P1 NEXT SAFE. Reconcile current mock request-integrity PASS into Marketing wording while keeping official API/auth/live READ/OPTIMISE and PUBLISH/SCHEDULE unproven.
 
 ---
 
@@ -118,10 +113,10 @@ P0 BLOCKED-UNKNOWN. Authoritative read-only account evidence only.
 P0/P1 BLOCKED-UNTIL-DATA. Existing authorised source only; no application/contact.
 
 ## M-B019 — OXO 48685 next-evidence gate
-P1 CONDITIONAL. Only if authenticated cost + real freight evidence appears and comfortably clears A$29.54 combined ceiling.
+P1 CONDITIONAL. Only if authenticated cost + real freight appears and comfortably clears current threshold.
 
-## M-B020 — CARLA current-leader re-screen
-P1 NEXT SAFE. Reconcile `V178-36336` and `V178-36335` against current comps, freight/weight, permission/stock-model evidence and free-delivery contribution discipline. No supplier contact.
+## M-B021 — capped pilot contradiction/freshness reconciliation
+P1 NEXT SAFE. Reconcile current eight-SKU pilot against latest permission, exact identity, weight/freight and market-price contradictions. Do not add rows merely to hit a number.
 
 ## M-B009 — first-qualified-SKU rapid-release kit
 P1 HOLD until one SKU clears every gate.
@@ -131,7 +126,7 @@ P1 HOLD until one SKU clears every gate.
 # AFFILIATE / HEADLESS / OTHER
 
 ## M-D001c — AU true publisher-relationship proof hunt
-P1 NEXT SAFE. Find current primary proof of user reward + separate publisher-commercial route; never conflate member referral with publisher rights.
+P1 NEXT SAFE. Current primary proof must show user reward plus separate publisher-commercial route; member referral alone is insufficient.
 
 ## M-D002 / M-D003 — UK / US proof-gated shortlists
 P1 PENDING.
@@ -148,14 +143,14 @@ P2 PENDING; no earnings/payback promises.
 ---
 
 # NEXT AUTONOMOUS ORDER
-1. mandatory fresh scans #104 / #111 / GlobalShopCo #17 / batch+log;
-2. recheck independent PRS/Green evidence for current #104 exact head;
-3. M-A038 + M-A039;
-4. M-A040 Content360 pre-beta education matrix if product evidence remains stable;
-5. M-B020 CARLA re-screen unless authenticated commerce evidence unlocks a higher gate;
-6. M-D001c AU dual-relationship proof hunt;
+1. mandatory fresh scans #104 / #111 / #49 assurance / GlobalShopCo #17 / batch+log;
+2. M-A042 if #104 implementation repair appears; otherwise preserve HOLD;
+3. M-A043 Frontend dependency-freshness gate;
+4. M-A044 Content360 bounded-integration claim delta;
+5. M-B021 capped-pilot contradiction/freshness reconciliation;
+6. M-D001c AU true publisher-commercial proof hunt;
 7. M-F001 if capacity remains;
-8. mandatory post-scan; replenish batch; update Marketing log + Overseer #49.
+8. mandatory post-scan; replenish batch; update Marketing log + #49.
 
 ## Core rule
-**CI GREEN is evidence of tested code, not a synonym for product readiness, physical acceptance, assurance, shipment, Beta readiness or overall GREEN. Fresh evidence outranks this batch.**
+**A green test run can prove a defect fixture runs correctly. It cannot turn a reproduced false-success condition into GREEN. Independent exact-head assurance controls security/completion claims.**
