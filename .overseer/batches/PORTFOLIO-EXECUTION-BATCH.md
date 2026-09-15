@@ -6,10 +6,10 @@ Canonical engine: `.overseer/doctrine/PORTFOLIO-BATCH-ENGINE.md`; profiles: `.ov
 
 **Invariant:** **NO MODEL DECIDES ITS OWN AUTHORITY.** No merge/approve/ready/rebase/deploy/credentials/security-policy changes/production writes/purchases/spend/supplier contact/live publication/physical owner-host action/production autonomy. Functional, security, Green and PRS status remain independent.
 
-## Checkpoint — 2026-09-15 20:29 Brisbane
-- **Changed:** AgentOS PR #112 advanced from `d1645450a06d00c49a7a78f176e97b44b9eaa225` to exact `6b8bcea4ed287e76fff4943b53e91926db5da7b0`, two commits ahead. Delta is confined to `runtime/capability-contract.mjs` and `tests/runtime-shell.test.mjs`. Exact-head `test` checks `104337750208` and `104337729107` plus `wake` `104337750562` completed SUCCESS. A-AG-03 remains ACTIVE with current-head functional evidence; this does not self-promote Green/security/authority.
+## Checkpoint — 2026-09-15 21:32 Brisbane
+- **Changed:** AgentOS PR #112 advanced one commit from `6b8bcea4ed287e76fff4943b53e91926db5da7b0` to exact `a7736d3747008f25f57290adbe37271447519303`. Compare evidence shows the successor changes only `tests/runtime-shell.test.mjs` (+40/−0); no runtime implementation changed. Exact-head `test` checks `104354565672` and `104354554829` plus `wake` `104354566066` completed SUCCESS. A-AG-03 remains ACTIVE with current-head functional CI evidence; this does not self-promote Green/security/authority.
 - **Stable:** AgentOS #104 remains exact `4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091`; SG-08 continuous ownership and SG-01/02 authenticated actor/canonical grant remain BLOCKED_STABLE. PRS must not recertify unchanged #104.
-- **Stable commerce:** Headless bounded predecessor evidence remains VERIFIED at `708d32207e1e01bcbf8f9052698ffb29e98a8270` / run `34951837218`; real browser/dev-store remains owner-gated. GSC remains evidence-gated with zero eBay-ready SKUs; eBay gets no new persistence plane; MyPrime divergent lineages require compatibility mapping.
+- **Stable commerce/manual:** unchanged durable rows remain authoritative until their owning executor supplies changed exact evidence. No competing implementation is performed by this coordination cycle.
 
 # AgentOS — Level 2 P0
 ### A-AG-01 continuous ownership fence — BLOCKED_STABLE
@@ -17,7 +17,7 @@ Anchor `#104@4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091`. One existing crash-relea
 ### A-AG-02 authenticated actor + canonical grant — BLOCKED_STABLE
 Anchor `#104@4c8bcc3...`. No evidenced end-to-end authenticated identity/canonical grant resolver. No duplicate authority registry. Security `SG-01,02,03,04,09,10,11,18,19`; S2.
 ### A-AG-03 runtime-shell eligibility consolidation — ACTIVE
-Anchor `#112@6b8bcea4ed287e76fff4943b53e91926db5da7b0`; exact-head checks SUCCESS. Objective: one canonical capability normalization/evaluation path without authority widening. Acceptance: deterministic aliases; compatibility adapter reuses canonical evaluator; asserted eligibility without canonical result denied; adjacent unauthorized capability denied; exact-head CI. **Next:** inspect the two-commit capability-contract delta, inventory uncovered evaluator/alias entry points, implement only 2–5 homogeneous missing denial/normalization cases, rerun exact-head CI. Keep #104 hot path untouched. Security `SG-02,03,04,10,18`; S2; Green required for promotion.
+Anchor `#112@a7736d3747008f25f57290adbe37271447519303`; exact-head checks SUCCESS. Latest successor is test-only. Objective: one canonical capability normalization/evaluation path without authority widening. Acceptance: deterministic aliases; compatibility adapter reuses canonical evaluator; asserted eligibility without canonical result denied; adjacent unauthorized capability denied; exact-head CI. **Next:** inspect the added 40-line test delta, inventory only genuinely uncovered evaluator/alias entry points, implement 2–5 homogeneous missing denial/normalization cases if gaps remain, then rerun exact-head CI. Keep #104 hot path untouched. Security `SG-02,03,04,10,18`; S2; Green required for promotion.
 ### A-AG-04 replay/correlation slice — PENDING
 Anchor #104. Inventory uncovered first-write provenance/conflicting identity/duplicate-result/restart-duplicate cases; implement 2–5 homogeneous gaps without changing ownership or adding persistence. Security `SG-09,10,11,14,18`; S2.
 ### A-AG-05 recovery/authority cross-bind — PENDING
@@ -87,4 +87,4 @@ Inventory validator coverage; add 2–5 stale Prime/rank/deal or identity/outbou
 5. eBay executes B-EBAY-04; never creates persistence.
 6. MyPrime executes B-MPD-01 and independent B-MPD-05 before any presentation port.
 
-**New exact-head movement this checkpoint: AgentOS #112 at `6b8bcea4...` with exact-head checks SUCCESS. This is functional CI evidence only; no Green/security/PRS/authority promotion and no overall GREEN.**
+**New exact-head movement this checkpoint: AgentOS #112 at `a7736d3747008f25f57290adbe37271447519303`; successor delta is test-only and all three exact-head checks are SUCCESS. Functional CI evidence only; no Green/security/PRS/authority promotion and no overall GREEN.**
