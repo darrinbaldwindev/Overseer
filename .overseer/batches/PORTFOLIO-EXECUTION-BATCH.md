@@ -1,188 +1,158 @@
 # Portfolio Execution Batch Manifest
 
-**Purpose:** queue state only. Canonical procedure: `.overseer/doctrine/PORTFOLIO-BATCH-ENGINE.md`; project shaping: `.overseer/profiles/PROJECT-BATCH-PROFILES.md`; security: `.overseer/security/AGENTOS-SECURITY-GATE-MATRIX.md`. Current repository/runtime/CI evidence always outranks this file.
+**Purpose:** scheduled queue state for the owner-selected core projects only. Canonical procedure: `.overseer/doctrine/PORTFOLIO-BATCH-ENGINE.md`; project shaping: `.overseer/profiles/PROJECT-BATCH-PROFILES.md`; security: `.overseer/security/AGENTOS-SECURITY-GATE-MATRIX.md`. Current repository/runtime/CI evidence always outranks this file.
 
-**Fixed lanes:** A = AgentOS Level 2 P0 + PRS/Green assurance-adjacent work; B = GlobalShopCo/Headless/eBay/Amazon/MyPrimeDelivery; C = Affiliate-Websites AU/UK/US/Master, GhostKitchen, Franchise, GemVerse, Content360, Commercial Frontend, Marketing.
+**Scheduled scope:** AgentOS, PRS, GlobalShopCo, GlobalShopCo-Headless, shopify_ebay, MyPrimeDelivery. All other portfolio projects are owner-manual unless the owner changes this scope.
 
 **States:** `PENDING | ACTIVE | VERIFIED | BLOCKED | STALE | SPLIT_REQUIRED`.
 
 **Core invariant:** **NO MODEL DECIDES ITS OWN AUTHORITY.** Functional, security and PRS state remain separate. No merge/approve/ready/rebase/deploy/credentials/security-policy changes/production writes/purchases/spend/supplier contact/live publication/physical owner-host action/production autonomy.
 
-## Checkpoint reconciliation — 2026-09-15 09:30 Brisbane
-- Previous durable checkpoint: Overseer #49 `5671706993`; previous manifest blob `82988c1d7301ed0645c9cb6cfaf38058c3dd80dd`.
-- Canonical engine/profile/security matrix were read first. Current repository/PR/CI/#49 evidence controlled disposition; scheduler firing and worker claims alone did not.
-- **AgentOS:** PR #104 is OPEN/DRAFT/UNMERGED at exact `4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091`. Exact-head Actions run `34906732495` has Ubuntu/Node22 and Windows/Node26 SUCCESS; companion exact-head run `34906728091` also has Ubuntu/Windows SUCCESS. This exact head therefore has bounded functional CI closure only. The current PR description continues to state that authenticated transport/canonical grant lookup are not wired and SG-08 continuous ownership remains unproven. SG-01/02 and SG-08 stay BLOCKED. No promotion-grade Green or completion-grade PRS PASS exists.
-- **PRS/Green:** PRS #17 historical false-GREEN baseline remains independent historical evidence, not current-head certification. Completion-grade ownership assurance remains blocked until SG-08 is actually repaired and identical-head Green passes.
-- **Lane B:** fresh GlobalShopCo PR reads show #29 exact `15fa99eb4c4b1f96127f6f51c412cbffc94e45e2` and #30 exact `80c82475b98663d677885e8b4d222ae2cedb8555`, both OPEN/DRAFT research-only. #30 explicitly reports no new authenticated supplier/app evidence and preserves the capped pilot; `0 eBay-ready SKUs` remains controlling. Headless/eBay/MyPrime prior bounded evidence is retained only at its exact recorded lineage; live commerce/publication authority remains absent.
-- **Lane C:** Affiliate Master #19 remains exact `ea2ec9ce6ced26c4841d080abb4403193f299519`, OPEN/DRAFT. GhostKitchen #32 remains exact `eab5b290c93e111a0275308bee39945d9076c956`, OPEN/DRAFT with no newer exact-head check evidence found in this checkpoint. Content360 #4 materially advanced to exact `d9782da613d407156d5e2a196d5d16f67bfc6fb2`, OPEN/DRAFT, with exact-head test check/run `34906007364` SUCCESS. This verifies the bounded mock request-integrity slice only; official API/auth/live READ/OPTIMISE and any PUBLISH/SCHEDULE authority remain UNKNOWN/BLOCKED.
+## Checkpoint reconciliation — 2026-09-15 10:32 Brisbane
+- Owner explicitly narrowed recurring autonomous execution to the six projects above. Lane-C ventures and Shopify-to-Amazon are removed from scheduled replenishment; their durable repo state is not erased.
+- **AgentOS:** PR #104 remains OPEN/DRAFT/UNMERGED at exact `4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091`. Exact-head runs `34906732495` and `34906728091` are SUCCESS cross-platform. Head `4c8bcc3...` expands deterministic SG-08 false-success repair fixtures and still proves the defect: target mutation + durable success receipt can precede release-time ownership-loss detection. SG-08 remains BLOCKED. SG-01/02 authenticated actor/canonical grant binding remains BLOCKED. No overall GREEN.
+- **PRS:** #17 `49fe1f8bca3ddae271d85e0f4767173060267222` remains historical immutable false-GREEN evidence, not certification of current AgentOS head. PR #24 `3039c886bdcff911f7c6dcc3e086368058e57fb6` has Validate repository run `34853865390` SUCCESS but its embedded AgentOS target is stale; exact-current-head completion assurance remains blocked pending SG-08 repair + unchanged-head Green.
+- **GlobalShopCo:** #29 `15fa99eb4c4b1f96127f6f51c412cbffc94e45e2` and #30 `80c82475b98663d677885e8b4d222ae2cedb8555` remain OPEN/DRAFT research-only. #30 records no new authenticated supplier/app evidence. `0 eBay-ready SKUs` remains controlling; supplier cost/freight/permission/stock/returns evidence is the commercial blocker.
+- **Headless:** bounded M3 secret-boundary exact head `4e66a67d3680bd59e3b4da923f9ef291aa6fa358`, run `34891752520` SUCCESS. No live checkout/deploy authority.
+- **shopify_ebay:** prior exact `23b263ecd4e04667e6c95977f694c66cce4734e2/34885862149` SUCCESS. Fresh read-only persistence discovery found no durable replay/idempotency store in the adapter repository; `accept_once` receives caller-supplied seen IDs/hashes only. Discovery was recorded on the same bounded branch at `02087f3c1b6fa4c6b9406b7cd39698c52a72ab6a`; exact-head Fixture validation run `34913579897` SUCCESS. Restart-level durability is therefore BLOCKED until an existing upstream canonical store/caller is identified; do not invent local persistence.
+- **MyPrimeDelivery:** research head `61feceb46de539948374deec86b3fe7578cf8014`, Fixture validation `34879834476` SUCCESS. Qualification funnel is coherent/fail-closed, including conflicting known ASIN denial. Research milestone is 100 distinct concepts but live `QUALIFIED=0`. WordPress fixture head `a38684c10541115f55f1d5612b72d669dced99f0` and research head are diverged (`61feceb...` is 101 commits ahead and 4 behind from that comparison), so stale overwrite prevention remains required.
 
-# LANE A — AgentOS Level 2 P0
+# AGENTOS / PRS
 
-## AgentOS Overseer
 ### A-AG-01 — continuous project-file ownership fence
-- status: BLOCKED; owner/workstream: AgentOS; anchor: `AgentOS#104@4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091`, current PR statement + historical exact SG-08 false-success baseline; objective: repair the existing single-threaded writer so one crash-releasing ownership fence remains valid continuously through final verify -> publish/prepared recovery -> durable success receipt -> release; acceptance: replacement-after-verify/publish/receipt, successor/three-writer, stale identity, TOCTOU, crash/replay, duplicate mutation/result and prepared-recovery stale-owner all fail closed before durable success; dependencies: existing writer seam only; safe action boundary: draft non-production code/tests, no new lock/control plane; verification: exact-head Ubuntu+Windows CI + independent Green; next handoff: unchanged repaired head -> Green -> PRS only after Green PASS.
-- security_gates: `SG-03,SG-08,SG-09,SG-10,SG-11,SG-14,SG-18,SG-19`; risk_class: S2; authority_required: scoped branch/test write; negative_tests: exact false-success baseline plus full ownership matrix; receipt_evidence: actor/task/file/pre-postimage/ownership/result lineage + exact run; green_required: yes; prs_required: yes; owner_boundary: merge/deploy/physical/production; security_disposition: BLOCKED.
+- status: BLOCKED
+- anchor: `AgentOS#104@4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091`
+- objective: repair the existing single writer so one crash-releasing ownership primitive remains continuously valid through final verify -> publish/prepared recovery -> durable success receipt -> release.
+- acceptance: replacement after publish/receipt, successor/three-writer, stale identity, TOCTOU, crash/replay and prepared-recovery stale-owner all fail before durable success.
+- current evidence: deterministic exact-head fixtures reproduce false durable success before release detects successor displacement.
+- next: minimal repair on existing writer seam only, then exact-head Ubuntu+Windows CI -> independent Green -> PRS. No second lock/ledger.
+- security: SG-03/08/09/10/11/14/18/19; S2; overall promotion BLOCKED.
 
 ### A-AG-02 — authenticated actor + canonical grant binding
-- status: BLOCKED; owner/workstream: AgentOS; anchor: `AgentOS#104@4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091` admission composition seam; objective: bind only an already-existing authenticated actor source and canonical grant resolver; acceptance: caller/request cannot self-supply identity/grant; absent/spoofed/mismatched/cross-project/replayed grant yields no admission or success receipt; dependencies: real existing source; safe action boundary: read/discovery + bounded tests; verification: spoof/mismatch/replay matrix on exact head; next handoff: implement only when source provenance is evidenced.
-- security_gates: `SG-01,SG-02,SG-03,SG-04,SG-09,SG-10,SG-11,SG-18,SG-19`; risk_class: S2; authority_required: canonical identity/grant read + scoped tests; negative_tests: host-as-auth, spoof actor, self-grant, absent/mismatch/cross-project/replay; receipt_evidence: issuer/source/version/request/task/mission; green_required: yes; prs_required: yes; owner_boundary: credentials/security policy; security_disposition: BLOCKED.
+- status: BLOCKED
+- anchor: current #104 admission composition seam.
+- objective: bind only a real existing authenticated actor source and canonical grant resolver.
+- acceptance: no caller self-identity/self-grant; absent/spoofed/mismatch/cross-project/replay denies admission/success.
+- next: architecture discovery only until real source provenance exists. No duplicate authority registry.
+- security: SG-01/02/03/04/09/10/11/18/19; S2.
 
 ### A-AG-03 — bounded current-head regression preservation
-- status: VERIFIED; owner/workstream: AgentOS; anchor: `4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091/34906732495/34906728091`; objective: preserve current bounded replay/correlation/provenance regressions without implying Level-2 readiness; acceptance: existing exact-head Ubuntu+Windows suites remain green and no sparse/legacy claim can widen authority; dependencies: none; safe action boundary: tests/read only; verification: exact-head CI; next handoff: independent bounded Green sample only.
-- security_gates: `SG-09,SG-10,SG-11,SG-14,SG-18`; risk_class: S1; authority_required: read/test; negative_tests: sparse forged lineage, conflicting replay, missing admitted authority evidence; receipt_evidence: exact head/runs; green_required: yes for promotion; prs_required: conditional; owner_boundary: runtime enable/merge/deploy; security_disposition: PENDING_SG18.
+- status: VERIFIED_BOUNDED
+- anchor: `4c8bcc3.../34906732495/34906728091`.
+- scope: replay/correlation/provenance + SG-08 defect fixtures execute successfully cross-platform; this is not readiness.
+- next: preserve while A-AG-01 is repaired.
 
 ### A-AG-04 — SG-08 repair fixture pack
-- status: PENDING; owner/workstream: AgentOS; anchor: historical deterministic false-success baseline + current `4c8bcc3...`; objective: maintain 2–5 homogeneous repair-driving ownership fixtures on the existing writer seam; acceptance: normal and prepared-recovery success cannot persist if retirement loses ownership; successor/replacement cases deterministic; dependencies: A-AG-01; safe action boundary: tests/minimal writer repair; verification: targeted + full exact-head CI; next handoff: A-AG-01 Green once repaired.
-- security_gates: `SG-08,SG-09,SG-10,SG-11,SG-18`; risk_class: S2; authority_required: scoped test/write; negative_tests: replacement after publish, replacement after receipt, prepared recovery stale owner, same-key successor; receipt_evidence: seed/head/run + receipt timing; green_required: yes; prs_required: conditional; owner_boundary: no merge/deploy/physical/production; security_disposition: PENDING.
+- status: VERIFIED_AS_DEFECT_BASELINE / REPAIR_PENDING
+- anchor: `4c8bcc3...`.
+- verified: after-publish and release replacement fixtures expose target mutation + false durable success ordering.
+- next: drive smallest existing-writer repair; rerun fixtures unchanged first.
 
 ### A-AG-05 — replay/freshness remainder
-- status: SPLIT_REQUIRED; owner/workstream: AgentOS; anchor: current #104 lineage + prior replay evidence; objective: split conflicting replay/duplicate-result/restart-duplicate from freshness; acceptance: first-write provenance preserved, conflicting replay never upgrades success, no invented freshness clock/source; dependencies: canonical claim/recovery semantics; safe action boundary: 2–5 homogeneous tests/minimal validation; verification: exact-head replay/restart CI; next handoff: Green SG-09/10/11.
-- security_gates: `SG-09,SG-10,SG-11,SG-14,SG-18`; risk_class: S2; authority_required: scoped tests/write; negative_tests: conflicting payload same identity, duplicate result, restart duplicate, stale delivery only if canonical source exists; receipt_evidence: claim/recovery IDs + first-write provenance; green_required: yes; prs_required: conditional; owner_boundary: no new persistence/authority plane; security_disposition: SPLIT_REQUIRED.
+- status: SPLIT_REQUIRED
+- objective: preserve first-write provenance and conflicting replay denial; freshness remains UNKNOWN/N/A unless canonical source exists.
+- next: no new replay/persistence authority.
 
-### A-AG-06 — physical Windows acceptance packet
-- status: BLOCKED; owner/workstream: AgentOS; anchor: `AgentOS#104@4c8bcc3...`; objective: retain owner-run physical acceptance checklist only; acceptance: exact SHA/root/mutation/recovery/correlation/no-production boundaries; dependencies: A-AG-01 + A-AG-02 + Green + explicit owner physical authority; safe action boundary: checklist/docs; verification: future owner physical evidence; next handoff: owner only after software/security closure.
-- security_gates: `SG-03,SG-08,SG-10,SG-11,SG-14,SG-18,SG-20`; risk_class: S2; authority_required: explicit owner physical Windows action; negative_tests: wrong head/root, missing receipt, production target; receipt_evidence: head/host/root/test/result; green_required: yes; prs_required: yes if promoted; owner_boundary: physical Windows; security_disposition: BLOCKED.
+### A-AG-06 — physical Windows acceptance
+- status: BLOCKED / OWNER_REQUIRED
+- dependencies: SG-08 + SG-01/02 + exact-head Green/PRS where required.
+- next: checklist only until software/security closure.
 
-## PRS / Green
 ### A-PRS-01 — immutable historical false-GREEN baseline
-- status: VERIFIED; owner/workstream: PRS; anchor: `PRS#17@49fe1f8bca3ddae271d85e0f4767173060267222`, historical AgentOS target; objective: preserve immutable historical ownership/admission defect evidence without treating it as current-head certification; acceptance: target/artifact identity stable; dependencies: none; safe action boundary: read-only assurance; verification: hashes + PRS exact-head validation; next handoff: A-AG-01/A-AG-02.
-- security_gates: `SG-01,SG-02,SG-08,SG-10,SG-11,SG-19`; risk_class: S0; authority_required: read-only; negative_tests: stale-owner normal/prepared recovery + admission compatibility; receipt_evidence: exact target/artifact hashes; green_required: no; prs_required: baseline; owner_boundary: none; security_disposition: VERIFIED.
+- status: VERIFIED_HISTORICAL
+- anchor: `PRS#17@49fe1f8bca3ddae271d85e0f4767173060267222`.
+- rule: historical target evidence cannot certify successor AgentOS heads.
 
-### A-PRS-02 — exact-head bounded Green sample
-- status: PENDING; owner/workstream: Green; anchor: `AgentOS#104@4c8bcc3.../34906732495`; objective: independently challenge only the bounded replay/correlation/provenance slice without implying Level-2 promotion; acceptance: no sparse claim authorizes richer replay, forges identity, alters receipt lineage or leaks secrets; dependencies: A-AG-03; safe action boundary: independent read/test; verification: exact-current-head negatives; next handoff: AgentOS Overseer.
-- security_gates: `SG-05,SG-09,SG-10,SG-11,SG-18`; risk_class: S1; authority_required: read/test; negative_tests: sparse forged lineage, conflicting replay, stale projection, leakage; receipt_evidence: exact target/run/outcome; green_required: yes; prs_required: conditional; owner_boundary: merge/deploy; security_disposition: PENDING.
+### A-PRS-02 — exact-current-head bounded Green sample
+- status: PENDING
+- anchor: `AgentOS#104@4c8bcc3...`.
+- objective: independently challenge bounded replay/correlation/provenance and the new SG-08 defect fixtures without implying completion.
 
 ### A-PRS-03 — completion-grade ownership challenge
-- status: BLOCKED; owner/workstream: PRS; anchor: current `AgentOS#104@4c8bcc3...` + A-PRS-01; objective: rerun complete ownership matrix only after real SG-08 repair and identical-head Green PASS; acceptance: normal/prepared/successor/crash/replay independently classified; dependencies: A-AG-01 + Green; safe action boundary: assurance harness; verification: immutable target/artifact hashes; next handoff: Overseer.
-- security_gates: `SG-08,SG-09,SG-10,SG-11,SG-19`; risk_class: S2; authority_required: bounded harness; negative_tests: full ownership matrix; receipt_evidence: exact target/artifact hash; green_required: prerequisite; prs_required: yes; owner_boundary: merge/deploy; security_disposition: BLOCKED.
+- status: BLOCKED
+- dependencies: real A-AG-01 repair + identical-head Green PASS.
+- objective: rerun complete normal/prepared/successor/crash/replay ownership matrix only then.
 
-# LANE B — Commerce
+# GLOBALSHOPCO
 
-## GlobalShopCo
 ### B-GSC-01 — authenticated supplier evidence closure
-- status: ACTIVE; owner/workstream: GlobalShopCo; anchor: `GlobalShopCo#29@15fa99eb4c4b1f96127f6f51c412cbffc94e45e2`, `#30@80c82475b98663d677885e8b4d222ae2cedb8555`; objective: close exact SKU rows only with authenticated trade cost, packaged freight, permission, stock identity and returns/warranty evidence; acceptance: every promoted field source/date/identity traceable; dependencies: current research rows; safe action boundary: research/data/docs only; verification: row provenance audit; next handoff: B-GSC-02.
-- security_gates: `SG-02,SG-06,SG-10,SG-12,SG-13,SG-14,SG-15,SG-20`; risk_class: S1; authority_required: read-only evidence; negative_tests: retail-as-wholesale, contradictory freight, inferred permission, stale stock; receipt_evidence: source/date/SKU/cost/freight/status; green_required: no; prs_required: no; owner_boundary: supplier contact/purchase/Shopify mutation; security_disposition: ACTIVE.
+- status: ACTIVE / EXTERNAL_EVIDENCE_LIMITED
+- anchors: `#29@15fa99eb...`, `#30@80c82475...`.
+- objective: exact SKU rows need authenticated trade cost, packaged freight/free-delivery basis, permission, stock identity, returns/warranty.
+- current truth: no new authenticated supplier/app evidence; 0 eBay-ready SKUs.
+- next: continue read-only evidence closure where sources exist; UNKNOWN/HOLD otherwise. No supplier contact without owner authority.
+
 ### B-GSC-02 — conservative delivered-margin gate
-- status: PENDING; owner/workstream: GlobalShopCo; anchor: `#29/#30`; objective: calculate delivered contribution only for evidence-complete rows; acceptance: fees/freight/returns allowance explicit and any UNKNOWN forces HOLD; dependencies: B-GSC-01; safe action boundary: deterministic calculator/data; verification: missing/contradiction fixtures; next handoff: B-GSC-03; security_gates: `SG-10,SG-12,SG-13,SG-14,SG-20`; risk_class: S1; authority_required: non-production calculation; negative_tests: unknown freight/fee/cost, negative margin, stale quote; receipt_evidence: input provenance + calculator version + disposition; green_required: no; prs_required: no; owner_boundary: spend/listing; security_disposition: PENDING.
-### B-GSC-03 — bounded channel shortlist
-- status: PENDING; owner/workstream: GlobalShopCo; anchor: controlling truth `0 eBay-ready SKUs`; objective: produce 2–5 evidence-complete candidates only if upstream clears; acceptance: exact variant/SKU + permission + stock + delivered economics + returns/warranty; dependencies: B-GSC-01/02; safe action boundary: shortlist only; verification: fail-closed readiness schema; next handoff: eBay/Amazon fixtures; security_gates: `SG-02,SG-06,SG-10,SG-12,SG-13,SG-14,SG-15,SG-20`; risk_class: S1; authority_required: read-only; negative_tests: any missing field => HOLD; receipt_evidence: candidate packet; green_required: no; prs_required: no; owner_boundary: publication/contact/spend; security_disposition: PENDING.
+- status: PENDING
+- dependency: B-GSC-01 evidence-complete row.
+- acceptance: all fees/freight/returns allowance explicit; any UNKNOWN => HOLD.
 
-## GlobalShopCo-Headless
+### B-GSC-03 — bounded eBay candidate shortlist
+- status: BLOCKED_UPSTREAM
+- dependency: B-GSC-01/02.
+- acceptance: 2–5 exact variants only after permission + stock + delivered economics + returns/warranty are complete.
+
+# GLOBALSHOPCO-HEADLESS
+
 ### B-HDL-01 — checkout secret-boundary baseline
-- status: VERIFIED; owner/workstream: Headless; anchor: `4e66a67d3680bd59e3b4da923f9ef291aa6fa358/34891752520`; objective: preserve bounded denial of secret-shaped values in cart/GraphQL/HTTP errors; acceptance: regressions fail CI; safe action boundary: tests only; verification: exact-head CI; next handoff: B-HDL-02; security_gates: `SG-05,SG-06,SG-14`; risk_class: S1; authority_required: read/test; negative_tests: cart/GraphQL/HTTP leaks; receipt_evidence: exact head/run; green_required: no; prs_required: no; owner_boundary: secrets/deploy/live purchase; security_disposition: VERIFIED_BOUNDED.
-### B-HDL-02 — uncovered destination/host edge inventory
-- status: PENDING; owner/workstream: Headless; anchor: `4e66a67d...`; objective: identify only genuinely uncovered malformed checkout destination/host cases; acceptance: 2–5 homogeneous gaps max, no duplicates; dependencies: suite inventory; safe action boundary: read/test; verification: exact-head CI; next handoff: project Overseer; security_gates: `SG-06,SG-10,SG-14`; risk_class: S1; authority_required: tests; negative_tests: scheme/userinfo/port/subdomain/canonical-host confusion; receipt_evidence: coverage map + exact run; green_required: no; prs_required: no; owner_boundary: deploy/secrets/checkout; security_disposition: PENDING.
-### B-HDL-03 — real dev-store checkout acceptance
-- status: BLOCKED; owner/workstream: Headless; anchor: owner-gated dev-store evidence; objective: non-production browser/dev-store proof of product identity -> cart -> canonical Shopify checkout; acceptance: exact dev resource and no secret leakage; dependencies: explicit dev-store access; safe action boundary: checklist only; verification: browser/dev evidence; next handoff: owner; security_gates: `SG-03,SG-05,SG-10,SG-14,SG-20`; risk_class: S3; authority_required: explicit dev-store/browser access; negative_tests: prod host, wrong product, secret leak; receipt_evidence: environment/product/cart/checkout IDs; green_required: yes if widened; prs_required: no; owner_boundary: credentials/live purchase/deploy; security_disposition: BLOCKED.
+- status: VERIFIED_BOUNDED
+- anchor: `4e66a67d3680bd59e3b4da923f9ef291aa6fa358/34891752520` SUCCESS.
+- next: preserve; no live checkout/deploy authority.
 
-## Shopify to eBay
-### B-EBAY-01 — durable replay-store discovery
-- status: PENDING; owner/workstream: shopify_ebay; anchor: `23b263ecd4e04667e6c95977f694c66cce4734e2/34885862149`; objective: locate an existing upstream durable replay/idempotency store without inventing one; acceptance: exact caller/store/provenance or explicit NONE; safe action boundary: read-only discovery; verification: code/config evidence; next handoff: bounded tests or BLOCKED; security_gates: `SG-09,SG-10,SG-11,SG-14`; risk_class: S1; authority_required: read-only; negative_tests: restart duplicate, same-event conflict, stale event; receipt_evidence: store/caller/version anchor; green_required: no; prs_required: no; owner_boundary: production listing/network; security_disposition: PENDING.
-### B-EBAY-02 — replay durability negatives
-- status: PENDING; owner/workstream: shopify_ebay; anchor: B-EBAY-01; objective: if an existing store exists, add 2–5 restart/conflict tests; acceptance: duplicate external mapping side effects denied and first-write provenance preserved; dependencies: B-EBAY-01 positive; safe action boundary: synthetic tests; verification: exact-head CI; next handoff: GlobalShopCo; security_gates: `SG-09,SG-10,SG-11,SG-14`; risk_class: S2; authority_required: scoped tests; negative_tests: restart duplicate, conflict, stale event, result-write replay; receipt_evidence: event/mapping/result lineage; green_required: no; prs_required: no; owner_boundary: network/publication; security_disposition: PENDING.
+### B-HDL-02 — destination/host edge inventory
+- status: PENDING
+- objective: identify only genuinely uncovered scheme/userinfo/port/subdomain/canonical-host confusion cases; add 2–5 homogeneous negatives max.
+
+### B-HDL-03 — Shopify canonical checkout projection
+- status: PENDING
+- objective: preserve Shopify checkout authority and deny any WordPress/local order/payment authority or secret leakage.
+
+# SHOPIFY -> EBAY
+
+### B-EBAY-01 — upstream durable replay-store discovery
+- status: VERIFIED_NONE_FOUND_IN_ADAPTER
+- inspected anchor: `23b263ecd4e04667e6c95977f694c66cce4734e2`.
+- durable record: `docs/REPLAY-DURABILITY-DISCOVERY.md` at `02087f3c1b6fa4c6b9406b7cd39698c52a72ab6a`.
+- verification: Fixture validation `34913579897` SUCCESS.
+- finding: adapter tree has no durable replay/idempotency store; `accept_once` consumes caller-supplied seen event IDs / prior hashes only.
+- next: trace integration caller to an existing canonical Shopify/AgentOS-approved durable store. If none exists, remain BLOCKED rather than creating SQLite/JSON/ledger/queue locally.
+
+### B-EBAY-02 — restart replay durability negatives
+- status: BLOCKED
+- dependency: B-EBAY-01 must identify an existing upstream durable store/caller.
+- objective when unblocked: 2–5 restart duplicate/conflict/result-write replay tests preserving first-write provenance.
+
 ### B-EBAY-03 — evidence-complete SKU admission fixture
-- status: BLOCKED; owner/workstream: shopify_ebay; anchor: `0 eBay-ready SKUs`; objective: validate exact SKU mapping only after a real evidence-complete candidate exists; acceptance: variant/SKU, permission, stock, landed economics, fees and seller identity all present; dependencies: B-GSC-03; safe action boundary: synthetic/preflight; verification: fail-closed fixture; next handoff: owner before publication; security_gates: `SG-02,SG-10,SG-12,SG-13,SG-14,SG-15,SG-20`; risk_class: S1; authority_required: non-production fixture; negative_tests: each missing readiness field; receipt_evidence: exact SKU packet; green_required: no; prs_required: no; owner_boundary: eBay credentials/listing; security_disposition: BLOCKED.
+- status: BLOCKED
+- dependency: GlobalShopCo evidence-complete SKU; controlling truth remains 0 eBay-ready SKUs.
+- no live listing/network authority.
 
-## Shopify to Amazon
-### B-AMZ-01 — contradiction/freshness fixtures
-- status: PENDING; owner/workstream: GlobalShopCo Amazon; anchor: `GlobalShopCo#29/#30`; objective: add 2–5 seller-of-record/permission/stock/fee contradiction and freshness fixtures; acceptance: conflict/unknown always HOLD; safe action boundary: synthetic tests/data; verification: deterministic fixture run; next handoff: B-AMZ-02; security_gates: `SG-02,SG-06,SG-10,SG-12,SG-13,SG-14,SG-20`; risk_class: S1; authority_required: non-production tests; negative_tests: seller mismatch, stale stock, absent permission, fee conflict; receipt_evidence: fixture/version/disposition; green_required: no; prs_required: no; owner_boundary: seller setup/listing/credentials; security_disposition: PENDING.
-### B-AMZ-02 — GTIN/category readiness map
-- status: PENDING; owner/workstream: GlobalShopCo Amazon; anchor: `#29/#30`; objective: map exact candidate identity to category/GTIN evidence without claiming eligibility; acceptance: exact IDs and UNKNOWNs retained; safe action boundary: research/docs; verification: source/date trace; next handoff: B-AMZ-03; security_gates: `SG-06,SG-10,SG-14,SG-20`; risk_class: S1; authority_required: read-only research; negative_tests: inferred GTIN/category, stale rule; receipt_evidence: source/date/product ID; green_required: no; prs_required: no; owner_boundary: seller account/listing; security_disposition: PENDING.
-### B-AMZ-03 — evidence-complete listing preflight
-- status: BLOCKED; owner/workstream: GlobalShopCo Amazon; anchor: no Amazon-ready packet; objective: offline preflight only when seller-of-record, permission, SKU/stock, GTIN/category, fulfilment and economics exist; acceptance: any absent field HOLD; dependencies: B-GSC-03 + B-AMZ-01/02; safe action boundary: offline preflight; verification: fail-closed report; next handoff: owner; security_gates: `SG-02,SG-10,SG-12,SG-13,SG-14,SG-15,SG-20`; risk_class: S1; authority_required: offline preflight; negative_tests: missing field matrix; receipt_evidence: readiness packet; green_required: no; prs_required: no; owner_boundary: live Amazon seller/listing; security_disposition: BLOCKED.
+# MYPRIMEDELIVERY
 
-## MyPrimeDelivery
-### B-MPD-01 — reconcile research vs WordPress fixture lineage
-- status: PENDING; owner/workstream: MyPrimeDelivery; anchor: research `61feceb46de539948374deec86b3fe7578cf8014`, WordPress fixture `a38684c10541115f55f1d5612b72d669dced99f0`; objective: compare exact branches and prevent stale overwrite; acceptance: lineage map names compatible/conflicting files/data; safe action boundary: read/compare; verification: exact commit diff; next handoff: project Overseer; security_gates: `SG-07,SG-10,SG-14`; risk_class: S1; authority_required: read-only; negative_tests: stale overwrite, branch identity confusion; receipt_evidence: exact heads/files/disposition; green_required: no; prs_required: no; owner_boundary: merge/live publication/provider signup; security_disposition: PENDING.
+### B-MPD-01 — research vs WordPress lineage reconciliation
+- status: ACTIVE
+- anchors: research `61feceb46de539948374deec86b3fe7578cf8014`; WordPress fixture `a38684c10541115f55f1d5612b72d669dced99f0`.
+- exact compare: diverged; research side 101 commits ahead / 4 behind relative to WordPress fixture head, common ancestor before both slices.
+- objective: produce compatibility/conflict map before any integration; no stale overwrite/rebase/merge.
+
 ### B-MPD-02 — authoritative source/right-to-use evidence queue
-- status: PENDING; owner/workstream: MyPrimeDelivery; anchor: live QUALIFIED=`0`; objective: source 3–8 exact products/categories with authoritative identity/right-to-use evidence; acceptance: editorial pages never count as Prime/rank/deal authority; dependencies: B-MPD-01; safe action boundary: research/docs; verification: source/date/identity/freshness audit; next handoff: B-MPD-03; security_gates: `SG-06,SG-07,SG-10,SG-14,SG-15,SG-20`; risk_class: S1; authority_required: public/read-only research; negative_tests: editorial-as-authority, stale deal, mismatched ASIN, absent rights; receipt_evidence: source/date/ASIN/category/evidence class; green_required: no; prs_required: no; owner_boundary: provider signup/credentials/publication; security_disposition: PENDING.
+- status: PENDING / EXTERNAL_EVIDENCE_LIMITED
+- current truth: 100 distinct research concepts, 0 live QUALIFIED products.
+- objective: exact ASIN + current product-level Prime + freshness + owner-approved ranking + source rights + outbound destination from authorised evidence.
+- editorial/historical Prime observations remain research-only.
+
 ### B-MPD-03 — coherent qualification observation tests
-- status: PENDING; owner/workstream: MyPrimeDelivery; anchor: current research lineage; objective: preserve one-observation qualification and add 2–5 identity/freshness contradictions only where uncovered; acceptance: evidence from different observations cannot combine into QUALIFIED and multi-ASIN conflicts fail closed; safe action boundary: tests/data; verification: exact-head fixture CI; next handoff: WordPress presentation only if live qualification later exists; security_gates: `SG-06,SG-10,SG-12,SG-14`; risk_class: S1; authority_required: synthetic tests; negative_tests: cross-observation aggregation, multi-ASIN collision, stale Prime/rank/deal; receipt_evidence: fixture/version/result; green_required: no; prs_required: no; owner_boundary: publication; security_disposition: PENDING.
+- status: VERIFIED_BOUNDED
+- anchor: `61feceb.../34879834476` SUCCESS.
+- verified: one coherent observation must carry every gate; independent observations cannot combine; conflicting known ASINs fail closed; publication authority and network IO remain false.
+- next: add only genuinely uncovered freshness/identity contradictions; do not optimize raw concept count further.
 
-# LANE C — Affiliates, Ventures, Content, Commercial
+## Replenishment order
+1. AgentOS A-AG-01 minimal SG-08 repair; preserve A-AG-02 fail-closed discovery.
+2. PRS exact-current-head bounded challenge; completion PRS waits for repaired identical-head Green.
+3. GlobalShopCo supplier evidence; if externally blocked, move immediately to Headless/eBay/MyPrime rather than inventing evidence.
+4. shopify_ebay trace only an existing upstream durable replay store; no local substitute.
+5. MyPrimeDelivery reconcile divergent WordPress/research lineages and deepen qualification evidence; raw concept count is no longer the target.
+6. Headless close only uncovered deterministic boundary cases.
 
-## Affiliate-Websites Master
-### C-AFF-M1 — preserve active identity/destination ownership
-- status: ACTIVE; owner/workstream: Affiliate Master; anchor: `Affiliate-Websites#19@ea2ec9ce6ced26c4841d080abb4403193f299519`; objective: let active PR own identity/destination determinism without duplicate implementation; acceptance: exact-head CI before promotion; safe action boundary: read/reconcile; verification: PR/CI evidence; next handoff: project Overseer; security_gates: `SG-05,SG-06,SG-07,SG-10,SG-14,SG-15,SG-20`; risk_class: S2; authority_required: existing PR owner; negative_tests: duplicate destination, country mismatch, credential/query/fragment ambiguity; receipt_evidence: exact head/run; green_required: no; prs_required: no; owner_boundary: signup/contact/publication; security_disposition: ACTIVE.
-### C-AFF-M2 — publication-state/CTA fail-closed matrix
-- status: PENDING; owner/workstream: Affiliate Master; anchor: active Master PRs `#16/#17/#19`; objective: inventory uncovered UNKNOWN/non-affiliate/referral/publisher-approved/publication-state combinations; acceptance: UNKNOWN/non-affiliate never yields monetized CTA; dependencies: avoid active files; safe action boundary: research/tests on non-overlap; verification: deterministic matrix; next handoff: country queues; security_gates: `SG-06,SG-07,SG-10,SG-14,SG-15,SG-20`; risk_class: S1; authority_required: non-production tests/docs; negative_tests: UNKNOWN->monetized CTA, destination mismatch, disclosure omission; receipt_evidence: fixture IDs/results; green_required: no; prs_required: no; owner_boundary: live affiliate destinations/publication; security_disposition: PENDING.
-### C-AFF-M3 — disclosure/SEO-AEO data contract
-- status: PENDING; owner/workstream: Affiliate Master; anchor: `main@5cb7fc8292ecf5a119dc682f8590e72e97e02981`; objective: define disclosure/freshness/country-config evidence fields without touching active seams; acceptance: claims traceable and stale evidence visible; dependencies: C-AFF-M2; safe action boundary: schema/docs/tests; verification: fixture validation; next handoff: AU/UK/US; security_gates: `SG-06,SG-07,SG-10,SG-14,SG-15`; risk_class: S1; authority_required: docs/tests; negative_tests: stale source, wrong-country config, absent disclosure; receipt_evidence: schema version/source class; green_required: no; prs_required: no; owner_boundary: publication; security_disposition: PENDING.
-
-## Affiliate AU
-### C-AU-01 — first-party program evidence refresh
-- status: PENDING; owner/workstream: Affiliate AU; anchor: active `Affiliate-Websites#5/#13/#15`; objective: refresh 3–8 reputable AU user-reward programs from first-party evidence outside active files; acceptance: country eligibility/reward/referral/publisher route/freshness separated; safe action boundary: research; verification: source/date table; next handoff: C-AU-02; security_gates: `SG-06,SG-07,SG-10,SG-14,SG-15,SG-20`; risk_class: S1; authority_required: public research; negative_tests: referral confused with publisher approval, stale reward, wrong country; receipt_evidence: source/date/program/evidence class; green_required: no; prs_required: no; owner_boundary: signup/contact/publication; security_disposition: PENDING.
-### C-AU-02 — fallback/HOLD CTA projection
-- status: PENDING; owner/workstream: Affiliate AU; anchor: C-AU-01; objective: classify each program as verified referral, publisher-approved, or fallback/HOLD; acceptance: missing publisher approval never generates monetized publisher CTA; dependencies: C-AU-01; safe action boundary: data/docs; verification: deterministic projection; next handoff: Master; security_gates: `SG-10,SG-14,SG-15,SG-20`; risk_class: S1; authority_required: non-production data; negative_tests: approval absent/stale/destination unknown; receipt_evidence: program/evidence/disposition; green_required: no; prs_required: no; owner_boundary: publication; security_disposition: PENDING.
-### C-AU-03 — claim-safe reward facts
-- status: PENDING; owner/workstream: Affiliate AU; anchor: C-AU-01/02; objective: produce evidence-bounded facts for Marketing; acceptance: no guaranteed earnings or unsupported values; safe action boundary: internal facts; verification: source-to-claim audit; next handoff: Marketing; security_gates: `SG-06,SG-10,SG-14,SG-15`; risk_class: S0; authority_required: internal draft; negative_tests: unsupported earnings, stale reward; receipt_evidence: claim/source map; green_required: no; prs_required: no; owner_boundary: publication; security_disposition: PENDING.
-
-## Affiliate UK
-### C-UK-01 — UK program evidence refresh
-- status: PENDING; owner/workstream: Affiliate UK; anchor: current UK lineage; objective: refresh 3–8 first-party UK reward/paid-participation programs and network routes; acceptance: country eligibility, reward and publisher route separate; safe action boundary: research; verification: source/date table; next handoff: C-UK-02; security_gates: `SG-06,SG-07,SG-10,SG-14,SG-15,SG-20`; risk_class: S1; authority_required: public research; negative_tests: guaranteed income, stale reward, network listing as approval; receipt_evidence: source/date/evidence class; green_required: no; prs_required: no; owner_boundary: signup/contact/publication; security_disposition: PENDING.
-### C-UK-02 — financial/regulatory HOLD classifier
-- status: PENDING; owner/workstream: Affiliate UK; anchor: C-UK-01; objective: classify financial/regulatory uncertainty conservatively; acceptance: uncertain finance/compliance claims HOLD; safe action boundary: internal data/docs; verification: negative claim fixtures; next handoff: Master; security_gates: `SG-06,SG-10,SG-14,SG-15,SG-20`; risk_class: S1; authority_required: internal analysis; negative_tests: guaranteed income, regulated implication, unsupported eligibility; receipt_evidence: claim/evidence/disposition; green_required: no; prs_required: no; owner_boundary: publication; security_disposition: PENDING.
-### C-UK-03 — publisher-vs-referral route map
-- status: PENDING; owner/workstream: Affiliate UK; anchor: C-UK-01; objective: map Awin/CJ/Impact/Webgains/Tradedoubler/direct route only where evidenced; acceptance: referral availability never implies publisher approval; safe action boundary: research/data; verification: source/date routing table; next handoff: Master; security_gates: `SG-06,SG-10,SG-14,SG-15`; risk_class: S1; authority_required: public research; negative_tests: network presence=>approval inference; receipt_evidence: route/source/status; green_required: no; prs_required: no; owner_boundary: applications/contact; security_disposition: PENDING.
-
-## Affiliate US
-### C-US-01 — high-value participation evidence refresh
-- status: PENDING; owner/workstream: Affiliate US; anchor: active `Affiliate-Websites#6`; objective: refresh 3–8 US focus-group/user-testing/survey/reward programs from first-party sources; acceptance: reward value, user eligibility and publisher/referral route separately evidenced; safe action boundary: research; verification: source/date table; next handoff: C-US-02; security_gates: `SG-06,SG-07,SG-10,SG-14,SG-15,SG-20`; risk_class: S1; authority_required: public research; negative_tests: reward value conflated with affiliate eligibility, stale terms; receipt_evidence: source/date/program/evidence class; green_required: no; prs_required: no; owner_boundary: signup/contact/publication; security_disposition: PENDING.
-### C-US-02 — consumer-value vs publisher-eligibility matrix
-- status: PENDING; owner/workstream: Affiliate US; anchor: C-US-01; objective: split consumer value from publisher monetization readiness; acceptance: high consumer payout cannot alone create monetized CTA; safe action boundary: data/docs; verification: fail-closed matrix; next handoff: Master; security_gates: `SG-10,SG-14,SG-15,SG-20`; risk_class: S1; authority_required: internal data; negative_tests: value=>approval inference; receipt_evidence: program matrix; green_required: no; prs_required: no; owner_boundary: publication; security_disposition: PENDING.
-### C-US-03 — claim-safe fact pack
-- status: PENDING; owner/workstream: Affiliate US; anchor: C-US-01/02; objective: prepare sourced facts for Marketing; acceptance: no guaranteed earnings/availability; safe action boundary: internal draft; verification: claim-source audit; next handoff: Marketing; security_gates: `SG-06,SG-10,SG-14,SG-15`; risk_class: S0; authority_required: internal draft; negative_tests: unsupported reward/availability; receipt_evidence: source/claim map; green_required: no; prs_required: no; owner_boundary: publication; security_disposition: PENDING.
-
-## GhostKitchen
-### C-GK-01 — exact-head CI restoration
-- status: ACTIVE; owner/workstream: GhostKitchen; anchor: `GhostKitchen#32@eab5b290c93e111a0275308bee39945d9076c956`; objective: obtain/diagnose exact-head workflow evidence without weakening tests; acceptance: workflow run tied exactly to current head or explicit infra blocker; dependencies: existing PR workflow trigger; safe action boundary: CI config/diagnostics only; verification: exact commit-associated run; next handoff: C-GK-02; security_gates: `SG-10,SG-12,SG-14`; risk_class: S2; authority_required: scoped branch/CI write if needed; negative_tests: predecessor inheritance denied, ceiling overrun; receipt_evidence: exact head/run/jobs; green_required: no; prs_required: no; owner_boundary: merge/deploy/spend/contact; security_disposition: ACTIVE.
-### C-GK-02 — evaluator ceiling regression
-- status: PENDING; owner/workstream: GhostKitchen; anchor: `#32@eab5b290...`; objective: after CI works, add 2–5 homogeneous SG-12 boundary/over-limit tests only if uncovered; acceptance: evaluator cannot widen records/orders/calls beyond deterministic ceiling; dependencies: C-GK-01; safe action boundary: synthetic tests; verification: exact-head CI; next handoff: C-GK-03; security_gates: `SG-10,SG-12,SG-14,SG-20`; risk_class: S1; authority_required: tests; negative_tests: limit+1, retry amplification, mixed-order batch; receipt_evidence: head/run/ceiling; green_required: no; prs_required: no; owner_boundary: production/spend; security_disposition: PENDING.
-### C-GK-03 — economics evidence-class separation
-- status: PENDING; owner/workstream: GhostKitchen; anchor: current vertical batch; objective: separate hypothesis/reference costs from verified unit/channel economics; acceptance: no profitability claim from reference assumptions; safe action boundary: fixtures/docs; verification: evidence-class validator; next handoff: Marketing/Franchise; security_gates: `SG-06,SG-07,SG-10,SG-12,SG-14`; risk_class: S1; authority_required: internal data; negative_tests: missing labour/packaging/delivery assumption promoted as verified; receipt_evidence: assumption/source/class; green_required: no; prs_required: no; owner_boundary: supplier contact/spend; security_disposition: PENDING.
-
-## Franchise
-### C-FR-01 — preserve tenancy active ownership
-- status: ACTIVE; owner/workstream: Franchise; anchor: active `Franchise#24` + parent `#6`; objective: avoid duplicate territory/persistence implementation while tenancy lineage is active; acceptance: portfolio queue does not touch active files; safe action boundary: read/reconcile; verification: PR diff/head refresh before mutation; next handoff: project Overseer; security_gates: `SG-06,SG-07,SG-10,SG-12,SG-14,SG-20`; risk_class: S2; authority_required: existing PR owner; negative_tests: cross-tenant leakage, stale tenant context; receipt_evidence: exact refreshed PR head before mutation; green_required: no; prs_required: no; owner_boundary: real tenancy/partner/publication; security_disposition: ACTIVE.
-### C-FR-02 — A/B tenant isolation negatives
-- status: PENDING; owner/workstream: Franchise; anchor: `#24/#6`; objective: after active tenancy lineage stabilises, add 2–5 repository/request-context isolation negatives; acceptance: tenant A cannot read/write B and stale/missing tenant context fails closed; dependencies: stable active head; safe action boundary: synthetic tests; verification: exact-head CI; next handoff: C-FR-03; security_gates: `SG-03,SG-06,SG-10,SG-12,SG-14`; risk_class: S2; authority_required: test write; negative_tests: cross-tenant ID, missing/stale context, overlap; receipt_evidence: tenant/request/test lineage; green_required: yes if widened; prs_required: no; owner_boundary: production tenancy; security_disposition: PENDING.
-### C-FR-03 — territory evidence/version correlation
-- status: PENDING; owner/workstream: Franchise; anchor: C-FR-02; objective: bind synthetic territory decisions to exact evidence/version without implying partner rights; acceptance: stale/conflicting evidence fails closed; safe action boundary: fixtures/tests; verification: deterministic audit receipt; next handoff: project Overseer; security_gates: `SG-06,SG-07,SG-10,SG-12,SG-14,SG-20`; risk_class: S1; authority_required: synthetic tests; negative_tests: stale version, overlap, duplicate franchise ID; receipt_evidence: tenant/territory/evidence version; green_required: no; prs_required: no; owner_boundary: real territory/partner action; security_disposition: PENDING.
-
-## GemVerse
-### C-GV-01 — recovery provenance baseline
-- status: VERIFIED; owner/workstream: GemVerse; anchor: `GemVerse#10@d23a49f19743302ceb768137bdc984699ddcb851/34895348321`, substantive `f85f5bb0.../34895246300`; objective: preserve fixture-only tamper denials for preimage hash, cross-mission evidence and fixture identity; acceptance: exact tests remain green; safe action boundary: synthetic fixture; verification: exact-head CI; next handoff: C-GV-02; security_gates: `SG-05,SG-06,SG-07,SG-10,SG-14`; risk_class: S1; authority_required: tests; negative_tests: tamper/substitution/demotion; receipt_evidence: head/run/fixture IDs; green_required: no; prs_required: no; owner_boundary: canon/production; security_disposition: VERIFIED_BOUNDED.
-### C-GV-02 — uncovered recovery replay boundary
-- status: PENDING; owner/workstream: GemVerse; anchor: C-GV-01; objective: add at most 2–5 recovery provenance/replay cases only for concrete gaps; acceptance: no rediscovery/duplicate cases; safe action boundary: fixture tests; verification: exact-head CI; next handoff: C-GV-03; security_gates: `SG-07,SG-09,SG-10,SG-14`; risk_class: S1; authority_required: tests; negative_tests: stale candidate, duplicate recovery result, competing candidate identity; receipt_evidence: fixture/head/run; green_required: no; prs_required: no; owner_boundary: executable control-plane implementation; security_disposition: PENDING.
-### C-GV-03 — canon-dependent implementation
-- status: BLOCKED; owner/workstream: GemVerse; anchor: current canon uncertainty; objective: prevent documentation/fixture evidence from being called executable canon; acceptance: implementation waits for verified canon/source contract; safe action boundary: research/docs; verification: exact canon reference; next handoff: owner/project Overseer; security_gates: `SG-07,SG-10,SG-14,SG-20`; risk_class: S2; authority_required: verified canon + scoped implementation grant; negative_tests: docs-as-authority, stale canon; receipt_evidence: canon hash/version; green_required: yes if implemented; prs_required: conditional; owner_boundary: alternate control plane/production; security_disposition: BLOCKED.
-
-## Content360
-### C-C360-01 — exact-head mock request-integrity baseline
-- status: VERIFIED; owner/workstream: Content360; anchor: `content360#4@d9782da613d407156d5e2a196d5d16f67bfc6fb2/34906007364`; objective: preserve exact-head bounded request-integrity behavior for the mock adapter; acceptance: required synthetic approval reference for PUBLISH/SCHEDULE construction and mismatch denials remain green; safe action boundary: mock tests only; verification: exact-head CI; next handoff: C-C360-02; security_gates: `SG-05,SG-09,SG-10,SG-14,SG-15`; risk_class: S1; authority_required: mock tests; negative_tests: correlation mismatch, idempotency mismatch, side-effect metadata mismatch, secret output; receipt_evidence: exact head/run/request/result lineage; green_required: no; prs_required: no; owner_boundary: credentials/live network/publish/schedule; security_disposition: VERIFIED_BOUNDED.
-### C-C360-02 — source replacement/version fixtures
-- status: PENDING; owner/workstream: Content360; anchor: `#4@d9782da.../34906007364`; objective: add 2–5 mock source-version/replacement negatives only if uncovered; acceptance: stale/replaced source cannot silently authorize result; dependencies: C-C360-01; safe action boundary: mock tests; verification: exact-head CI; next handoff: Marketing provenance; security_gates: `SG-06,SG-07,SG-09,SG-10,SG-14`; risk_class: S1; authority_required: mock tests; negative_tests: stale source, substitution, duplicate request/result; receipt_evidence: request/source/version/result lineage; green_required: no; prs_required: no; owner_boundary: provider credentials/network; security_disposition: PENDING.
-### C-C360-03 — official API/auth capability evidence
-- status: BLOCKED; owner/workstream: Content360; anchor: current PR #4 + profile; objective: distinguish mock adapter capability from official provider API/auth reality; acceptance: only official evidence can clear live READ/OPTIMISE; PUBLISH/SCHEDULE remain denied; safe action boundary: research; verification: official source/date; next handoff: owner; security_gates: `SG-05,SG-06,SG-10,SG-14,SG-15,SG-20`; risk_class: S1; authority_required: public docs/read-only; negative_tests: model output as capability, secret persistence, live publish inference; receipt_evidence: official source/date/capability; green_required: no; prs_required: no; owner_boundary: credentials/network/account mutation/publication; security_disposition: BLOCKED.
-
-## Commercial Frontend
-### C-CF-01 — direct operator evidence packet
-- status: PENDING; owner/workstream: Commercial Frontend; anchor: current Overseer commercial-frontend lineage; objective: synthesize existing direct evidence for frequency, friction, consequence, authority and WTP across tradie/service-ops/ecommerce workflows; acceptance: hypothesis vs direct evidence separated; safe action boundary: research synthesis, no outreach; verification: source/date/evidence-class table; next handoff: C-CF-02; security_gates: `SG-06,SG-07,SG-10,SG-14,SG-15,SG-20`; risk_class: S1; authority_required: existing/public research; negative_tests: feasibility=>demand, anecdote=>WTP, model claim=>evidence; receipt_evidence: source/date/workflow/evidence class; green_required: no; prs_required: no; owner_boundary: customer contact/deployment; security_disposition: PENDING.
-### C-CF-02 — bounded exception-workflow prototype spec
-- status: PENDING; owner/workstream: Commercial Frontend; anchor: C-CF-01; objective: choose 2–5 homogeneous high-evidence operator exceptions and define evidence packet/correction/receipt contract; acceptance: measurable operator value hypothesis + explicit UNKNOWNs; safe action boundary: spec/tests; verification: acceptance fixture; next handoff: AgentOS only if non-overlapping; security_gates: `SG-06,SG-10,SG-12,SG-14`; risk_class: S1; authority_required: internal design; negative_tests: unsupported automation, missing receipt, over-broad scope; receipt_evidence: workflow/spec/version; green_required: no; prs_required: no; owner_boundary: deployment/account mutation; security_disposition: PENDING.
-### C-CF-03 — integration feasibility map
-- status: PENDING; owner/workstream: Commercial Frontend; anchor: C-CF-02; objective: map candidates to existing AgentOS capability/MCP seams without duplicate control planes; acceptance: exact dependency/gap/authority boundary; safe action boundary: read/design; verification: architecture review; next handoff: AgentOS only for accepted gaps; security_gates: `SG-02,SG-03,SG-10,SG-14,SG-20`; risk_class: S1; authority_required: read/design; negative_tests: duplicate scheduler/authority/persistence proposal; receipt_evidence: integration map/version; green_required: no; prs_required: no; owner_boundary: production integration; security_disposition: PENDING.
-
-## Marketing
-### C-MKT-01 — evidence-class claims ledger refresh
-- status: PENDING; owner/workstream: Marketing; anchor: `Overseer#23` + current project evidence; objective: refresh internal AgentOS/GlobalShopCo/Affiliate claims against current evidence; acceptance: compatibility/partner/conversion/market claims only at supported evidence class; safe action boundary: internal docs/content; verification: claim-source audit; next handoff: C-MKT-02; security_gates: `SG-06,SG-07,SG-10,SG-14,SG-15`; risk_class: S0; authority_required: internal draft; negative_tests: unsupported partner/compatibility/conversion claim, stale source; receipt_evidence: claim/source/date/evidence class; green_required: no; prs_required: no; owner_boundary: campaign/publication/outreach/spend; security_disposition: PENDING.
-### C-MKT-02 — Content360-ready bounded asset packs
-- status: PENDING; owner/workstream: Marketing; anchor: C-MKT-01 + Content360 ownership rule; objective: prepare 2–5 homogeneous internal assets with immutable source/claim provenance for optimisation; acceptance: Marketing owns message, Content360 only optimizes approved content, no publication instruction; safe action boundary: draft content; verification: provenance fields + claim audit; next handoff: Content360 C-C360-02; security_gates: `SG-05,SG-06,SG-07,SG-10,SG-14,SG-15`; risk_class: S0; authority_required: internal draft; negative_tests: optimization invents claim, secret inclusion, publish directive; receipt_evidence: asset/source/version; green_required: no; prs_required: no; owner_boundary: live publish/campaign/spend; security_disposition: PENDING.
-### C-MKT-03 — objection/landing-page evidence closure
-- status: PENDING; owner/workstream: Marketing; anchor: `Overseer#23`; objective: improve internal objection/landing modules using only evidenced differentiators; acceptance: no fabricated benchmark, customer, partner or conversion proof; safe action boundary: internal draft; verification: sentence-level claim audit; next handoff: owner review, not publication; security_gates: `SG-06,SG-07,SG-10,SG-14,SG-15,SG-20`; risk_class: S0; authority_required: internal content; negative_tests: fabricated social proof, unsupported savings, implied live capability; receipt_evidence: asset/claim/source map; green_required: no; prs_required: no; owner_boundary: publication/campaign/outreach/spend; security_disposition: PENDING.
-
-## Queue health
-- Lane A has multiple actionable PENDING items while A-AG-01/A-AG-02/A-AG-06 remain explicitly BLOCKED; exact-head CI success does not repair SG-08 or SG-01/02.
-- Lane B has multiple independent research/test PENDING items despite owner/external-evidence blocks; `0 eBay-ready SKUs` and MyPrime live QUALIFIED=`0` remain explicit.
-- Lane C has at least one actionable next item or explicit BLOCKED/ACTIVE reason for every scheduled workstream. Content360 mock request-integrity is now bounded VERIFIED at exact head; live capability remains blocked.
-- Functional success never upgrades security state; security success never upgrades functional state. No overall GREEN.
+No overall GREEN. Scheduled work outside these six projects is intentionally disabled.
