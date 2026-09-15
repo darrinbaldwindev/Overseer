@@ -28,9 +28,12 @@ def health_score(findings: Iterable[Any]) -> float:
     analysis representation.
     """
     score = 100.0
-    normalized = [FindingScore(getattr(f, "area", ""), getattr(f, "severity", "")) for f in findings]
-    for finding in normalized:
+    has_critical = False
+    for f in findings:
+        finding = FindingScore(getattr(f, "area", ""), getattr(f, "severity", ""))
         score -= SEVERITY_DEDUCTIONS.get(finding.severity, 0.0) * WEIGHTS.get(finding.area, 0.0) / 0.25
-    if any(f.severity == "Critical" for f in normalized):
+        if finding.severity == "Critical":
+            has_critical = True
+    if has_critical:
         score = min(score, 49.0)
     return round(max(0.0, min(100.0, score)), 1)
