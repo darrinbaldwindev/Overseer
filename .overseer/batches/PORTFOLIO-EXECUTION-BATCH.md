@@ -1,193 +1,118 @@
 # Portfolio Execution Batch Manifest
 
-**Purpose:** rolling scheduled queue for owner-selected core projects only. Canonical procedure: `.overseer/doctrine/PORTFOLIO-BATCH-ENGINE.md`; shaping: `.overseer/profiles/PROJECT-BATCH-PROFILES.md`; security: `.overseer/security/AGENTOS-SECURITY-GATE-MATRIX.md`. Repository/runtime/CI evidence outranks this file.
+Canonical engine: `.overseer/doctrine/PORTFOLIO-BATCH-ENGINE.md`; profiles: `.overseer/profiles/PROJECT-BATCH-PROFILES.md`; security: `.overseer/security/AGENTOS-SECURITY-GATE-MATRIX.md`. Repository/runtime/CI evidence outranks this queue.
 
-**Scheduled scope only:** AgentOS, PRS, GlobalShopCo, GlobalShopCo-Headless, shopify_ebay, MyPrimeDelivery. All other portfolio projects are owner-manual and are not consumed/replenished here.
-
-**States:** `PENDING | ACTIVE | VERIFIED | BLOCKED | STALE | SPLIT_REQUIRED`.
+**Scheduled scope only:** AgentOS, PRS, GlobalShopCo, GlobalShopCo-Headless, shopify_ebay, MyPrimeDelivery. All other portfolio workstreams remain owner-manual and are not scheduled or consumed here.
 
 **Invariant:** **NO MODEL DECIDES ITS OWN AUTHORITY.** No merge/approve/ready/rebase/deploy/credentials/security-policy changes/production writes/purchases/spend/supplier contact/live publication/physical owner-host action/production autonomy. Functional, security, Green and PRS status remain independent.
 
-## Checkpoint reconciliation — 2026-09-15 11:30 Brisbane
-- **AgentOS:** #104 unchanged exact `4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091`, OPEN/DRAFT/UNMERGED. SG-08 and SG-01/02 remain BLOCKED_STABLE; do not rediscover until head/source evidence changes. #112 remains independently ACTIVE exact `d1645450a06d00c49a7a78f176e97b44b9eaa225` and must not touch #104 mutation ownership.
-- **PRS:** #24 unchanged exact `3039c886bdcff911f7c6dcc3e086368058e57fb6`; completion-grade PRS remains BLOCKED_STABLE pending repaired AgentOS head + identical-head Jess functional PASS + Michael security PASS. Historical #17 is baseline only.
-- **GlobalShopCo:** #30 unchanged exact `80c82475b98663d677885e8b4d222ae2cedb8555` on #29 `15fa99eb4c4b1f96127f6f51c412cbffc94e45e2`; no authenticated supplier/app evidence closes cost+freight+permission+stock. `0 eBay-ready SKUs` remains controlling and is BLOCKED_STABLE for shortlist admission.
-- **GlobalShopCo-Headless:** CHANGED. PR #1 advanced from stale `4e66a67d...` to exact `9107ca283cf20b4bb79a4c25eaf1d4340b269e04`; commit `fix: validate Shopify store authority before request`; exact-head Actions run `34916760358`, job `104215957898`, `validate` SUCCESS. Bounded Shopify-store-authority validation is VERIFIED on this exact head only; no live checkout/deploy authority.
-- **shopify_ebay:** default unchanged exact `c68883f24fb3711fce567a35b1a80db74933b82a`; no open PR/new canonical durable replay owner evidenced. Persistence discovery remains BLOCKED_STABLE; do not invent local store/ledger.
-- **MyPrimeDelivery:** research `61feceb46de539948374deec86b3fe7578cf8014` and WordPress fixture `a38684c10541115f55f1d5612b72d669dced99f0` remain deliberately divergent. Exact compare: `diverged`, merge base `3635c903214b06464e28674d5a6403f8539b8c1e`, research side ahead 101 / behind 4 relative to fixture. Compatibility mapping remains required; live `QUALIFIED=0`.
+## Checkpoint reconciliation — 2026-09-15 12:30 Brisbane
+- **AgentOS:** #104 unchanged exact `4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091`, OPEN/DRAFT/UNMERGED; SG-08 and SG-01/02 remain BLOCKED_STABLE. #112 unchanged exact `d1645450a06d00c49a7a78f176e97b44b9eaa225`, independently ACTIVE and outside #104 mutation ownership.
+- **PRS:** #24 remains exact `3039c886bdcff911f7c6dcc3e086368058e57fb6`; completion-grade assurance remains BLOCKED_STABLE pending repaired AgentOS head plus identical-head Jess functional PASS, Michael security PASS, then PRS. Historical #17 is baseline only.
+- **GlobalShopCo:** #29 `15fa99eb4c4b1f96127f6f51c412cbffc94e45e2` / #30 `80c82475b98663d677885e8b4d222ae2cedb8555` unchanged; authenticated cost+freight+permission+stock evidence remains absent and `0 eBay-ready SKUs` remains controlling.
+- **GlobalShopCo-Headless — CHANGED / VERIFIED USEFUL MOVEMENT:** PR #1 advanced from `9107ca283cf20b4bb79a4c25eaf1d4340b269e04` to exact `c3f4939f1b7de8ef6e7fe6547400343dbb076348`; commit `test: reject malformed configured checkout authorities`; exact-head Actions run `34920523147`, job `104227407074`, `validate` SUCCESS. Malformed configured checkout authority values (userinfo, path, port, host-confusion and leading-space forms) now fail closed in bounded non-production tests. No live checkout/deploy authority.
+- **shopify_ebay:** default remains `c68883f24fb3711fce567a35b1a80db74933b82a`; canonical durable replay owner remains BLOCKED_STABLE. No local persistence plane is authorized.
+- **MyPrimeDelivery:** research `61feceb46de539948374deec86b3fe7578cf8014` and WordPress fixture `a38684c10541115f55f1d5612b72d669dced99f0` remain deliberately divergent from merge base `3635c903214b06464e28674d5a6403f8539b8c1e`; compatibility mapping remains prerequisite; live `QUALIFIED=0`.
 
-# AGENTOS — Level 2 P0
+# AgentOS — Level 2 P0
 
-### A-AG-01 — continuous project-file ownership fence
-- status: BLOCKED; anchor: `AgentOS#104@4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091`; objective: preserve one crash-releasing ownership fence continuously through verify -> side effect/prepared recovery -> durable success receipt -> release.
-- acceptance/evidence: replacement-after-verify/publish/receipt, successor/three-writer, stale identity, TOCTOU, crash/replay and prepared-recovery negatives all deny false success; exact-head Ubuntu+Windows CI.
-- next executable action: only the existing #104 owner implements the smallest SG-08 repair on the current writer seam; no competing lock/ledger/control plane.
-- security: `SG-03,08,09,10,11,14,18,19`; S2; scoped branch/test grant; Green=yes; PRS=yes after identical-head Green; owner boundary merge/deploy/physical/production; security_disposition=BLOCKED.
+### A-AG-01 continuous ownership fence — BLOCKED_STABLE
+Anchor `AgentOS#104@4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091`. Objective: one crash-releasing ownership fence held continuously through final verification -> side effect/prepared recovery -> durable success receipt -> release. Acceptance: replacement/successor/three-writer/TOCTOU/crash/replay/prepared-recovery negatives deny false success with exact-head Ubuntu+Windows CI. Next: only existing #104 owner may implement the smallest repair on the existing writer seam; no competing lock/ledger. Security `SG-03,08,09,10,11,14,18,19`; S2; Green=yes; PRS=yes after identical-head Green; merge/deploy/physical/production owner-only.
 
-### A-AG-02 — authenticated actor + canonical grant binding
-- status: BLOCKED_STABLE; anchor: `#104@4c8bcc3...`; objective: bind only a real existing authenticated identity source and canonical grant resolver.
-- acceptance/evidence: absent/spoofed/mismatch/cross-project/replay denies; issuer/source/version/request/task/mission provenance. Dependency is external/currently unevidenced canonical source.
-- next executable action: none until changed source evidence; executors fall through.
-- security: `SG-01,02,03,04,09,10,11,18,19`; S2; credentials/security-policy owner-only; Green=yes; PRS=yes; security_disposition=BLOCKED.
+### A-AG-02 authenticated actor + canonical grant — BLOCKED_STABLE
+Anchor `#104@4c8bcc3...`. Dependency: real existing authenticated identity source and canonical grant resolver not evidenced. Acceptance: absent/spoofed/mismatch/cross-project/replay denies with exact issuer/source/version/request/task/mission provenance. Next: none until source evidence changes; fall through. Security `SG-01,02,03,04,09,10,11,18,19`; S2; credentials/security-policy owner-only; Green/PRS required for promotion.
 
-### A-AG-03 — runtime-shell eligibility consolidation
-- status: ACTIVE; anchor: `AgentOS#112@d1645450a06d00c49a7a78f176e97b44b9eaa225`; objective: one canonical capability normalization/evaluation path without authority widening.
-- acceptance/evidence: deterministic aliases, compatibility adapter reuses evaluator, asserted eligibility without canonical result denied, adjacent unauthorized capability denied; exact-head CI.
-- next executable action: inspect current #112 CI/head; if unchanged and gaps remain, add at most 2–5 homogeneous evaluator/alias negatives, test and verify exact head.
-- security: `SG-02,03,04,10,18`; S2; branch/tests only; Green only for promotion; PRS conditional on authority widening; owner boundary merge/deploy/production; security_disposition=ACTIVE.
+### A-AG-03 runtime-shell eligibility consolidation — ACTIVE
+Anchor `AgentOS#112@d1645450a06d00c49a7a78f176e97b44b9eaa225`. Objective: one canonical normalization/evaluation path without authority widening. Acceptance: deterministic aliases, compatibility adapter reuse, asserted eligibility without canonical result denied, adjacent unauthorized capability denied; exact-head CI. Next: inventory uncovered evaluator/alias negatives and implement only 2–5 homogeneous gaps. Security `SG-02,03,04,10,18`; S2; branch/tests only; Green for promotion; no merge/deploy/production.
 
-### A-AG-04 — replay/correlation slices
-- status: SPLIT_REQUIRED; anchor: current #104 lineage; objective: close only genuinely uncovered replay/correlation cases.
-- acceptance/evidence: first-write provenance retained; conflicting same identity, duplicate result and restart duplicate fail closed without invented freshness source.
-- next executable action: inventory existing tests, select 2–5 homogeneous uncovered cases, implement minimal validation/tests, exact-head CI; do not overlap A-AG-01.
-- security: `SG-09,10,11,14,18`; S2; no new persistence/authority plane; Green=yes for promoted scope; PRS conditional; security_disposition=SPLIT_REQUIRED.
+### A-AG-04 replay/correlation slice — SPLIT_REQUIRED
+Anchor current #104 lineage. Objective: close genuinely uncovered replay/correlation cases without touching A-AG-01 ownership repair. Acceptance: first-write provenance retained; conflicting same identity, duplicate result and restart duplicate fail closed. Next: inventory coverage, select 2–5 homogeneous gaps, test exact head. Security `SG-09,10,11,14,18`; S2; no new persistence/authority plane.
 
-### A-AG-05 — physical Windows acceptance
-- status: BLOCKED_STABLE; anchor: future repaired #104 exact head; dependency A-AG-01/02 + Jess/Michael + PRS + owner physical authority.
-- next executable action: none; retain owner-run evidence contract only.
-- security: `SG-03,08,10,11,14,18,20`; S2; owner physical Windows only; Green=yes; PRS=yes; security_disposition=BLOCKED.
+### A-AG-05 physical Windows acceptance — BLOCKED_STABLE
+Dependency repaired #104 + A-AG-02 + Jess/Michael + PRS + owner physical authority. Next: none; preserve owner-run evidence contract. Security `SG-03,08,10,11,14,18,20`; S2; owner-only physical action.
 
 # PRS — independent assurance
 
-### A-PRS-01 — historical false-GREEN baseline
-- status: VERIFIED; anchor: `PRS#17@49fe1f8bca3ddae271d85e0f4767173060267222`; immutable historical defect evidence only, never successor certification.
-- next action: none unless target interpretation changes. security `SG-01,02,08,10,11,19`; S0.
+### A-PRS-01 historical false-GREEN baseline — VERIFIED
+Anchor `PRS#17@49fe1f8bca3ddae271d85e0f4767173060267222`. Immutable historical defect evidence only; never successor certification. Security `SG-01,02,08,10,11,19`; S0.
 
-### A-PRS-02 — changed-head bounded challenge
-- status: PENDING; anchor: current `AgentOS#104@4c8bcc3...`; objective: independently challenge replay/correlation/receipt and defect-baseline behavior without completion claim.
-- acceptance/evidence: immutable exact target/artifact hashes and independent outcomes; stale-owner/replay/correlation/receipt-order negatives.
-- next executable action: run only if AgentOS target/evidence changed since last PRS probe; otherwise skip under changed-lineage rule.
-- security: `SG-08,09,10,11,19`; S1; read/harness only; Green not prerequisite for defect confirmation; owner boundary merge/deploy; security_disposition=PENDING.
+### A-PRS-02 changed-head bounded challenge — PENDING
+Target only a changed AgentOS #104 lineage. Objective: independently challenge replay/correlation/receipt ordering and defect-baseline behavior. Acceptance: immutable exact target/artifact hashes plus independent outcomes. Next: skip while #104 remains unchanged; automatically reopen on changed target/evidence. Security `SG-08,09,10,11,19`; S1; read/harness only.
 
-### A-PRS-03 — completion-grade ownership challenge
-- status: BLOCKED_STABLE; anchor: `PRS#24@3039c886bdcff911f7c6dcc3e086368058e57fb6` contract + future repaired AgentOS head.
-- acceptance: identical-head Jess functional PASS + Michael security PASS first, then independent normal/prepared/successor/crash/replay matrix with exact hashes.
-- next executable action: none until prerequisites change.
-- security: `SG-08,09,10,11,18,19`; S2; Green prerequisite; PRS=yes; owner boundary merge/deploy; security_disposition=BLOCKED.
+### A-PRS-03 completion-grade ownership challenge — BLOCKED_STABLE
+Anchor `PRS#24@3039c886bdcff911f7c6dcc3e086368058e57fb6` plus future repaired AgentOS head. Acceptance: identical-head Jess functional PASS + Michael security PASS first, then independent normal/prepared/successor/crash/replay matrix. Next: none until prerequisites change. Security `SG-08,09,10,11,18,19`; S2; Green prerequisite.
 
-### A-PRS-04 — physical Windows evidence contract freshness
-- status: PENDING; anchor: `PRS#24@3039c886...`; objective: contract rejects stale/missing/mismatched AgentOS head, host/root, mutation/recovery/correlation or artifact identity.
-- next executable action: add/verify only missing contract-negative fixtures; no physical execution.
-- security: `SG-10,11,19,20`; S1; docs/tests only; owner physical host; security_disposition=PENDING.
+### A-PRS-04 physical evidence-contract negatives — PENDING
+Anchor `PRS#24@3039c886...`. Objective: reject stale/missing/mismatched AgentOS head, host/root, mutation/recovery/correlation or artifact identity. Next: add only missing contract-negative fixtures; no physical execution. Security `SG-10,11,19,20`; S1; owner physical host.
 
-# GLOBALSHOPCO
+# GlobalShopCo
 
-### B-GSC-01 — authenticated supplier evidence closure
-- status: ACTIVE; anchor: `#29@15fa99eb...`, `#30@80c82475...`; objective: close exact SKU rows only with authenticated trade cost, packaged freight/free-delivery basis, permission, stock identity, returns/warranty.
-- acceptance/evidence: source/date/SKU/cost/freight/status traceable; any missing material field => HOLD.
-- next executable action: process only newly available authenticated evidence for existing candidates; do not repeat public-source rediscovery when unchanged.
-- security: `SG-02,06,10,12,13,14,15,20`; S1; read-only; supplier contact/purchase/Shopify mutation owner-only; security_disposition=ACTIVE.
+### B-GSC-01 authenticated supplier evidence closure — ACTIVE
+Anchors `#29@15fa99eb...`, `#30@80c82475...`. Objective: close exact SKU rows only with authenticated trade cost, packaged freight/free-delivery basis, permission, stock identity, returns/warranty. Acceptance: source/date/SKU/cost/freight/status traceable; missing material field => HOLD. Next: process only newly available authenticated evidence; no repeated public rediscovery. Security `SG-02,06,10,12,13,14,15,20`; S1; read-only; contact/purchase/Shopify mutation owner-only.
 
-### B-GSC-02 — conservative delivered-margin gate
-- status: PENDING; anchor: #29/#30 evidence-complete rows; objective: calculate delivered contribution only where inputs are complete.
-- acceptance: fees/freight/returns allowance explicit; unknown/stale/negative economics => HOLD.
-- next executable action: apply deterministic calculator to any newly evidence-complete row; otherwise skip.
-- security: `SG-10,12,13,14,20`; S1; non-production calculation; spend/listing owner-only; security_disposition=PENDING.
+### B-GSC-02 conservative delivered-margin gate — PENDING
+Dependency evidence-complete B-GSC-01 row. Acceptance: fees/freight/returns allowance explicit; unknown/stale/negative economics => HOLD. Next: calculate only when a row becomes evidence-complete. Security `SG-10,12,13,14,20`; S1; non-production calculation.
 
-### B-GSC-03 — bounded eBay shortlist
-- status: BLOCKED_STABLE; anchor: `0 eBay-ready SKUs`; dependency B-GSC-01/02.
-- next executable action: none until at least one exact variant has permission+stock+delivered economics+returns/warranty.
-- security: `SG-02,06,10,12,13,14,15,20`; S1; publication/contact/spend owner-only; security_disposition=BLOCKED.
+### B-GSC-03 bounded eBay shortlist — BLOCKED_STABLE
+Anchor `0 eBay-ready SKUs`. Dependency B-GSC-01/02. Next: none until an exact variant has permission+stock+delivered economics+returns/warranty. Security `SG-02,06,10,12,13,14,15,20`; S1; publication/contact/spend owner-only.
 
-### B-GSC-04 — compact pet-accessory evidence mini-batch
-- status: PENDING; anchor: #30 next-cycle direction; objective: 2–5 compact/light AU-stock candidates, not category expansion.
-- acceptance: exact identity, supplier provenance, freight, permission, stock, returns captured or HOLD.
-- next executable action: one homogeneous 2–5 candidate research batch, prioritizing authenticated evidence routes; stop if sources remain retail/syndicated only.
-- security: `SG-06,10,12,13,14,15,20`; S1; research only; contact/purchase/listing owner-only; security_disposition=PENDING.
+### B-GSC-04 compact AU-stock evidence mini-batch — PENDING
+Objective: 2–5 compact/light candidates only where authenticated evidence routes exist. Acceptance: exact identity, supplier provenance, freight, permission, stock, returns captured or HOLD. Next: one homogeneous mini-batch; stop when sources remain retail/syndicated only. Security `SG-06,10,12,13,14,15,20`; S1; research only.
 
-# GLOBALSHOPCO-HEADLESS
+# GlobalShopCo-Headless
 
-### B-HDL-01 — Shopify store-authority pre-request validation
-- status: VERIFIED; anchor: `#1@9107ca283cf20b4bb79a4c25eaf1d4340b269e04`, commit `fix: validate Shopify store authority before request`, Actions `34916760358` / job `104215957898` SUCCESS.
-- objective/acceptance: preserve exact configured Shopify store authority validation before request; bounded exact-head CI evidence only.
-- next handoff: B-HDL-02/03; no live checkout inference.
-- security: `SG-02,05,06,10,14,20`; S1; test/non-production only; secrets/deploy/live purchase owner-only; security_disposition=VERIFIED.
+### B-HDL-01 configured Shopify store authority — VERIFIED
+Anchor predecessor/current lineage through `#1@c3f4939f1b7de8ef6e7fe6547400343dbb076348`; pre-request configured store authority remains fail-closed. Current exact-head `validate` SUCCESS `34920523147` / `104227407074`. Security `SG-02,05,06,10,14,20`; S1; non-production only.
 
-### B-HDL-02 — destination/host edge inventory
-- status: PENDING; anchor: `#1@9107ca283cf20b4bb79a4c25eaf1d4340b269e04`; objective: identify only uncovered scheme/userinfo/port/subdomain/canonical-host confusion cases.
-- acceptance: 2–5 homogeneous uncovered negatives, no duplicate coverage; exact-head CI.
-- next executable action: inventory current tests after 9107ca; implement only genuine gaps.
-- security: `SG-06,10,14`; S1; tests only; deploy/live checkout owner-only; security_disposition=PENDING.
+### B-HDL-02 malformed configured checkout authority — VERIFIED
+Anchor `#1@c3f4939f1b7de8ef6e7fe6547400343dbb076348`, commit `test: reject malformed configured checkout authorities`, Actions `34920523147` SUCCESS. Acceptance evidenced for configured checkout userinfo/path/port/host-confusion/leading-space denial plus canonical configured host acceptance and alternate destination denial. No live checkout inference. Security `SG-02,06,10,14,20`; S1; tests only; deploy/live purchase owner-only.
 
-### B-HDL-03 — Shopify canonical checkout projection
-- status: PENDING; anchor: `#1@9107ca...`; objective: prove WordPress cannot become order/payment authority.
-- acceptance: canonical Shopify checkout destination only; local payment/order mutation absent; alternate host/local-order negatives fail closed.
-- next executable action: add 2–5 synthetic authority-boundary tests adjacent to new store-authority preflight, then exact-head CI.
-- security: `SG-02,05,06,10,14,20`; S1; tests/docs; Shopify mutation/deploy/live purchase owner-only; security_disposition=PENDING.
+### B-HDL-03 canonical checkout projection — PENDING
+Anchor `#1@c3f4939...`. Objective: prove WordPress cannot become order/payment authority. Acceptance: canonical Shopify checkout destination only; no local payment/order mutation; alternate host/local-order negatives fail closed. Next: inventory current tests, then add only 2–5 uncovered authority-boundary cases. Security `SG-02,05,06,10,14,20`; S1; tests/docs only.
 
-### B-HDL-04 — product identity/availability contradictions
-- status: PENDING; anchor: current M3 contract at `9107ca...`; objective: stale/mismatched product/variant/availability cannot form checkout payload.
-- next executable action: add 2–5 homogeneous variant mismatch/stale availability/duplicate cart identity fixtures; exact-head CI.
-- security: `SG-06,09,10,14`; S1; synthetic tests only; production commerce owner-only; security_disposition=PENDING.
+### B-HDL-04 product identity/availability contradictions — PENDING
+Anchor current M3 contract `c3f4939...`. Objective: stale/mismatched product/variant/availability cannot form checkout payload. Next: add 2–5 homogeneous uncovered variant mismatch/stale availability/duplicate cart identity fixtures; exact-head CI. Security `SG-06,09,10,14`; S1; synthetic only.
 
-### B-HDL-05 — non-production acceptance packet
-- status: BLOCKED_STABLE; anchor: current #1 lineage; dependency genuine dev-store/browser evidence + owner-authorized credentials/environment.
-- next executable action: none; preserve checklist, fall through to deterministic tests.
-- security: `SG-05,10,14,20`; S2; owner-gated environment/credentials; no deploy/live purchase; security_disposition=BLOCKED.
+### B-HDL-05 non-production dev-store/browser acceptance — BLOCKED_STABLE
+Dependency genuine dev-store/browser evidence plus owner-authorized credentials/environment. Next: none; fall through to deterministic tests. Security `SG-05,10,14,20`; S2; credentials/deploy/live purchase owner-only.
 
-# SHOPIFY -> EBAY
+# shopify_ebay
 
-### B-EBAY-01 — upstream durable replay-store discovery
-- status: BLOCKED_STABLE; anchor: default `c68883f24fb3711fce567a35b1a80db74933b82a`; objective: use only an existing canonical upstream replay store/caller.
-- acceptance: exact owner/source/schema/lifecycle identified or explicit NONE; caller-supplied seen IDs are not durable evidence.
-- next executable action: none until integration topology/source changes; no repeated rediscovery.
-- security: `SG-02,09,10,11,14`; S1; no new ledger/persistence/production; security_disposition=BLOCKED.
+### B-EBAY-01 upstream durable replay owner — BLOCKED_STABLE
+Anchor default `c68883f24fb3711fce567a35b1a80db74933b82a`. Acceptance requires an evidenced existing canonical upstream owner/source/schema/lifecycle; caller-supplied seen IDs are not durability. Next: none until topology/source changes. Security `SG-02,09,10,11,14`; S1; no new ledger/persistence.
 
-### B-EBAY-02 — restart replay durability negatives
-- status: BLOCKED; dependency B-EBAY-01; objective: restart duplicate/conflict/result-write replay preserves first-write provenance.
-- next executable action: none until canonical store exists.
-- security: `SG-09,10,11,14`; S2; synthetic tests only after dependency; publication owner-only; security_disposition=BLOCKED.
+### B-EBAY-02 restart replay durability negatives — BLOCKED
+Dependency B-EBAY-01. Objective: restart duplicate/conflict/result-write replay preserves first-write provenance. Next: none until canonical store exists. Security `SG-09,10,11,14`; S2; synthetic only after dependency.
 
-### B-EBAY-03 — evidence-complete SKU admission fixture
-- status: BLOCKED_STABLE; anchor: `c68883f...` + GlobalShopCo `0 eBay-ready SKUs`; dependency B-GSC-03.
-- next executable action: none until real evidence-complete Shopify variant exists.
-- security: `SG-02,06,10,12,13,14,15,20`; S1; fixture only; eBay network/listing/spend owner-only; security_disposition=BLOCKED.
+### B-EBAY-03 evidence-complete SKU admission — BLOCKED_STABLE
+Anchor `c68883f...` + GlobalShopCo `0 eBay-ready SKUs`. Next: none until a real evidence-complete Shopify variant exists. Security `SG-02,06,10,12,13,14,15,20`; S1; network/listing/spend owner-only.
 
-### B-EBAY-04 — synthetic mapper identity regression
-- status: PENDING; anchor: `c68883f...`; objective: exact variant/SKU/event mapping under malformed/duplicate inputs.
-- acceptance: 2–5 genuinely uncovered identity negatives; no live API.
-- next executable action: inventory existing mapper tests; implement homogeneous gaps such as variant mismatch/malformed ID/conflicting hash, exact-head fixture CI.
-- security: `SG-06,09,10,14`; S1; tests only; publication/network owner-only; security_disposition=PENDING.
+### B-EBAY-04 synthetic mapper identity regression — PENDING
+Anchor `c68883f...`. Objective: exact variant/SKU/event mapping under malformed/duplicate inputs. Next: inventory existing mapper tests and implement only 2–5 uncovered homogeneous variant mismatch/malformed-ID/conflicting-hash cases; fixture CI. Security `SG-06,09,10,14`; S1; no live API/publication.
 
-# MYPRIMEDELIVERY
+# MyPrimeDelivery
 
-### B-MPD-01 — divergent-lineage compatibility map
-- status: ACTIVE; anchors: research `61feceb46de539948374deec86b3fe7578cf8014`, WordPress fixture `a38684c10541115f55f1d5612b72d669dced99f0`, merge base `3635c903214b06464e28674d5a6403f8539b8c1e`; exact compare `diverged`, research side ahead 101/behind 4.
-- objective: record changed paths/contracts and compatibility/conflict classes before integration; no stale overwrite/merge/rebase.
-- acceptance/evidence: exact heads/base/path map + explicit compatible/conflicting/fixture-only classifications.
-- next executable action: produce path-level compatibility map and identify the smallest presentation-contract port that does not import stale fixture assumptions.
-- security: `SG-10,11,14,20`; S1; read/docs/tests; merge/deploy/publication owner-only; security_disposition=ACTIVE.
+### B-MPD-01 divergent-lineage compatibility map — ACTIVE
+Anchors research `61feceb46de539948374deec86b3fe7578cf8014`, fixture `a38684c10541115f55f1d5612b72d669dced99f0`, merge base `3635c903214b06464e28674d5a6403f8539b8c1e`. Objective: exact path/contract compatibility map before integration; no stale overwrite/merge/rebase. Acceptance: explicit compatible/conflicting/fixture-only classifications. Next: identify smallest presentation-contract port that does not import stale fixture assumptions. Security `SG-10,11,14,20`; S1; read/docs/tests.
 
-### B-MPD-02 — authoritative source/right-to-use evidence
-- status: PENDING; anchor: research `61feceb...`; truth `0 live QUALIFIED`.
-- objective: one coherent observation must carry exact ASIN + current product-level Prime + owner-approved rank/deal freshness + source rights + outbound destination.
-- acceptance: editorial/public pages never become Prime/rank/deal authority; missing gate => HOLD.
-- next executable action: process only newly available authorized evidence; no raw-concept expansion for its own sake.
-- security: `SG-02,06,10,12,14,15,20`; S1; read-only; signup/credentials/publication owner-only; security_disposition=PENDING.
+### B-MPD-02 authoritative source/right-to-use evidence — PENDING
+Anchor research `61feceb...`; truth `0 live QUALIFIED`. Acceptance: one coherent observation carries exact ASIN + current product-level Prime + owner-approved rank/deal freshness + source rights + outbound destination; editorial/public pages never become authority. Next: process only newly available authorized evidence. Security `SG-02,06,10,12,14,15,20`; S1; signup/credentials/publication owner-only.
 
-### B-MPD-03 — coherent qualification baseline
-- status: VERIFIED; anchor: research `61feceb...`; objective: preserve one-observation coherence and conflicting-known-ASIN denial.
-- next action: only genuinely uncovered contradictions; no repeat certification.
-- security: `SG-06,09,10,14`; S1; test/read; live publication/network owner-only; security_disposition=VERIFIED.
+### B-MPD-03 coherent qualification baseline — VERIFIED
+Anchor research `61feceb...`; preserve one-observation coherence and conflicting-known-ASIN denial. Next: only genuinely uncovered contradictions. Security `SG-06,09,10,14`; S1.
 
-### B-MPD-04 — WordPress non-production presentation adapter
-- status: PENDING; dependency B-MPD-01 compatibility map; anchor fixture `a38684c...` plus research qualification schema.
-- objective: render only QUALIFIED fixture data without inventing Prime/rank/deal authority.
-- acceptance: HOLD/UNKNOWN never produces monetized/live CTA; outbound destination exact; no secret leakage.
-- next executable action: after B-MPD-01, port only compatible presentation contract into a bounded fixture/test slice; no merge/rebase/live WordPress.
-- security: `SG-05,06,10,14,15,20`; S2; non-production template/tests; Green if promoted; credentials/publication owner-only; security_disposition=PENDING.
+### B-MPD-04 WordPress non-production presentation adapter — PENDING
+Dependency B-MPD-01. Objective: render only QUALIFIED fixture data without inventing Prime/rank/deal authority. Acceptance: HOLD/UNKNOWN never emits monetized/live CTA; outbound destination exact; no secret leakage. Next: after compatibility map, port only compatible presentation contract into bounded fixture/tests. Security `SG-05,06,10,14,15,20`; S2; Green if promoted; credentials/publication owner-only.
 
-### B-MPD-05 — freshness/identity contradiction mini-batch
-- status: PENDING; anchor: research `61feceb...`; objective: 2–5 uncovered homogeneous stale Prime/rank/deal or identity/outbound contradictions fail closed.
-- next executable action: inventory validator coverage, add only genuine gaps, run exact-head fixture CI.
-- security: `SG-06,09,10,14`; S1; tests only; publication/network owner-only; security_disposition=PENDING.
+### B-MPD-05 freshness/identity contradiction mini-batch — PENDING
+Anchor research `61feceb...`. Objective: 2–5 uncovered homogeneous stale Prime/rank/deal or identity/outbound contradictions fail closed. Next: inventory validator coverage, add only genuine gaps, exact-head fixture CI. Security `SG-06,09,10,14`; S1; tests only.
 
 ## Execution order / starvation control
-1. AgentOS A-AG-01 remains P0 but BLOCKED owner seam must not starve independent #112 A-AG-03 and replay/correlation test slices.
-2. PRS follows changed AgentOS lineages only; unchanged heads are skipped. Completion-grade PRS requires identical-head Jess PASS + Michael PASS first.
-3. Headless receives raised priority this window because it has fresh VERIFIED movement at `9107ca...`; consume adjacent deterministic authority/host/identity negatives while confidence class is homogeneous.
-4. GlobalShopCo processes new authenticated evidence only; stable external evidence gaps are not rediscovered. `0 eBay-ready SKUs` remains truth.
-5. shopify_ebay executes mapper identity tests while durable replay/SKU admission blockers remain stable; never add a persistence plane.
-6. MyPrimeDelivery prioritizes the exact divergent-lineage compatibility map before presentation work; qualification authority remains fail-closed.
+1. AgentOS A-AG-01 remains P0 but its stable blocker must not starve independent #112 and replay/correlation slices.
+2. PRS runs only on changed AgentOS lineage; no repeated certification of unchanged #104.
+3. Headless has fresh VERIFIED movement at `c3f4939...`; consume B-HDL-03/04 adjacent deterministic slices next while confidence class remains homogeneous.
+4. GlobalShopCo processes new authenticated evidence only; `0 eBay-ready SKUs` remains truth.
+5. shopify_ebay falls through to mapper regressions while persistence/SKU blockers remain stable; never create persistence.
+6. MyPrimeDelivery completes compatibility mapping before presentation work; live qualification authority remains fail-closed.
 
 **No overall GREEN. Scheduled work outside these six projects remains untouched.**
