@@ -19,6 +19,7 @@ Rules: CLAIMED requires an owner and exact task identity; ACTIVE requires substa
 - `SCHED-15-COMMERCE` — GlobalShopCo / Headless / Shopify-eBay / MyPrime executor.
 - `SCHED-30-REPLENISH` — portfolio coordination/replenishment; does not compete with mutation owners.
 - `SCHED-40-ASSURANCE` — Jess + Michael AgentOS/PRS assurance.
+- `SCHED-45-VENTURES` — owner-re-enabled Lane C / Ventures executor; claims only exact Lane-C tasks not already ACTIVE/VERIFYING elsewhere.
 - `WORK-PORTFOLIO` — owner-started Work.
 - `PROJECT-CHAT:<name>` — project-specific manual executor.
 - Lane-C and other non-core projects are owner-manual unless the owner explicitly re-enables scheduled execution. Their durable state is retained here for coordination only.
@@ -60,7 +61,7 @@ Live evidence changed in coordination, not in AgentOS code lineage. AgentOS PR #
 | B-MPD-04 | MyPrimeDelivery | P1 | PENDING | SCHED-15-COMMERCE | B-MPD-01 | Port only compatible non-production presentation contract; HOLD/UNKNOWN cannot emit monetized/live CTA. |
 | B-MPD-05 | MyPrimeDelivery | P1 | PENDING | SCHED-15-COMMERCE | existing validator lineage | 2–5 stale Prime/rank/deal or identity/outbound contradictions; exact-head fixture CI. |
 | C-AFF-01 | Affiliate-Websites Master/AU/UK/US | P1 | ACTIVE | PROJECT-CHAT:Affiliate-Websites / WORK-PORTFOLIO | current Master/AU/UK/US seams | OWNER-MANUAL coordination only. Preserve country compliance, disclosure and UNKNOWN/non-affiliate CTA HOLD; no scheduled claim. |
-| C-GK-01 | GhostKitchen | P1 | PENDING | PROJECT-CHAT:GhostKitchen / WORK-PORTFOLIO | representative-order evidence | OWNER-MANUAL. Deterministic economics/field evidence only; hypothesis remains hypothesis. |
+| C-GK-01 | GhostKitchen | P1 | CLAIMED | SCHED-45-VENTURES | `GhostKitchen#32@eab5b290c93e111a0275308bee39945d9076c956`; exact-head economics CI verification | Owner re-enabled Lane-C scheduled execution. Verify current exact-head CI and reconcile GK-V1/GK-V3; do not widen economics or publication authority while CI is absent. |
 | C-FR-01 | Franchise | P1 | PENDING | PROJECT-CHAT:Franchise / WORK-PORTFOLIO | GhostKitchen template evidence | OWNER-MANUAL. Gate-3 reusable franchise acceptance; synthetic/non-production. |
 | C-GEM-01 | GemVerse | P2 | PENDING | PROJECT-CHAT:GemVerse / WORK-PORTFOLIO | current canon/recovery lineage | OWNER-MANUAL. Exact recovery identity; competing/ambiguous state fails closed. |
 | C-C360-01 | content360 | P1 | ACTIVE | PROJECT-CHAT:Content360 / WORK-PORTFOLIO | current PR lineage + Marketing provenance | OWNER-MANUAL. Provenance/claim-strength/secret boundary; no live PUBLISH/SCHEDULE/network authority. |
@@ -73,7 +74,7 @@ Live evidence changed in coordination, not in AgentOS code lineage. AgentOS PR #
 1. AgentOS: A-AG-08 independent runtime-shell slice while A-AG-01/02 are BLOCKED_STABLE; A-AG-03/06/07 become executable only after changed ownership candidate.
 2. PRS: A-PRS-04 independent fixture gaps; A-PRS-02/03 remain closed until changed AgentOS lineage and required identical-head assurance.
 3. Commerce: B-HDL-02/03; B-EBAY-04; B-MPD-01 then B-MPD-04, with B-MPD-05 independent; B-GSC-04 only where authenticated evidence routes exist.
-4. Manual projects: retain state and exact owner boundaries; SCHED-30 coordinates handoffs but does not claim or implement them.
+4. Lane C: SCHED-45-VENTURES may consume only exact tasks it first claims after fresh scan; skip C-AFF-01/C-C360-01/C-MKT-01 while already ACTIVE under another executor. GhostKitchen C-GK-01 is the current claimed verification slice.
 
 ## Security / authority boundary
 Security is cross-cutting. Material AgentOS Level-2 work uses the applicable SG-01/02/03/08/09/10/11/14/18/19/20 gates; commerce applies applicable SG-02/05/06/09/10/12/13/14/15/20. Risk is S0/S1 for read-only/synthetic work and S2 for non-production branch/test mutations; unknown classification fails closed upward. Production/publication/contact/spend/credentials/security-policy/physical-host actions remain owner-only. Functional success never upgrades security, Green or PRS status.
