@@ -22,140 +22,84 @@ No merge/deploy/approval/ready/rebase/credentials/purchase/supplier contact/list
 
 # CURRENT DURABLE INDEX
 
-## AgentOS beta / trust / frontend
-- claim + beta gate @ `a23acd01ec46d7368949d29d7c7e931d28ab92b6`
-- Level 2 claim delta @ `c592f802a6929bfd9922ed7d735e0a0cce805ca0`
-- Wave 0 activation @ `e56f7f0810d8b8add0c1b8e884a796f00764f43a` — DO NOT ACTIVATE
-- scorecard/dashboard @ `3e6d3d96657ea2d26b16cef4a330cbce43ae5e58`
-- invitation/screener @ `53782e28fe0a6a41021a1307e99329f59ca0d6da` — DO NOT SEND
-- trust UX brief @ `3ba5bd49623e2a3194fac09b253a29ce9e5de976`
-- stop/revoke language @ `4a7efb43fe711e24dc8a707e6ab3ff7b8db1a0de`
-- Marketing→Frontend trust matrix @ `98a6f532e0aabe019b72bd30cb59b68368cf26a0`
-- Frontend claim checklist @ `f84864c09f5ccd261042f02504b6bef350a88802`
-- beta trust-task traceability @ `2e3c5b13566e4c423db643b3812fa395a8159ca7`
-- beta measurement contract @ `2669f0550c02dcfd495563c49413f1f0b8422b1c`
-- beta telemetry mapping @ `573a76f27b2a1cd8e13f2cea483c05547df4f398`
-- beta event acceptance matrix @ `206337090d5577be94284732fe345990c08a22e6`
-- capability trust acceptance ladder @ `74c9ee590c4d69f34bb561e748be379564bb243d`
-- Evidence Timeline acceptance matrix @ `6a53bf129817432a9634cff1745524d5e89fd3db`
-- Jack permission-card acceptance matrix @ `474fcb025891ea38f2ed5db95e32f7464672617a`
-- readiness projection claim/screen acceptance @ `31ae5313c9801b05ee7b69affb5b65ccf9cfd70b`
-- authority-source discovery follow-up @ `1488dafdeeaf34df382e64c88ab447844482c7df`
-- Content360 demographic campaign operating system @ `8782bb10f114767df6d52d0aa0f851d25ab02776`
-- 17-agent identity/persona Marketing acceptance @ `1076f6d89257b89fe0bf77832e1532fff43b4f1b`
-- voice conversation claim gate @ `abdcc921b623d13d0c19b87c2e6beb04921dcba1`
+## AgentOS / Marketing
+- Evidence Timeline acceptance @ `6a53bf129817432a9634cff1745524d5e89fd3db`
+- Jack permission acceptance @ `474fcb025891ea38f2ed5db95e32f7464672617a`
+- readiness projection acceptance @ `31ae5313c9801b05ee7b69affb5b65ccf9cfd70b`
+- authority-source follow-up @ `1488dafdeeaf34df382e64c88ab447844482c7df`
+- Content360 demographic campaign OS @ `8782bb10f114767df6d52d0aa0f851d25ab02776`
+- 17-agent identity/persona acceptance @ `1076f6d89257b89fe0bf77832e1532fff43b4f1b`
+- voice claim gate @ `abdcc921b623d13d0c19b87c2e6beb04921dcba1`
+- 17-agent/Overseer campaign vocabulary @ `527f93fc409113ebd96fc475941da5b88db0295d`
+- single Overseer front-door gate @ `1bf7643aab282ea1bcdfcf67f2d360ada724393b`
+- Content360 pre-Beta education matrix @ `8014b90d826517f2b203d8a18b57df9f2e5fcc11`
 
-## AgentOS competitive
-- trust/control batches @ `abecdf2738d1a343b8234771274a15fbd204dc90`, `d6c99bf81d677115db6caca4c001c6030f4aba99`, `0525c7e6355853aa74c90cd92bb12876e0efbf8d`, `1f2e3bd4c743ce7d49294784ccd24adfcd214b88`, `43a54536f809889e1a1b1e622742eefe7c466931`
-- capability/MCP supply-chain comparison @ `1585942475eb00d97d302941eadc8953642978e4`
+## GlobalShopCo / eBay
+- contradiction-aware gate @ `f3f41630a2bc7ea711c86597a91e5592ea2b17a5`
+- OXO threshold screen @ `181e4507642740422e79b6a5e60377468991cb8f`
+- CARLA current-leader re-screen @ `328d353e3ec43ea013ee67c37e24f18b17d01567`
 
-## GlobalShopCo / eBay / Headless
-- eBay launch/readiness/pointer work @ `670e76883c1a47b698195b28ae7017b68bb36798`, `69068d3ff90381fb877fe5fb2e0bdfa19fbdaa95`, `25c1fa2d12f0fe1b2284379f2e9adcce5cbadc21`, `54e6389e61bb2e695466840f10722ff95db82cb4`
-- Southern Pet economics/decision @ `e15743373332bde4d97f6677f9cd55fe7322d41c`, `729d7fb1aad0430fadf4e134d7c45ca675bf93c5`
-- Home Organisation organic/Content360 @ `3785e13cf4a456fa4f028b456c0f8982c43dd498`, `3df9ad6a4edd0765047843cb23ff432af5694d21`
-- permission-first supplier screen @ `12b14b162d07e22f5d52158747e73d5690d13bff`
-- Dropshipzone compact category screen @ `0e2562f99c531f1de787302814c2772070954e05`
-- contradiction-aware Marketing gate @ `f3f41630a2bc7ea711c86597a91e5592ea2b17a5`
-- OXO organiser threshold screen @ `181e4507642740422e79b6a5e60377468991cb8f`
-- Headless readiness/stale trust/SEO-AEO @ `02192ee7fbf29a2d9551e23cd353b9a0357d7c06`, `4129c55baf00037854e30533209a677059aacc1d`, `b564f870d74aa11b09274e2f79c3c831a23dfef1`
-
-## Affiliate / other
-- Affiliate editorial acquisition gate @ `be66a1bea89965908ac6a43e715adafbcf0c4909`
-- Affiliate relationship/freshness gate @ `f104847603cf73558563fc34b5ab0ee4dc5073a2`
+## Affiliate
+- relationship/freshness gate @ `f104847603cf73558563fc34b5ab0ee4dc5073a2`
 - AU proof-gated shortlist @ `f077101bd77cb3ef1dd1183e7ee79350c4bebe81`
-- AU shortlist expansion @ `2d654dee4e55f82f17351559f589f4889024a112`
-- GhostKitchen prelaunch Marketing gate @ `c669521390ee329226b1c04008960bd8fbc09953`
-
-Standing positioning: **AgentOS = governed AI execution / AI control plane**. Stronger intended differentiation is integrated authority + evidence + recovery/replay + Green + PRS + provider-neutral lifecycle, not generic chat/MCP/plugin counts.
+- AU expansion @ `2d654dee4e55f82f17351559f589f4889024a112`
 
 ---
 
-# 2026-09-15 — EXACT-HEAD / CONTENT360 / 17-AGENT AUTONOMOUS CYCLE
+# 2026-09-15 10:46+ AEST — AUTONOMOUS MARKETING CYCLE
 
-## AgentOS Level 2 — exact post-scan
-PR #104 remains OPEN / DRAFT / UNMERGED at exact `bbfee5221652c9bf0551ce5b31eb0b1cf6e78af1`. Exact-head workflow `34857161932` is SUCCESS.
+## Mandatory pre-scan findings
+### AgentOS #104
+Live exact head moved materially from the prior Marketing checkpoint to `4c8bcc3bc2ad2041b0a1871d3004c1db23f3c091`, OPEN/DRAFT/UNMERGED. Exact-head AgentOS Tests `34906732495` completed SUCCESS on Ubuntu/Node22 and Windows/Node26.
 
-Current tested lineage materially improves:
-- source-backed authority admission and correlation;
-- rejection of unauthenticated/mismatched actor/issuer/project evidence;
-- duplicate-admission prevention;
-- bounded capability/project allowlisting;
-- replacement-lock ownership and stale-owner regressions;
-- Windows-specific three-writer race and abrupt-holder-exit behavior;
-- replay-safe execution/evidence paths.
+Crucial reconciliation: this head is not the SG-08 repair. Canonical #49 evidence states its material delta is a **test-only expansion of false-success repair fixtures**. Independent Jess + Michael assurance on the identical head is controlling:
+- SG-08 FAIL/BLOCKED;
+- durable `MUTATED_VERIFIED` success can persist before final ownership-loss detection;
+- A-AG-01 remains BLOCKED;
+- A-AG-04 is a repair-driving fixture pack, not PASS;
+- SG-18 Green cannot PASS while the defect reproduces;
+- SG-19 completion-grade PRS is ineligible until identical-head Green after real repair;
+- SG-01/02 authenticated actor/canonical grant remain blocked;
+- physical Windows remains owner-gated.
 
-This is meaningful implementation movement. Marketing does **not** declare the prior PRS stale-owner finding closed until independent exact-head assurance revalidates it. Current real physical Windows Level 2 acceptance, independent Green exact eligible head, and independent PRS after Green remain unproven. **Founding Beta remains HOLD.**
+Marketing correction: earlier language that the stale-owner false-success condition `appears technically addressed` is superseded. **Current exact-head evidence proves the false-success condition remains reproducible.** CI success proves the diagnostic fixture executes; it does not prove safety.
 
-## Frontend — exact post-scan
-PR #111 remains OPEN / DRAFT / UNMERGED at exact `429b6d5bc14b2790f1a9bace09b76e699cb88b8c`. Exact-head workflow `34859721665` is SUCCESS on general and Windows Basic Chat lifecycle lanes. The prior Ubuntu SIGINT/null regression is cleared on this exact head.
+**Founding Beta remains HOLD.**
 
-Current evidence integration and readiness projection tests remain fail-closed. Basic Chat availability, Windows host capability, physical Windows acceptance and project-file mutation readiness are deliberately separate. CI success does not establish mutation safety, physical acceptance, PRS/Henry assurance, durable revoke, shipment or overall readiness.
+### Frontend #111
+Live exact head moved to `352c83fdbcff65dd9dc592fb3b8d65d4aa130969`, OPEN/DRAFT/UNMERGED. Exact-head AgentOS Tests `34863648579` = SUCCESS.
 
-Marketing classification: **IMPLEMENTATION-ADVANCED / EXACT-HEAD CROSS-PLATFORM CI PASS / EVIDENCE+READINESS PROJECTIONS VERIFIED / DRAFT-UNMERGED / NOT SHIPPED.**
+The PR body contains stale internal references to implementation head `429b6d5...` and observed #104 `bbfee522...`; Marketing therefore treats dependency/head prose as stale unless refreshed by live evidence. Product truth remains fail-closed: Basic Chat, host lifecycle, Windows capability, physical acceptance and mutation readiness are distinct; Green ≠ PRS; Stop requested ≠ stopped; no durable Revoke claim.
 
-## Owner-directed 17-agent / Overseer model
-The user always interacts through the **Overseer**. AgentOS has 17 specialist agents operating behind that single relationship.
+### Content360
+Canonical portfolio evidence reports Content360 #4 exact `d9782da613d407156d5e2a196d5d16f67bfc6fb2`, exact-head test `34906007364` SUCCESS. Classification is **VERIFIED_BOUNDED mock/non-production request-integrity only**. Official API/auth/live READ/OPTIMISE remains unproven; PUBLISH/SCHEDULE/network/account mutation remains blocked/owner-gated.
 
-Product direction:
-- stable numbered/system identity;
-- controlled role/capability contract;
-- replaceable display name/persona;
-- replaceable appearance/avatar;
-- voice/personality may be replaceable where implemented;
-- persona changes never alter authority, permissions, evidence identity, routing, Green or PRS.
+### GlobalShopCo
+Canonical #49 and #17 evidence keep **0 eBay-ready SKUs** controlling. Research PRs #29/#30 remain research-only and no new authenticated supplier/app evidence has unlocked the OXO/CARLA gates.
 
-Core principle:
-> **Identity is stable. Role is controlled. Persona is replaceable.**
+## Work executed
+1. M-A038 — 17-agent/Overseer campaign vocabulary @ `527f93fc409113ebd96fc475941da5b88db0295d`.
+2. M-A039 — single Overseer front-door Marketing gate @ `1bf7643aab282ea1bcdfcf67f2d360ada724393b`.
+3. M-A040 — Content360 pre-Beta education matrix @ `8014b90d826517f2b203d8a18b57df9f2e5fcc11` — PREPARED / DO NOT PUBLISH.
+4. M-B020 — CARLA current-leader re-screen @ `328d353e3ec43ea013ee67c37e24f18b17d01567` — BOTH HOLD.
+5. Marketing vertical batch replenished with exact-head SG-08 correction and next tasks.
 
-Willow, Isla, Jack and Henry are default brand/persona presentations rather than canonical machine identities. Implementation is not claimed until repo evidence exists.
+## Marketing decisions
+- `17 agents` remains owner-approved product direction, not a claim of 17 shipped autonomous employees.
+- User-facing relationship remains the Overseer; persona cannot become an authority identity.
+- Pre-Beta education may be prepared but not published/activated under this cycle.
+- `V178-36335` is the better physical CARLA eBay research row than `V178-36336`, but neither is eligible.
+- A green CI run must never be translated into a safety/readiness claim when independent exact-head assurance reproduces false success.
 
-## Content360 demographic campaign system
-Prepared a campaign operating system for the ambition of AgentOS across homes, schools, businesses and computers.
-
-Segmentation model:
-`life context × age/life stage × expertise × problem × trust concern × desired outcome × platform × funnel stage`
-
-Critical rule: **age ≠ expertise**.
-
-Core recurring benefits:
-- better answers;
-- safer actions;
-- less complexity;
-- lower AI cost where evidenced;
-- proof of what happened.
-
-Content360 is downstream only: approved evidence/claim → audience/format → variants → policy/claim review → publication authority. It may not upgrade claim class or invent product facts.
-
-Prepared output states: `ORGANIC_SAFE`, `PAID_ELIGIBLE`, `PAID_REVIEW_REQUIRED`, `DO_NOT_PUBLISH`. No paid campaign or public Beta activation is authorized.
-
-## Voice
-Verbal conversation is owner-approved **PRODUCT DIRECTION / NOT SHIPPED**. User speaks to the Overseer; voice must preserve the same identity, authority, permission, replay, evidence and assurance lifecycle as typed interaction. Do not claim voice availability until implementation and exact acceptance evidence exist.
-
-## GlobalShopCo
-Controlling truth remains **0 eBay-ready SKUs / PILOT NOT READY / PUBLICATION HOLD**. Fork-lane security progress does not promote SKU readiness. OXO economics remain gated by authenticated buy cost, real freight, permission, fulfilment/ownership and actual account fee evidence.
-
-## Work completed
-1. M-A032 readiness-projection claim/screen acceptance @ `31ae5313c9801b05ee7b69affb5b65ccf9cfd70b`.
-2. M-A034 authority-source discovery follow-up @ `1488dafdeeaf34df382e64c88ab447844482c7df`.
-3. M-A035 Content360 demographic campaign operating system @ `8782bb10f114767df6d52d0aa0f851d25ab02776`.
-4. M-A036 agent identity/persona Marketing acceptance @ `1076f6d89257b89fe0bf77832e1532fff43b4f1b`.
-5. M-A037 voice conversation claim gate @ `abdcc921b623d13d0c19b87c2e6beb04921dcba1`.
-6. Marketing vertical batch refreshed @ `52d45ead1477ec2722c2c07906e736e173b7d0b9`.
-
-## Replenished next actions
-- M-A007 exact-head claim watcher — P0 ACTIVE.
-- M-A015 Frontend claim QA — P0 ACTIVE.
-- M-A016 Founding Beta — HOLD.
-- M-A033 Evidence Timeline implementation watch — ACTIVE.
-- M-A038 17-agent/Overseer campaign vocabulary — NEXT SAFE.
-- M-A039 single-front-door Marketing gate — NEXT SAFE.
-- M-A040 Content360 pre-beta education pack — PREPARE ONLY.
-- M-A041 voice implementation evidence watcher — WATCH.
-- M-B020 CARLA current-leader re-screen — NEXT SAFE unless higher commerce evidence unlocks first.
-- M-D001c AU true publisher-commercial proof hunt — NEXT SAFE.
-- M-F001 claim-evidence pointer index — NEXT SAFE if higher lanes block.
+## Next priorities
+- M-A042 SG-08 repair claim-delta watcher.
+- M-A043 Frontend dependency freshness gate.
+- M-A044 Content360 bounded-integration claim delta.
+- M-B021 capped eBay pilot contradiction/freshness reconciliation.
+- M-D001c AU true publisher-commercial proof hunt.
+- M-F001 portfolio claim-evidence pointer index if higher lanes block.
 
 ## Hard status
 **NO PUBLIC BETA / NO INVITATIONS / NO TELEMETRY ACTIVATION / NO PAID CAMPAIGN / NO EBAY LISTING / NO SHOPIFY PRODUCT ACTIVATION / NO SUPPLIER CONTACT / NO ACCOUNT APPLICATION / NO PURCHASE / NO DEPLOYMENT / NO OVERALL GREEN.**
 
-**Operating rule:** CI GREEN is tested-code evidence, not a synonym for product readiness, physical acceptance, assurance, shipment or overall GREEN. Fresh evidence outranks this log.
+**Operating rule:** fresh exact-head independent evidence outranks prior Marketing interpretation, PR prose and green CI.
