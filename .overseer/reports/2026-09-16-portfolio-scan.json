@@ -1,0 +1,1924 @@
+{
+  "scanned_at": "2026-09-16T00:36:33.289024+00:00",
+  "repos": [
+    {
+      "repo": "darrinbaldwindev/AgentOS",
+      "branch": "main",
+      "head": "962cb3820b83506f9e6d90f50e003690dd85a8a1",
+      "default_branch": "main",
+      "repo_updated": "2026-09-14T23:41:41Z",
+      "open_prs": [
+        {
+          "number": 113,
+          "title": "docs(sop): bootstrap evidence-controlled SOP library",
+          "head_sha": "55abb2e373d521cc75845b103b3559275925642e",
+          "updated_at": "2026-09-16T00:36:04Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/113"
+        },
+        {
+          "number": 119,
+          "title": "docs(sop): hand off AgentOS Server Overseer",
+          "head_sha": "bb24e4c28146ea401ecff73e1938c20c63044c27",
+          "updated_at": "2026-09-16T00:33:47Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/119"
+        },
+        {
+          "number": 112,
+          "title": "refactor(runtime): consolidate runtime-shell eligibility path",
+          "head_sha": "33eca1d257179a873a8aca2eea1a4e5e994415a0",
+          "updated_at": "2026-09-16T00:31:34Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/112"
+        },
+        {
+          "number": 104,
+          "title": "feat(local): stage governed PowerShell Windows worker on remote-bridge lineage",
+          "head_sha": "5bb27bb4290bbdf743c53c7f48e75af14db37966",
+          "updated_at": "2026-09-16T00:28:03Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/104"
+        },
+        {
+          "number": 120,
+          "title": "fix(runtime): reject contradictory PowerShell receipt persistence",
+          "head_sha": "e44f0facccc6be7f9dba4820fddebd92b4a16b3c",
+          "updated_at": "2026-09-16T00:04:42Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/120"
+        },
+        {
+          "number": 110,
+          "title": "docs(frontend): establish Frontend Overseer vertical batch and trust-state contract",
+          "head_sha": "86d01ce1407c63c370171d5088e7112f5b901be9",
+          "updated_at": "2026-09-15T10:56:11Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/110"
+        },
+        {
+          "number": 111,
+          "title": "fix(frontend): make Basic Chat primary copy plain-language and truthful",
+          "head_sha": "b4386cfd960fc1659917b223c75004982a2c157d",
+          "updated_at": "2026-09-15T10:55:28Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/111"
+        },
+        {
+          "number": 108,
+          "title": "feat(governance): add bounded governed execution preflight",
+          "head_sha": "48a7aea9ab5428ddd758ee76d53ca5503a84c8bb",
+          "updated_at": "2026-09-13T03:15:41Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/108"
+        },
+        {
+          "number": 102,
+          "title": "fix(chat): preserve uncertain locks on Windows repair lineage",
+          "head_sha": "d3714c406c08de1a950b6f55ba27d5e4fe0af1c3",
+          "updated_at": "2026-09-11T02:09:33Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/102"
+        },
+        {
+          "number": 103,
+          "title": "feat(governance): add fail-closed governed execution boundary",
+          "head_sha": "fd12547daf4c0d962ea78d73d2c765b74e156373",
+          "updated_at": "2026-09-11T01:54:36Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/103"
+        },
+        {
+          "number": 101,
+          "title": "feat(v1): add bounded local host status receipt",
+          "head_sha": "d91abaecf602d7ef223c4888f10fa9361677302e",
+          "updated_at": "2026-09-11T00:44:05Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/101"
+        },
+        {
+          "number": 99,
+          "title": "fix(chat): show pending work and expose local launch command",
+          "head_sha": "5abda2dfdb5464adb412fea76f43939800d9b906",
+          "updated_at": "2026-09-10T03:32:15Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/99"
+        },
+        {
+          "number": 98,
+          "title": "fix(v1-rc): repair real Windows Ctrl+C lock cleanup",
+          "head_sha": "84fa347428881e746d5a220acd0caaf5d7181019",
+          "updated_at": "2026-09-10T02:33:28Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/98"
+        },
+        {
+          "number": 96,
+          "title": "fix(local): retain uncertain host locks for recovery",
+          "head_sha": "fa0be202057ab18aeb8ffb485e7d35e6d728f30e",
+          "updated_at": "2026-09-10T02:03:12Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/96"
+        },
+        {
+          "number": 97,
+          "title": "fix(v1-rc): repair Windows Basic Chat Ctrl+C lock cleanup",
+          "head_sha": "a71f2c00686cc2480ef84a93f247f9db029c4b8e",
+          "updated_at": "2026-09-10T02:02:02Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/97"
+        },
+        {
+          "number": 95,
+          "title": "fix(governance): require explicit Boolean authority grants",
+          "head_sha": "3b9b71de5e1f1fb20a64c10f78636d0829da89e2",
+          "updated_at": "2026-09-09T23:02:45Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/95"
+        },
+        {
+          "number": 94,
+          "title": "fix(remote): reject conflicting completion correlation",
+          "head_sha": "e2decd360755156125a1a4133366a9657f6c00e3",
+          "updated_at": "2026-09-09T23:02:45Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/94"
+        },
+        {
+          "number": 91,
+          "title": "feat(local): add fail-closed remote bridge admission contract",
+          "head_sha": "5cc27c96d48e18419cc678fd03b37c9e1c7ccd70",
+          "updated_at": "2026-09-09T15:05:31Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/91"
+        },
+        {
+          "number": 93,
+          "title": "fix(v1-rc): Basic Chat host lifecycle + stale lock recovery",
+          "head_sha": "c50b2e805535aa30b7d46245074ca2c62f63601b",
+          "updated_at": "2026-09-09T12:02:46Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/93"
+        },
+        {
+          "number": 92,
+          "title": "fix(v1-rc): fresh-install scheduler OFF for Basic Chat first-run",
+          "head_sha": "fe068b2b1c11cdbf1e54bc4399006f86e9256063",
+          "updated_at": "2026-09-09T11:06:10Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/92"
+        },
+        {
+          "number": 88,
+          "title": "feat(integrations): add capability-level health contract",
+          "head_sha": "8da0813190970c7f704feee72ba129749aaf37cd",
+          "updated_at": "2026-09-09T01:41:12Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/88"
+        },
+        {
+          "number": 87,
+          "title": "feat(v1-rc): Basic Chat surface + restricted Green seam + RC acceptance prep",
+          "head_sha": "90ebe42289990b3c6d054aac37b278eaf6554144",
+          "updated_at": "2026-09-08T23:42:52Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/87"
+        },
+        {
+          "number": 86,
+          "title": "feat(control): add blocker watchdog schedule reconciliation",
+          "head_sha": "cecda4ca5c880e13bdcfc0cf60e02ee2d2b0c99c",
+          "updated_at": "2026-09-08T23:38:15Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/86"
+        },
+        {
+          "number": 76,
+          "title": "Control loop: durable mission ledger",
+          "head_sha": "a53df90982358d60719c53e4d5b6d4eb216c32e5",
+          "updated_at": "2026-09-08T22:05:08Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/76"
+        },
+        {
+          "number": 80,
+          "title": "Add governed local Basic Chat vertical slice",
+          "head_sha": "093de72453d03445736a5eb0a1cf60def6e6558e",
+          "updated_at": "2026-09-08T08:11:02Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/80"
+        },
+        {
+          "number": 84,
+          "title": "fix: Mission B-repair \u2014 canonical wake + ledger on Mission A lineage",
+          "head_sha": "6c9e39762462ce5729096ef452aae7a12ccb8702",
+          "updated_at": "2026-09-08T07:16:24Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/84"
+        },
+        {
+          "number": 83,
+          "title": "feat(local): Mission B \u2014 canonical wake safety + mission ledger hot path",
+          "head_sha": "facd1162be5f85d8d066ee1e66ee25bb23b05142",
+          "updated_at": "2026-09-08T06:52:19Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/83"
+        },
+        {
+          "number": 82,
+          "title": "fix(local): require Green PASS before final COMPLETED (V1 Mission A)",
+          "head_sha": "acc8aace9c2b782e9a2025d089a18a60272224a5",
+          "updated_at": "2026-09-08T06:35:05Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/82"
+        },
+        {
+          "number": 71,
+          "title": "fix(local): keep scheduler disabled by default",
+          "head_sha": "82d7045b057ee1b9deaf503dc494a8405f0631d9",
+          "updated_at": "2026-09-07T10:25:16Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/71"
+        },
+        {
+          "number": 78,
+          "title": "feat(governance): implement graduated autonomy policy model",
+          "head_sha": "9cfe7aa38b2ffccd4872f0ba69ffbd6a4f4c6b80",
+          "updated_at": "2026-09-07T01:47:03Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/AgentOS/pull/78"
+        }
+      ],
+      "open_issues": [
+        {
+          "number": 62,
+          "title": "TEST: scheduled Overseer round-trip chain",
+          "updated_at": "2026-09-16T00:22:26Z",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/issues/62"
+        },
+        {
+          "number": 109,
+          "title": "Product acceptance gate \u2014 defeat top user objections before commercial scale",
+          "updated_at": "2026-09-14T00:34:17Z",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/issues/109"
+        },
+        {
+          "number": 75,
+          "title": "Control-loop mission ledger and timestamped execution evidence",
+          "updated_at": "2026-09-13T03:13:58Z",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/issues/75"
+        },
+        {
+          "number": 41,
+          "title": "[P0] Worker Safety/Consent Protocol + Human Intervention Registry",
+          "updated_at": "2026-09-13T01:56:42Z",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/issues/41"
+        },
+        {
+          "number": 105,
+          "title": "Canonical commercial, affiliate, AI-cost and savings strategy \u2014 2026-09-11",
+          "updated_at": "2026-09-12T03:01:00Z",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/issues/105"
+        },
+        {
+          "number": 107,
+          "title": "AgentOS authoritative pricing evidence & rate snapshots \u2014 research contract",
+          "updated_at": "2026-09-11T11:49:39Z",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/issues/107"
+        },
+        {
+          "number": 106,
+          "title": "AgentOS Savings Ledger & Smart Model Routing \u2014 implementation contract",
+          "updated_at": "2026-09-11T10:40:12Z",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/issues/106"
+        },
+        {
+          "number": 89,
+          "title": "Canonical AgentOS integration architecture and subscription roadmap \u2014 2026-09-09",
+          "updated_at": "2026-09-11T10:37:54Z",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/issues/89"
+        },
+        {
+          "number": 38,
+          "title": "[PRS] Integrate Project Reliability & Assurance layer",
+          "updated_at": "2026-09-11T00:44:15Z",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/issues/38"
+        },
+        {
+          "number": 100,
+          "title": "V1 visibility: expose bounded local host status receipt",
+          "updated_at": "2026-09-10T05:16:02Z",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/issues/100"
+        },
+        {
+          "number": 90,
+          "title": "P0: Governed remote local-worker bridge for always-on host",
+          "updated_at": "2026-09-09T15:06:47Z",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/issues/90"
+        }
+      ],
+      "recent_commits": [
+        {
+          "sha": "962cb3820b83506f9e6d90f50e003690dd85a8a1",
+          "date": "2026-09-14T23:41:37Z",
+          "message": "docs: add commercial self-hosted seat tier",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/commit/962cb3820b83506f9e6d90f50e003690dd85a8a1"
+        },
+        {
+          "sha": "e7fcb704ddfd5ba663d0f9cd7d5fbfc77bc41274",
+          "date": "2026-09-14T23:38:32Z",
+          "message": "docs: update AgentOS pricing to $49/$99 and $22 monthly",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/commit/e7fcb704ddfd5ba663d0f9cd7d5fbfc77bc41274"
+        },
+        {
+          "sha": "6e94e00fc5d81f9de9fc03ff6efc929a2a7ddcc1",
+          "date": "2026-09-14T02:56:01Z",
+          "message": "docs: adopt portfolio vertical batch execution doctrine",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/commit/6e94e00fc5d81f9de9fc03ff6efc929a2a7ddcc1"
+        },
+        {
+          "sha": "a679f2233550ffdca4ebc835bbd23f2ac17c99c5",
+          "date": "2026-09-13T13:40:21Z",
+          "message": "docs(operator): bound n8n packaging by official licensing FAQ",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/commit/a679f2233550ffdca4ebc835bbd23f2ac17c99c5"
+        },
+        {
+          "sha": "6304dd85553a1c2cb52d94613b94b1238273a7ea",
+          "date": "2026-09-13T13:38:04Z",
+          "message": "docs(integrations): score provisional Operator first wave",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/commit/6304dd85553a1c2cb52d94613b94b1238273a7ea"
+        },
+        {
+          "sha": "7e25fa336af0ef2271c49028ccf659b89db47866",
+          "date": "2026-09-13T13:36:27Z",
+          "message": "docs(integrations): record official first-wave interface and scope checkpoint",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/commit/7e25fa336af0ef2271c49028ccf659b89db47866"
+        },
+        {
+          "sha": "011e5a5dee10382065eccc78988b8cee208a8bb6",
+          "date": "2026-09-13T13:12:57Z",
+          "message": "docs(marketing): rank next-wave branded integrations",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/commit/011e5a5dee10382065eccc78988b8cee208a8bb6"
+        },
+        {
+          "sha": "450d59589926593dc20f6fda19b6920590336bd3",
+          "date": "2026-09-13T13:12:24Z",
+          "message": "docs(ecosystem): add branded integration candidates",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/commit/450d59589926593dc20f6fda19b6920590336bd3"
+        }
+      ],
+      "checks": [
+        {
+          "name": "scheduler-roundtrip",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/actions/runs/35039707303/job/104616617513"
+        },
+        {
+          "name": "wake",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/actions/runs/35039331675/job/104615441204"
+        },
+        {
+          "name": "scheduler-roundtrip",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/actions/runs/35029590179/job/104584697718"
+        },
+        {
+          "name": "wake",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/actions/runs/35024789527/job/104569094239"
+        },
+        {
+          "name": "scheduler-roundtrip",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/actions/runs/35011356490/job/104523830961"
+        },
+        {
+          "name": "wake",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/actions/runs/35005792305/job/104505085531"
+        },
+        {
+          "name": "scheduler-roundtrip",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/actions/runs/34987061159/job/104441767012"
+        },
+        {
+          "name": "wake",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/actions/runs/34975458396/job/104401915898"
+        },
+        {
+          "name": "scheduler-roundtrip",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/actions/runs/34958169176/job/104345141726"
+        },
+        {
+          "name": "wake",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/actions/runs/34942997033/job/104295772466"
+        },
+        {
+          "name": "scheduler-roundtrip",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/actions/runs/34933981185/job/104267862756"
+        },
+        {
+          "name": "test",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/actions/runs/34931924810/job/104261733752"
+        },
+        {
+          "name": "wake",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/actions/runs/34917231539/job/104217397376"
+        },
+        {
+          "name": "scheduler-roundtrip",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/actions/runs/34914992707/job/104210595850"
+        },
+        {
+          "name": "wake",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/actions/runs/34910003062/job/104195160948"
+        },
+        {
+          "name": "test",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/AgentOS/actions/runs/34910003038/job/104195160644"
+        }
+      ],
+      "errors": {}
+    },
+    {
+      "repo": "darrinbaldwindev/PRS",
+      "branch": "main",
+      "head": "3b3e22d9a20d05f0dde1a0d25a4e7edb9e3d8207",
+      "default_branch": "main",
+      "repo_updated": "2026-09-14T02:56:20Z",
+      "open_prs": [
+        {
+          "number": 17,
+          "title": "test: add immutable AgentOS adversarial probes",
+          "head_sha": "12889cb4c732d3e3de271c31160d05cf8ea694e5",
+          "updated_at": "2026-09-15T05:03:21Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/PRS/pull/17"
+        },
+        {
+          "number": 24,
+          "title": "docs: establish PRS vertical batch and physical Windows acceptance contract",
+          "head_sha": "3039c886bdcff911f7c6dcc3e086368058e57fb6",
+          "updated_at": "2026-09-14T14:10:15Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/PRS/pull/24"
+        },
+        {
+          "number": 23,
+          "title": "fix(assurance): contain adapter evidence paths and prove package provenance",
+          "head_sha": "ea6d40c06361f3f598eb71b2e009feefb46c4d37",
+          "updated_at": "2026-09-14T08:38:38Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/PRS/pull/23"
+        },
+        {
+          "number": 19,
+          "title": "fix(assurance): require complete Green assignment identity",
+          "head_sha": "56337f5a56695f5a58d7e5f114745437f6d8842c",
+          "updated_at": "2026-09-14T08:37:03Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/PRS/pull/19"
+        },
+        {
+          "number": 22,
+          "title": "refactor: consolidate PRS v0.1 evaluator API",
+          "head_sha": "f5a87d524463ed947f19b6824ef425fe2e72b31e",
+          "updated_at": "2026-09-14T02:37:10Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/PRS/pull/22"
+        },
+        {
+          "number": 16,
+          "title": "test: refresh false-GREEN assurance on current main",
+          "head_sha": "4901cd639d49e5c38365c2443f0e8ffe1a759bde",
+          "updated_at": "2026-09-11T02:15:45Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/PRS/pull/16"
+        },
+        {
+          "number": 15,
+          "title": "test: add explicit false-GREEN assurance case",
+          "head_sha": "af596f1a7f2eb41aa660ffe80e42dca0db6b5dae",
+          "updated_at": "2026-09-04T10:24:18Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/PRS/pull/15"
+        }
+      ],
+      "open_issues": [
+        {
+          "number": 25,
+          "title": "P0 Level 2 assurance \u2014 remote authority admission exact head",
+          "updated_at": "2026-09-15T01:00:26Z",
+          "url": "https://github.com/darrinbaldwindev/PRS/issues/25"
+        },
+        {
+          "number": 20,
+          "title": "P0 Level 2 assurance \u2014 adversarially test AgentOS project-file mutation exact head",
+          "updated_at": "2026-09-15T01:00:18Z",
+          "url": "https://github.com/darrinbaldwindev/PRS/issues/20"
+        },
+        {
+          "number": 21,
+          "title": "P1: Consolidate duplicate PRS v0.1 evaluator APIs",
+          "updated_at": "2026-09-14T13:44:14Z",
+          "url": "https://github.com/darrinbaldwindev/PRS/issues/21"
+        },
+        {
+          "number": 18,
+          "title": "Assurance: adversarially test AgentOS host-status false-GREEN paths",
+          "updated_at": "2026-09-12T03:00:23Z",
+          "url": "https://github.com/darrinbaldwindev/PRS/issues/18"
+        },
+        {
+          "number": 14,
+          "title": "P0: Add explicit false-GREEN negative assurance test",
+          "updated_at": "2026-09-11T16:30:43Z",
+          "url": "https://github.com/darrinbaldwindev/PRS/issues/14"
+        },
+        {
+          "number": 7,
+          "title": "Validate PRS v0.1 evaluator before AgentOS integration",
+          "updated_at": "2026-09-04T10:52:35Z",
+          "url": "https://github.com/darrinbaldwindev/PRS/issues/7"
+        },
+        {
+          "number": 13,
+          "title": "Assure AgentOS Mission 037 distributed persistence gate",
+          "updated_at": "2026-09-02T03:43:57Z",
+          "url": "https://github.com/darrinbaldwindev/PRS/issues/13"
+        },
+        {
+          "number": 6,
+          "title": "[Worker] Implement PRS v0.1 evaluator",
+          "updated_at": "2026-08-31T11:09:56Z",
+          "url": "https://github.com/darrinbaldwindev/PRS/issues/6"
+        },
+        {
+          "number": 5,
+          "title": "Record PRS v0.1 assurance contract in repository",
+          "updated_at": "2026-08-31T11:09:51Z",
+          "url": "https://github.com/darrinbaldwindev/PRS/issues/5"
+        },
+        {
+          "number": 4,
+          "title": "Implement dependency-light PRS v0.1 evaluator",
+          "updated_at": "2026-08-31T11:09:41Z",
+          "url": "https://github.com/darrinbaldwindev/PRS/issues/4"
+        },
+        {
+          "number": 3,
+          "title": "Define PRS Assurance Contract v0.1",
+          "updated_at": "2026-08-31T11:09:27Z",
+          "url": "https://github.com/darrinbaldwindev/PRS/issues/3"
+        },
+        {
+          "number": 2,
+          "title": "Define PRS assurance contract and vertical slice",
+          "updated_at": "2026-08-31T11:06:15Z",
+          "url": "https://github.com/darrinbaldwindev/PRS/issues/2"
+        },
+        {
+          "number": 1,
+          "title": "Define authoritative PRS functional requirements",
+          "updated_at": "2026-08-30T23:22:46Z",
+          "url": "https://github.com/darrinbaldwindev/PRS/issues/1"
+        }
+      ],
+      "recent_commits": [
+        {
+          "sha": "3b3e22d9a20d05f0dde1a0d25a4e7edb9e3d8207",
+          "date": "2026-09-14T02:56:17Z",
+          "message": "docs: adopt portfolio vertical batch execution doctrine",
+          "url": "https://github.com/darrinbaldwindev/PRS/commit/3b3e22d9a20d05f0dde1a0d25a4e7edb9e3d8207"
+        },
+        {
+          "sha": "a646f4033fd1b0c40135cb6f5c1286e9c7610728",
+          "date": "2026-09-14T00:42:49Z",
+          "message": "test(prs): require parity from legacy evaluator adapter",
+          "url": "https://github.com/darrinbaldwindev/PRS/commit/a646f4033fd1b0c40135cb6f5c1286e9c7610728"
+        },
+        {
+          "sha": "c1a3a8b20595b9c3942ed878719edf460ccf454c",
+          "date": "2026-09-14T00:42:33Z",
+          "message": "fix(prs): make legacy evaluator a canonical compatibility adapter",
+          "url": "https://github.com/darrinbaldwindev/PRS/commit/c1a3a8b20595b9c3942ed878719edf460ccf454c"
+        },
+        {
+          "sha": "75c87274591c8c1738748540f146ae6d7472298b",
+          "date": "2026-09-14T00:24:56Z",
+          "message": "docs: archive PRS review session",
+          "url": "https://github.com/darrinbaldwindev/PRS/commit/75c87274591c8c1738748540f146ae6d7472298b"
+        },
+        {
+          "sha": "47ea27e6f003c4c7c16653112b5f8a14e84ae738",
+          "date": "2026-09-14T00:24:08Z",
+          "message": "docs: archive PR 104 false-green review",
+          "url": "https://github.com/darrinbaldwindev/PRS/commit/47ea27e6f003c4c7c16653112b5f8a14e84ae738"
+        },
+        {
+          "sha": "698243a4f2c6faa25299de1e141d1459a298adb7",
+          "date": "2026-09-13T14:27:09Z",
+          "message": "docs: archive PR 104 worker verification",
+          "url": "https://github.com/darrinbaldwindev/PRS/commit/698243a4f2c6faa25299de1e141d1459a298adb7"
+        },
+        {
+          "sha": "2bf2c4b2a62e1599e4284762f23405564cb3cbfc",
+          "date": "2026-09-13T00:46:51Z",
+          "message": "docs: archive 2026-09-13 PRS adversarial review",
+          "url": "https://github.com/darrinbaldwindev/PRS/commit/2bf2c4b2a62e1599e4284762f23405564cb3cbfc"
+        },
+        {
+          "sha": "3059f80ed9d98a9b54db4ff29b33d18f232db062",
+          "date": "2026-09-04T10:50:22Z",
+          "message": "docs: reconcile PRS assurance status with false-GREEN evidence",
+          "url": "https://github.com/darrinbaldwindev/PRS/commit/3059f80ed9d98a9b54db4ff29b33d18f232db062"
+        }
+      ],
+      "checks": [
+        {
+          "name": "validate",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/PRS/actions/runs/34800869321/job/103843112840"
+        }
+      ],
+      "errors": {}
+    },
+    {
+      "repo": "darrinbaldwindev/GlobalShopCo",
+      "branch": "main",
+      "head": "UNKNOWN",
+      "default_branch": "agent/overseer/initial-project-timeline",
+      "repo_updated": "2026-09-14T02:56:38Z",
+      "open_prs": [
+        {
+          "number": 31,
+          "title": "docs(channels): add vertical batch 010 West Paw pet source hunt",
+          "head_sha": "6387a92238cf18c60024c00f3f8b64875f945c24",
+          "updated_at": "2026-09-15T00:58:21Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/pull/31"
+        },
+        {
+          "number": 30,
+          "title": "docs(channels): add vertical batch 009 OXO organiser source hunt",
+          "head_sha": "80c82475b98663d677885e8b4d222ae2cedb8555",
+          "updated_at": "2026-09-15T00:58:08Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/pull/30"
+        },
+        {
+          "number": 29,
+          "title": "docs(channels): add vertical batch 008 shelf-organiser source hunt",
+          "head_sha": "15fa99eb4c4b1f96127f6f51c412cbffc94e45e2",
+          "updated_at": "2026-09-14T13:41:39Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/pull/29"
+        },
+        {
+          "number": 28,
+          "title": "docs(channels): add vertical batch 007 rotating-organiser source hunt",
+          "head_sha": "5a28d996d79efe7903ff08ba4ce9c2e5a9e406a5",
+          "updated_at": "2026-09-14T13:37:07Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/pull/28"
+        },
+        {
+          "number": 27,
+          "title": "docs(channels): add vertical batch 006 fridge-bin source hunt",
+          "head_sha": "2809177a8e6fe0f3adcbdda53eaa4ed617d073e7",
+          "updated_at": "2026-09-14T09:17:12Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/pull/27"
+        },
+        {
+          "number": 10,
+          "title": "docs: reconcile M4.1 product research into project timeline",
+          "head_sha": "f4e5de0e0e946a5c6844dea84d99527d0c9f8474",
+          "updated_at": "2026-09-14T08:17:50Z",
+          "draft": false,
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/pull/10"
+        },
+        {
+          "number": 25,
+          "title": "docs(overseer): establish canonical vertical execution batch",
+          "head_sha": "13a9a050983b2db790d3ecc00c69ab31aa71776b",
+          "updated_at": "2026-09-14T05:32:47Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/pull/25"
+        },
+        {
+          "number": 26,
+          "title": "docs(overseer): add vertical batch 005 kitchen source hunt",
+          "head_sha": "6598684322e96b9a01aa8ccd4081fa4d1494f08e",
+          "updated_at": "2026-09-14T05:52:44Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/pull/26"
+        },
+        {
+          "number": 24,
+          "title": "docs(channels): add eBay/Amazon vertical batch 001",
+          "head_sha": "752eb48fd760191c692471834415b9e8e6082312",
+          "updated_at": "2026-09-14T02:45:30Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/pull/24"
+        },
+        {
+          "number": 15,
+          "title": "docs(research): capture storage SKUs and unresolved freight",
+          "head_sha": "ec173cb8f927cd8308151f3ce22efed1a10c8f0a",
+          "updated_at": "2026-09-10T03:32:17Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/pull/15"
+        },
+        {
+          "number": 14,
+          "title": "docs(research): expand Home Organisation freight evidence",
+          "head_sha": "60738edace0a6ca88b08b5c2764c12be466166b1",
+          "updated_at": "2026-09-09T12:05:08Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/pull/14"
+        },
+        {
+          "number": 13,
+          "title": "docs(research): evidence-gate K&A 6L free-delivery economics",
+          "head_sha": "69637712fc3fdf588b720b781aa18464005e7bdb",
+          "updated_at": "2026-09-09T03:01:55Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/pull/13"
+        },
+        {
+          "number": 3,
+          "title": "docs: prepare M3 headless integration decision package",
+          "head_sha": "7c35d90ad4f141dbd4d5205d7536ab9d9b189151",
+          "updated_at": "2026-09-06T06:24:59Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/pull/3"
+        }
+      ],
+      "open_issues": [
+        {
+          "number": 9,
+          "title": "M4.1 CONTROL \u2014 Product Sub-Agent Handoff Gate",
+          "updated_at": "2026-09-15T01:00:49Z",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/issues/9"
+        },
+        {
+          "number": 17,
+          "title": "eBay channel gate \u2014 supplier eligibility, integration choice and pilot criteria",
+          "updated_at": "2026-09-15T00:58:03Z",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/issues/17"
+        },
+        {
+          "number": 23,
+          "title": "Amazon channel gate \u2014 seller setup, supplier eligibility and pilot criteria",
+          "updated_at": "2026-09-14T14:33:37Z",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/issues/23"
+        },
+        {
+          "number": 2,
+          "title": "M4 \u2014 Build curated master catalogue and vertical merchandising model",
+          "updated_at": "2026-09-14T13:30:29Z",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/issues/2"
+        },
+        {
+          "number": 18,
+          "title": "SITE-WIDE LAUNCH GATE \u2014 Shopify catalogue, vertical readiness and channel sequencing",
+          "updated_at": "2026-09-14T13:29:46Z",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/issues/18"
+        },
+        {
+          "number": 5,
+          "title": "[Portfolio Overseer] Reconcile current project state and Manus/GPTChat workstreams",
+          "updated_at": "2026-09-12T23:15:54Z",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/issues/5"
+        },
+        {
+          "number": 19,
+          "title": "AgentOS: allowance-aware routing strategy persisted (2026-09-13)",
+          "updated_at": "2026-09-12T21:31:59Z",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/issues/19"
+        },
+        {
+          "number": 16,
+          "title": "Level 2 acceptance workload \u2014 reconcile United Living 15510 exact identity into progress dashboard",
+          "updated_at": "2026-09-11T09:28:10Z",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/issues/16"
+        },
+        {
+          "number": 12,
+          "title": "M4.1 Batch B \u2014 K&A 6L compartment storage validation",
+          "updated_at": "2026-09-09T03:01:54Z",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/issues/12"
+        },
+        {
+          "number": 11,
+          "title": "[ChatGPT Gemini Overseer] Commercial Intelligence M002 \u2014 Handoff to GlobalShopCo Overseer",
+          "updated_at": "2026-08-31T23:47:19Z",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/issues/11"
+        },
+        {
+          "number": 6,
+          "title": "M4.1 \u2014 Validate priority product candidates and suppliers",
+          "updated_at": "2026-08-26T11:28:33Z",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/issues/6"
+        },
+        {
+          "number": 8,
+          "title": "Manus Overseer \u2014 Near-Autonomous Operating Loop",
+          "updated_at": "2026-08-26T11:28:28Z",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/issues/8"
+        },
+        {
+          "number": 7,
+          "title": "M4 Product Research Dashboard",
+          "updated_at": "2026-08-26T11:17:12Z",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/issues/7"
+        },
+        {
+          "number": 4,
+          "title": "M5 \u2014 Supplier validation and free-delivery product economics",
+          "updated_at": "2026-08-26T05:55:46Z",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo/issues/4"
+        }
+      ],
+      "recent_commits": {
+        "error": {
+          "_error": "HTTP Error 404: Not Found"
+        }
+      },
+      "checks": [],
+      "errors": {
+        "commits": "HTTP Error 404: Not Found"
+      }
+    },
+    {
+      "repo": "darrinbaldwindev/GlobalShopCo-Headless",
+      "branch": "main",
+      "head": "c3e2960961fd60ef33ddb531577173fd3ff7cb17",
+      "default_branch": "main",
+      "repo_updated": "2026-09-14T02:56:53Z",
+      "open_prs": [
+        {
+          "number": 4,
+          "title": "Reject malformed identity and contradictory commerce evidence",
+          "head_sha": "b4e707be4942f51355d8f55ccdf4e7369cfa3559",
+          "updated_at": "2026-09-16T00:01:43Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo-Headless/pull/4"
+        },
+        {
+          "number": 1,
+          "title": "docs: establish M3 headless implementation baseline",
+          "head_sha": "708d32207e1e01bcbf8f9052698ffb29e98a8270",
+          "updated_at": "2026-09-15T11:16:12Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo-Headless/pull/1"
+        }
+      ],
+      "open_issues": [
+        {
+          "number": 3,
+          "title": "M3 \u2014 Implement minimum Shopify cart/checkout handoff",
+          "updated_at": "2026-09-14T20:15:30Z",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo-Headless/issues/3"
+        }
+      ],
+      "recent_commits": [
+        {
+          "sha": "c3e2960961fd60ef33ddb531577173fd3ff7cb17",
+          "date": "2026-09-14T02:56:49Z",
+          "message": "docs: adopt portfolio vertical batch execution doctrine",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo-Headless/commit/c3e2960961fd60ef33ddb531577173fd3ff7cb17"
+        },
+        {
+          "sha": "eeaccf2bb13bb268c232a16cb566b08153cd68a9",
+          "date": "2026-09-13T09:34:23Z",
+          "message": "docs(storefront): bind Amazon channel category to canonical gate",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo-Headless/commit/eeaccf2bb13bb268c232a16cb566b08153cd68a9"
+        },
+        {
+          "sha": "c7c90e218486e56dbd2c5abc710043904d206cfc",
+          "date": "2026-09-13T09:22:26Z",
+          "message": "test(storefront): add marketplace channel isolation fixture",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo-Headless/commit/c7c90e218486e56dbd2c5abc710043904d206cfc"
+        },
+        {
+          "sha": "0fd04e30183b2684de60e5e706711aa1a1eb6a95",
+          "date": "2026-09-13T09:22:00Z",
+          "message": "docs(storefront): define eBay and Amazon channel category gates",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo-Headless/commit/0fd04e30183b2684de60e5e706711aa1a1eb6a95"
+        },
+        {
+          "sha": "472d5c1b22988e8391ded3ae19ce4d34e168168b",
+          "date": "2026-09-13T09:14:17Z",
+          "message": "docs(storefront): add eBay and Amazon channel copy",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo-Headless/commit/472d5c1b22988e8391ded3ae19ce4d34e168168b"
+        },
+        {
+          "sha": "56eabe77bcc1b2ae908a276e0471e831efdfecdc",
+          "date": "2026-09-13T09:13:53Z",
+          "message": "docs(storefront): add channel-category rendering gates",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo-Headless/commit/56eabe77bcc1b2ae908a276e0471e831efdfecdc"
+        },
+        {
+          "sha": "0c711085a1ad6a38a21b0e9d414e62cf6ebb81f7",
+          "date": "2026-09-13T09:13:18Z",
+          "message": "docs(storefront): add marketplace channel categories",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo-Headless/commit/0c711085a1ad6a38a21b0e9d414e62cf6ebb81f7"
+        },
+        {
+          "sha": "f67cb8d7a95a5316bf6cf34e6b1cdf1d3211691f",
+          "date": "2026-09-13T09:12:49Z",
+          "message": "docs(storefront): add eBay and Amazon channel categories",
+          "url": "https://github.com/darrinbaldwindev/GlobalShopCo-Headless/commit/f67cb8d7a95a5316bf6cf34e6b1cdf1d3211691f"
+        }
+      ],
+      "checks": [],
+      "errors": {}
+    },
+    {
+      "repo": "darrinbaldwindev/shopify_ebay",
+      "branch": "main",
+      "head": "c68883f24fb3711fce567a35b1a80db74933b82a",
+      "default_branch": "main",
+      "repo_updated": "2026-09-14T12:37:07Z",
+      "open_prs": [
+        {
+          "number": 2,
+          "title": "Reject malformed identity and contradictory commerce evidence",
+          "head_sha": "b943d42afdd44eb8cd124dd81e68c985b3b9de82",
+          "updated_at": "2026-09-15T06:18:21Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/shopify_ebay/pull/2"
+        }
+      ],
+      "open_issues": [
+        {
+          "number": 1,
+          "title": "Bootstrap contract \u2014 Shopify-canonical eBay pilot adapter (non-production only)",
+          "updated_at": "2026-09-15T10:16:45Z",
+          "url": "https://github.com/darrinbaldwindev/shopify_ebay/issues/1"
+        }
+      ],
+      "recent_commits": [
+        {
+          "sha": "c68883f24fb3711fce567a35b1a80db74933b82a",
+          "date": "2026-09-14T12:37:03Z",
+          "message": "docs(overseer): adopt canonical portfolio batch engine",
+          "url": "https://github.com/darrinbaldwindev/shopify_ebay/commit/c68883f24fb3711fce567a35b1a80db74933b82a"
+        },
+        {
+          "sha": "0a930a2ad99c03b8d054317c6ad50216d558431c",
+          "date": "2026-09-14T12:28:49Z",
+          "message": "docs(overseer): establish shopify ebay vertical execution batch",
+          "url": "https://github.com/darrinbaldwindev/shopify_ebay/commit/0a930a2ad99c03b8d054317c6ad50216d558431c"
+        },
+        {
+          "sha": "f4214f6995af3b9a05f501c12b9bfe9b0af86b7c",
+          "date": "2026-09-13T23:16:13Z",
+          "message": "test: cover synthetic eBay channel gate denials",
+          "url": "https://github.com/darrinbaldwindev/shopify_ebay/commit/f4214f6995af3b9a05f501c12b9bfe9b0af86b7c"
+        },
+        {
+          "sha": "f105fd2e6962a2ab8fd4366e336906cc782294db",
+          "date": "2026-09-13T23:16:05Z",
+          "message": "feat: add fail-closed eBay channel gate",
+          "url": "https://github.com/darrinbaldwindev/shopify_ebay/commit/f105fd2e6962a2ab8fd4366e336906cc782294db"
+        }
+      ],
+      "checks": [],
+      "errors": {}
+    },
+    {
+      "repo": "darrinbaldwindev/MyPrimeDelivery",
+      "branch": "main",
+      "head": "UNKNOWN",
+      "default_branch": "agent/overseer/initial-project-timeline",
+      "repo_updated": "2026-09-14T18:16:53Z",
+      "open_prs": [
+        {
+          "number": 3,
+          "title": "docs: establish M-03 evidence matrix and fixture gate",
+          "head_sha": "95d5ccd2f5cfed20042e9a6ad450f9027487408f",
+          "updated_at": "2026-09-09T01:27:11Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/MyPrimeDelivery/pull/3"
+        }
+      ],
+      "open_issues": [
+        {
+          "number": 2,
+          "title": "M-03 \u2014 Evidence checklist and minimum implementation gate",
+          "updated_at": "2026-09-15T22:15:35Z",
+          "url": "https://github.com/darrinbaldwindev/MyPrimeDelivery/issues/2"
+        },
+        {
+          "number": 1,
+          "title": "[OVERSEER] CHATGPT communication and autonomous handoff bridge",
+          "updated_at": "2026-08-31T23:51:16Z",
+          "url": "https://github.com/darrinbaldwindev/MyPrimeDelivery/issues/1"
+        }
+      ],
+      "recent_commits": {
+        "error": {
+          "_error": "HTTP Error 404: Not Found"
+        }
+      },
+      "checks": [],
+      "errors": {
+        "commits": "HTTP Error 404: Not Found"
+      }
+    },
+    {
+      "repo": "darrinbaldwindev/Affiliate-Websites",
+      "branch": "main",
+      "head": "1c4df2dbc269371bc53e3655a3374241fed5f265",
+      "default_branch": "main",
+      "repo_updated": "2026-09-15T01:31:43Z",
+      "open_prs": [
+        {
+          "number": 6,
+          "title": "docs(usa): establish affiliate program intelligence framework",
+          "head_sha": "b57198a18670f99b4bb1d591f22d6f8e011767b4",
+          "updated_at": "2026-09-15T07:44:46Z",
+          "draft": false,
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/pull/6"
+        },
+        {
+          "number": 22,
+          "title": "feat(master): define WordPress presentation payload boundary",
+          "head_sha": "505678f74ff2ec80b9782c457890e7a7ba4261bb",
+          "updated_at": "2026-09-15T01:36:28Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/pull/22"
+        },
+        {
+          "number": 15,
+          "title": "feat(au): harden surveys read-model boundary",
+          "head_sha": "a33a5b3907160d3a393c30f6305e496d12b7d148",
+          "updated_at": "2026-09-15T01:32:56Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/pull/15"
+        },
+        {
+          "number": 21,
+          "title": "feat(master): define publication state presentation mapping",
+          "head_sha": "71b018c39b80243cd0b9b1adb783a36f0900977d",
+          "updated_at": "2026-09-15T01:32:51Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/pull/21"
+        },
+        {
+          "number": 20,
+          "title": "Software & Games Batch 004: normalized ranking assurance",
+          "head_sha": "a076b2a53e39710d718e4275a44f3673f5f03d00",
+          "updated_at": "2026-09-15T01:30:49Z",
+          "draft": false,
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/pull/20"
+        },
+        {
+          "number": 19,
+          "title": "test: harden affiliate identity and destination determinism",
+          "head_sha": "ea2ec9ce6ced26c4841d080abb4403193f299519",
+          "updated_at": "2026-09-14T11:50:28Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/pull/19"
+        },
+        {
+          "number": 17,
+          "title": "feat(master): wire publication state into detail pages",
+          "head_sha": "ef0e7306e40d696abe324ad73baee4abf04a6f6f",
+          "updated_at": "2026-09-14T09:12:11Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/pull/17"
+        },
+        {
+          "number": 16,
+          "title": "feat(master): add reusable publication state contract",
+          "head_sha": "0f3c63c94ba6ec22e0570ed5597ca3226eb1c700",
+          "updated_at": "2026-09-14T08:23:09Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/pull/16"
+        },
+        {
+          "number": 14,
+          "title": "test: reject future publisher verification evidence",
+          "head_sha": "7f78bcea1b5a91213d6ec5f693097f071ad9a1b1",
+          "updated_at": "2026-09-14T07:52:02Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/pull/14"
+        },
+        {
+          "number": 13,
+          "title": "feat(au): execute surveys vertical batch",
+          "head_sha": "1494dc4e0bca8a868bdeb2449f82b01e5266c079",
+          "updated_at": "2026-09-14T06:02:49Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/pull/13"
+        },
+        {
+          "number": 9,
+          "title": "docs: reconcile country state and unavailable affiliate offers",
+          "head_sha": "21572e43cf3eb893480bccc63eabbedb0b951b7f",
+          "updated_at": "2026-09-13T22:48:00Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/pull/9"
+        },
+        {
+          "number": 1,
+          "title": "feat(au): establish global homepage and AU vertical slice foundation",
+          "head_sha": "837d5bab4c2a4f48df5728ad0c5295e7a24bfa7d",
+          "updated_at": "2026-09-02T23:19:43Z",
+          "draft": false,
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/pull/1"
+        },
+        {
+          "number": 5,
+          "title": "research(au): prioritise Australian affiliate programs",
+          "head_sha": "5d11a09357eafca01759b408ee5f8ec648838df1",
+          "updated_at": "2026-09-02T22:24:58Z",
+          "draft": false,
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/pull/5"
+        },
+        {
+          "number": 7,
+          "title": "feat: establish legal and trust page framework",
+          "head_sha": "02af12dc538e23b908a07948ad15e4de7dda82ce",
+          "updated_at": "2026-09-02T16:36:44Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/pull/7"
+        }
+      ],
+      "open_issues": [
+        {
+          "number": 18,
+          "title": "C-AFF-M2: deterministic program identity and synthetic destination integrity",
+          "updated_at": "2026-09-14T11:51:19Z",
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/issues/18"
+        },
+        {
+          "number": 8,
+          "title": "P0 vertical slice \u2014 AU category to governed commercial CTA",
+          "updated_at": "2026-09-14T07:53:51Z",
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/issues/8"
+        },
+        {
+          "number": 12,
+          "title": "AgentOS Level 2 acceptance workload \u2014 AU fixture/document mutation",
+          "updated_at": "2026-09-14T02:41:20Z",
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/issues/12"
+        },
+        {
+          "number": 11,
+          "title": "Country validation \u2014 US rewards/referral publishability and governed CTA evidence",
+          "updated_at": "2026-09-13T13:43:01Z",
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/issues/11"
+        },
+        {
+          "number": 10,
+          "title": "Country validation \u2014 UK rewards/referral publishability and governed CTA evidence",
+          "updated_at": "2026-09-12T02:59:43Z",
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/issues/10"
+        },
+        {
+          "number": 4,
+          "title": "Footer legal navigation and disclosure component",
+          "updated_at": "2026-09-02T16:07:46Z",
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/issues/4"
+        },
+        {
+          "number": 3,
+          "title": "Legal page copy pack \u2014 master placeholders",
+          "updated_at": "2026-09-02T16:07:40Z",
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/issues/3"
+        },
+        {
+          "number": 2,
+          "title": "Legal and trust page framework",
+          "updated_at": "2026-09-02T16:07:35Z",
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/issues/2"
+        }
+      ],
+      "recent_commits": [
+        {
+          "sha": "1c4df2dbc269371bc53e3655a3374241fed5f265",
+          "date": "2026-09-15T01:31:39Z",
+          "message": "docs(uk): record presentation assurance batch",
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/commit/1c4df2dbc269371bc53e3655a3374241fed5f265"
+        },
+        {
+          "sha": "24a960995f351dae048c6e048f0a21da9107f502",
+          "date": "2026-09-15T01:31:09Z",
+          "message": "ci: assure UK presentation seam",
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/commit/24a960995f351dae048c6e048f0a21da9107f502"
+        },
+        {
+          "sha": "26b3a4743ba1084531f0f7638a316af2a0ebefe9",
+          "date": "2026-09-15T01:30:58Z",
+          "message": "test(uk): assure fixture-to-presentation fail-closed seam",
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/commit/26b3a4743ba1084531f0f7638a316af2a0ebefe9"
+        },
+        {
+          "sha": "b24e1b9ab8c61ee21e1f00d6bea9dd2f5e25936e",
+          "date": "2026-09-15T01:30:42Z",
+          "message": "feat(uk): add governed presentation seam fixture",
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/commit/b24e1b9ab8c61ee21e1f00d6bea9dd2f5e25936e"
+        },
+        {
+          "sha": "d3cf400aabe631dc6c2e37193eca8b192856eaba",
+          "date": "2026-09-14T14:11:53Z",
+          "message": "docs(uk): record technology vertical slice batch",
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/commit/d3cf400aabe631dc6c2e37193eca8b192856eaba"
+        },
+        {
+          "sha": "e80ec54c4cb56c12bce391c904ddee0d99ae91d6",
+          "date": "2026-09-14T14:11:05Z",
+          "message": "ci: validate UK technology vertical slice",
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/commit/e80ec54c4cb56c12bce391c904ddee0d99ae91d6"
+        },
+        {
+          "sha": "2781175639e4e67547e2bf947dbd81c9ee4fdb4f",
+          "date": "2026-09-14T14:10:54Z",
+          "message": "test(uk): assert stable CTA audit reason codes",
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/commit/2781175639e4e67547e2bf947dbd81c9ee4fdb4f"
+        },
+        {
+          "sha": "a99210b1b9c49e37182afd61da253c1459d872e7",
+          "date": "2026-09-14T14:10:39Z",
+          "message": "test: stabilise governed CTA audit reason codes",
+          "url": "https://github.com/darrinbaldwindev/Affiliate-Websites/commit/a99210b1b9c49e37182afd61da253c1459d872e7"
+        }
+      ],
+      "checks": [],
+      "errors": {}
+    },
+    {
+      "repo": "darrinbaldwindev/GhostKitchen",
+      "branch": "main",
+      "head": "f51d4080cfb7bfb0448fd27153f4bf3c9225cf9f",
+      "default_branch": "main",
+      "repo_updated": "2026-09-15T01:42:01Z",
+      "open_prs": [
+        {
+          "number": 32,
+          "title": "test: harden economics batch metadata contract",
+          "head_sha": "766f69b92fe3ea5a98aca0cd611727cdf61c879d",
+          "updated_at": "2026-09-15T08:45:02Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/pull/32"
+        },
+        {
+          "number": 27,
+          "title": "docs: normalize ghost-kitchen unit economics",
+          "head_sha": "1b5558a1c66dd3ab4a0849828c84b5d382f218b7",
+          "updated_at": "2026-09-13T23:47:24Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/pull/27"
+        },
+        {
+          "number": 28,
+          "title": "docs: reconcile GhostKitchen project state and missions",
+          "head_sha": "d5d97d7636813a8f83a33b753d6220accf494316",
+          "updated_at": "2026-09-13T13:50:17Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/pull/28"
+        }
+      ],
+      "open_issues": [
+        {
+          "number": 31,
+          "title": "C-002 follow-on: harden economics batch metadata and evidence summary",
+          "updated_at": "2026-09-15T08:45:17Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/31"
+        },
+        {
+          "number": 17,
+          "title": "GK-002: Evaluate pilot food concepts",
+          "updated_at": "2026-09-15T01:42:12Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/17"
+        },
+        {
+          "number": 16,
+          "title": "GK-001: Validate Model B unit economics",
+          "updated_at": "2026-09-15T01:42:05Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/16"
+        },
+        {
+          "number": 29,
+          "title": "GK-010: Deterministic delivery-channel contribution calculator",
+          "updated_at": "2026-09-15T01:40:20Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/29"
+        },
+        {
+          "number": 23,
+          "title": "GK-008: Pilot concept evidence research",
+          "updated_at": "2026-09-15T01:42:19Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/23"
+        },
+        {
+          "number": 24,
+          "title": "GK-009: Compare direct-order and marketplace delivery economics",
+          "updated_at": "2026-09-13T23:52:53Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/24"
+        },
+        {
+          "number": 10,
+          "title": "P0: Create pilot menu and recipe-costing pack",
+          "updated_at": "2026-09-08T08:27:28Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/10"
+        },
+        {
+          "number": 22,
+          "title": "GK-007: Establish QA and compliance evidence structure",
+          "updated_at": "2026-08-31T10:51:54Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/22"
+        },
+        {
+          "number": 21,
+          "title": "GK-006: Define Ghost Kitchen OS requirements",
+          "updated_at": "2026-08-31T10:51:49Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/21"
+        },
+        {
+          "number": 20,
+          "title": "GK-005: Define franchise package and support model",
+          "updated_at": "2026-08-31T10:51:44Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/20"
+        },
+        {
+          "number": 19,
+          "title": "GK-004: Define vendor-neutral technology architecture",
+          "updated_at": "2026-08-31T10:51:40Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/19"
+        },
+        {
+          "number": 18,
+          "title": "GK-003: Design pilot order-to-delivery operating model",
+          "updated_at": "2026-08-31T10:51:36Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/18"
+        },
+        {
+          "number": 15,
+          "title": "P0: Define free-delivery customer offer economics",
+          "updated_at": "2026-08-31T10:46:57Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/15"
+        },
+        {
+          "number": 14,
+          "title": "P0: Build a Queensland pilot location shortlist",
+          "updated_at": "2026-08-31T10:46:53Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/14"
+        },
+        {
+          "number": 13,
+          "title": "P1: Define franchise replication and location onboarding gates",
+          "updated_at": "2026-08-31T10:46:50Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/13"
+        },
+        {
+          "number": 9,
+          "title": "P0: Validate Queensland compliance pathway for pilot kitchen",
+          "updated_at": "2026-08-31T10:46:35Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/9"
+        },
+        {
+          "number": 8,
+          "title": "P0: Validate delivery-channel economics and direct-order strategy",
+          "updated_at": "2026-08-31T10:46:31Z",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/issues/8"
+        }
+      ],
+      "recent_commits": [
+        {
+          "sha": "f51d4080cfb7bfb0448fd27153f4bf3c9225cf9f",
+          "date": "2026-09-15T01:41:57Z",
+          "message": "docs: record 2026-09-15 field-test vertical batch",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/commit/f51d4080cfb7bfb0448fd27153f4bf3c9225cf9f"
+        },
+        {
+          "sha": "c40405d71f7a52857145b81e98a6918b6350bab2",
+          "date": "2026-09-15T01:41:40Z",
+          "message": "docs: add representative-order field test packet",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/commit/c40405d71f7a52857145b81e98a6918b6350bab2"
+        },
+        {
+          "sha": "ad09642f6e240b162f4a879630efd636c0d48f77",
+          "date": "2026-09-15T01:39:55Z",
+          "message": "test(economics): verify evidence-to-GK010 bridge",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/commit/ad09642f6e240b162f4a879630efd636c0d48f77"
+        },
+        {
+          "sha": "77a738c0d2a17f5e27fde716977a1feeb4e1ea98",
+          "date": "2026-09-15T01:39:36Z",
+          "message": "feat(economics): bridge evidence handoff into GK-010 scenario",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/commit/77a738c0d2a17f5e27fde716977a1feeb4e1ea98"
+        },
+        {
+          "sha": "dbd64153ca3f2b0e7e9152955692f62f6c9fa59a",
+          "date": "2026-09-14T09:09:14Z",
+          "message": "docs: close representative-order evidence integrity batch",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/commit/dbd64153ca3f2b0e7e9152955692f62f6c9fa59a"
+        },
+        {
+          "sha": "614b47c4238cefc46916e4fac4c7eb7e938032e8",
+          "date": "2026-09-14T09:08:42Z",
+          "message": "ci: validate representative-order evidence template",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/commit/614b47c4238cefc46916e4fac4c7eb7e938032e8"
+        },
+        {
+          "sha": "c5d67c0d3f84f602681317a810b9e7256aba1018",
+          "date": "2026-09-14T09:08:40Z",
+          "message": "test(evidence): verify derived economics handoff reconciliation",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/commit/c5d67c0d3f84f602681317a810b9e7256aba1018"
+        },
+        {
+          "sha": "fc88d4c529c512aa1a91e7232a0e3b5cddf7ba27",
+          "date": "2026-09-14T09:08:31Z",
+          "message": "docs: record representative-order evidence integrity batch",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/commit/fc88d4c529c512aa1a91e7232a0e3b5cddf7ba27"
+        }
+      ],
+      "checks": [
+        {
+          "name": "validate-channel-economics",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/GhostKitchen/actions/runs/34918303063/job/104220608470"
+        }
+      ],
+      "errors": {}
+    },
+    {
+      "repo": "darrinbaldwindev/Franchise",
+      "branch": "main",
+      "head": "a796129572f7fb0c496bfb760d6c159124f46023",
+      "default_branch": "main",
+      "repo_updated": "2026-09-15T01:43:49Z",
+      "open_prs": [
+        {
+          "number": 24,
+          "title": "fix(tenancy): fail closed on duplicate active membership",
+          "head_sha": "36ceb7e5b160b8115ff862505afa70308fec51fa",
+          "updated_at": "2026-09-15T23:23:32Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/Franchise/pull/24"
+        },
+        {
+          "number": 25,
+          "title": "ci: verify Franchise Hub runtime on stacked PRs",
+          "head_sha": "9660b11ffe41ebdebdde1175b71d612ca517bda5",
+          "updated_at": "2026-09-15T10:51:52Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/Franchise/pull/25"
+        },
+        {
+          "number": 6,
+          "title": "feat: integrate managed Franchise Hub source",
+          "head_sha": "768d624a149e383939791406dcf8ced1ac271662",
+          "updated_at": "2026-09-14T08:13:37Z",
+          "draft": false,
+          "url": "https://github.com/darrinbaldwindev/Franchise/pull/6"
+        },
+        {
+          "number": 22,
+          "title": "test(territory): harden status and deterministic batch validation",
+          "head_sha": "7b8b07562f69ce7988f82e1f3ec71a225fb23709",
+          "updated_at": "2026-09-14T02:46:34Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/Franchise/pull/22"
+        },
+        {
+          "number": 20,
+          "title": "docs: define delivery-area territories",
+          "head_sha": "88ddd55b99123cfb6e0b07b5fc35538c2c419f54",
+          "updated_at": "2026-09-02T05:30:05Z",
+          "draft": false,
+          "url": "https://github.com/darrinbaldwindev/Franchise/pull/20"
+        },
+        {
+          "number": 8,
+          "title": "docs(overseer): initial portfolio review",
+          "head_sha": "129652acf725936bb3d22be7ef7e161f515c85fa",
+          "updated_at": "2026-08-28T02:09:09Z",
+          "draft": false,
+          "url": "https://github.com/darrinbaldwindev/Franchise/pull/8"
+        },
+        {
+          "number": 13,
+          "title": "docs: reconcile source integration continuity",
+          "head_sha": "55f359090ba24251920ebf126b5b150bf1655379",
+          "updated_at": "2026-08-25T09:45:17Z",
+          "draft": false,
+          "url": "https://github.com/darrinbaldwindev/Franchise/pull/13"
+        },
+        {
+          "number": 14,
+          "title": "docs: reconcile PR #6 opening-readiness state",
+          "head_sha": "1ac3f12a999e104c3af1d944a6903cbac61213ff",
+          "updated_at": "2026-08-25T09:32:30Z",
+          "draft": false,
+          "url": "https://github.com/darrinbaldwindev/Franchise/pull/14"
+        }
+      ],
+      "open_issues": [
+        {
+          "number": 18,
+          "title": "App gate: implement canonical franchise membership tenancy in Franchise Hub",
+          "updated_at": "2026-09-15T09:46:25Z",
+          "url": "https://github.com/darrinbaldwindev/Franchise/issues/18"
+        },
+        {
+          "number": 15,
+          "title": "App: implement real franchise membership tenancy before commerce V1",
+          "updated_at": "2026-09-15T01:44:54Z",
+          "url": "https://github.com/darrinbaldwindev/Franchise/issues/15"
+        },
+        {
+          "number": 16,
+          "title": "Gate 3: obtain verified supplier account pricing for V1 SKU range",
+          "updated_at": "2026-09-15T01:44:22Z",
+          "url": "https://github.com/darrinbaldwindev/Franchise/issues/16"
+        },
+        {
+          "number": 23,
+          "title": "Territory fixture: fail closed on status and identity ambiguity",
+          "updated_at": "2026-09-14T02:47:54Z",
+          "url": "https://github.com/darrinbaldwindev/Franchise/issues/23"
+        },
+        {
+          "number": 19,
+          "title": "Docs: define delivery-area territory routing and audit model",
+          "updated_at": "2026-09-14T02:25:49Z",
+          "url": "https://github.com/darrinbaldwindev/Franchise/issues/19"
+        },
+        {
+          "number": 21,
+          "title": "Governance: formalize royalty breakeven threshold before production use",
+          "updated_at": "2026-09-05T09:12:28Z",
+          "url": "https://github.com/darrinbaldwindev/Franchise/issues/21"
+        },
+        {
+          "number": 17,
+          "title": "[Portfolio Overseer] Manus execution/validation pass \u2014 tenancy and current implementation",
+          "updated_at": "2026-08-26T06:18:23Z",
+          "url": "https://github.com/darrinbaldwindev/Franchise/issues/17"
+        },
+        {
+          "number": 4,
+          "title": "Create AI Continuity Steward sub-agent",
+          "updated_at": "2026-08-24T10:01:15Z",
+          "url": "https://github.com/darrinbaldwindev/Franchise/issues/4"
+        },
+        {
+          "number": 12,
+          "title": "Establish canonical domain tenancy and financial data model",
+          "updated_at": "2026-08-24T07:13:29Z",
+          "url": "https://github.com/darrinbaldwindev/Franchise/issues/12"
+        },
+        {
+          "number": 11,
+          "title": "Build order lifecycle and contribution accounting layer",
+          "updated_at": "2026-08-23T14:38:05Z",
+          "url": "https://github.com/darrinbaldwindev/Franchise/issues/11"
+        },
+        {
+          "number": 10,
+          "title": "Build SKU-level inventory and stock economics layer",
+          "updated_at": "2026-08-23T14:38:00Z",
+          "url": "https://github.com/darrinbaldwindev/Franchise/issues/10"
+        },
+        {
+          "number": 9,
+          "title": "Build Franchisee Economics Engine and Recovery Dashboard",
+          "updated_at": "2026-08-23T14:37:55Z",
+          "url": "https://github.com/darrinbaldwindev/Franchise/issues/9"
+        },
+        {
+          "number": 5,
+          "title": "Integrate managed Franchise Hub source into canonical repository",
+          "updated_at": "2026-08-23T14:37:50Z",
+          "url": "https://github.com/darrinbaldwindev/Franchise/issues/5"
+        },
+        {
+          "number": 7,
+          "title": "Install and initialise Overseer cross-repository AI agent",
+          "updated_at": "2026-08-23T12:45:28Z",
+          "url": "https://github.com/darrinbaldwindev/Franchise/issues/7"
+        },
+        {
+          "number": 1,
+          "title": "AI collaboration: Manus + ChatGPT continuity and handoff protocol",
+          "updated_at": "2026-08-23T11:05:00Z",
+          "url": "https://github.com/darrinbaldwindev/Franchise/issues/1"
+        }
+      ],
+      "recent_commits": [
+        {
+          "sha": "a796129572f7fb0c496bfb760d6c159124f46023",
+          "date": "2026-09-15T01:43:45Z",
+          "message": "ops: advance Gate 3 delivery evidence",
+          "url": "https://github.com/darrinbaldwindev/Franchise/commit/a796129572f7fb0c496bfb760d6c159124f46023"
+        },
+        {
+          "sha": "0ea3b26de71f78f7eafc38cf50079805b43a7d93",
+          "date": "2026-09-14T09:11:08Z",
+          "message": "ops: advance tenancy review and Gate 3 evidence",
+          "url": "https://github.com/darrinbaldwindev/Franchise/commit/0ea3b26de71f78f7eafc38cf50079805b43a7d93"
+        },
+        {
+          "sha": "e03a113320d21a0eb808b6ce8c56655dd810c7aa",
+          "date": "2026-09-14T09:08:33Z",
+          "message": "ops: replenish Franchise App exact-head assurance batch",
+          "url": "https://github.com/darrinbaldwindev/Franchise/commit/e03a113320d21a0eb808b6ce8c56655dd810c7aa"
+        },
+        {
+          "sha": "aa3ffa30a35ca4322ed7762992d7cae69f190a28",
+          "date": "2026-09-14T08:42:23Z",
+          "message": "ops: replenish Franchise App tenancy batch",
+          "url": "https://github.com/darrinbaldwindev/Franchise/commit/aa3ffa30a35ca4322ed7762992d7cae69f190a28"
+        },
+        {
+          "sha": "00de71f85a4f41f4007be00cf957d22c1e3b79f8",
+          "date": "2026-09-14T08:40:27Z",
+          "message": "ops: execute and replenish Franchise vertical batch",
+          "url": "https://github.com/darrinbaldwindev/Franchise/commit/00de71f85a4f41f4007be00cf957d22c1e3b79f8"
+        },
+        {
+          "sha": "7baa8027533bc71d82dea5661f50a5016dfaba0f",
+          "date": "2026-09-14T08:15:24Z",
+          "message": "ops: reconcile Franchise vertical batch execution",
+          "url": "https://github.com/darrinbaldwindev/Franchise/commit/7baa8027533bc71d82dea5661f50a5016dfaba0f"
+        },
+        {
+          "sha": "01342837e989d7ff3853cbedf2983eadc3fe8e88",
+          "date": "2026-09-14T08:14:15Z",
+          "message": "docs: replenish Franchise App vertical batch after review",
+          "url": "https://github.com/darrinbaldwindev/Franchise/commit/01342837e989d7ff3853cbedf2983eadc3fe8e88"
+        },
+        {
+          "sha": "a640af75a57f3b5e17956e446c8099cb9d86603e",
+          "date": "2026-09-14T08:13:05Z",
+          "message": "docs: create Franchise App vertical execution batch",
+          "url": "https://github.com/darrinbaldwindev/Franchise/commit/a640af75a57f3b5e17956e446c8099cb9d86603e"
+        }
+      ],
+      "checks": [
+        {
+          "name": "validate-territory-fixture",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/Franchise/actions/runs/34918422408/job/104220965040"
+        }
+      ],
+      "errors": {}
+    },
+    {
+      "repo": "darrinbaldwindev/GemVerse",
+      "branch": "gemverse",
+      "head": "b36750f01f62184e2f563ff8f8030682ba10033e",
+      "default_branch": "gemverse",
+      "repo_updated": "2026-09-14T12:37:42Z",
+      "open_prs": [
+        {
+          "number": 10,
+          "title": "test(level2): harden recovery-result evidence and schema",
+          "head_sha": "d23a49f19743302ceb768137bdc984699ddcb851",
+          "updated_at": "2026-09-14T20:50:42Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GemVerse/pull/10"
+        },
+        {
+          "number": 4,
+          "title": "docs: prepare Arena source-intake and verification manifest",
+          "head_sha": "bfa85845a1544842f1e7ef795c5a8ee54f0058f1",
+          "updated_at": "2026-09-09T01:28:38Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/GemVerse/pull/4"
+        },
+        {
+          "number": 1,
+          "title": "docs(overseer): initial portfolio review",
+          "head_sha": "906b3917faa7212864fc1c643f47697084478e35",
+          "updated_at": "2026-08-31T10:54:21Z",
+          "draft": false,
+          "url": "https://github.com/darrinbaldwindev/GemVerse/pull/1"
+        }
+      ],
+      "open_issues": [
+        {
+          "number": 9,
+          "title": "[LEVEL2-FIXTURE] Harden recovery-result evidence/schema batch",
+          "updated_at": "2026-09-15T09:46:42Z",
+          "url": "https://github.com/darrinbaldwindev/GemVerse/issues/9"
+        },
+        {
+          "number": 3,
+          "title": "Arena first-slice gate \u2014 source intake and canon decision closure",
+          "updated_at": "2026-09-14T09:15:39Z",
+          "url": "https://github.com/darrinbaldwindev/GemVerse/issues/3"
+        },
+        {
+          "number": 5,
+          "title": "[LEVEL2-FIXTURE] Governed file-mutation acceptance workload",
+          "updated_at": "2026-09-14T02:25:56Z",
+          "url": "https://github.com/darrinbaldwindev/GemVerse/issues/5"
+        },
+        {
+          "number": 6,
+          "title": "[LEVEL2-FIXTURE] Deterministic mutation spec and baseline",
+          "updated_at": "2026-09-13T19:43:40Z",
+          "url": "https://github.com/darrinbaldwindev/GemVerse/issues/6"
+        },
+        {
+          "number": 8,
+          "title": "[LEVEL2-FIXTURE] Fixture content contract",
+          "updated_at": "2026-09-11T04:04:42Z",
+          "url": "https://github.com/darrinbaldwindev/GemVerse/issues/8"
+        },
+        {
+          "number": 7,
+          "title": "[LEVEL2-FIXTURE] Execution evidence checklist",
+          "updated_at": "2026-09-11T04:04:32Z",
+          "url": "https://github.com/darrinbaldwindev/GemVerse/issues/7"
+        },
+        {
+          "number": 2,
+          "title": "[OVERSEER] CHATGPT communication and autonomous handoff bridge",
+          "updated_at": "2026-09-01T01:56:04Z",
+          "url": "https://github.com/darrinbaldwindev/GemVerse/issues/2"
+        }
+      ],
+      "recent_commits": [
+        {
+          "sha": "b36750f01f62184e2f563ff8f8030682ba10033e",
+          "date": "2026-09-14T12:37:37Z",
+          "message": "docs(overseer): adopt canonical portfolio batch engine",
+          "url": "https://github.com/darrinbaldwindev/GemVerse/commit/b36750f01f62184e2f563ff8f8030682ba10033e"
+        },
+        {
+          "sha": "59609d17f28010bfa99487490f4f6fa1c225f39f",
+          "date": "2026-09-14T09:15:56Z",
+          "message": "docs(overseer): record GemVerse vertical batch 03 session",
+          "url": "https://github.com/darrinbaldwindev/GemVerse/commit/59609d17f28010bfa99487490f4f6fa1c225f39f"
+        },
+        {
+          "sha": "12b881c73ca5f659e0993058c1eb46a5d9d10b58",
+          "date": "2026-09-14T09:15:29Z",
+          "message": "docs(overseer): reconcile Arena source-intake branch",
+          "url": "https://github.com/darrinbaldwindev/GemVerse/commit/12b881c73ca5f659e0993058c1eb46a5d9d10b58"
+        },
+        {
+          "sha": "67f0bdf079e808578ba85aed82a5144560f56471",
+          "date": "2026-09-14T09:15:14Z",
+          "message": "docs(overseer): execute GemVerse vertical batch 03",
+          "url": "https://github.com/darrinbaldwindev/GemVerse/commit/67f0bdf079e808578ba85aed82a5144560f56471"
+        },
+        {
+          "sha": "20ce84f81e68f65fb274d89c1997957929ed8c75",
+          "date": "2026-09-14T09:12:41Z",
+          "message": "docs(overseer): record GemVerse vertical batch 02 session",
+          "url": "https://github.com/darrinbaldwindev/GemVerse/commit/20ce84f81e68f65fb274d89c1997957929ed8c75"
+        },
+        {
+          "sha": "6db96978f834f77718ee9ee4342b923c7b20ba4e",
+          "date": "2026-09-14T09:12:30Z",
+          "message": "docs(overseer): define GemVerse AgentOS fixture boundary",
+          "url": "https://github.com/darrinbaldwindev/GemVerse/commit/6db96978f834f77718ee9ee4342b923c7b20ba4e"
+        },
+        {
+          "sha": "c47c60a310dcb9d59ff2a30e4ade662d1492e309",
+          "date": "2026-09-14T09:12:13Z",
+          "message": "docs(overseer): execute GemVerse vertical batch 02",
+          "url": "https://github.com/darrinbaldwindev/GemVerse/commit/c47c60a310dcb9d59ff2a30e4ade662d1492e309"
+        },
+        {
+          "sha": "25fea374f8f51b714b106a65da1a578034f8fd2b",
+          "date": "2026-09-14T08:14:18Z",
+          "message": "docs(overseer): complete GemVerse vertical batch 2026-09-14",
+          "url": "https://github.com/darrinbaldwindev/GemVerse/commit/25fea374f8f51b714b106a65da1a578034f8fd2b"
+        }
+      ],
+      "checks": [
+        {
+          "name": "validate-level2-fixture",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/GemVerse/actions/runs/34844452776/job/103976879178"
+        }
+      ],
+      "errors": {}
+    },
+    {
+      "repo": "darrinbaldwindev/content360",
+      "branch": "main",
+      "head": "80b7ad1f815421157ae98043074c2195ffc23892",
+      "default_branch": "main",
+      "repo_updated": "2026-09-14T12:37:17Z",
+      "open_prs": [
+        {
+          "number": 4,
+          "title": "test: harden mock Content360 request integrity",
+          "head_sha": "d9782da613d407156d5e2a196d5d16f67bfc6fb2",
+          "updated_at": "2026-09-14T22:49:50Z",
+          "draft": true,
+          "url": "https://github.com/darrinbaldwindev/content360/pull/4"
+        }
+      ],
+      "open_issues": [
+        {
+          "number": 3,
+          "title": "C-005 mock adapter request-integrity batch",
+          "updated_at": "2026-09-14T22:50:29Z",
+          "url": "https://github.com/darrinbaldwindev/content360/issues/3"
+        },
+        {
+          "number": 2,
+          "title": "P0 bootstrap \u2014 governed AgentOS \u2194 Content360 integration contract",
+          "updated_at": "2026-09-14T00:03:16Z",
+          "url": "https://github.com/darrinbaldwindev/content360/issues/2"
+        },
+        {
+          "number": 1,
+          "title": "Integration readiness: define safe AgentOS/Marketing Overseer boundary before API work",
+          "updated_at": "2026-09-13T20:43:59Z",
+          "url": "https://github.com/darrinbaldwindev/content360/issues/1"
+        }
+      ],
+      "recent_commits": [
+        {
+          "sha": "80b7ad1f815421157ae98043074c2195ffc23892",
+          "date": "2026-09-14T12:37:13Z",
+          "message": "docs(overseer): adopt canonical portfolio batch engine",
+          "url": "https://github.com/darrinbaldwindev/content360/commit/80b7ad1f815421157ae98043074c2195ffc23892"
+        },
+        {
+          "sha": "24a33b127fbf3b9e6f183379b5acc9ee36e872e2",
+          "date": "2026-09-14T12:29:13Z",
+          "message": "docs(overseer): establish Content360 vertical execution batch",
+          "url": "https://github.com/darrinbaldwindev/content360/commit/24a33b127fbf3b9e6f183379b5acc9ee36e872e2"
+        },
+        {
+          "sha": "8dd031bb1efaf7d0909bdc411365faf3da497f84",
+          "date": "2026-09-14T00:03:06Z",
+          "message": "ci: validate mock Content360 adapter",
+          "url": "https://github.com/darrinbaldwindev/content360/commit/8dd031bb1efaf7d0909bdc411365faf3da497f84"
+        },
+        {
+          "sha": "7947f678d4b426a92506dc4484e3a4ea2b3b5023",
+          "date": "2026-09-14T00:03:01Z",
+          "message": "test: add governed Content360 adapter cases",
+          "url": "https://github.com/darrinbaldwindev/content360/commit/7947f678d4b426a92506dc4484e3a4ea2b3b5023"
+        },
+        {
+          "sha": "eeb7662b29ba87a4fdd39e785d165bbc13b964cb",
+          "date": "2026-09-14T00:02:50Z",
+          "message": "feat: add mock governed Content360 adapter",
+          "url": "https://github.com/darrinbaldwindev/content360/commit/eeb7662b29ba87a4fdd39e785d165bbc13b964cb"
+        },
+        {
+          "sha": "0e93f78859f19bef3171adc446385e7b2cc2e3a5",
+          "date": "2026-09-14T00:02:37Z",
+          "message": "docs: bootstrap governed Content360 adapter boundary",
+          "url": "https://github.com/darrinbaldwindev/content360/commit/0e93f78859f19bef3171adc446385e7b2cc2e3a5"
+        }
+      ],
+      "checks": [
+        {
+          "name": "test",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/darrinbaldwindev/content360/actions/runs/34844414576/job/103976753212"
+        }
+      ],
+      "errors": {}
+    }
+  ]
+}
