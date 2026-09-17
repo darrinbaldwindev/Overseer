@@ -15,8 +15,8 @@ States: `PENDING -> CLAIMED -> ACTIVE -> VERIFYING -> VERIFIED`; holding/termina
 - `SCHED-45-VENTURES` — Lane-C/Ventures only where latest owner instruction permits and no exact task is already claimed.
 - `WORK-PORTFOLIO` / `PROJECT-CHAT:<name>` — owner/manual execution.
 
-## Reconciliation checkpoint — 2026-09-18 07:31 Brisbane
-Fresh live evidence supersedes the stale 2026-09-16 checkpoint. AgentOS PR #104 is OPEN/DRAFT/UNMERGED at exact `f01021301255ebde0f9b3c6baf2b1d55bea05420`. Exact-head checks are **mixed**: run `35274093606` passed Ubuntu/Node22 and Windows/Node26, while concurrent run `35274101008` passed Windows/Node26 but failed Ubuntu/Node22. Therefore current-head functional evidence is not uniformly clean and A-AG-03 remains VERIFYING. Predecessor exact-head Green/security/PRS evidence does not transfer. A-AG-01 and A-AG-02 are reopened BLOCKED on SG-08 and SG-01/02 respectively; A-PRS-02 is PENDING fresh identical-head Jess + Michael challenge only after the functional failure is understood and the candidate stabilizes. AgentOS PR #112 remains OPEN/DRAFT/UNMERGED at `33eca1d257179a873a8aca2eea1a4e5e994415a0`; PRS PR #24 remains OPEN/DRAFT/UNMERGED at `3039c886bdcff911f7c6dcc3e086368058e57fb6`. No unchanged active lineage is duplicated. Commerce and Lane-C rows remain at their prior durable dispositions absent changed owning-executor evidence.
+## Reconciliation checkpoint — 2026-09-18 09:31 Brisbane
+AgentOS PR #104 remains OPEN/DRAFT/UNMERGED at exact `f01021301255ebde0f9b3c6baf2b1d55bea05420`. The prior mixed-CI condition is resolved without a head change: run `35274101008` attempt 2 is completed SUCCESS on the exact head; independent exact-head run `35274093606` was already successful. Therefore the CI-triage blocker is cleared and A-AG-03 remains VERIFYING with clean functional CI. Functional evidence does not promote Green/security/PRS. A-AG-01 remains BLOCKED on SG-08 continuous ownership; A-AG-02 remains BLOCKED on SG-01/02; A-PRS-02 remains PENDING fresh identical-head Jess + Michael challenge under canonical ordering. Unchanged owning-executor lineages are not duplicated; commerce and Lane-C dispositions remain unchanged absent fresh owning evidence.
 
 ## Current ledger
 
@@ -24,15 +24,15 @@ Fresh live evidence supersedes the stale 2026-09-16 checkpoint. AgentOS PR #104 
 |---|---|---:|---|---|---|---|
 | A-AG-01 | AgentOS | P0 | BLOCKED | SCHED-00-AGENTOS | `AgentOS#104@f01021301255ebde0f9b3c6baf2b1d55bea05420`; SG-08 | Fresh identical-head continuous-ownership evidence required; one existing ownership primitive through verify→side effect/prepared recovery→durable success→release. No predecessor assurance transfer. |
 | A-AG-02 | AgentOS | P0 | BLOCKED | SCHED-00-AGENTOS | `#104@f010213...`; SG-01/02 | Authenticated actor + canonical grant source not evidenced end-to-end. No invented identity/grant registry. |
-| A-AG-03 | AgentOS | P0 | VERIFYING | SCHED-00-AGENTOS | `#104@f010213...`; mixed exact-head CI | Investigate exact Ubuntu/Node22 failure in run `35274101008`; require reproducible explanation/repair and clean exact-head Ubuntu+Windows CI before promotion. Preserve ownership/authority boundaries and add no persistence/control plane. |
+| A-AG-03 | AgentOS | P0 | VERIFYING | SCHED-00-AGENTOS | `#104@f010213...`; exact-head CI clean | Functional CI stable on exact head; next bounded work is replay/result/correlation negatives. Promotion still requires applicable Green/security/PRS evidence. |
 | A-AG-04 | AgentOS | P0 | BLOCKED_STABLE | SCHED-00-AGENTOS | repaired #104 + admission + Jess/Michael + PRS + owner physical authority | Physical Windows install/scheduler acceptance is owner-gated; no simulated evidence. |
 | A-AG-05 | AgentOS | P0 | ACTIVE | SCHED-00-AGENTOS | existing #104 authority-receipt lineage | Preserve exact source-backed authority evidence/correlation; do not duplicate A-AG-01/02. |
 | A-AG-06 | AgentOS | P0 | PENDING | SCHED-00-AGENTOS | after A-AG-01 repair | Recovery-state/authority-generation cross-bind; stale/mismatched or cross-spliced generations fail closed; exact-head Ubuntu+Windows CI. |
 | A-AG-07 | AgentOS | P0 | PENDING | SCHED-00-AGENTOS | after A-AG-01 repair | Authority revocation at durable-success linearization; false success denied. |
 | A-AG-08 | AgentOS | P0 | ACTIVE | SCHED-00-AGENTOS | `AgentOS#112@33eca1d257179a873a8aca2eea1a4e5e994415a0` | Runtime-shell eligibility/capability-contract consolidation. Independent lineage; do not duplicate or touch #104 hot path. |
 | A-PRS-01 | PRS | P0 | VERIFIED | SCHED-40-ASSURANCE | historical `PRS#17@49fe1f8bca3ddae271d85e0f4767173060267222` | Historical false-GREEN baseline only. |
-| A-PRS-02 | PRS | P0 | PENDING | SCHED-40-ASSURANCE | changed `AgentOS#104@f010213...` | Fresh identical-head Jess + Michael challenge required after candidate/function CI stabilizes; never certify worker self-report. |
-| A-PRS-03 | PRS | P0 | BLOCKED | SCHED-40-ASSURANCE | `PRS#24@3039c886bdcff911f7c6dcc3e086368058e57fb6` + future stabilized AgentOS head | Completion-grade PRS requires identical-head Jess functional PASS + Michael security PASS + owner/runtime gates. |
+| A-PRS-02 | PRS | P0 | PENDING | SCHED-40-ASSURANCE | `AgentOS#104@f010213...` | Fresh identical-head Jess + Michael challenge required; never certify worker self-report. |
+| A-PRS-03 | PRS | P0 | BLOCKED | SCHED-40-ASSURANCE | `PRS#24@3039c886bdcff911f7c6dcc3e086368058e57fb6` + stabilized AgentOS head | Completion-grade PRS requires identical-head Jess functional PASS + Michael security PASS + owner/runtime gates. |
 | A-PRS-04 | PRS | P0 | PENDING | SCHED-40-ASSURANCE | `PRS#24@3039c886...` | Evidence-bundle substitution/mix-and-match plus prepared-recovery envelope splice; fixtures only; no physical execution. |
 | B-GSC-01 | GlobalShopCo | P1 | ACTIVE | SCHED-15-COMMERCE | authenticated trade evidence lineage | Authenticated trade evidence only; missing material field => HOLD/UNKNOWN. |
 | B-GSC-02 | GlobalShopCo | P1 | PENDING | SCHED-15-COMMERCE | evidence-complete B-GSC-01 row | Delivered-margin calculation only after evidence completeness. |
@@ -63,9 +63,9 @@ Fresh live evidence supersedes the stale 2026-09-16 checkpoint. AgentOS PR #104 
 | OVR-01 | Overseer | P0 | ACTIVE | SCHED-30-REPLENISH | this ledger + project batches + #49 | Fresh-fetch before shared writes; coordination only. |
 
 ## Ready ordering
-1. **AgentOS #104 CI triage:** exact `f010213...`; explain/reproduce Ubuntu failure from run `35274101008`; acceptance = stable clean exact-head Ubuntu+Windows evidence; SG-03/09/10/11/18; S2; no Green self-promotion.
-2. **AgentOS #104 replay/correlation negatives:** after CI triage, 2–5 homogeneous duplicate-result/restart/correlation cases without ownership/persistence changes; exact-head tests; SG-09/10/11; S2.
-3. **PRS changed-head challenge:** exact stabilized #104 successor only; identical-head Jess + Michael, then completion-grade PRS only if controlling gates pass; SG-08/09/10/11/18/19.
+1. **AgentOS #104 replay/correlation negatives:** exact `f010213...`; 2–5 homogeneous duplicate-result/restart/correlation cases without ownership/persistence changes; exact-head tests; SG-09/10/11; S2.
+2. **AgentOS #104 ownership assurance:** same exact stabilized head; continuous ownership SG-08 through verify→side effect/prepared recovery→durable success→release; no new control plane; SG-08/10/11/18; S2.
+3. **PRS changed-head challenge:** exact stabilized #104 only; identical-head Jess + Michael, then completion-grade PRS only if controlling gates pass; SG-08/09/10/11/18/19.
 4. **PRS adversarial fixtures:** evidence-bundle substitution + prepared-recovery envelope splice on PRS #24; synthetic only; SG-10/11/19/20; S1.
 5. **Headless contradictions:** variant/availability/cart contradictions; fail before network; non-production; SG-06/09/10/14; S1.
 6. **eBay mapper negatives:** malformed ID/variant/hash/duplicate-event fixtures; no persistence plane or publication; SG-06/09/10/14; S1.
