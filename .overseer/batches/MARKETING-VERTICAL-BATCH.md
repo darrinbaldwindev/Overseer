@@ -1,7 +1,7 @@
 # MARKETING OVERSEER — VERTICAL EXECUTION BATCH
 
 **Canonical mission:** `darrinbaldwindev/Overseer#49`  
-**Fresh scan + post-scan:** 2026-09-16 AEST  
+**Fresh scan + post-scan:** 2026-09-17 AEST  
 **Status:** ACTIVE / EXECUTED / REPLENISHED / EVIDENCE-GATED
 
 ## Governance
@@ -11,82 +11,60 @@ No merge/approval/ready/rebase/deploy/credentials/purchase/supplier contact/publ
 
 ## AgentOS #104
 - OPEN / DRAFT / UNMERGED;
-- exact head `86005652d7454c0be4862d49846bd5bccc1daec7`;
-- exact-head Tests `35093331168` SUCCESS;
-- bounded PowerShell operations remain allowlisted;
-- admitted PowerShell receipts now preserve source-backed `authority_evidence_id` and fail closed if it disappears before receipt construction;
-- project-file mutation remains AMBER/BLOCKED because SG-08 continuous ownership is not proven;
-- authenticated transport/canonical grant lookup remain unwired;
-- physical Windows acceptance separate;
-- Green and PRS promotion remain gated;
+- fresh exact head `e59eea89021b89631fac865d6610f927e4103ef0`;
+- exact-head AgentOS Tests `35192316311` SUCCESS;
+- PR body remains explicit that project-file mutation is AMBER/BLOCKED, SG-08 continuous ownership is not proven, authenticated transport/canonical grant lookup are not wired, physical Windows is separate, Green/PRS gated;
+- PR body checkpoint text contains older embedded head/run details, so live PR metadata + exact-head CI outrank embedded historical checkpoint prose;
 - Founding Beta HOLD.
 
 ## Frontend #111
-- OPEN / DRAFT / UNMERGED;
-- exact head `f89dd5cb49ffa7efe0649ca2aee433d19cf0fd34`;
-- exact-head Tests `35097976181` SUCCESS;
-- current cycle adds project isolation to Recent Jobs: non-empty project correlation required and Basic Chat scoped to `agentos-local`;
-- dispatch `completed` is explicitly `Execution completed`, not Green/PRS;
-- Stop remains request semantics, not authority revoke or proof an in-flight action terminated;
-- Projects/Inbox remain unwired rather than synthetic;
+- unchanged exact `f89dd5cb49ffa7efe0649ca2aee433d19cf0fd34`, OPEN/DRAFT/UNMERGED;
+- exact-head Tests `35097976181` SUCCESS from prior verified cycle;
+- Recent Jobs project isolation remains bounded/read-only;
+- Projects and Inbox remain unwired;
 - mutation readiness remains unknown.
 
-## Commercial truth
-Current canonical product direction remains Free $0/year → Standard $49/year → Advanced/Pro $99/year; AI Plus $22/month separately; Business TBD. Detailed tier entitlements remain implementation-gated.
+## Independent assurance
+Latest retrieved #49 assurance on predecessor `86005652...` remained `BLOCKED_SG08` / `BLOCKED_CONTROLLING_GATES`, with SG-01/02 and SG-08 unresolved and completion-grade PRS ineligible. Because #104 has since moved to `e59eea89...`, predecessor assurance cannot be promoted to the new head. New exact-head independent assurance is required before any gate promotion.
 
 # COMPLETED THIS CYCLE
 
-## M-A048 — tier-benefit claim matrix
-COMPLETE — `reports/2026-09-16-agentos-tier-benefit-claim-matrix.md` @ `292529912cf30d8696c69dc5839aa85ac7538f16`.
-Free remains genuinely useful; paid benefits require canonical entitlement mapping before public `included` claims.
-
-## M-A049 — 30-day value-loop Marketing contract
-COMPLETE — `reports/2026-09-16-agentos-30-day-value-loop-marketing-contract.md` @ `2b56b17411903d8896392ba91c306c3a16b1157e`.
-Upgrade recommendations require demonstrated value and explicitly support `STAY_FREE`.
-
-## M-A050 — Windows capability wording
-COMPLETE — `reports/2026-09-16-agentos-windows-capability-marketing-wording.md` @ `f0161a8d10489e0a5ad1eaaa19adf218f7b0a1c0`.
-Bounded Windows foundation can be described; physical acceptance, mutation safety and overall autonomy cannot.
-
-## M-A047 — Overseer front-door implementation watch
-COMPLETE/WATCH — `reports/2026-09-16-agentos-overseer-front-door-implementation-watch.md` @ `09ce846294f7cda41490ffe3082270175bc9d19e`.
-Frontend materially aligns with a primary Chat/Overseer experience, but complete runtime-wide routing across every specialist/modality remains unproven.
+- **M-A051 COMPLETE** authority-provenance claim delta — `953e00b500f7e20fbadef35fbec7799455718d2d`.
+- **M-A052 COMPLETE** Recent Jobs/project comprehension — `d046d9ec4215e7d40a175ce1ff7520166d2a89d1`.
+- **M-A053 COMPLETE** tier comparison evidence skeleton — `9ae3c2ee2f9bfed9ed361323c973013cc3492050`.
+- **M-A054 COMPLETE/PREPARED** stay-Free lifecycle copy pack — `760a4167bf3e495e6fb9277ae8622ceed298c168`; DO NOT PUBLISH/ACTIVATE.
 
 # REPLENISHED PRIORITIES
 
 ## P0 AgentOS
-- M-A007 exact #104 + independent assurance watcher.
-- M-A015 exact #111 claim QA.
-- M-A016 Founding Beta HOLD/readiness gate.
-- M-A051 NEXT SAFE — authority-provenance Marketing delta for #104 `authority_evidence_id`; prevent receipt provenance improvement being misrepresented as authenticated admission completion.
-- M-A052 NEXT SAFE — Recent Jobs / project-isolation user-comprehension contract: explain Jobs without implying Projects surface is wired.
+- **M-A007 ACTIVE** exact #104 watcher; new head requires identical-head assurance.
+- **M-A015 ACTIVE** #111 exact-head claim QA.
+- **M-A016 HOLD** Founding Beta.
+- **M-A056 NEXT SAFE** #104 head-movement delta: inspect what changed from `86005652...` to `e59eea89...` and classify Marketing relevance without inferring assurance.
+- **M-A057 NEXT SAFE** claim-freshness rule for PR bodies containing historical embedded checkpoint SHAs; live metadata must outrank stale prose.
 
-## P1 AgentOS commercial/acquisition
-- M-A053 NEXT SAFE — tier comparison skeleton with all unresolved feature cells explicitly UNKNOWN rather than guessed.
-- M-A054 NEXT SAFE — `stay Free` lifecycle copy and ethical upgrade CTA pack for future Content360 use; prepare only.
-- M-A055 WATCH — single Overseer runtime implementation evidence.
-- M-A033 WATCH — Evidence Timeline implementation acceptance.
-- M-A041 WATCH — voice PRODUCT DIRECTION.
+## P1 AgentOS
+- **M-A055 WATCH** single Overseer runtime implementation.
+- **M-A058 NEXT SAFE** ethical upgrade frequency/suppression contract: material-new-trigger requirement after decline.
+- **M-A059 NEXT SAFE** public pricing-page readiness checklist separating target price from purchasability, billing, tax/refund and entitlement proof.
+- **M-A033 WATCH** Evidence Timeline.
+- **M-A041 WATCH** voice PRODUCT DIRECTION.
 
-## GlobalShopCo/eBay
-- M-B023 NEXT SAFE — candidate evidence-gap scoreboard against first-SKU evidence bundle.
-- M-B014 BLOCKED — actual eBay account/category fee.
-- M-B015c BLOCKED — authenticated supplier evidence.
-- M-B009 HOLD — rapid release until first SKU qualifies.
-
-## Affiliate/other
-- M-D001c NEXT SAFE — AU true publisher-commercial proof hunt.
-- M-F001 NEXT SAFE — portfolio claim-evidence pointer index if higher lanes block.
+## Commerce / affiliate
+- **M-B023 NEXT SAFE** candidate evidence-gap scoreboard.
+- **M-B014/B015c BLOCKED** actual eBay fees + authenticated supplier evidence.
+- **M-D001c NEXT SAFE** AU publisher-commercial proof hunt.
+- **M-F001 NEXT SAFE** portfolio claim-evidence pointer index.
 
 # NEXT AUTONOMOUS ORDER
 1. fresh #104/#111/#49/commerce scan;
-2. M-A051 authority-provenance claim delta;
-3. M-A052 Jobs/project comprehension contract;
-4. M-A053 tier comparison skeleton;
-5. M-A054 stay-Free copy pack;
-6. M-B023 evidence-gap scoreboard;
-7. M-D001c/M-F001 if capacity remains;
+2. M-A056 exact #104 delta;
+3. M-A057 stale embedded checkpoint claim-freshness contract;
+4. M-A058 upgrade suppression;
+5. M-A059 pricing-page readiness;
+6. M-B023;
+7. M-D001c/M-F001 if capacity;
 8. post-scan, replenish, log, #49.
 
 ## Core rule
-**Sell evidenced value, not inferred completeness. A paid tier, green CI run, receipt provenance field or polished frontend must never upgrade an unproven safety/readiness state.**
+**Live exact evidence outranks embedded historical checkpoint prose. Provenance is not authentication; execution completion is not verification; a target price is not a purchasable product.**
