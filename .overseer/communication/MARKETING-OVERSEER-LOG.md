@@ -6,45 +6,42 @@
 ## Governance
 No merge/deploy/approval/ready/rebase/credentials/purchase/supplier contact/listing publication/paid campaign/production write/telemetry activation/production autonomy without explicit authority. Content360 remains downstream of product truth.
 
-# 2026-09-16 AEST — AUTONOMOUS VERTICAL MARKETING CYCLE
+# 2026-09-17 AEST — AUTONOMOUS VERTICAL MARKETING CYCLE
 
 ## Fresh AgentOS state
-PR #104 advanced materially to exact `86005652d7454c0be4862d49846bd5bccc1daec7`, OPEN/DRAFT/UNMERGED. Exact-head Tests `35093331168` = SUCCESS.
+PR #104 moved again to exact `e59eea89021b89631fac865d6610f927e4103ef0`, OPEN/DRAFT/UNMERGED. Exact-head AgentOS Tests `35192316311` = SUCCESS.
 
-Marketing-relevant improvement: admitted PowerShell tasks now preserve source-backed `authority_evidence_id` into execution receipts and fail closed if that evidence disappears before receipt construction. This strengthens provenance but **does not resolve authenticated admission**: #104 still says authenticated transport and canonical grant lookup are not wired. It also does not resolve SG-08 continuous ownership, physical Windows acceptance, Green or PRS. Project-file mutation remains AMBER/BLOCKED and Founding Beta remains HOLD.
+The PR's current body still explicitly preserves the controlling boundaries: project-file mutation AMBER/BLOCKED; SG-08 continuous ownership unproven; authenticated transport and canonical grant lookup unwired; physical Windows acceptance separate; Green/PRS gated. The PR body also contains an older embedded checkpoint SHA/run, so Marketing now treats live PR metadata + exact-head CI as higher-freshness evidence than historical prose embedded in the body.
 
-## Fresh Frontend state
-PR #111 advanced materially to exact `f89dd5cb49ffa7efe0649ca2aee433d19cf0fd34`, OPEN/DRAFT/UNMERGED. Exact-head Tests `35097976181` = SUCCESS.
+Latest retrieved independent assurance on predecessor `86005652...` was still BLOCKED for SG-08/controlling gates. Since #104 moved again, that assurance cannot be promoted to `e59eea89...`; identical-head independent assurance is required.
 
-Current frontend now includes bounded Recent Jobs from canonical `dispatch.task` artifacts and Cycle 017 adds project isolation: jobs require non-empty `project_id`, Basic Chat scopes to `agentos-local`, and foreign/missing-project tasks fail closed. Canonical dispatch `completed` is presented as `Execution completed`, not verified/assured. Stop remains a request/future-action boundary, not durable authority revoke or proof an already-running action terminated. Projects and Inbox remain unwired where canonical sources are absent.
+Founding Beta remains HOLD.
 
-This is strong alignment with Marketing's trust model: expose useful state without inventing missing product systems.
+## Frontend
+#111 remains exact `f89dd5cb49ffa7efe0649ca2aee433d19cf0fd34`, OPEN/DRAFT/UNMERGED, with exact-head Tests `35097976181` SUCCESS. Recent Jobs remains project-scoped/read-only; Projects and Inbox remain unwired; execution completion remains separate from verification/PRS.
 
-## Completed Marketing work
-- M-A048 tier-benefit claim matrix — `292529912cf30d8696c69dc5839aa85ac7538f16`.
-- M-A049 30-day value-loop Marketing contract — `2b56b17411903d8896392ba91c306c3a16b1157e`.
-- M-A050 Windows capability wording — `f0161a8d10489e0a5ad1eaaa19adf218f7b0a1c0`.
-- M-A047 Overseer front-door implementation watch — `09ce846294f7cda41490ffe3082270175bc9d19e`.
-- Vertical batch replenished — `00809dbc8ccd19588a1337b7c47a76e7cc2f8bea`.
+## Completed work
+- M-A051 authority-provenance Marketing delta — `953e00b500f7e20fbadef35fbec7799455718d2d`.
+- M-A052 Recent Jobs/project comprehension — `d046d9ec4215e7d40a175ce1ff7520166d2a89d1`.
+- M-A053 tier comparison evidence skeleton — `9ae3c2ee2f9bfed9ed361323c973013cc3492050`.
+- M-A054 stay-Free lifecycle copy pack — `760a4167bf3e495e6fb9277ae8622ceed298c168`, PREPARED / DO NOT PUBLISH OR ACTIVATE.
+- Batch replenished — `04ca7f4325e7a90103b6cd9c3f652b0a4b3ff818`.
 
-## Commercial doctrine strengthened
-Current canonical price direction remains Free $0/year, Standard $49/year, Advanced/Pro $99/year, separate AI Plus $22/month, Business TBD. Detailed feature allocation remains UNKNOWN until canonical entitlement evidence exists.
+## Marketing doctrine additions
+**Provenance is not authentication.** Preserving `authority_evidence_id` is valuable evidence plumbing, not proof of a real authenticated actor/canonical grant source.
 
-The 30-day value loop now has a hard ethical/product requirement: `STAY_FREE` is a legitimate successful recommendation. Paid conversion must be justified by observed user value and an actual mapped entitlement, not funnel pressure.
+**Jobs is not Projects.** The bounded Recent Jobs projection can be marketed truthfully without implying a complete cross-project workspace exists.
 
-## Claim-safe Windows position
-Current safe classification:
-**BOUNDED WINDOWS FOUNDATION / EXACT-HEAD CI PASS / MUTATION BLOCKED / PHYSICAL ACCEPTANCE SEPARATE / NOT SHIPPED AS FULL WINDOWS AUTONOMY.**
+**Tier checkmarks remain UNKNOWN until entitlement evidence exists.** Current price direction does not authorize Marketing to invent Free/Standard/Pro feature allocation.
 
-## Single-front-door position
-Frontend materially supports the owner-approved primary Chat/Overseer relationship, but complete end-to-end runtime routing across all specialists/models/tools/modalities remains evidence-gated. Do not yet say every AgentOS interaction is proven to route through one runtime Overseer seam.
+**Stay Free is a valid success state.** Future lifecycle messaging now has prepared copy that explicitly declines to recommend an upgrade when evidence does not justify it.
 
-## Replenished next work
-- M-A051 authority-provenance claim delta.
-- M-A052 Recent Jobs/project-isolation comprehension contract.
-- M-A053 tier comparison skeleton with UNKNOWN cells.
-- M-A054 stay-Free lifecycle/CTA pack for future Content360 use.
-- M-B023 GlobalShopCo candidate evidence-gap scoreboard.
+## Next vertical work
+- M-A056 exact #104 delta from `86005652...` to `e59eea89...`.
+- M-A057 historical-checkpoint freshness contract.
+- M-A058 upgrade suppression/frequency contract.
+- M-A059 pricing-page readiness checklist.
+- M-B023 eBay candidate evidence-gap scoreboard.
 - M-D001c AU publisher-commercial proof hunt.
 
 ## Hard status
