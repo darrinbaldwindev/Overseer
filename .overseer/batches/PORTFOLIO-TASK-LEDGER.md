@@ -15,14 +15,23 @@ States: `PENDING -> CLAIMED -> ACTIVE -> VERIFYING -> VERIFIED`; holding/termina
 - `SCHED-45-VENTURES` — Lane-C/Ventures only where latest owner instruction permits and no exact task is already claimed.
 - `WORK-PORTFOLIO` / `PROJECT-CHAT:<name>` — owner/manual execution.
 
-## Reconciliation checkpoint — 2026-09-18 12:32 Brisbane
+
+## Current manual checkpoint — 2026-09-18, #123 CI follow-up
+
+WORK-PORTFOLIO completed a bounded test-only follow-up on existing AgentOS #123, head `b993632ef44d26c91cab08190968205a6316106d`, base #104 `607f2683b7d3b234fc6ffa70e2a7d42e31499c3a`. Source-backed completed Work result at #123 predecessor `e84f49d...` is bounded recovery-ownership hardening, not SG-08 closure. Fresh evidence found PR run `35334905122` failed with 22 Ubuntu cancellations despite push run `35334901641` SUCCESS; failed evidence retained. Two-call duplicate test gates now bind intended winner arrival explicitly. Local writer tests 28 PASS / zero failure/cancellation. Manual CI follow-up VERIFIED and claim released; independent functional/security certification remains PENDING. New exact-head push `35335982121` and PR `35335986661` both SUCCESS on Ubuntu Node22 and Windows Node26, including full-suite and dependency-audit steps; do not infer overall GREEN from CI.
+
+SCHED-00 retains production ownership-fence/authority implementation; SCHED-40 retains independent assurance. Manual test-only claim source: Overseer #49 comment `5728850621`. PRS #17 intake comment `5728866719` binds changed #123 target and identifies historical workflow pins. Completion-grade PRS remains INELIGIBLE/NOT RUN until independent Jess+Michael PASS on identical current SHA and all required owner/runtime gates. SG08/SG01/02 and physical/runtime gates remain blocked; mutation disabled. No competing subsystem or protected action.
+
+Live PRS anchors: #17 `5616ab602ca569b9a47e9cf95ad606bbb9cfa7b4`; #24 `ece88ac707cdb8c73bf23983771fcae849857fa1`; #26 `79b916f99eaea772da7786913867961a3bb714d0`. AgentOS #122 `a6d18e779c5ec112908fa1c1c0e2d863b5d5f04c` is a separate installer candidate; no assurance transfer between branches.
+
+## Historical reconciliation checkpoint — 2026-09-18 12:32 Brisbane
 AgentOS PR #104 advanced two commits from `ffe6954a4879606804fc512bf000ff3ea7e46fec` to exact `607f2683b7d3b234fc6ffa70e2a7d42e31499c3a`, remains OPEN/DRAFT/UNMERGED. Compare evidence shows a bounded installer fail-closed change in `scripts/install-local.mjs` plus regression coverage in `tests/install-local.test.mjs`: a pre-existing config with missing canonical state now raises `LOCAL_INSTALL_INCOMPLETE` and preserves existing files rather than silently synthesizing state. Exact-head AgentOS Tests run `35297751947` completed SUCCESS. This is useful functional/install recovery movement only. Exact-head identity changed, so predecessor Green/security/PRS assurance does not transfer. A-AG-01 remains BLOCKED on SG-08; A-AG-02 remains BLOCKED on SG-01/02; A-AG-03 remains VERIFYING with clean exact-head functional CI; A-PRS-02 remains PENDING fresh identical-head Jess + Michael challenge. Physical Windows acceptance remains owner-gated. AgentOS #112 remains `33eca1d257179a873a8aca2eea1a4e5e994415a0`; PRS #24 remains `3039c886bdcff911f7c6dcc3e086368058e57fb6`. Commerce/Lane-C states remain unchanged absent fresh owning-executor evidence.
 
 ## Current ledger
 
 | Task | Project | Priority | State | Owner | Exact anchor / dependency | Acceptance boundary / next transition |
 |---|---|---:|---|---|---|---|
-| A-AG-01 | AgentOS | P0 | BLOCKED | SCHED-00-AGENTOS | `AgentOS#104@607f2683b7d3b234fc6ffa70e2a7d42e31499c3a`; SG-08 | Fresh identical-head continuous-ownership evidence required; one existing ownership primitive through verify→side effect/prepared recovery→durable success→release. No predecessor assurance transfer. |
+| A-AG-01 | AgentOS | P0 | BLOCKED | SCHED-00-AGENTOS | `AgentOS#123@b993632ef44d26c91cab08190968205a6316106d` on #104 `607f2683...`; SG-08 | Fresh identical-head continuous-ownership evidence required; one existing ownership primitive through verify→side effect/prepared recovery→durable success→release. No predecessor assurance transfer. |
 | A-AG-02 | AgentOS | P0 | BLOCKED | SCHED-00-AGENTOS | `#104@607f2683...`; SG-01/02 | Authenticated actor + canonical grant source not evidenced end-to-end. No invented identity/grant registry. |
 | A-AG-03 | AgentOS | P0 | VERIFYING | SCHED-00-AGENTOS | `#104@607f2683...`; run `35297751947` SUCCESS | Exact-head functional CI clean. Installer now fails closed on config-present/state-missing partial install. Inventory remaining replay/result/correlation and install/recovery negatives without widening authority. Promotion still requires applicable Green/security/PRS evidence. |
 | A-AG-04 | AgentOS | P0 | BLOCKED_STABLE | SCHED-00-AGENTOS | repaired #104 + admission + Jess/Michael + PRS + owner physical authority | Physical Windows install/scheduler acceptance is owner-gated; no simulated evidence. |
@@ -31,9 +40,9 @@ AgentOS PR #104 advanced two commits from `ffe6954a4879606804fc512bf000ff3ea7e46
 | A-AG-07 | AgentOS | P0 | PENDING | SCHED-00-AGENTOS | after A-AG-01 repair | Authority revocation at durable-success linearization; false success denied. |
 | A-AG-08 | AgentOS | P0 | ACTIVE | SCHED-00-AGENTOS | `AgentOS#112@33eca1d257179a873a8aca2eea1a4e5e994415a0` | Runtime-shell eligibility/capability-contract consolidation. Independent lineage; do not duplicate or touch #104 hot path. |
 | A-PRS-01 | PRS | P0 | VERIFIED | SCHED-40-ASSURANCE | historical `PRS#17@49fe1f8bca3ddae271d85e0f4767173060267222` | Historical false-GREEN baseline only. |
-| A-PRS-02 | PRS | P0 | PENDING | SCHED-40-ASSURANCE | `AgentOS#104@607f2683...` | Fresh identical-head Jess + Michael challenge required; never certify worker self-report. |
-| A-PRS-03 | PRS | P0 | BLOCKED | SCHED-40-ASSURANCE | `PRS#24@3039c886bdcff911f7c6dcc3e086368058e57fb6` + stabilized AgentOS head | Completion-grade PRS requires identical-head Jess functional PASS + Michael security PASS + owner/runtime gates. |
-| A-PRS-04 | PRS | P0 | PENDING | SCHED-40-ASSURANCE | `PRS#24@3039c886...` | Evidence-bundle substitution/mix-and-match plus prepared-recovery envelope splice; fixtures only; no physical execution. |
+| A-PRS-02 | PRS | P0 | PENDING | SCHED-40-ASSURANCE | `AgentOS#123@b993632ef44d26c91cab08190968205a6316106d` | Fresh identical-head Jess + Michael challenge required; never certify worker self-report. |
+| A-PRS-03 | PRS | P0 | BLOCKED | SCHED-40-ASSURANCE | `PRS#24@ece88ac707cdb8c73bf23983771fcae849857fa1` + stabilized AgentOS head | Completion-grade PRS requires identical-head Jess functional PASS + Michael security PASS + owner/runtime gates. |
+| A-PRS-04 | PRS | P0 | PENDING | SCHED-40-ASSURANCE | `PRS#24@ece88ac7...` | Evidence-bundle substitution/mix-and-match plus prepared-recovery envelope splice; fixtures only; no physical execution. |
 | B-GSC-01 | GlobalShopCo | P1 | ACTIVE | SCHED-15-COMMERCE | authenticated trade evidence lineage | Authenticated trade evidence only; missing material field => HOLD/UNKNOWN. |
 | B-GSC-02 | GlobalShopCo | P1 | PENDING | SCHED-15-COMMERCE | evidence-complete B-GSC-01 row | Delivered-margin calculation only after evidence completeness. |
 | B-GSC-03 | GlobalShopCo | P1 | BLOCKED_STABLE | SCHED-15-COMMERCE | current durable truth `0 eBay-ready SKUs` | Reopen only on exact evidence-complete variant. |
@@ -63,14 +72,14 @@ AgentOS PR #104 advanced two commits from `ffe6954a4879606804fc512bf000ff3ea7e46
 | OVR-01 | Overseer | P0 | ACTIVE | SCHED-30-REPLENISH | this ledger + project batches + #49 | Fresh-fetch before shared writes; coordination only. |
 
 ## Ready ordering
-1. **AgentOS #104 remaining replay/result/correlation + installer recovery negatives:** exact `607f2683...`; inventory genuinely uncovered duplicate-result/restart/correlation cases plus bounded partial-install/recovery contradictions after the new incomplete-install guard; implement only 2–5 homogeneous gaps without ownership/persistence changes; exact-head tests; SG-09/10/11/14; S2.
-2. **AgentOS #104 ownership assurance:** exact `607f2683...`; require continuous ownership through verify→side effect/prepared recovery→durable success→release; no new control plane; SG-08/10/11/18; S2.
-3. **PRS changed-head challenge:** exact stabilized `607f2683...` only; identical-head Jess + Michael, then completion-grade PRS only if controlling gates pass; SG-08/09/10/11/18/19.
-4. **PRS adversarial fixtures:** evidence-bundle substitution + prepared-recovery envelope splice on PRS #24; synthetic only; SG-10/11/19/20; S1.
-5. **Headless contradictions:** variant/availability/cart contradictions; fail before network; non-production; SG-06/09/10/14; S1.
-6. **eBay mapper negatives:** malformed ID/variant/hash/duplicate-event fixtures; no persistence plane or publication; SG-06/09/10/14; S1.
-7. **MyPrime compatibility/freshness:** deliberate divergent-lineage map plus stale Prime/rank/deal/identity contradictions; no presentation integration until mapped; SG-06/09/10/14/20; S1.
-8. **GSC/Lane-C fall-through:** authenticated-only GSC evidence; otherwise preserve existing Lane-C canon/compliance/provenance boundaries and do not consume active project-chat work.
+1. **AgentOS #123 continuous fence:** SCHED-00 owning lane; current `b993632ef44d26c91cab08190968205a6316106d`; recorder displacement and durable-receipt/pre-release successor races; existing primitive only, mutation disabled.
+2. **Jess functional challenge:** SCHED-40; identical #123 head, bounded positive path plus prepared recovery, metadata loss, replay/crash/result-write and successor negatives; no inherited PASS.
+3. **Michael security challenge:** SCHED-40; identical #123 head, continuous ownership and real canonical authority provenance; no synthetic identity/grant.
+4. **PRS conditional refresh:** existing immutable probe lineage; historical workflow pins cannot certify changed #123/#122; completion-grade run only after independent identical-head PASS plus applicable owner/runtime gates.
+5. **GlobalShopCo supplier evidence closure:** existing shortlist, authenticated cost/freight/permission/stock/returns evidence; absent input => HOLD, no supplier contact or further horizontal expansion.
+6. **Headless/shopify_ebay/MyPrimeDelivery:** existing owning commerce lane; exact candidate CI and uncovered identity/freshness/correlation negatives; compatibility map before UI port, no new persistence.
+7. **Affiliate/GhostKitchen/Franchise/GemVerse:** next unclaimed repository-backed non-production acceptance/economics/canon slice; fresh scan and preserve active project ownership.
+8. **Content360/Marketing/Car Rental:** existing provider contract/provenance/research lane; no live publication, credentials, contact or spend.
 
 ## Security / authority
 Security is cross-cutting. S0/S1 read-only/synthetic work; S2 non-production branch/tests/docs requires scoped grant and Green where promotion applies. Production/publication/contact/spend/credentials/security-policy/physical-host actions remain owner-only. Functional success never upgrades security, Green or PRS status.
