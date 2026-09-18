@@ -6,6 +6,33 @@
 ## Governance
 No merge/deploy/approval/ready/rebase/credentials/purchase/supplier contact/listing publication/paid campaign/production write/telemetry activation/production autonomy without explicit authority. Content360 remains downstream of product truth.
 
+# 2026-09-18 AEST — $99 CORE INTEGRATIONS ENTITLEMENT OWNER DECISION
+
+Owner direction: the **$99 AgentOS tier includes access to all twelve core AgentOS integrations**:
+
+1. ChatGPT / OpenAI
+2. Claude / Anthropic
+3. Gemini / Google AI
+4. Perplexity
+5. Manus
+6. OpenAI Codex
+7. Cursor
+8. Devin
+9. Replit
+10. Base44
+11. AgentMail
+12. Tavily
+
+Marketing may describe these twelve integration surfaces as included in the $99 AgentOS tier, subject to implementation readiness and truthful capability state.
+
+Critical commercial boundary: "included" means the AgentOS integration/access surface is included. It does **not** currently mean AgentOS pays for, bundles or guarantees external provider subscriptions, API credits, account entitlements, usage fees or unlimited provider consumption. Where a provider requires its own account, subscription, plan, credits or API billing, those remain separate unless a later explicit owner decision creates a bundled commercial arrangement.
+
+The $99 entitlement also does not bypass authentication, capability health, provider plan limits, quotas/rate limits, AgentOS authority, consent, policy, budget/spend approval, execution approval, verification, Green, PRS or production eligibility.
+
+Marketing/Content360 wording should therefore use formulations such as **"All 12 core integrations included"** together with a concise external-provider-cost disclosure where relevant, and must avoid claims equivalent to "all subscriptions included", "unlimited use", or "no additional provider costs" unless those claims later become evidence-backed.
+
+This owner decision materially resolves one previously UNKNOWN tier-allocation point: the twelve core integrations belong in the $99 tier. It does not by itself resolve the entire AgentOS pricing/tier matrix or any separate pricing-cadence conflict.
+
 # 2026-09-18 AEST — CORE PROGRAMS OWNER DECISION
 
 ## Canonical core set
