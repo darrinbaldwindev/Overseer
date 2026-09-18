@@ -8,6 +8,14 @@
 
 The ChatGPT Portfolio Overseer is the single coordination point for ChatGPT Work-mode escalation across the portfolio.
 
+### Owner reaffirmation — 2026-09-18 16:50 Australia/Brisbane
+
+Darrin explicitly reaffirmed: **the ChatGPT Portfolio Overseer will control Work mode from now on.**
+
+This means the Portfolio Overseer owns Work-mode intake, triage, prioritisation, deduplication, batching, routing and reconciliation across the portfolio. Project Overseers, project chats, scheduled lanes, workers and specialist Overseers must log work that materially requires or benefits from Work mode and hand control of that escalation to the Portfolio Overseer rather than independently coordinating a competing Work flow.
+
+This is a coordination decision only. It does not expand execution authority, bypass owner-only actions, or replace AgentOS/Green/PRS/governance controls.
+
 Project Overseers, project chats, scheduled lanes, workers and specialist Overseers must not independently create a competing Work-mode queue or coordination process. When work is better suited to Work mode, they must durably log the requirement for Portfolio Overseer triage.
 
 This document governs coordination only. It is not a scheduler, mission ledger, authority source, queue runtime, persistence service, Green system or PRS system.
