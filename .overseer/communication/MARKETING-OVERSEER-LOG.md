@@ -30,6 +30,32 @@ Canonical durable decision record: `.overseer/communication/AGENTOS-CORE-PROGRAM
 
 AgentOS remains provider/model/tool agnostic and free-first. Commercial or affiliate economics must not influence technical worker ranking or governance decisions.
 
+## Core product role map
+The owner-approved core products are complementary capability classes, not twelve interchangeable AI providers. Canonical detailed mapping is maintained in `darrinbaldwindev/AgentOS/docs/CORE-INTEGRATIONS-REGISTRY.md`.
+
+- **General intelligence:** ChatGPT, Claude, Gemini
+- **Research and retrieval:** Perplexity, Tavily
+- **Autonomous execution:** Manus
+- **Software engineering:** Codex, Cursor, Devin, Replit
+- **Rapid app building:** Base44
+- **Communications:** AgentMail
+
+Practical roles recorded:
+- ChatGPT: broad all-rounder for planning, drafting, coding, analysis and orchestration support.
+- Claude: long-context review, document/codebase analysis and structured second-opinion reasoning.
+- Gemini: Google-oriented, multimodal and research-capable worker where connected capabilities are healthy and authorised.
+- Perplexity: fresh public-information research and source-backed synthesis.
+- Manus: bounded higher-autonomy multi-step digital execution under AgentOS authority and governance.
+- Codex: specialist repository implementation, debugging and verification worker.
+- Cursor: interactive developer execution surface for editing, refactoring and coding workflows.
+- Devin: longer autonomous engineering missions under AgentOS governance.
+- Replit: rapid cloud development, prototyping and application execution environment.
+- Base44: rapid prototype/UI/application scaffolding; never an AgentOS control plane.
+- AgentMail: governed agent email and communications capability.
+- Tavily: machine-oriented fresh web search and retrieval.
+
+AgentOS remains the coordinating layer above these capabilities. A single governed mission may route research, synthesis, prototyping, implementation and communications across multiple core products, while AgentOS retains routing, authority, policy, budget, evidence, verification and assurance responsibilities.
+
 ## FAQ programme requirement
 Every core program now requires an extensive AgentOS FAQ pack covering ordinary-user, advanced and Tech Head depths from one canonical truth model. FAQ scope includes purpose, costs, free/paid options, connection methods, permissions, least privilege, privacy/data movement, capability health, known limitations, budgets, provider routing/fallback, scheduling/autonomy, approvals, recovery, duplicate/replay protection, evidence/receipts, Green/PRS, troubleshooting, disconnection and last-verified evidence.
 
