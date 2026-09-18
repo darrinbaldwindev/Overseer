@@ -6,6 +6,48 @@
 ## Governance
 No merge/deploy/approval/ready/rebase/credentials/purchase/supplier contact/listing publication/paid campaign/production write/telemetry activation/production autonomy without explicit authority. Content360 remains downstream of product truth.
 
+# 2026-09-18 AEST — FEATURE CONSOLIDATION / PRODUCT-SURFACE OWNER DIRECTION
+
+Owner direction: AgentOS should **stop expanding headline feature count by default** and enter a consolidation phase focused on making existing capability simpler, clearer and easier to trust.
+
+The broad underlying capability set remains valuable. The risk to manage is not capability breadth itself, but feature overload at the visible product surface.
+
+Canonical user-facing product pillars:
+
+1. **Chat & Projects** — tell AgentOS what needs doing and keep work understandable.
+2. **Workers & AI** — AgentOS selects and coordinates the right intelligence/tool/provider.
+3. **Automations** — run work later, repeatedly or on a trigger through governed scheduling.
+4. **Connections** — connect models, apps, files and services.
+5. **Control & Cost** — permissions, approvals, budgets, privacy and spend controls.
+6. **Evidence & Recovery** — show what happened, verify it and recover safely.
+
+Simple / Essentials / Tech Head remain the complexity-management model:
+- **Simple:** appliance-like, minimal decisions and technical exposure.
+- **Essentials:** normal everyday operating view.
+- **Tech Head:** deeper routing, provider health, receipts, correlation, recovery, Green/PRS and diagnostics.
+
+These views do not change authority, entitlement, governance or safety.
+
+Priority product work should now emphasize:
+- first-run success: install -> connect one provider -> give one real job -> receive a verified result;
+- clear Projects + Jobs model;
+- one permissions/control centre;
+- one cost/budget dashboard;
+- one current-status / attention Inbox view for running, blocked, completed and approval-required work;
+- safe retry/resume/inspect recovery UX;
+- provider-routing transparency and substitution explanation;
+- guided connection/onboarding for the twelve core integrations;
+- plain-language 'why did AgentOS choose this?' explanations;
+- personal policy defaults such as free-first routing, no spend without approval, draft-only email and local-file privacy boundaries;
+- simple natural-language automation UX over the governed scheduler;
+- concise trust state showing authority, cost, execution, verification and assurance separately.
+
+Do **not** prioritize more visible connectors, dashboards, personas, developer toggles or automation types merely to increase feature count. New headline features should be admitted only when they clearly strengthen one of the six pillars or unblock an evidence-backed user workflow.
+
+Product principle: **more capability underneath, fewer decisions on the surface.**
+
+Marketing implication: AgentOS should not be positioned as 'the AI product with the most features.' Position it as the system that coordinates many capabilities so the user has to think about fewer of them.
+
 # 2026-09-18 AEST — $99 CORE INTEGRATIONS ENTITLEMENT OWNER DECISION
 
 Owner direction: the **$99 AgentOS tier includes access to all twelve core AgentOS integrations**:
