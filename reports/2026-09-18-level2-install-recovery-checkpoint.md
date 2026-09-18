@@ -80,6 +80,40 @@ Evidence:
 | Green / completion-grade PRS | NOT ELIGIBLE | Controlling security/runtime gates remain open |
 | Overall AgentOS GREEN | NOT CLAIMED | Evidence is intentionally bounded |
 
+## GlobalShopCo fall-through reconciliation
+
+GlobalShopCo's current stacked research reaches draft PR #31 at exact head `6387a92238cf18c60024c00f3f8b64875f945c24`. No new authenticated supplier/app evidence exists. Current records still show zero evidence-complete eBay-ready SKUs because authenticated trade cost, exact freight, marketplace/dropship permission and fresh stock remain unavailable. The lane is `BLOCKED_STABLE`; no further public product-page expansion was performed.
+
+The `shopify_ebay` synthetic mapper requirement from the owner batch is already covered by draft PR #2 at `b943d42afdd44eb8cd124dd81e68c985b3b9de82`, including malformed identity and contradictory replay evidence negatives. No duplicate mapper work was created.
+
+## GlobalShopCo-Headless bounded repair
+
+- Draft PR: `darrinbaldwindev/GlobalShopCo-Headless#5`
+- Branch: `work/headless-product-identity`
+- Base: headless PR #1 exact head `708d32207e1e01bcbf8f9052698ffb29e98a8270`
+- Head: `d48c5075547bd02cf846693e553cb6cdc934522a`
+
+Files:
+
+- `wp-content/plugins/globalshopco-headless/globalshopco-headless.php`
+- `tests/m3-checkout-handoff-test.php`
+
+Repairs:
+
+- a successful Storefront response can no longer project a different/missing canonical product identity;
+- checkout requires literal Boolean `availableForSale === true`; the truthy string `"false"` remains unavailable and creates no cart;
+- Shopify remains catalogue, availability and checkout authority; WordPress remains a validated projection only.
+
+Evidence:
+
+- Shopify Storefront API 2026-07 schema validation for `product(handle:)`: PASS;
+- `git diff --check`: PASS;
+- local PHP execution unavailable and not claimed;
+- exact-head M3 checkout validation run `35306361729` / #13: SUCCESS;
+- PHP syntax and deterministic checkout-handoff test steps: SUCCESS.
+
+No live Storefront request, cart, checkout, order or production mutation was performed.
+
 ## Next executable items
 
 1. Preserve the single active SG-08 repair lane; do not duplicate its ownership primitive.
@@ -88,3 +122,5 @@ Evidence:
 4. Refresh completion-grade PRS only after the AgentOS target changes and independent prerequisites pass.
 5. Keep the owner physical Windows checklist on HOLD until software prerequisites are genuinely ready.
 6. Review PR #122 and PRS #26 as bounded stacked drafts; do not merge, approve, mark ready, rebase, deploy, or enable production execution from this checkpoint.
+7. GlobalShopCo: request only the exact authenticated cost/freight/permission/stock evidence already identified; do not resume horizontal public candidate discovery until one of those inputs changes.
+8. Review headless PR #5 as a bounded projection repair; do not infer live checkout readiness from CI.
