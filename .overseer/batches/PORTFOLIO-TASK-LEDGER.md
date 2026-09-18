@@ -15,23 +15,23 @@ States: `PENDING -> CLAIMED -> ACTIVE -> VERIFYING -> VERIFIED`; holding/termina
 - `SCHED-45-VENTURES` — Lane-C/Ventures only where latest owner instruction permits and no exact task is already claimed.
 - `WORK-PORTFOLIO` / `PROJECT-CHAT:<name>` — owner/manual execution.
 
-## Reconciliation checkpoint — 2026-09-18 10:30 Brisbane
-AgentOS PR #104 advanced two commits from `f01021301255ebde0f9b3c6baf2b1d55bea05420` to exact `b034f2af9a805adde62c2f6c0bb0c3c26f1fa0d9`, remains OPEN/DRAFT/UNMERGED. Compare evidence shows a bounded runtime change in `src/dispatch/runner.mjs` (+3) plus 23 lines of canonical mission-correlation regression coverage. Exact-head AgentOS Tests run `35289608332` completed SUCCESS on Ubuntu/Node22 and Windows/Node26 including npm audit. Changed-head rule invalidates predecessor assurance: A-AG-01 remains BLOCKED on SG-08, A-AG-02 remains BLOCKED on SG-01/02, A-AG-03 remains VERIFYING with clean functional CI, and A-PRS-02 remains PENDING fresh identical-head Jess + Michael challenge. Functional evidence does not promote Green/security/PRS. AgentOS #112 remains independently ACTIVE at `33eca1d257179a873a8aca2eea1a4e5e994415a0`; PRS #24 remains `3039c886bdcff911f7c6dcc3e086368058e57fb6`. Commerce/Lane-C states remain unchanged absent fresh owning-executor evidence.
+## Reconciliation checkpoint — 2026-09-18 11:28 Brisbane
+AgentOS PR #104 advanced two commits from `b034f2af9a805adde62c2f6c0bb0c3c26f1fa0d9` to exact `ffe6954a4879606804fc512bf000ff3ea7e46fec`, remains OPEN/DRAFT/UNMERGED. Compare evidence shows documentation/research-only changes: `docs/SCHEDULER_BRIDGE_ACCEPTANCE.md` and `docs/overseer/PERPLEXITY-WINDOWS-SG08-RESEARCH-RECONCILIATION-2026-09-18.md`; no runtime/test implementation changed in this successor. Exact-head AgentOS Tests run `35293612439` completed SUCCESS on Ubuntu/Node22 and Windows/Node26 including npm audit. Exact-head identity nevertheless changes, so predecessor Green/security/PRS assurance does not transfer unless evidence explicitly covers this successor. A-AG-01 remains BLOCKED on SG-08; A-AG-02 remains BLOCKED on SG-01/02; A-AG-03 remains VERIFYING with clean functional CI; A-PRS-02 remains PENDING fresh identical-head Jess + Michael challenge. Functional evidence does not promote Green/security/PRS. Commerce/Lane-C states remain unchanged absent fresh owning-executor evidence.
 
 ## Current ledger
 
 | Task | Project | Priority | State | Owner | Exact anchor / dependency | Acceptance boundary / next transition |
 |---|---|---:|---|---|---|---|
-| A-AG-01 | AgentOS | P0 | BLOCKED | SCHED-00-AGENTOS | `AgentOS#104@b034f2af9a805adde62c2f6c0bb0c3c26f1fa0d9`; SG-08 | Fresh identical-head continuous-ownership evidence required; one existing ownership primitive through verify→side effect/prepared recovery→durable success→release. No predecessor assurance transfer. |
-| A-AG-02 | AgentOS | P0 | BLOCKED | SCHED-00-AGENTOS | `#104@b034f2a...`; SG-01/02 | Authenticated actor + canonical grant source not evidenced end-to-end. No invented identity/grant registry. |
-| A-AG-03 | AgentOS | P0 | VERIFYING | SCHED-00-AGENTOS | `#104@b034f2a...`; run `35289608332` SUCCESS | Canonical mission-correlation runtime guard + regression now covered; inventory remaining replay/result/correlation negatives. Promotion still requires applicable Green/security/PRS evidence. |
+| A-AG-01 | AgentOS | P0 | BLOCKED | SCHED-00-AGENTOS | `AgentOS#104@ffe6954a4879606804fc512bf000ff3ea7e46fec`; SG-08 | Fresh identical-head continuous-ownership evidence required; one existing ownership primitive through verify→side effect/prepared recovery→durable success→release. No predecessor assurance transfer. |
+| A-AG-02 | AgentOS | P0 | BLOCKED | SCHED-00-AGENTOS | `#104@ffe6954...`; SG-01/02 | Authenticated actor + canonical grant source not evidenced end-to-end. No invented identity/grant registry. |
+| A-AG-03 | AgentOS | P0 | VERIFYING | SCHED-00-AGENTOS | `#104@ffe6954...`; run `35293612439` SUCCESS | Runtime/tests unchanged from prior candidate; exact-head functional CI clean. Inventory remaining replay/result/correlation negatives. Promotion still requires applicable Green/security/PRS evidence. |
 | A-AG-04 | AgentOS | P0 | BLOCKED_STABLE | SCHED-00-AGENTOS | repaired #104 + admission + Jess/Michael + PRS + owner physical authority | Physical Windows install/scheduler acceptance is owner-gated; no simulated evidence. |
 | A-AG-05 | AgentOS | P0 | ACTIVE | SCHED-00-AGENTOS | existing #104 authority-receipt lineage | Preserve exact source-backed authority evidence/correlation; do not duplicate A-AG-01/02. |
 | A-AG-06 | AgentOS | P0 | PENDING | SCHED-00-AGENTOS | after A-AG-01 repair | Recovery-state/authority-generation cross-bind; stale/mismatched or cross-spliced generations fail closed; exact-head Ubuntu+Windows CI. |
 | A-AG-07 | AgentOS | P0 | PENDING | SCHED-00-AGENTOS | after A-AG-01 repair | Authority revocation at durable-success linearization; false success denied. |
 | A-AG-08 | AgentOS | P0 | ACTIVE | SCHED-00-AGENTOS | `AgentOS#112@33eca1d257179a873a8aca2eea1a4e5e994415a0` | Runtime-shell eligibility/capability-contract consolidation. Independent lineage; do not duplicate or touch #104 hot path. |
 | A-PRS-01 | PRS | P0 | VERIFIED | SCHED-40-ASSURANCE | historical `PRS#17@49fe1f8bca3ddae271d85e0f4767173060267222` | Historical false-GREEN baseline only. |
-| A-PRS-02 | PRS | P0 | PENDING | SCHED-40-ASSURANCE | `AgentOS#104@b034f2a...` | Fresh identical-head Jess + Michael challenge required; never certify worker self-report. |
+| A-PRS-02 | PRS | P0 | PENDING | SCHED-40-ASSURANCE | `AgentOS#104@ffe6954...` | Fresh identical-head Jess + Michael challenge required; never certify worker self-report. |
 | A-PRS-03 | PRS | P0 | BLOCKED | SCHED-40-ASSURANCE | `PRS#24@3039c886bdcff911f7c6dcc3e086368058e57fb6` + stabilized AgentOS head | Completion-grade PRS requires identical-head Jess functional PASS + Michael security PASS + owner/runtime gates. |
 | A-PRS-04 | PRS | P0 | PENDING | SCHED-40-ASSURANCE | `PRS#24@3039c886...` | Evidence-bundle substitution/mix-and-match plus prepared-recovery envelope splice; fixtures only; no physical execution. |
 | B-GSC-01 | GlobalShopCo | P1 | ACTIVE | SCHED-15-COMMERCE | authenticated trade evidence lineage | Authenticated trade evidence only; missing material field => HOLD/UNKNOWN. |
@@ -63,9 +63,9 @@ AgentOS PR #104 advanced two commits from `f01021301255ebde0f9b3c6baf2b1d55bea05
 | OVR-01 | Overseer | P0 | ACTIVE | SCHED-30-REPLENISH | this ledger + project batches + #49 | Fresh-fetch before shared writes; coordination only. |
 
 ## Ready ordering
-1. **AgentOS #104 remaining replay/result/correlation negatives:** exact `b034f2a...`; inventory genuinely uncovered duplicate-result/restart/correlation cases after the new canonical mission guard; implement only 2–5 homogeneous gaps without ownership/persistence changes; exact-head tests; SG-09/10/11; S2.
-2. **AgentOS #104 ownership assurance:** exact `b034f2a...`; continuous ownership SG-08 through verify→side effect/prepared recovery→durable success→release; no new control plane; SG-08/10/11/18; S2.
-3. **PRS changed-head challenge:** exact stabilized `b034f2a...` only; identical-head Jess + Michael, then completion-grade PRS only if controlling gates pass; SG-08/09/10/11/18/19.
+1. **AgentOS #104 remaining replay/result/correlation negatives:** exact `ffe6954...`; inventory genuinely uncovered duplicate-result/restart/correlation cases after the existing mission guards; implement only 2–5 homogeneous gaps without ownership/persistence changes; exact-head tests; SG-09/10/11; S2.
+2. **AgentOS #104 ownership assurance:** exact `ffe6954...`; reconcile the new SG-08 research/acceptance docs against implementation and require continuous ownership through verify→side effect/prepared recovery→durable success→release; no new control plane; SG-08/10/11/18; S2.
+3. **PRS changed-head challenge:** exact stabilized `ffe6954...` only; identical-head Jess + Michael, then completion-grade PRS only if controlling gates pass; SG-08/09/10/11/18/19.
 4. **PRS adversarial fixtures:** evidence-bundle substitution + prepared-recovery envelope splice on PRS #24; synthetic only; SG-10/11/19/20; S1.
 5. **Headless contradictions:** variant/availability/cart contradictions; fail before network; non-production; SG-06/09/10/14; S1.
 6. **eBay mapper negatives:** malformed ID/variant/hash/duplicate-event fixtures; no persistence plane or publication; SG-06/09/10/14; S1.
