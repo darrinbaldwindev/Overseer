@@ -6,6 +6,37 @@
 ## Governance
 No merge/deploy/approval/ready/rebase/credentials/purchase/supplier contact/listing publication/paid campaign/production write/telemetry activation/production autonomy without explicit authority. Content360 remains downstream of product truth.
 
+# 2026-09-18 AEST — CORE PROGRAMS OWNER DECISION
+
+## Canonical core set
+Owner direction establishes the following twelve programs as the **core AgentOS program set** for ecosystem inclusion, integration planning, capability modelling, provider-neutral routing consideration and comprehensive FAQ/documentation coverage:
+
+1. ChatGPT / OpenAI
+2. Claude / Anthropic
+3. Gemini / Google AI
+4. Perplexity
+5. Manus
+6. OpenAI Codex
+7. Cursor
+8. Devin
+9. Replit
+10. Base44
+11. AgentMail
+12. Tavily
+
+Canonical durable decision record: `.overseer/communication/AGENTOS-CORE-PROGRAMS-APPROVAL-2026-09-18.md`.
+
+`CORE` / `APPROVED` is an inclusion and documentation/product decision only. It does not imply credentials, live connectivity, paid entitlement, every capability healthy, production readiness, execution authority, spend authority, unrestricted autonomy, Green PASS or PRS PASS.
+
+AgentOS remains provider/model/tool agnostic and free-first. Commercial or affiliate economics must not influence technical worker ranking or governance decisions.
+
+## FAQ programme requirement
+Every core program now requires an extensive AgentOS FAQ pack covering ordinary-user, advanced and Tech Head depths from one canonical truth model. FAQ scope includes purpose, costs, free/paid options, connection methods, permissions, least privilege, privacy/data movement, capability health, known limitations, budgets, provider routing/fallback, scheduling/autonomy, approvals, recovery, duplicate/replay protection, evidence/receipts, Green/PRS, troubleshooting, disconnection and last-verified evidence.
+
+A shared cross-provider `Programs & Integrations FAQ` and a canonical Approved/Core Integrations Registry should also be created so core/approval state is not inferred from scattered PRs.
+
+Marketing and Content360 must use only evidence-supported provider claims. Content360 remains downstream of Marketing-approved and product-evidence-approved truth.
+
 # 2026-09-17 AEST — AUTONOMOUS VERTICAL MARKETING CYCLE
 
 ## Fresh AgentOS state
