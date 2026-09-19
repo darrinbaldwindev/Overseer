@@ -11,8 +11,13 @@ class Change:
 
 
 def compare_paths(previous: Iterable[str], current: Iterable[str]) -> list[Change]:
-    old = {p.strip().lstrip("./") for p in previous}
-    new = {p.strip().lstrip("./") for p in current}
+    def normalize(path):
+        path = path.strip()
+        while path.startswith("./"):
+            path = path[2:]
+        return path
+    old = {normalize(p) for p in previous}
+    new = {normalize(p) for p in current}
     changes = [Change(p, "ADDED") for p in new - old]
     changes += [Change(p, "REMOVED") for p in old - new]
     return sorted(changes, key=lambda item: (item.status, item.path))

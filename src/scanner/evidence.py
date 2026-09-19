@@ -18,17 +18,22 @@ class Evidence:
 def extract_evidence(paths: Iterable[str]) -> list[Evidence]:
     evidence: list[Evidence] = []
     for raw_path in paths:
-        path = raw_path.strip().lstrip("./")
+        path = raw_path.strip()
+        while path.startswith("./"):
+            path = path[2:]
         lower = path.lower()
-        if lower.startswith(".github/workflows/"):
+        name = lower.rsplit("/", 1)[-1]
+        if name in {".env", ".env.local"}:
+            evidence.append(Evidence("configuration", path, "Environment file path only; contents not inspected"))
+        elif lower.startswith(".github/workflows/"):
             evidence.append(Evidence("ci_workflow", path, "GitHub Actions workflow"))
-        elif lower.endswith(("/package.json", "package.json")):
+        elif name == "package.json":
             evidence.append(Evidence("dependency_manifest", path, "Node package manifest"))
-        elif lower.endswith(("/pyproject.toml", "requirements.txt", "poetry.lock")):
+        elif name in {"pyproject.toml", "requirements.txt", "poetry.lock"}:
             evidence.append(Evidence("dependency_manifest", path, "Python dependency metadata"))
-        elif lower.endswith(("/go.mod", "go.sum")):
+        elif name in {"go.mod", "go.sum"}:
             evidence.append(Evidence("dependency_manifest", path, "Go dependency metadata"))
-        elif lower.endswith(("/cargo.toml", "cargo.lock")):
+        elif name in {"cargo.toml", "cargo.lock"}:
             evidence.append(Evidence("dependency_manifest", path, "Rust dependency metadata"))
         elif lower.endswith("dockerfile"):
             evidence.append(Evidence("container", path, "Docker build definition"))
