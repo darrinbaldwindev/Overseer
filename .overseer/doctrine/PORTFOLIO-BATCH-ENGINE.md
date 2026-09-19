@@ -98,3 +98,12 @@ If another schedule/worker changes a target or batch while a cycle is running, r
 A cycle is complete only when safe useful work has been consumed as far as current tools/authority allow, exact state has been verified, the batch has been replenished, the owner-facing chat view has been updated when applicable, and material progress/blockers are durably logged.
 
 Scheduler firing alone never means the portfolio or project advanced, and never implies GREEN.
+## Work-mode reconciliation and carry-forward
+Owner doctrine: https://github.com/darrinbaldwindev/Overseer/issues/54.
+Use ordinary chat for planning, research, design and drafts that can be completed safely there. Queue only work requiring repository/file mutation, execution, tests, browser/computer use or another Work-only capability.
+
+Before each substantial Work task, check necessity, equivalent completed work, live relevance, active ownership and whether a meaningful durable increment fits the available allowance. Do not invent credit usage.
+
+At the first batch preparation each day, inspect the previous batch and durable receipts. Record whether fully/partially completed, blocked/error-stopped, superseded, allowance-stopped (only with evidence), or UNKNOWN. Assign each carried item a reconciliation state: DONE / SUPERSEDED / STILL_REQUIRED / BLOCKED / DUPLICATE / STALE_OR_UNKNOWN. These describe intake reconciliation; execution and assurance states remain separate. Carry only evidenced incomplete work; refresh unknown completion before repeating.
+
+Reuse the existing local batch and control log. A WORK_MODE_QUEUE section is a view of existing task IDs, not a new scheduler or queue service. Each item includes why Work is required, whether chat-side design is complete, acceptance criteria and existing evidence. Checkpoints preserve exact repo/branch/PR/head, completed and incomplete steps, tests/receipts, blockers, next exact action, Work requirement and remaining assurance gates. Include independent fall-through tasks; checkpoint before starting work that cannot reach a useful stopping point.

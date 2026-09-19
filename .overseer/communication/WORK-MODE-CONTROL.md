@@ -94,3 +94,6 @@ External execution capability provides capability, never authority.
 No merge, approval, ready transition, rebase, deployment, credential/security-policy change, production write, spend, supplier/partner contact, publication, production autonomy, unrestricted elevation or invented physical-host evidence is authorized by a `WORK_REQUIRED` record or by Work-mode routing itself.
 
 **NO MODEL DECIDES ITS OWN AUTHORITY.**
+
+## Chat-first refinement and daily reconciliation
+Owner issue #54 (https://github.com/darrinbaldwindev/Overseer/issues/54) narrows escalation to genuine Work requirements. Planning, research, reasoning and drafting that can be completed safely in ordinary chat stay there. Add chat-side preparation status and acceptance criteria to WORK_REQUIRED records. Use the canonical engine's daily previous-batch reconciliation, six intake states and exact incomplete checkpoint contract. WORK_MODE_QUEUE sections reuse existing task IDs and logs; the Portfolio Overseer remains the sole Work coordination point.

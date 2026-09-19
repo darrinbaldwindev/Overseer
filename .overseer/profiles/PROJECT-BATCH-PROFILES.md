@@ -126,3 +126,5 @@ These profiles customize the canonical `PORTFOLIO-BATCH-ENGINE.md` without forki
 
 ## Profile maintenance rule
 If a project changes materially, update this central profile rather than forking the universal engine. Local live batch files may add temporary task-specific constraints but must not silently override portfolio governance.
+## Inherited Work-mode convention — all current and future profiles
+Every profile above, including country-specific and non-repository workstreams, inherits owner issue #54 and the Portfolio Batch Engine's Work-mode reconciliation and carry-forward section. Maintain WORK_MODE_QUEUE as a small section in the established batch/control log referencing existing task IDs, not as a separate queue or persistence plane. Record objective, why Work is needed, chat-side preparation complete/UNKNOWN, exact source/head, blockers, acceptance/tests and protected boundary. The Portfolio Overseer reconciles these candidates against live ownership and previous-batch receipts. Current per-project adoption is not implied until that project consumes this updated profile.

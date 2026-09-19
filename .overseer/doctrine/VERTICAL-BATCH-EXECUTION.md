@@ -442,3 +442,5 @@ If another portfolio project chat is created later, it should inherit this doctr
 **Every owner `cont` should leave the project materially further ahead, evidence clearer, stale assumptions reduced, and the next useful batch already prepared.**
 
 Fresh evidence outranks old batch text. Verification outranks claims. Blockers do not starve independent safe work. Protected actions remain protected.
+## Work-mode application
+Apply owner issue #54 (https://github.com/darrinbaldwindev/Overseer/issues/54) through the canonical Portfolio Batch Engine's Work-mode reconciliation and carry-forward section. A continuation trigger is not a requirement to spend Work credits on chat-completable preparation. Reconcile the previous daily batch, retain exact incomplete checkpoints, classify intake DONE / SUPERSEDED / STILL_REQUIRED / BLOCKED / DUPLICATE / STALE_OR_UNKNOWN, and execute genuine Work tasks with safe fall-through. Existing authority and assurance gates are unchanged.
