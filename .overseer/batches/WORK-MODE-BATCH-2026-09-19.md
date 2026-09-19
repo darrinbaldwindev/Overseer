@@ -64,3 +64,20 @@ MyPrimeDelivery fresh default 61feceb46de539948374deec86b3fe7578cf8014. #4 inven
 - Next MyPrimeDelivery: inspect #5 composition test coverage for a concrete missing denial before UI expansion; latest port already completed.
 - Overseer #56: no workflows configured in scanned default tree and exact-head run collection empty. Content readback is validation; do not invent CI or add a workflow merely to obtain a green badge.
 Protected actions unchanged; SG-08 mutation disabled; no owner laptop action needed. No overall GREEN.
+
+## Repeat cycle 3 — 2026-09-19
+Previous batch #56 a67431b09a303a1b4a5ee7cfc8daaa0966adbd1e and latest #49 comments reconciled. Earlier finite-economics work DONE; not repeated.
+
+WM-05 old CI_RED repair task SUPERSEDED: AgentOS #125 is now 203273761794cca8c7a9636d45eae0249a435a72. Fresh run 35420953642 confirms SUCCESS on this exact head; PR records unchanged-head Windows retry. PRS run 35421118895 confirms successful probe execution (PRS carrier head be1932504213b64b89089834a2c3d9969a2da834, not AgentOS SHA). #125 body and #49 report exact-target continuous-ownership negatives no longer reproduce the prior false-success class. These bounded results do not certify all ownership/authority behavior.
+Jess/Michael identical-head acceptance remains pending per latest durable handoff; do not fabricate independent PASS or enable mutation. SG-01/02 now has read-only consumer #129 ecd7fa33536fa963c51dbbcf381ee676e385c117 reported with CI and independent negatives in #49 comment 5739449078; trusted issuers and governed integration remain BLOCKED_STABLE. Reported disabled assurance automation not changed; no schedule authority inferred.
+
+WM-06 next missing MPD denial executed:
+- default 61feceb46de539948374deec86b3fe7578cf8014; #5 bc51e38bc9e37c03c340c2f3652a99b8ba8e7603 unchanged; no overlapping open repair found.
+- Existing renderer used a denylist and treated unsupported freshness as current. New matrix reproduced 12 false ranking displays and 4 container TypeErrors.
+- Explicit CURRENT/FIXTURE string allowlist now controls product/category current presentation. Existing fixture disclosure and no-local-checkout behavior retained.
+- Draft MyPrimeDelivery #6, work/renderer-freshness-20260919, exact cb2f6cf3abe7aa81b251a7aaac7ee1c71998e92c.
+- Local 39 M-03 tests PASS; exact-head complete Fixture validation run 35432055765 SUCCESS. Three changed committed files read back identical.
+- Existing project batch replenished. No live Prime/source-rights/affiliate qualification or production authority. Independent acceptance remains pending.
+
+Next Work requirements: (1) independent same-head Jess/Michael acceptance of repaired AgentOS candidate through existing assurance owner; (2) canonical trusted session/grant/consent issuer integration, no duplicate authority; (3) review MPD #6, then inventory missing-field/destination contracts before another edit. Physical Windows/commercial authenticated inputs remain BLOCKED_STABLE. Marketing sync rejection preserved. No owner laptop action required.
+Overseer docs validation is readback, no workflow PASS claimed. No protected action, merge, deployment, credential/security-policy change, production write or overall GREEN.
